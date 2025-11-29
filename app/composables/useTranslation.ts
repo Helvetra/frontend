@@ -1,0 +1,87 @@
+/**
+ * Composable for translation API calls.
+ * Handles communication with the backend translation endpoint.
+ */
+
+interface TranslationResponse {
+  success: boolean
+  data?: {
+    translation: string
+    source_lang: string
+    target_lang: string
+  }
+  meta?: {
+    characters: number
+    processing_time_ms: number
+  }
+  error?: {
+    code: string
+    message: string
+    retry_after?: number
+  }
+}
+
+export function useTranslation() {
+  const config = useRuntimeConfig()
+  const isLoading = ref(false)
+  const error = ref<string | null>(null)
+
+  async function translate(
+    text: string,
+    sourceLang: string,
+    targetLang: string
+  ): Promise<string | null> {
+    if (!text.trim()) {
+      return null
+    }
+
+    isLoading.value = true
+    error.value = null
+
+    try {
+      const response = await $fetch<TranslationResponse>(
+        `${config.public.apiBase}/api/v1/translate`,
+        {
+          method: 'POST',
+          body: {
+            text,
+            source_lang: sourceLang,
+            target_lang: targetLang,
+          },
+        }
+      )
+
+      if (response.success && response.data) {
+        return response.data.translation
+      }
+
+      if (response.error) {
+        error.value = response.error.message
+        return null
+      }
+
+      error.value = 'Translation failed'
+      return null
+    } catch (e) {
+      const fetchError = e as { data?: TranslationResponse; statusCode?: number }
+
+      if (fetchError.data?.error) {
+        error.value = fetchError.data.error.message
+      } else if (fetchError.statusCode === 429) {
+        error.value = 'Too many requests. Please wait a moment.'
+      } else {
+        error.value = 'Connection error. Please try again.'
+      }
+
+      return null
+    } finally {
+      isLoading.value = false
+    }
+  }
+
+  return {
+    translate,
+    isLoading,
+    error,
+  }
+}
