@@ -5,7 +5,7 @@
   <footer class="bg-white border-t border-neutral-200 py-6">
     <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2 text-neutral-500 text-sm">
-        <span class="text-swiss-red">+</span>
+        <img src="/img/icon.svg" alt="" class="h-4 w-4" />
         <span>{{ $t('footer.madeIn') }}</span>
       </div>
 
