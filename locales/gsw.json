@@ -1,0 +1,35 @@
+{
+  "app": {
+    "title": "Helvetra",
+    "tagline": "D'Schwiizer Übersetzigsapp"
+  },
+  "nav": {
+    "home": "Hei",
+    "about": "Über eus",
+    "privacy": "Dateschutz"
+  },
+  "translate": {
+    "placeholder": "Text zum Übersetze iigeh...",
+    "button": "Übersetze",
+    "swap": "Sprache tuusche",
+    "copy": "Übersetztig kopiere",
+    "copied": "Kopiert!"
+  },
+  "feedback": {
+    "like": "Gueti Übersetztig",
+    "dislike": "Schlechti Übersetztig",
+    "consent": "Ich stimme zue, das Feedback zum Verbessere vo de Übersetzige z'teile",
+    "thanks": "Merci vilmal für s'Feedback!"
+  },
+  "languages": {
+    "en": "Englisch",
+    "de": "Dütsch",
+    "gsw": "Schwyzerdütsch",
+    "fr": "Französisch",
+    "it": "Italiänisch"
+  },
+  "footer": {
+    "madeIn": "Made in Switzerland",
+    "privacy": "Dateschutzerchlärig"
+  }
+}

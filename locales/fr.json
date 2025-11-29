@@ -1,0 +1,35 @@
+{
+  "app": {
+    "title": "Helvetra",
+    "tagline": "L'application de traduction suisse"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "privacy": "Confidentialité"
+  },
+  "translate": {
+    "placeholder": "Entrez le texte à traduire...",
+    "button": "Traduire",
+    "swap": "Inverser les langues",
+    "copy": "Copier la traduction",
+    "copied": "Copié!"
+  },
+  "feedback": {
+    "like": "Bonne traduction",
+    "dislike": "Mauvaise traduction",
+    "consent": "J'accepte de partager ce commentaire pour améliorer les traductions",
+    "thanks": "Merci pour votre retour!"
+  },
+  "languages": {
+    "en": "Anglais",
+    "de": "Allemand",
+    "gsw": "Suisse allemand",
+    "fr": "Français",
+    "it": "Italien"
+  },
+  "footer": {
+    "madeIn": "Fabriqué en Suisse",
+    "privacy": "Politique de confidentialité"
+  }
+}
