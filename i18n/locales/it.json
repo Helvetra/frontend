@@ -41,5 +41,47 @@
   "footer": {
     "madeIn": "Made in Switzerland",
     "privacy": "Informativa sulla privacy"
+  },
+  "privacy": {
+    "title": "Informativa sulla privacy",
+    "lastUpdated": "Ultimo aggiornamento",
+    "intro": {
+      "title": "La tua privacy ci sta a cuore",
+      "text": "Helvetra si impegna a proteggere la tua privacy. Raccogliamo dati minimi e conserviamo tutto in Svizzera."
+    },
+    "collection": {
+      "title": "Cosa raccogliamo",
+      "text": "Raccogliamo dati solo quando scegli esplicitamente di dare un feedback:",
+      "item1": "Il tuo feedback (mi piace/non mi piace) sulle traduzioni",
+      "item2": "Il testo tradotto (solo con il tuo consenso)",
+      "item3": "Opzionale: regione dialettale e commenti che fornisci"
+    },
+    "notCollected": {
+      "title": "Cosa NON raccogliamo",
+      "text": "Rispettiamo la tua privacy e non raccogliamo:",
+      "item1": "Le tue traduzioni (a meno che tu non dia feedback con consenso)",
+      "item2": "Indirizzi IP o informazioni sul dispositivo",
+      "item3": "Cookie per tracciamento o pubblicità",
+      "item4": "Dati di identificazione personale"
+    },
+    "storage": {
+      "title": "Dove vengono conservati i dati",
+      "text": "Tutti i dati sono conservati esclusivamente in Svizzera su server svizzeri (Infomaniak). I tuoi dati non lasciano mai la Svizzera."
+    },
+    "usage": {
+      "title": "Come utilizziamo i dati",
+      "text": "I dati di feedback vengono utilizzati esclusivamente per migliorare la qualità delle traduzioni. Non vendiamo, condividiamo o utilizziamo i tuoi dati per pubblicità."
+    },
+    "rights": {
+      "title": "I tuoi diritti",
+      "text": "Hai il diritto di:",
+      "item1": "Sapere quali dati abbiamo su di te",
+      "item2": "Richiedere la cancellazione dei tuoi dati",
+      "item3": "Revocare il consenso in qualsiasi momento"
+    },
+    "contact": {
+      "title": "Contattaci",
+      "text": "Per domande sulla privacy o richieste di dati, contattaci a"
+    }
   }
 }

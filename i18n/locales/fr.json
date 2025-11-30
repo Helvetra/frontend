@@ -41,5 +41,47 @@
   "footer": {
     "madeIn": "Fabriqué en Suisse",
     "privacy": "Politique de confidentialité"
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "lastUpdated": "Dernière mise à jour",
+    "intro": {
+      "title": "Votre vie privée nous importe",
+      "text": "Helvetra s'engage à protéger votre vie privée. Nous collectons un minimum de données et stockons tout en Suisse."
+    },
+    "collection": {
+      "title": "Ce que nous collectons",
+      "text": "Nous ne collectons des données que lorsque vous choisissez explicitement de donner votre avis :",
+      "item1": "Votre avis (j'aime/je n'aime pas) sur les traductions",
+      "item2": "Le texte traduit (uniquement avec votre consentement)",
+      "item3": "Optionnel : région dialectale et commentaires que vous fournissez"
+    },
+    "notCollected": {
+      "title": "Ce que nous ne collectons PAS",
+      "text": "Nous respectons votre vie privée et ne collectons pas :",
+      "item1": "Vos traductions (sauf si vous donnez un avis avec consentement)",
+      "item2": "Adresses IP ou informations sur l'appareil",
+      "item3": "Cookies de suivi ou publicitaires",
+      "item4": "Données d'identification personnelle"
+    },
+    "storage": {
+      "title": "Où les données sont stockées",
+      "text": "Toutes les données sont stockées exclusivement en Suisse sur des serveurs suisses (Infomaniak). Vos données ne quittent jamais la Suisse."
+    },
+    "usage": {
+      "title": "Comment nous utilisons les données",
+      "text": "Les données de retour sont utilisées uniquement pour améliorer la qualité des traductions. Nous ne vendons, ne partageons ni n'utilisons vos données à des fins publicitaires."
+    },
+    "rights": {
+      "title": "Vos droits",
+      "text": "Vous avez le droit de :",
+      "item1": "Savoir quelles données nous avons sur vous",
+      "item2": "Demander la suppression de vos données",
+      "item3": "Retirer votre consentement à tout moment"
+    },
+    "contact": {
+      "title": "Nous contacter",
+      "text": "Pour toute question sur la confidentialité ou demande de données, contactez-nous à"
+    }
   }
 }
