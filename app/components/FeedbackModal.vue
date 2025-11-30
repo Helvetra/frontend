@@ -86,8 +86,9 @@
 const props = defineProps<{
   isOpen: boolean
   vote: 'like' | 'dislike'
-  translationId: string
+  sourceText: string
   sourceLang: string
+  translatedText: string
   targetLang: string
 }>()
 
@@ -128,9 +129,12 @@ function resetForm() {
 
 async function submit() {
   const success = await submitFeedback({
-    translationId: props.translationId,
     vote: props.vote,
     consent: true,
+    sourceText: props.sourceText,
+    sourceLang: props.sourceLang,
+    translatedText: props.translatedText,
+    targetLang: props.targetLang,
     region: selectedRegion.value || undefined,
     comment: comment.value || undefined,
   })

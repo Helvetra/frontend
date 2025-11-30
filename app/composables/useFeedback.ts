@@ -4,9 +4,12 @@
  */
 
 interface FeedbackRequest {
-  translationId: string
   vote: 'like' | 'dislike'
   consent: boolean
+  sourceText: string
+  sourceLang: string
+  translatedText: string
+  targetLang: string
   region?: string
   comment?: string
 }
@@ -56,9 +59,12 @@ export function useFeedback() {
         {
           method: 'POST',
           body: {
-            translation_id: request.translationId,
             vote: request.vote,
             consent: request.consent,
+            source_text: request.sourceText,
+            source_lang: request.sourceLang,
+            translated_text: request.translatedText,
+            target_lang: request.targetLang,
             region: request.region || null,
             comment: request.comment || null,
           },

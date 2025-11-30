@@ -140,8 +140,9 @@
     <FeedbackModal
       :is-open="showFeedbackModal"
       :vote="pendingVote"
-      :translation-id="translationId"
+      :source-text="sourceText"
       :source-lang="sourceLanguage"
+      :translated-text="targetText"
       :target-lang="targetLanguage"
       @close="showFeedbackModal = false"
       @submitted="onFeedbackSubmitted"
@@ -166,15 +167,6 @@ const copied = ref(false)
 const showFeedbackModal = ref(false)
 const pendingVote = ref<'like' | 'dislike'>('like')
 const feedbackSubmitted = ref(false)
-const translationId = ref('')
-
-/**
- * Generate a unique ID for the current translation.
- */
-function generateTranslationId(): string {
-  const hash = btoa(`${sourceLanguage.value}:${targetLanguage.value}:${sourceText.value.slice(0, 100)}`)
-  return `${Date.now()}-${hash.slice(0, 20)}`
-}
 
 // Load saved language preferences from localStorage
 onMounted(() => {
@@ -268,15 +260,17 @@ function swapLanguages() {
  * Handle feedback button click.
  */
 async function handleFeedback(vote: 'like' | 'dislike') {
-  translationId.value = generateTranslationId()
   pendingVote.value = vote
 
   // If user has stored consent, submit directly
   if (hasStoredConsent()) {
     const success = await submitFeedback({
-      translationId: translationId.value,
       vote,
       consent: true,
+      sourceText: sourceText.value,
+      sourceLang: sourceLanguage.value,
+      translatedText: targetText.value,
+      targetLang: targetLanguage.value,
     })
     if (success) {
       feedbackSubmitted.value = true
