@@ -43,7 +43,7 @@
     <!-- Formality toggle (only for languages with T-V distinction) -->
     <div
       v-if="showFormalityToggle"
-      class="flex items-center justify-center gap-2 px-4 py-2 border-b border-neutral-200 bg-neutral-50/50"
+      class="flex items-center justify-end gap-2 px-4 py-2 border-b border-neutral-200 bg-neutral-50/50"
     >
       <span class="text-xs text-neutral-500">{{ $t('formality.label') }}:</span>
       <div class="flex rounded-lg bg-neutral-200/50 p-0.5">
