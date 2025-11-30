@@ -15,6 +15,11 @@
     "copy": "Copia traduzione",
     "copied": "Copiato!"
   },
+  "formality": {
+    "label": "Tono",
+    "informal": "Tu",
+    "formal": "Lei"
+  },
   "feedback": {
     "like": "Buona traduzione",
     "dislike": "Traduzione scarsa",

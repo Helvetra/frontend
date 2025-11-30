@@ -29,7 +29,8 @@ export function useTranslation() {
   async function translate(
     text: string,
     sourceLang: string,
-    targetLang: string
+    targetLang: string,
+    formality: 'informal' | 'formal' | 'auto' = 'auto'
   ): Promise<string | null> {
     if (!text.trim()) {
       return null
@@ -47,6 +48,7 @@ export function useTranslation() {
             text,
             source_lang: sourceLang,
             target_lang: targetLang,
+            formality,
           },
         }
       )

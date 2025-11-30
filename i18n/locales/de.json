@@ -15,6 +15,11 @@
     "copy": "Übersetzung kopieren",
     "copied": "Kopiert!"
   },
+  "formality": {
+    "label": "Anrede",
+    "informal": "Du",
+    "formal": "Sie"
+  },
   "feedback": {
     "like": "Gute Übersetzung",
     "dislike": "Schlechte Übersetzung",

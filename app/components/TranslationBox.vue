@@ -40,6 +40,36 @@
       </select>
     </div>
 
+    <!-- Formality toggle (only for languages with T-V distinction) -->
+    <div
+      v-if="showFormalityToggle"
+      class="flex items-center justify-center gap-2 px-4 py-2 border-b border-neutral-200 bg-neutral-50/50"
+    >
+      <span class="text-xs text-neutral-500">{{ $t('formality.label') }}:</span>
+      <div class="flex rounded-lg bg-neutral-200/50 p-0.5">
+        <button
+          type="button"
+          class="px-3 py-1 text-xs font-medium rounded-md transition-colors"
+          :class="formality === 'informal'
+            ? 'bg-white text-neutral-900 shadow-sm'
+            : 'text-neutral-600 hover:text-neutral-900'"
+          @click="setFormality('informal')"
+        >
+          {{ $t('formality.informal') }}
+        </button>
+        <button
+          type="button"
+          class="px-3 py-1 text-xs font-medium rounded-md transition-colors"
+          :class="formality === 'formal'
+            ? 'bg-white text-neutral-900 shadow-sm'
+            : 'text-neutral-600 hover:text-neutral-900'"
+          @click="setFormality('formal')"
+        >
+          {{ $t('formality.formal') }}
+        </button>
+      </div>
+    </div>
+
     <!-- Text areas -->
     <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-neutral-200">
       <!-- Source text -->
@@ -156,23 +186,34 @@ const { submitFeedback, hasStoredConsent } = useFeedback()
 
 const STORAGE_KEY_SOURCE = 'helvetra_source_lang'
 const STORAGE_KEY_TARGET = 'helvetra_target_lang'
+const STORAGE_KEY_FORMALITY = 'helvetra_formality'
+
+// Languages with T-V distinction (informal/formal address)
+const FORMALITY_LANGUAGES = ['de', 'gsw', 'fr', 'it']
 
 const sourceLanguage = ref('de')
 const targetLanguage = ref('en')
 const sourceText = ref('')
 const targetText = ref('')
 const copied = ref(false)
+const formality = ref<'informal' | 'formal'>('informal')
+
+// Show formality toggle only for languages with T-V distinction
+const showFormalityToggle = computed(() =>
+  FORMALITY_LANGUAGES.includes(targetLanguage.value)
+)
 
 // Feedback state
 const showFeedbackModal = ref(false)
 const pendingVote = ref<'like' | 'dislike'>('like')
 const feedbackSubmitted = ref(false)
 
-// Load saved language preferences from localStorage
+// Load saved preferences from localStorage
 onMounted(() => {
   if (import.meta.client) {
     const savedSource = localStorage.getItem(STORAGE_KEY_SOURCE)
     const savedTarget = localStorage.getItem(STORAGE_KEY_TARGET)
+    const savedFormality = localStorage.getItem(STORAGE_KEY_FORMALITY)
 
     if (savedSource && availableLanguages.some(l => l.code === savedSource)) {
       sourceLanguage.value = savedSource
@@ -180,15 +221,26 @@ onMounted(() => {
     if (savedTarget && availableLanguages.some(l => l.code === savedTarget)) {
       targetLanguage.value = savedTarget
     }
+    if (savedFormality === 'informal' || savedFormality === 'formal') {
+      formality.value = savedFormality
+    }
   }
 })
 
-// Persist language selections to localStorage
+// Persist preferences to localStorage
 function saveLanguagePreferences() {
   if (import.meta.client) {
     localStorage.setItem(STORAGE_KEY_SOURCE, sourceLanguage.value)
     localStorage.setItem(STORAGE_KEY_TARGET, targetLanguage.value)
+    localStorage.setItem(STORAGE_KEY_FORMALITY, formality.value)
   }
+}
+
+// Set formality and trigger re-translation
+function setFormality(value: 'informal' | 'formal') {
+  formality.value = value
+  saveLanguagePreferences()
+  performTranslation()
 }
 
 const availableLanguages = [
@@ -212,10 +264,16 @@ async function performTranslation() {
     return
   }
 
+  // Only send formality for languages that support it
+  const effectiveFormality = FORMALITY_LANGUAGES.includes(targetLanguage.value)
+    ? formality.value
+    : 'auto'
+
   const result = await translate(
     sourceText.value,
     sourceLanguage.value,
-    targetLanguage.value
+    targetLanguage.value,
+    effectiveFormality
   )
 
   if (result !== null) {
