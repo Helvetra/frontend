@@ -87,26 +87,71 @@
           :class="{ 'text-neutral-400 italic': !targetText }"
         />
 
-        <!-- Copy button -->
-        <button
+        <!-- Bottom actions: feedback and copy -->
+        <div
           v-if="targetText && !isLoading && !error"
-          type="button"
-          :title="$t('translate.copy')"
-          class="absolute bottom-2 right-2 p-2 rounded-lg hover:bg-neutral-200 transition-colors text-neutral-500 hover:text-neutral-700"
-          @click="copyTranslation"
+          class="absolute bottom-2 right-2 flex items-center gap-1"
         >
-          <svg v-if="!copied" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-          </svg>
-          <span v-else class="text-xs text-swiss-red font-medium">{{ $t('translate.copied') }}</span>
-        </button>
+          <!-- Feedback buttons -->
+          <div v-if="!feedbackSubmitted" class="flex items-center gap-1 mr-2">
+            <button
+              type="button"
+              :title="$t('feedback.like')"
+              class="p-2 rounded-lg hover:bg-neutral-200 transition-colors text-neutral-400 hover:text-green-600"
+              @click="handleFeedback('like')"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              :title="$t('feedback.dislike')"
+              class="p-2 rounded-lg hover:bg-neutral-200 transition-colors text-neutral-400 hover:text-red-600"
+              @click="handleFeedback('dislike')"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
+              </svg>
+            </button>
+          </div>
+          <!-- Feedback submitted confirmation -->
+          <span v-else class="text-xs text-green-600 font-medium mr-2">
+            {{ $t('feedback.thanks') }}
+          </span>
+
+          <!-- Copy button -->
+          <button
+            type="button"
+            :title="$t('translate.copy')"
+            class="p-2 rounded-lg hover:bg-neutral-200 transition-colors text-neutral-500 hover:text-neutral-700"
+            @click="copyTranslation"
+          >
+            <svg v-if="!copied" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <span v-else class="text-xs text-swiss-red font-medium">{{ $t('translate.copied') }}</span>
+          </button>
+        </div>
       </div>
     </div>
+
+    <!-- Feedback modal -->
+    <FeedbackModal
+      :is-open="showFeedbackModal"
+      :vote="pendingVote"
+      :translation-id="translationId"
+      :source-lang="sourceLanguage"
+      :target-lang="targetLanguage"
+      @close="showFeedbackModal = false"
+      @submitted="onFeedbackSubmitted"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 const { translate, isLoading, error } = useTranslation()
+const { submitFeedback, hasStoredConsent } = useFeedback()
 
 const STORAGE_KEY_SOURCE = 'helvetra_source_lang'
 const STORAGE_KEY_TARGET = 'helvetra_target_lang'
@@ -116,6 +161,20 @@ const targetLanguage = ref('en')
 const sourceText = ref('')
 const targetText = ref('')
 const copied = ref(false)
+
+// Feedback state
+const showFeedbackModal = ref(false)
+const pendingVote = ref<'like' | 'dislike'>('like')
+const feedbackSubmitted = ref(false)
+const translationId = ref('')
+
+/**
+ * Generate a unique ID for the current translation.
+ */
+function generateTranslationId(): string {
+  const hash = btoa(`${sourceLanguage.value}:${targetLanguage.value}:${sourceText.value.slice(0, 100)}`)
+  return `${Date.now()}-${hash.slice(0, 20)}`
+}
 
 // Load saved language preferences from localStorage
 onMounted(() => {
@@ -203,6 +262,47 @@ function swapLanguages() {
   targetText.value = tempText
 
   saveLanguagePreferences()
+}
+
+/**
+ * Handle feedback button click.
+ */
+async function handleFeedback(vote: 'like' | 'dislike') {
+  translationId.value = generateTranslationId()
+  pendingVote.value = vote
+
+  // If user has stored consent, submit directly
+  if (hasStoredConsent()) {
+    const success = await submitFeedback({
+      translationId: translationId.value,
+      vote,
+      consent: true,
+    })
+    if (success) {
+      feedbackSubmitted.value = true
+      resetFeedbackAfterDelay()
+    }
+  } else {
+    // Show consent modal
+    showFeedbackModal.value = true
+  }
+}
+
+/**
+ * Called when feedback is submitted via modal.
+ */
+function onFeedbackSubmitted() {
+  feedbackSubmitted.value = true
+  resetFeedbackAfterDelay()
+}
+
+/**
+ * Reset feedback state after showing confirmation.
+ */
+function resetFeedbackAfterDelay() {
+  setTimeout(() => {
+    feedbackSubmitted.value = false
+  }, 3000)
 }
 
 async function copyTranslation() {

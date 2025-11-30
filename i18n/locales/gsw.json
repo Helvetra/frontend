@@ -19,7 +19,17 @@
     "like": "Gueti Übersetztig",
     "dislike": "Schlechti Übersetztig",
     "consent": "Ich stimme zue, das Feedback zum Verbessere vo de Übersetzige z'teile",
-    "thanks": "Merci vilmal für s'Feedback!"
+    "thanks": "Merci!",
+    "modalTitle": "Feedback teile",
+    "modalDescription": "Dis Feedback hilft, d'Übersetzige z'verbessere. Mir speichered dini Bewertig zäme mit em Übersetztigstext.",
+    "regionLabel": "Weli Dialäktregion? (optional)",
+    "regionPlaceholder": "Region uuswähle...",
+    "commentLabel": "Zuesätzlichi Kommentär (optional)",
+    "commentPlaceholder": "Was chönnt verbesseret werde?",
+    "rememberChoice": "Uuswahl merke",
+    "cancel": "Abbräche",
+    "submit": "Feedback schicke",
+    "submitting": "Wird gschickt..."
   },
   "languages": {
     "en": "Englisch",

@@ -19,7 +19,17 @@
     "like": "Bonne traduction",
     "dislike": "Mauvaise traduction",
     "consent": "J'accepte de partager ce commentaire pour améliorer les traductions",
-    "thanks": "Merci pour votre retour!"
+    "thanks": "Merci!",
+    "modalTitle": "Partager votre avis",
+    "modalDescription": "Votre avis nous aide à améliorer les traductions. Nous stockerons votre évaluation avec le texte traduit.",
+    "regionLabel": "Quelle région dialectale? (optionnel)",
+    "regionPlaceholder": "Sélectionner une région...",
+    "commentLabel": "Commentaires supplémentaires (optionnel)",
+    "commentPlaceholder": "Qu'est-ce qui pourrait être amélioré?",
+    "rememberChoice": "Mémoriser mon choix",
+    "cancel": "Annuler",
+    "submit": "Envoyer",
+    "submitting": "Envoi en cours..."
   },
   "languages": {
     "en": "Anglais",
