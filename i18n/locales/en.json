@@ -41,5 +41,47 @@
   "footer": {
     "madeIn": "Made in Switzerland",
     "privacy": "Privacy Policy"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "intro": {
+      "title": "Your Privacy Matters",
+      "text": "Helvetra is committed to protecting your privacy. We collect minimal data and store everything in Switzerland."
+    },
+    "collection": {
+      "title": "What We Collect",
+      "text": "We only collect data when you explicitly choose to give feedback:",
+      "item1": "Your feedback (like/dislike) on translations",
+      "item2": "The translated text (only with your consent)",
+      "item3": "Optional: dialect region and comments you provide"
+    },
+    "notCollected": {
+      "title": "What We Do NOT Collect",
+      "text": "We respect your privacy and do not collect:",
+      "item1": "Your translations (unless you give feedback with consent)",
+      "item2": "IP addresses or device information",
+      "item3": "Cookies for tracking or advertising",
+      "item4": "Any personal identification data"
+    },
+    "storage": {
+      "title": "Where Data Is Stored",
+      "text": "All data is stored exclusively in Switzerland on Swiss servers (Infomaniak). Your data never leaves Switzerland."
+    },
+    "usage": {
+      "title": "How We Use Data",
+      "text": "Feedback data is used solely to improve translation quality. We do not sell, share, or use your data for advertising."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "text": "You have the right to:",
+      "item1": "Know what data we have about you",
+      "item2": "Request deletion of your data",
+      "item3": "Withdraw consent at any time"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "text": "For privacy questions or data requests, contact us at"
+    }
   }
 }

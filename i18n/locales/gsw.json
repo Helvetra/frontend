@@ -41,5 +41,47 @@
   "footer": {
     "madeIn": "Made in Switzerland",
     "privacy": "Dateschutzerchlärig"
+  },
+  "privacy": {
+    "title": "Dateschutzerchlärig",
+    "lastUpdated": "Zletscht aktualisiert",
+    "intro": {
+      "title": "Dini Privatsphäri isch eus wichtig",
+      "text": "Helvetra schützt dini Privatsphäri. Mir sammled minimal Date und speichered alles id Schwiiz."
+    },
+    "collection": {
+      "title": "Was mir sammled",
+      "text": "Mir sammled nur Date, wenn du explizit Feedback gisch:",
+      "item1": "Dis Feedback (gfallt/gfallt nöd) zu Übersetzige",
+      "item2": "De übersetzte Text (nur mit dinere Zuestimmig)",
+      "item3": "Optional: Dialäktregion und Kommentär wo du aagisch"
+    },
+    "notCollected": {
+      "title": "Was mir NÖD sammled",
+      "text": "Mir respektiered dini Privatsphäri und sammled nöd:",
+      "item1": "Dini Übersetzige (usser du gisch Feedback mit Zuestimmig)",
+      "item2": "IP-Adresse oder Grätinfo",
+      "item3": "Cookies fürs Tracking oder Werbig",
+      "item4": "Persönlichi Identifikationsdate"
+    },
+    "storage": {
+      "title": "Wo Date gspeichered werded",
+      "text": "Alli Date werded nur id Schwiiz uf Schwiizer Server (Infomaniak) gspeichered. Dini Date verlönd d'Schwiiz nie."
+    },
+    "usage": {
+      "title": "Wie mir Date bruuched",
+      "text": "Feedback-Date werded nur bruucht zum d'Übersetzigqualität verbessere. Mir verchaufed, teilet oder nutzed dini Date nöd für Werbig."
+    },
+    "rights": {
+      "title": "Dini Rächt",
+      "text": "Du hesch s'Rächt:",
+      "item1": "Z'wüsse, weli Date mir über dich hend",
+      "item2": "D'Löschig vo dine Date z'verlange",
+      "item3": "Dini Zuestimmig jederziit z'widerruefe"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "text": "Bi Dateschutzfrage oder Dateafrage kontaktier eus under"
+    }
   }
 }
