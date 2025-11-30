@@ -108,11 +108,37 @@
 <script setup lang="ts">
 const { translate, isLoading, error } = useTranslation()
 
-const sourceLanguage = ref('en')
-const targetLanguage = ref('gsw')
+const STORAGE_KEY_SOURCE = 'helvetra_source_lang'
+const STORAGE_KEY_TARGET = 'helvetra_target_lang'
+
+const sourceLanguage = ref('de')
+const targetLanguage = ref('en')
 const sourceText = ref('')
 const targetText = ref('')
 const copied = ref(false)
+
+// Load saved language preferences from localStorage
+onMounted(() => {
+  if (import.meta.client) {
+    const savedSource = localStorage.getItem(STORAGE_KEY_SOURCE)
+    const savedTarget = localStorage.getItem(STORAGE_KEY_TARGET)
+
+    if (savedSource && availableLanguages.some(l => l.code === savedSource)) {
+      sourceLanguage.value = savedSource
+    }
+    if (savedTarget && availableLanguages.some(l => l.code === savedTarget)) {
+      targetLanguage.value = savedTarget
+    }
+  }
+})
+
+// Persist language selections to localStorage
+function saveLanguagePreferences() {
+  if (import.meta.client) {
+    localStorage.setItem(STORAGE_KEY_SOURCE, sourceLanguage.value)
+    localStorage.setItem(STORAGE_KEY_TARGET, targetLanguage.value)
+  }
+}
 
 const availableLanguages = [
   { code: 'en' },
@@ -158,8 +184,14 @@ function debouncedTranslate() {
 
 // Watch for changes that trigger translation
 watch(sourceText, debouncedTranslate)
-watch(sourceLanguage, performTranslation)
-watch(targetLanguage, performTranslation)
+watch(sourceLanguage, () => {
+  saveLanguagePreferences()
+  performTranslation()
+})
+watch(targetLanguage, () => {
+  saveLanguagePreferences()
+  performTranslation()
+})
 
 function swapLanguages() {
   const tempLang = sourceLanguage.value
@@ -169,6 +201,8 @@ function swapLanguages() {
   const tempText = sourceText.value
   sourceText.value = targetText.value
   targetText.value = tempText
+
+  saveLanguagePreferences()
 }
 
 async function copyTranslation() {
