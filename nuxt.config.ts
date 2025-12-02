@@ -1,3 +1,4 @@
+/// <reference types="node" />
 /**
  * Nuxt configuration.
  * Configures modules, i18n, and runtime settings.
@@ -5,6 +6,8 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+
+  css: ['~/assets/css/main.css'],
 
   modules: [
     '@nuxtjs/tailwindcss',
@@ -23,6 +26,9 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     lazy: true,
     strategy: 'prefix_except_default',
+    compilation: {
+      strictMessage: false,
+    },
   },
 
   runtimeConfig: {

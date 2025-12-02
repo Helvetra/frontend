@@ -3,7 +3,7 @@
   Auto-translates with 300ms debounce as user types.
 -->
 <template>
-  <div class="bg-white rounded-2xl shadow-sm border border-neutral-200 overflow-hidden">
+  <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden" style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), 0 0 60px 20px rgba(218, 41, 28, 0.12);">
     <!-- Language selectors row -->
     <div class="flex items-center justify-between border-b border-neutral-200 px-4 py-3 bg-neutral-50">
       <!-- Source language -->

@@ -3,6 +3,97 @@
     "title": "Helvetra",
     "tagline": "D'Schwiizer Übersetzigsapp"
   },
+  "marketing": {
+    "hero": {
+      "title": "D'urschwiizerischi Übersetzigsapp",
+      "subtitle": "Eifach, privat, präzis. Id Schwiiz baut für alli, wo ihri Wort schätzed."
+    },
+    "trust": {
+      "title": "Schwiizer Dateschutz & Sicherheit",
+      "subtitle": "Dini Wort verlönd d'Schwiiz nie",
+      "apertus": {
+        "title": "Betribe vo Apertus",
+        "text": "Schwiizer KI, entwicklet vo ETH und EPFL. Forschigexzellenz vo Schwiizer Spitzeuni."
+      },
+      "infomaniak": {
+        "title": "Ghostet bi Infomaniak",
+        "text": "100% Schwiizer Infrastruktur. Dini Date blibed i Schwiizer Rechezentere, gschützt durchs Schwiizer Dateschutzgsetz."
+      },
+      "swiss": {
+        "title": "Entwicklet id Schwiiz",
+        "text": "Mit Sorgfalt z'Bärn baut. Schwiizer Ingenieurskunst für es Wärchzüüg, wo du vertraue chasch."
+      }
+    },
+    "features": {
+      "focus": {
+        "title": "Fokus",
+        "text": "Ei Zwäck, guet gmacht. Kei Chat-Historie, kei Ablänkig. Nur Übersetztig."
+      },
+      "simplicity": {
+        "title": "Eifachheit",
+        "text": "Tippe, übersetze, fertig. S'Interface stoht nöd im Wäg."
+      },
+      "privacy": {
+        "title": "Privatsphäri",
+        "text": "Dini Übersetzige ghöred dir. Keis Training mit dine Date. Keis Tracking. Kei Kompromiss."
+      }
+    },
+    "languages": {
+      "title": "Di ganzi Schwiiz, abgdeckt"
+    },
+    "faq": {
+      "title": "Hüfig gschtellti Frage",
+      "items": {
+        "languages": {
+          "q": "Weli Sprache unterstützt Helvetra?",
+          "a": "Dütsch, Schwyzerdütsch (mit regionale Dialäkt), Französisch, Italiänisch, Rätoromanisch und Englisch zum Start. Meh Sprache chömed."
+        },
+        "dataStorage": {
+          "q": "Wo werded mini Date gspeicheret?",
+          "a": "Dini Date werded nöd gspeicheret. Text wird a Infomaniak-Server id Schwiiz gschickt, wo Apertus ihn verarbeitet und d'Übersetztig zruggit. Nüt wird gspeicheret."
+        },
+        "free": {
+          "q": "Isch Helvetra gratis?",
+          "a": "Die erschti Version isch gratis. E Vollversion chönnt später cho, falls gnueg Interesse bestoht."
+        },
+        "different": {
+          "q": "Was unterscheidet Helvetra vo Google Translate oder DeepL?",
+          "a": "Keis Tracking, und dini Date blibed id Schwiiz — nöd id USA (Google) oder id EU (DeepL). Dezue en einzige Fokus uf Übersetztig, kei Ablänkig."
+        },
+        "swissGerman": {
+          "q": "Verstoht Helvetra würkli Schwyzerdütsch?",
+          "a": "So guet wie Apertus es ermöglicht, ja. Helvetra nutzt Apertus für Übersetztige und cha kei Garantie für d'Ergebnis übernäh."
+        },
+        "dataTraining": {
+          "q": "Werded mini Date zum Trainiere vo KI-Modell bruucht?",
+          "a": "Nei. Helvetra bruucht dini Date in keinere Form."
+        },
+        "apertus": {
+          "q": "Was isch Apertus?",
+          "a": "Apertus isch s'Schwiizer Open-Source-KI-Sprachmodell, entwicklet vo ETH Züri, EPFL und CSCS. Trainiert mit über 15 Billione Tokens in meh als 1'000 Sprache — inklusive Schwyzerdütsch und Rätoromanisch — stoht es für Transparänz und Gmeinwohl. Helvetra isch nöd mit Apertus verbunde, het sich aber dafür entschide, will mir a d'Mission glaube. Meh erfahre bi <a href=\"https://www.swiss-ai.org\" target=\"_blank\" rel=\"noopener\" class=\"text-swiss-red hover:underline\">Swiss AI</a>, <a href=\"https://ai.epfl.ch\" target=\"_blank\" rel=\"noopener\" class=\"text-swiss-red hover:underline\">EPFL AI</a> und <a href=\"https://ai.ethz.ch\" target=\"_blank\" rel=\"noopener\" class=\"text-swiss-red hover:underline\">ETH AI</a>."
+        },
+        "infomaniak": {
+          "q": "Warum Infomaniak?",
+          "a": "Infomaniak isch es Schwiizer Unternähme mit Open-Source-KI-Infrastruktur, wo 100% mit erneuerbarer Energie betribe wird. Dini Date blibed id Schwiiz, kei Afrage werded gspeicheret, und d'Energie wird zur Heiztig wiederverwendet. Helvetra isch nöd mit Infomaniak verbunde — mir hend sie gwählt, will sie üsi Wert teilet. <a href=\"https://www.infomaniak.com/de/hosting/ai-services\" target=\"_blank\" rel=\"noopener\" class=\"text-swiss-red hover:underline\">Meh erfahre</a>."
+        },
+        "api": {
+          "q": "Gits e API für Unternähme?",
+          "a": "No nöd, aber es stoht uf de Roadmap. <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Kontaktier eus</a>, wenn du interessiert bisch."
+        },
+        "contribute": {
+          "q": "Cha ich mithälfe?",
+          "a": "Klar! <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Mäld di</a> — mir freued eus uf dini Nachricht."
+        }
+      }
+    },
+    "newsletter": {
+      "title": "Blib informiert",
+      "subtitle": "Erhalt Benachrichtigunge über neui Funktione und Verbesserige.",
+      "placeholder": "dini&#64;email.ch",
+      "button": "Abonniere",
+      "privacy": "Dini E-Mail wird nur für üse Newsletter bruucht. Jederziit abmälde."
+    }
+  },
   "nav": {
     "home": "Hei",
     "about": "Über eus",
@@ -46,6 +137,40 @@
   "footer": {
     "madeIn": "Made in Switzerland",
     "privacy": "Dateschutzerchlärig"
+  },
+  "about": {
+    "title": "Über Helvetra",
+    "pretensions": {
+      "title": "Kei Amassung",
+      "text1": "Mir sind kei Linguiste. Mir sind kei Übersetzigsprofis. Mir behaupte nöd, dass Helvetra besser übersetzt als DeepL, Google oder anderi.",
+      "text2": "Mir sind es chlises Team id Schwiiz, wo gfunde het, es wär spannend, e Übersetzigsapp mit Schwiizer Technologie z'baue — und z'luege, wohi's füehrt."
+    },
+    "swiss": {
+      "title": "Swiss-Made, KI-gstützt",
+      "text1": "Helvetra wird vo Apertus atribe, emene KI-Modell, wo vo de ETH Züri und EPFL entwicklet und bi Infomaniak ghostet wird. Apertus isch nöd extra für Konsumänte-Übersetzige baut worde — aber mir finded's schön, Schwiizer Forschig für öppis Praktischs und Zugänglichs z'nutze.",
+      "text2": "De grösst Teil vo de Inhalt uf dere Website und id App isch vo Apertus generiert und übersetzt worde. Nöd vo Mönsche. Mir lehrned underwegs."
+    },
+    "output": {
+      "title": "Mir kontrolliere d'Usgab nöd",
+      "text1": "KI übersetzt. Mir überprüefed nöd jedes Ergebnis. Übersetzige chönd unvollkomme, unhandlich oder falsch sii. Das isch d'Realität bi de Arbet mit KI.",
+      "text2": "Wenn dir öppis uffalt —",
+      "tellUs": "säg eus Bscheid."
+    },
+    "money": {
+      "title": "Wo s'Geld ane gaht",
+      "text": "D'Inahme gönd direkt a Helvetra. Kei Kommission a Apertus, Infomaniak oder Payrexx — nur ihri Standardgebühre. Mir sind unabhängig."
+    },
+    "fun": {
+      "title": "Es Spassprojekt",
+      "text1": "Das isch es Experiment. En Liebesbrief a d'Schwiizer Technologie.",
+      "text2": "Wenn du wotsch, dass Helvetra wachst, teil's, nutz's, gib Feedback. Das isch alles, wo mir bitted."
+    },
+    "backLink": "Zrugg zu Helvetra"
+  },
+  "confirm": {
+    "title": "Fasch gschafft!",
+    "instruction": "Bitte lueg i din Postiigang und klick uf de Bestätigigslink, zum dini Amäldig abzschliesse.",
+    "backButton": "Zrugg zu Helvetra"
   },
   "privacy": {
     "title": "Dateschutzerchlärig",
