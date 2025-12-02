@@ -87,6 +87,7 @@
       }
     },
     "newsletter": {
+      "confirmed": "Vous êtes inscrit·e ! Merci.",
       "title": "Restez informé",
       "subtitle": "Recevez des notifications sur les nouvelles fonctionnalités et améliorations.",
       "placeholder": "votre&#64;email.ch",

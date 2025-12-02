@@ -4,6 +4,15 @@
 -->
 <template>
   <div>
+    <!-- Newsletter confirmation banner -->
+    <Transition name="fade">
+      <div
+        v-if="showConfirmationBanner"
+        class="bg-green-600 text-white py-3 text-center"
+      >
+        <p class="text-sm font-medium">{{ $t('marketing.newsletter.confirmed') }}</p>
+      </div>
+    </Transition>
     <MarketingHeroSection />
     <MarketingTrustSection />
     <MarketingFeaturesSection />
@@ -15,6 +24,23 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const route = useRoute()
+const router = useRouter()
+
+// Newsletter confirmation banner
+const showConfirmationBanner = ref(false)
+
+onMounted(() => {
+  if (route.query.confirmed !== undefined) {
+    showConfirmationBanner.value = true
+    // Remove query param from URL without reload
+    router.replace({ query: {} })
+    // Auto-dismiss after 5 seconds
+    setTimeout(() => {
+      showConfirmationBanner.value = false
+    }, 5000)
+  }
+})
 
 useHead({
   title: 'Helvetra - The very Swiss translation app',

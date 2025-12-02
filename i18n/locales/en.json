@@ -87,6 +87,7 @@
       }
     },
     "newsletter": {
+      "confirmed": "You're subscribed! Thank you for joining.",
       "title": "Stay updated",
       "subtitle": "Get notified about new features and improvements.",
       "placeholder": "your{'@'}email.com",

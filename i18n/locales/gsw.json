@@ -87,6 +87,7 @@
       }
     },
     "newsletter": {
+      "confirmed": "Du bisch agmäldet! Merci vilmal.",
       "title": "Blib informiert",
       "subtitle": "Erhalt Benachrichtigunge über neui Funktione und Verbesserige.",
       "placeholder": "dini&#64;email.ch",

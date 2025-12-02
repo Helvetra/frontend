@@ -87,6 +87,7 @@
       }
     },
     "newsletter": {
+      "confirmed": "Sei iscritto! Grazie.",
       "title": "Resta aggiornato",
       "subtitle": "Ricevi notifiche su nuove funzionalità e miglioramenti.",
       "placeholder": "tua&#64;email.ch",
