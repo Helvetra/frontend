@@ -4,13 +4,16 @@
 -->
 <template>
   <div>
-    <!-- Newsletter confirmation banner -->
-    <Transition name="fade">
+    <!-- Newsletter confirmation banner (matches original website design) -->
+    <Transition name="confirm-banner">
       <div
         v-if="showConfirmationBanner"
-        class="bg-green-600 text-white py-3 text-center"
+        class="confirm-banner-wrapper"
       >
-        <p class="text-sm font-medium">{{ $t('marketing.newsletter.confirmed') }}</p>
+        <div class="confirm-banner">
+          <span>{{ $t('marketing.newsletter.confirmed') }}</span>
+          <button class="confirm-banner-close" @click="closeBanner">&times;</button>
+        </div>
       </div>
     </Transition>
     <MarketingHeroSection />
@@ -30,15 +33,17 @@ const router = useRouter()
 // Newsletter confirmation banner
 const showConfirmationBanner = ref(false)
 
+function closeBanner() {
+  showConfirmationBanner.value = false
+}
+
 onMounted(() => {
   if (route.query.confirmed !== undefined) {
     showConfirmationBanner.value = true
     // Remove query param from URL without reload
-    router.replace({ query: {} })
-    // Auto-dismiss after 5 seconds
-    setTimeout(() => {
-      showConfirmationBanner.value = false
-    }, 5000)
+    history.replaceState({}, '', window.location.pathname)
+    // Auto-close after 5 seconds
+    setTimeout(closeBanner, 5000)
   }
 })
 

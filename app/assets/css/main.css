@@ -20,3 +20,63 @@
 .fade-leave-to {
   opacity: 0;
 }
+
+/* Confirmation Banner (from original website) */
+.confirm-banner-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+}
+
+.confirm-banner {
+  background: #e10a19; /* swiss-red */
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.confirm-banner-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  opacity: 0.7;
+  line-height: 1;
+  padding: 0;
+  transition: opacity 0.2s;
+}
+
+.confirm-banner-close:hover {
+  opacity: 1;
+}
+
+/* Confirmation banner Vue transition */
+.confirm-banner-enter-active {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.confirm-banner-leave-active {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.confirm-banner-enter-from {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.confirm-banner-leave-to {
+  opacity: 0;
+  transform: translateY(-100%);
+}

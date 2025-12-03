@@ -1,6 +1,6 @@
 <!--
   Main translation interface component.
-  Auto-translates with 300ms debounce as user types.
+  Auto-translates with two-phase debounce: 500ms loading indicator, 1000ms API call.
 -->
 <template>
   <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden" style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), 0 0 60px 20px rgba(218, 41, 28, 0.12);">
@@ -86,9 +86,9 @@
 
       <!-- Target text -->
       <div class="relative bg-neutral-50">
-        <!-- Loading indicator -->
+        <!-- Loading indicator (shows during pending translation or active API call) -->
         <div
-          v-if="isLoading"
+          v-if="isPendingTranslation || isLoading"
           class="absolute inset-0 flex items-center justify-center bg-neutral-50/80"
         >
           <div class="flex items-center gap-2 text-neutral-500">
@@ -251,9 +251,15 @@ const availableLanguages = [
   { code: 'it' },
 ]
 
-let debounceTimer: ReturnType<typeof setTimeout> | null = null
+// Two-phase debounce timers
+let loadingIndicatorTimer: ReturnType<typeof setTimeout> | null = null
+let apiCallTimer: ReturnType<typeof setTimeout> | null = null
+
+// Shows loading spinner before API call (visual feedback while typing)
+const isPendingTranslation = ref(false)
 
 async function performTranslation() {
+  isPendingTranslation.value = false
   if (!sourceText.value.trim()) {
     targetText.value = ''
     return
@@ -282,13 +288,30 @@ async function performTranslation() {
 }
 
 function debouncedTranslate() {
-  if (debounceTimer) {
-    clearTimeout(debounceTimer)
+  // Clear both timers when user types
+  if (loadingIndicatorTimer) {
+    clearTimeout(loadingIndicatorTimer)
+  }
+  if (apiCallTimer) {
+    clearTimeout(apiCallTimer)
+  }
+  isPendingTranslation.value = false
+
+  // Don't show loading for empty text
+  if (!sourceText.value.trim()) {
+    targetText.value = ''
+    return
   }
 
-  debounceTimer = setTimeout(() => {
+  // Phase 1: Show loading indicator after 500ms of inactivity
+  loadingIndicatorTimer = setTimeout(() => {
+    isPendingTranslation.value = true
+  }, 500)
+
+  // Phase 2: Trigger API call after 1000ms of inactivity
+  apiCallTimer = setTimeout(() => {
     performTranslation()
-  }, 300)
+  }, 1000)
 }
 
 // Watch for changes that trigger translation
@@ -382,8 +405,11 @@ async function copyTranslation() {
 
 // Cleanup on unmount
 onUnmounted(() => {
-  if (debounceTimer) {
-    clearTimeout(debounceTimer)
+  if (loadingIndicatorTimer) {
+    clearTimeout(loadingIndicatorTimer)
+  }
+  if (apiCallTimer) {
+    clearTimeout(apiCallTimer)
   }
 })
 </script>

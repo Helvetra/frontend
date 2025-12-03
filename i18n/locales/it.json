@@ -87,7 +87,7 @@
       }
     },
     "newsletter": {
-      "confirmed": "Sei iscritto! Grazie.",
+      "confirmed": "Fatto! La tua iscrizione è ora confermata.",
       "title": "Resta aggiornato",
       "subtitle": "Ricevi notifiche su nuove funzionalità e miglioramenti.",
       "placeholder": "tua&#64;email.ch",
@@ -154,8 +154,7 @@
     "output": {
       "title": "Non controlliamo l'output",
       "text1": "L'IA traduce. Non controlliamo ogni risultato. Le traduzioni possono essere imperfette, goffe o sbagliate. È la realtà del lavoro con l'IA.",
-      "text2": "Se noti qualcosa che non va —",
-      "tellUs": "faccelo sapere."
+      "text2": "Se noti qualcosa che non va — <a href=\"mailto:gruezi{'@'}helvetra.ch\" class=\"text-swiss-red hover:underline\">faccelo sapere</a>. Il tuo feedback rende Helvetra migliore."
     },
     "money": {
       "title": "Dove vanno i soldi",

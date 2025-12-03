@@ -2,10 +2,7 @@
   About page with transparency sections about Helvetra.
 -->
 <template>
-  <div class="min-h-screen flex flex-col">
-    <AppHeader />
-
-    <main class="flex-1 py-16 md:py-24">
+  <div class="py-16 md:py-24">
       <div class="max-w-[800px] mx-auto px-4 md:px-8">
         <h1 class="text-[2.5rem] font-normal text-black mb-12">
           {{ $t('about.title') }}
@@ -45,12 +42,7 @@
           <p class="text-neutral-600 leading-relaxed mb-4">
             {{ $t('about.output.text1') }}
           </p>
-          <p class="text-neutral-600 leading-relaxed">
-            {{ $t('about.output.text2') }}
-            <a href="mailto:gruezi@helvetra.ch" class="text-swiss-red hover:underline">
-              {{ $t('about.output.tellUs') }}
-            </a>
-          </p>
+          <p class="text-neutral-600 leading-relaxed" v-html="$t('about.output.text2')"></p>
         </section>
 
         <!-- Where the Money Goes -->
@@ -87,9 +79,6 @@
           {{ $t('about.backLink') }}
         </NuxtLink>
       </div>
-    </main>
-
-    <AppFooter />
   </div>
 </template>
 

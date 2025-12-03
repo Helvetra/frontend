@@ -87,7 +87,7 @@
       }
     },
     "newsletter": {
-      "confirmed": "Vous êtes inscrit·e ! Merci.",
+      "confirmed": "C'est fait ! Votre inscription est maintenant confirmée.",
       "title": "Restez informé",
       "subtitle": "Recevez des notifications sur les nouvelles fonctionnalités et améliorations.",
       "placeholder": "votre&#64;email.ch",
@@ -143,7 +143,7 @@
     "title": "À propos de Helvetra",
     "pretensions": {
       "title": "Sans prétention",
-      "text1": "Nous ne sommes pas linguistes. Nous ne sommes pas expert·e·s en traduction. Nous ne prétendons pas qu'Helvetra traduit mieux que DeepL, Google ou quiconque.",
+      "text1": "Nous ne sommes pas linguistes. Nous ne sommes pas experts en traduction. Nous ne prétendons pas qu'Helvetra traduit mieux que DeepL, Google ou quiconque.",
       "text2": "Nous sommes une petite équipe en Suisse qui a trouvé amusant de créer une application de traduction avec de la technologie suisse — et de voir où ça mène."
     },
     "swiss": {
@@ -154,16 +154,15 @@
     "output": {
       "title": "Nous ne contrôlons pas les résultats",
       "text1": "L'IA traduit. Nous ne vérifions pas chaque résultat. Les traductions peuvent être imparfaites, maladroites ou fausses. C'est la réalité du travail avec l'IA.",
-      "text2": "Si vous remarquez quelque chose —",
-      "tellUs": "dites-le nous."
+      "text2": "Si vous remarquez quelque chose — <a href=\"mailto:gruezi{'@'}helvetra.ch\" class=\"text-swiss-red hover:underline\">dites-le nous</a>. Vos retours rendent Helvetra meilleur."
     },
     "money": {
       "title": "Où va l'argent",
-      "text": "Les revenus vont directement à Helvetra. Pas de commission pour Apertus, Infomaniak ou Payrexx — juste leurs frais standards. Nous sommes indépendant·e·s."
+      "text": "Les revenus vont directement à Helvetra. Pas de commission pour Apertus, Infomaniak ou Payrexx — juste leurs frais standards. Nous sommes indépendants."
     },
     "fun": {
       "title": "Un projet pour le plaisir",
-      "text1": "C'est une expérience. Une lettre d'amour à la technologie suisse.",
+      "text1": "C'est un expériment. Une lettre d'amour à la technologie suisse.",
       "text2": "Si vous souhaitez voir Helvetra évoluer, partagez-le, utilisez-le, donnez votre avis. C'est tout ce que nous demandons."
     },
     "backLink": "Retour à Helvetra"

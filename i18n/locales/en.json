@@ -87,7 +87,7 @@
       }
     },
     "newsletter": {
-      "confirmed": "You're subscribed! Thank you for joining.",
+      "confirmed": "You're in! Your subscription is now confirmed.",
       "title": "Stay updated",
       "subtitle": "Get notified about new features and improvements.",
       "placeholder": "your{'@'}email.com",
@@ -154,8 +154,7 @@
     "output": {
       "title": "We Don't Control the Output",
       "text1": "AI translates. We don't review every result. Translations may be imperfect, awkward, or wrong. That's the reality of working with AI.",
-      "text2": "If you spot something off —",
-      "tellUs": "tell us."
+      "text2": "If you spot something off — <a href=\"mailto:gruezi{'@'}helvetra.ch\" class=\"text-swiss-red hover:underline\">tell us</a>. Your feedback makes Helvetra sharper."
     },
     "money": {
       "title": "Where the Money Goes",
