@@ -79,8 +79,11 @@
           :placeholder="$t('translate.placeholder')"
           class="w-full h-48 p-4 resize-none border-none focus:outline-none focus:ring-0 text-neutral-900 placeholder-neutral-400"
         />
-        <div class="absolute bottom-2 right-2 text-xs text-neutral-400">
-          {{ sourceText.length }}
+        <div
+          class="absolute bottom-2 right-2 text-xs"
+          :class="sourceText.length > 1000 ? 'text-red-500 font-medium' : 'text-neutral-400'"
+        >
+          {{ sourceText.length.toLocaleString() }} / 1'000
         </div>
       </div>
 
@@ -105,7 +108,7 @@
           v-else-if="error"
           class="absolute inset-0 flex items-center justify-center p-4"
         >
-          <p class="text-sm text-red-500 text-center">{{ error }}</p>
+          <p class="text-sm text-red-500 text-center">{{ $t(`errors.${error}`) }}</p>
         </div>
 
         <!-- Translation result -->

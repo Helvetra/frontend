@@ -65,14 +65,25 @@ export function useTranslation() {
       error.value = 'Translation failed'
       return null
     } catch (e) {
-      const fetchError = e as { data?: TranslationResponse; statusCode?: number }
+      const fetchError = e as {
+        data?: TranslationResponse | { detail?: Array<{ type: string; msg: string }> }
+        statusCode?: number
+      }
 
       if (fetchError.data?.error) {
-        error.value = fetchError.data.error.message
+        error.value = (fetchError.data as TranslationResponse).error!.message
+      } else if (fetchError.statusCode === 422) {
+        // Pydantic validation error
+        const detail = (fetchError.data as { detail?: Array<{ type: string; msg: string }> })?.detail
+        if (detail?.[0]?.type === 'string_too_long') {
+          error.value = 'TEXT_TOO_LONG'
+        } else {
+          error.value = 'VALIDATION_ERROR'
+        }
       } else if (fetchError.statusCode === 429) {
-        error.value = 'Too many requests. Please wait a moment.'
+        error.value = 'RATE_LIMITED'
       } else {
-        error.value = 'Connection error. Please try again.'
+        error.value = 'CONNECTION_ERROR'
       }
 
       return null

@@ -135,6 +135,12 @@
     "fr": "Francese",
     "it": "Italiano"
   },
+  "errors": {
+    "TEXT_TOO_LONG": "Testo troppo lungo. Questa prima versione supporta fino a 1'000 caratteri. Hai bisogno di più? Scrivici a gruezi{'@'}helvetra.ch",
+    "VALIDATION_ERROR": "Richiesta non valida. Riprova.",
+    "RATE_LIMITED": "Traduci veloce! Questa prima versione ha limiti di utilizzo. Vuoi accesso illimitato? Scrivici a gruezi{'@'}helvetra.ch",
+    "CONNECTION_ERROR": "Errore di connessione. Riprova."
+  },
   "footer": {
     "madeIn": "Made in Switzerland",
     "privacy": "Informativa sulla privacy"

@@ -135,6 +135,12 @@
     "fr": "Französisch",
     "it": "Italiänisch"
   },
+  "errors": {
+    "TEXT_TOO_LONG": "Text z'lang. Die erschti Version unterstützt bis zu 1'000 Zeiche. Meh bruucht? Schrib eus a gruezi{'@'}helvetra.ch",
+    "VALIDATION_ERROR": "Ungültigi Afrag. Bitte probier's nomal.",
+    "RATE_LIMITED": "Du übersetzisch schnäll! Die erschti Version het Nutziglimits. Unbegränzte Zuegang gwinnscht? Schrib eus a gruezi{'@'}helvetra.ch",
+    "CONNECTION_ERROR": "Verbindigsfehler. Bitte probier's nomal."
+  },
   "footer": {
     "madeIn": "Made in Switzerland",
     "privacy": "Dateschutzerchlärig"
