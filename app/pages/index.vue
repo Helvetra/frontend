@@ -17,6 +17,7 @@
       </div>
     </Transition>
     <MarketingHeroSection />
+    <MarketingTaglineSection />
     <MarketingTrustSection />
     <MarketingFeaturesSection />
     <MarketingLanguagesSection />

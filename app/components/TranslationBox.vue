@@ -77,7 +77,7 @@
         <textarea
           v-model="sourceText"
           :placeholder="$t('translate.placeholder')"
-          class="w-full h-48 p-4 resize-none border-none focus:outline-none focus:ring-0 text-neutral-900 placeholder-neutral-400"
+          class="w-full h-64 p-4 resize-none border-none focus:outline-none focus:ring-0 text-neutral-900 placeholder-neutral-400"
         />
         <div
           class="absolute bottom-2 right-2 text-xs"
@@ -88,7 +88,7 @@
       </div>
 
       <!-- Target text -->
-      <div class="relative bg-neutral-50 h-48">
+      <div class="relative bg-neutral-50 h-64">
         <!-- Scrollable content area -->
         <div class="h-full overflow-y-auto p-4 pb-12">
           <!-- Error message -->
