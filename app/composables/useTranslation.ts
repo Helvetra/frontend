@@ -41,7 +41,7 @@ export function useTranslation() {
 
     try {
       const response = await $fetch<TranslationResponse>(
-        `${config.public.apiBase}/api/v1/translate`,
+        `${config.public.apiBase}/v1/translate`,
         {
           method: 'POST',
           body: {

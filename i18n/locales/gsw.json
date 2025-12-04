@@ -90,7 +90,7 @@
       "confirmed": "Gschafft! Dini Amäldig isch jetzt bestätigt.",
       "title": "Blib informiert",
       "subtitle": "Erhalt Benachrichtigunge über neui Funktione und Verbesserige.",
-      "placeholder": "dini&#64;email.ch",
+      "placeholder": "dini{'@'}email.ch",
       "button": "Abonniere",
       "privacy": "Dini E-Mail wird nur für üse Newsletter bruucht. Jederziit abmälde."
     }

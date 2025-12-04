@@ -90,7 +90,7 @@
       "confirmed": "Geschafft! Ihre Anmeldung ist jetzt bestätigt.",
       "title": "Bleiben Sie informiert",
       "subtitle": "Erhalten Sie Benachrichtigungen über neue Funktionen und Verbesserungen.",
-      "placeholder": "ihre&#64;email.ch",
+      "placeholder": "ihre{'@'}email.ch",
       "button": "Abonnieren",
       "privacy": "Ihre E-Mail wird nur für unseren Newsletter verwendet. Jederzeit abmelden."
     }

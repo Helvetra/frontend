@@ -55,7 +55,7 @@ export function useFeedback() {
 
     try {
       const response = await $fetch<FeedbackResponse>(
-        `${config.public.apiBase}/api/v1/feedback`,
+        `${config.public.apiBase}/v1/feedback`,
         {
           method: 'POST',
           body: {

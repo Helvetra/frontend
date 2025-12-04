@@ -90,7 +90,7 @@
       "confirmed": "Fatto! La tua iscrizione è ora confermata.",
       "title": "Resta aggiornato",
       "subtitle": "Ricevi notifiche su nuove funzionalità e miglioramenti.",
-      "placeholder": "tua&#64;email.ch",
+      "placeholder": "tua{'@'}email.ch",
       "button": "Iscriviti",
       "privacy": "La tua email è usata solo per la nostra newsletter. Cancellati quando vuoi."
     }
