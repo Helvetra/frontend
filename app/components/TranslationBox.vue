@@ -88,37 +88,37 @@
       </div>
 
       <!-- Target text -->
-      <div class="relative bg-neutral-50">
-        <!-- Loading indicator (shows during pending translation or active API call) -->
-        <div
-          v-if="isPendingTranslation || isLoading"
-          class="absolute inset-0 flex items-center justify-center bg-neutral-50/80"
-        >
-          <div class="flex items-center gap-2 text-neutral-500">
-            <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
-              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-            </svg>
-            <span class="text-sm">{{ $t('translate.button') }}...</span>
+      <div class="relative bg-neutral-50 h-48">
+        <!-- Scrollable content area -->
+        <div class="h-full overflow-y-auto p-4 pb-12">
+          <!-- Error message -->
+          <div
+            v-if="error && !isLoading"
+            class="h-full flex items-center justify-center"
+          >
+            <p class="text-sm text-red-500 text-center">{{ $t(`errors.${error}`) }}</p>
           </div>
-        </div>
 
-        <!-- Error message -->
-        <div
-          v-else-if="error"
-          class="absolute inset-0 flex items-center justify-center p-4"
-        >
-          <p class="text-sm text-red-500 text-center">{{ $t(`errors.${error}`) }}</p>
-        </div>
+          <template v-else>
+            <!-- Existing translation (pulses subtly when loading) -->
+            <div
+              v-if="targetText"
+              class="text-neutral-900 whitespace-pre-wrap"
+              :class="{ 'animate-pulse-subtle': isPendingTranslation || isLoading }"
+            >{{ targetText }}</div>
 
-        <!-- Translation result -->
-        <textarea
-          v-else
-          v-model="targetText"
-          readonly
-          class="w-full h-48 p-4 resize-none border-none focus:outline-none bg-transparent text-neutral-900"
-          :class="{ 'text-neutral-400 italic': !targetText }"
-        />
+            <!-- Skeleton loading (flows naturally below text) -->
+            <div
+              v-if="isPendingTranslation || isLoading"
+              class="space-y-2"
+              :class="{ 'mt-3': targetText }"
+            >
+              <div class="h-3 bg-neutral-200/60 rounded animate-pulse w-3/4" />
+              <div class="h-3 bg-neutral-200/60 rounded animate-pulse w-5/6" />
+              <div class="h-3 bg-neutral-200/60 rounded animate-pulse w-1/2" />
+            </div>
+          </template>
+        </div>
 
         <!-- Bottom actions: feedback and copy -->
         <div
