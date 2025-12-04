@@ -77,7 +77,9 @@
         <textarea
           v-model="sourceText"
           :placeholder="$t('translate.placeholder')"
-          class="w-full h-64 p-4 resize-none border-none focus:outline-none focus:ring-0 text-neutral-900 placeholder-neutral-400"
+          ref="sourceTextarea"
+          class="w-full h-40 md:h-64 p-4 resize-none border-none focus:outline-none focus:ring-0 text-neutral-900 placeholder-neutral-400"
+          @focus="scrollIntoViewOnMobile"
         />
         <div
           class="absolute bottom-2 right-2 text-xs"
@@ -88,7 +90,7 @@
       </div>
 
       <!-- Target text -->
-      <div class="relative bg-neutral-50 h-64">
+      <div class="relative bg-neutral-50 h-40 md:h-64">
         <!-- Scrollable content area -->
         <div class="h-full overflow-y-auto p-4 pb-12">
           <!-- Error message -->
@@ -200,6 +202,19 @@ const sourceText = ref('')
 const targetText = ref('')
 const copied = ref(false)
 const formality = ref<'informal' | 'formal'>('informal')
+const sourceTextarea = ref<HTMLTextAreaElement | null>(null)
+
+/**
+ * Scroll textarea into view on mobile when keyboard appears.
+ */
+function scrollIntoViewOnMobile() {
+  if (import.meta.client && window.innerWidth < 768 && sourceTextarea.value) {
+    // Small delay to let keyboard appear
+    setTimeout(() => {
+      sourceTextarea.value?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }, 300)
+  }
+}
 
 // Show formality toggle only for languages with T-V distinction
 const showFormalityToggle = computed(() =>
