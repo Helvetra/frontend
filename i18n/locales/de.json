@@ -3,9 +3,15 @@
     "title": "Helvetra",
     "tagline": "Die Schweizer Übersetzungs-App"
   },
+  "meta": {
+    "title": "Helvetra - Die urschweizerische Übersetzungs-App",
+    "description": "Eine einfache, private Übersetzungs-App aus der Schweiz. Schweizerdeutsch, Französisch, Deutsch, Italienisch, Englisch. Ihre Worte bleiben in der Schweiz."
+  },
   "marketing": {
     "hero": {
-      "title": "Die urschweizerische Übersetzungs-App",
+      "titleStart": "Die",
+      "titleEmphasis": "urschweizerische",
+      "titleEnd": "Übersetzungs-App",
       "subtitle": "Einfach, privat, präzise. In der Schweiz entwickelt für alle, die ihre Worte schätzen."
     },
     "trust": {

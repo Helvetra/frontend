@@ -3,9 +3,15 @@
     "title": "Helvetra",
     "tagline": "L'application de traduction suisse"
   },
+  "meta": {
+    "title": "Helvetra - L'application de traduction très suisse",
+    "description": "Une application de traduction simple et privée, développée en Suisse. Suisse allemand, français, allemand, italien, anglais. Vos mots restent en Suisse."
+  },
   "marketing": {
     "hero": {
-      "title": "L'application de traduction très suisse",
+      "titleStart": "L'application de traduction",
+      "titleEmphasis": "très",
+      "titleEnd": "suisse",
       "subtitle": "Simple, privée, précise. Développée en Suisse pour tous ceux qui tiennent à leurs mots."
     },
     "trust": {

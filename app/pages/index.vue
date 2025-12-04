@@ -48,11 +48,11 @@ onMounted(() => {
 })
 
 useHead({
-  title: 'Helvetra - The very Swiss translation app',
+  title: t('meta.title'),
   meta: [
     {
       name: 'description',
-      content: 'A simple, private translation app built in Switzerland. Swiss German, French, German, Italian, English. Your words stay in Switzerland.',
+      content: t('meta.description'),
     },
   ],
 })

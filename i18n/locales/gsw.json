@@ -3,9 +3,15 @@
     "title": "Helvetra",
     "tagline": "D'Schwiizer Übersetzigsapp"
   },
+  "meta": {
+    "title": "Helvetra - D'urschwiizerischi Übersetzigsapp",
+    "description": "E eifachi, privati Übersetzigsapp us de Schwiiz. Schwyzerdütsch, Französisch, Dütsch, Italiänisch, Englisch. Dini Wort blibed id Schwiiz."
+  },
   "marketing": {
     "hero": {
-      "title": "D'urschwiizerischi Übersetzigsapp",
+      "titleStart": "D'",
+      "titleEmphasis": "urschwiizerischi",
+      "titleEnd": "Übersetzigsapp",
       "subtitle": "Eifach, privat, präzis. Id Schwiiz baut für alli, wo ihri Wort schätzed."
     },
     "trust": {

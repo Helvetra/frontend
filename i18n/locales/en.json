@@ -3,9 +3,15 @@
     "title": "Helvetra",
     "tagline": "The very Swiss translation app"
   },
+  "meta": {
+    "title": "Helvetra - The very Swiss translation app",
+    "description": "A simple, private translation app built in Switzerland. Swiss German, French, German, Italian, English. Your words stay in Switzerland."
+  },
   "marketing": {
     "hero": {
-      "title": "The very Swiss translation app",
+      "titleStart": "The",
+      "titleEmphasis": "very",
+      "titleEnd": "Swiss translation app",
       "subtitle": "Simple, private, precise. Built in Switzerland for everyone who values their words."
     },
     "trust": {

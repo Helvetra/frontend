@@ -9,7 +9,7 @@
         <!-- Left: Tagline -->
         <div class="text-center md:text-left">
           <h1 class="text-[3.5rem] leading-tight font-normal text-black mb-6">
-            The <em class="italic">very</em> Swiss translation app
+            {{ $t('marketing.hero.titleStart') }} <em class="italic">{{ $t('marketing.hero.titleEmphasis') }}</em> {{ $t('marketing.hero.titleEnd') }}
           </h1>
           <p class="text-lg text-neutral-600 max-w-md mx-auto md:mx-0">
             {{ $t('marketing.hero.subtitle') }}
