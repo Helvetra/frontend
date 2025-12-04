@@ -268,11 +268,6 @@ async function performTranslation() {
     return
   }
 
-  if (sourceLanguage.value === targetLanguage.value) {
-    targetText.value = sourceText.value
-    return
-  }
-
   // Only send formality for languages that support it
   const effectiveFormality = FORMALITY_LANGUAGES.includes(targetLanguage.value)
     ? formality.value
@@ -319,11 +314,19 @@ function debouncedTranslate() {
 
 // Watch for changes that trigger translation
 watch(sourceText, debouncedTranslate)
-watch(sourceLanguage, () => {
+watch(sourceLanguage, (newLang, oldLang) => {
+  // If user selects same language as target, swap them
+  if (newLang === targetLanguage.value) {
+    targetLanguage.value = oldLang
+  }
   saveLanguagePreferences()
   performTranslation()
 })
-watch(targetLanguage, () => {
+watch(targetLanguage, (newLang, oldLang) => {
+  // If user selects same language as source, swap them
+  if (newLang === sourceLanguage.value) {
+    sourceLanguage.value = oldLang
+  }
   saveLanguagePreferences()
   performTranslation()
 })
