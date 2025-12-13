@@ -104,7 +104,64 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "login": "Log in",
+    "register": "Sign up",
+    "account": "Account"
+  },
+  "auth": {
+    "email": "Email",
+    "emailPlaceholder": "your{'@'}email.com",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "loading": "Loading...",
+    "login": {
+      "title": "Log in",
+      "submit": "Log in",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Sign up"
+    },
+    "register": {
+      "title": "Create account",
+      "submit": "Create account",
+      "confirmPassword": "Confirm password",
+      "confirmPasswordPlaceholder": "Confirm your password",
+      "passwordHint": "At least 8 characters with letters and numbers",
+      "privacyNotice": "By creating an account, you agree to our",
+      "privacyLink": "Privacy Policy",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Log in"
+    },
+    "errors": {
+      "invalidCredentials": "Invalid email or password",
+      "emailExists": "An account with this email already exists",
+      "validationError": "Please check your input and try again",
+      "rateLimited": "Too many attempts. Please wait a moment.",
+      "connectionError": "Connection error. Please try again.",
+      "passwordMismatch": "Passwords do not match",
+      "passwordTooShort": "Password must be at least 8 characters",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "account": {
+    "title": "Account",
+    "logout": "Log out",
+    "profile": {
+      "title": "Profile",
+      "emailStatus": "Email status",
+      "verified": "Verified",
+      "unverified": "Not verified",
+      "resendVerification": "Resend verification email",
+      "resendIn": "Resend in {seconds}s",
+      "verificationSent": "Verification email sent!"
+    },
+    "subscription": {
+      "title": "Subscription",
+      "plan": "Plan",
+      "free": "Free",
+      "usage": "Usage this period",
+      "upgrade": "Upgrade to Helvetra+"
+    }
   },
   "translate": {
     "placeholder": "Enter text to translate...",

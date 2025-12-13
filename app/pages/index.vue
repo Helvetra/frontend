@@ -29,7 +29,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const route = useRoute()
-const router = useRouter()
 
 // Newsletter confirmation banner
 const showConfirmationBanner = ref(false)

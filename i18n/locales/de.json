@@ -104,7 +104,64 @@
   "nav": {
     "home": "Startseite",
     "about": "Über uns",
-    "privacy": "Datenschutz"
+    "privacy": "Datenschutz",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "account": "Konto"
+  },
+  "auth": {
+    "email": "E-Mail",
+    "emailPlaceholder": "ihre{'@'}email.ch",
+    "password": "Passwort",
+    "passwordPlaceholder": "Passwort eingeben",
+    "loading": "Laden...",
+    "login": {
+      "title": "Anmelden",
+      "submit": "Anmelden",
+      "noAccount": "Noch kein Konto?",
+      "registerLink": "Registrieren"
+    },
+    "register": {
+      "title": "Konto erstellen",
+      "submit": "Konto erstellen",
+      "confirmPassword": "Passwort bestätigen",
+      "confirmPasswordPlaceholder": "Passwort bestätigen",
+      "passwordHint": "Mindestens 8 Zeichen mit Buchstaben und Zahlen",
+      "privacyNotice": "Mit der Erstellung eines Kontos stimmen Sie unserer",
+      "privacyLink": "Datenschutzerklärung",
+      "hasAccount": "Bereits ein Konto?",
+      "loginLink": "Anmelden"
+    },
+    "errors": {
+      "invalidCredentials": "Ungültige E-Mail oder Passwort",
+      "emailExists": "Ein Konto mit dieser E-Mail existiert bereits",
+      "validationError": "Bitte überprüfen Sie Ihre Eingaben",
+      "rateLimited": "Zu viele Versuche. Bitte warten Sie einen Moment.",
+      "connectionError": "Verbindungsfehler. Bitte erneut versuchen.",
+      "passwordMismatch": "Passwörter stimmen nicht überein",
+      "passwordTooShort": "Passwort muss mindestens 8 Zeichen lang sein",
+      "generic": "Etwas ist schiefgelaufen. Bitte erneut versuchen."
+    }
+  },
+  "account": {
+    "title": "Konto",
+    "logout": "Abmelden",
+    "profile": {
+      "title": "Profil",
+      "emailStatus": "E-Mail-Status",
+      "verified": "Verifiziert",
+      "unverified": "Nicht verifiziert",
+      "resendVerification": "Bestätigungs-E-Mail erneut senden",
+      "resendIn": "Erneut senden in {seconds}s",
+      "verificationSent": "Bestätigungs-E-Mail gesendet!"
+    },
+    "subscription": {
+      "title": "Abonnement",
+      "plan": "Plan",
+      "free": "Kostenlos",
+      "usage": "Nutzung in dieser Periode",
+      "upgrade": "Auf Helvetra+ upgraden"
+    }
   },
   "translate": {
     "placeholder": "Text zum Übersetzen eingeben...",

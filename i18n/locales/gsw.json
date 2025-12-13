@@ -104,7 +104,64 @@
   "nav": {
     "home": "Hei",
     "about": "Über eus",
-    "privacy": "Dateschutz"
+    "privacy": "Dateschutz",
+    "login": "Amälde",
+    "register": "Registriere",
+    "account": "Konto"
+  },
+  "auth": {
+    "email": "E-Mail",
+    "emailPlaceholder": "dini{'@'}email.ch",
+    "password": "Passwort",
+    "passwordPlaceholder": "Passwort iigeh",
+    "loading": "Ladet...",
+    "login": {
+      "title": "Amälde",
+      "submit": "Amälde",
+      "noAccount": "No keis Konto?",
+      "registerLink": "Registriere"
+    },
+    "register": {
+      "title": "Konto erstelle",
+      "submit": "Konto erstelle",
+      "confirmPassword": "Passwort bestätige",
+      "confirmPasswordPlaceholder": "Passwort bestätige",
+      "passwordHint": "Mindestens 8 Zeiche mit Buechstabe und Zahle",
+      "privacyNotice": "Mit em Erstelle vomene Konto stimmsch du üsere",
+      "privacyLink": "Dateschutzerchlärig",
+      "hasAccount": "Scho es Konto?",
+      "loginLink": "Amälde"
+    },
+    "errors": {
+      "invalidCredentials": "Ungültigi E-Mail oder Passwort",
+      "emailExists": "Es Konto mit dere E-Mail existiert scho",
+      "validationError": "Bitte überprüef dini Iigabe",
+      "rateLimited": "Z'vill Versüech. Bitte wart e Momänt.",
+      "connectionError": "Verbindigsfehler. Bitte probier's nomal.",
+      "passwordMismatch": "Passwörter stimmed nöd überein",
+      "passwordTooShort": "Passwort mues mindestens 8 Zeiche lang sii",
+      "generic": "Öppis isch schief gloffe. Bitte probier's nomal."
+    }
+  },
+  "account": {
+    "title": "Konto",
+    "logout": "Abmälde",
+    "profile": {
+      "title": "Profil",
+      "emailStatus": "E-Mail-Status",
+      "verified": "Verifiziert",
+      "unverified": "Nöd verifiziert",
+      "resendVerification": "Bestätigigsmail nomal schicke",
+      "resendIn": "Nomal schicke in {seconds}s",
+      "verificationSent": "Bestätigigsmail verschickt!"
+    },
+    "subscription": {
+      "title": "Abonnemänt",
+      "plan": "Plan",
+      "free": "Gratis",
+      "usage": "Nutztig i dere Period",
+      "upgrade": "Uf Helvetra+ upgrade"
+    }
   },
   "translate": {
     "placeholder": "Text zum Übersetze iigeh...",

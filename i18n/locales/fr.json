@@ -104,7 +104,64 @@
   "nav": {
     "home": "Accueil",
     "about": "À propos",
-    "privacy": "Confidentialité"
+    "privacy": "Confidentialité",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "account": "Compte"
+  },
+  "auth": {
+    "email": "E-mail",
+    "emailPlaceholder": "votre{'@'}email.ch",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "Entrez votre mot de passe",
+    "loading": "Chargement...",
+    "login": {
+      "title": "Connexion",
+      "submit": "Se connecter",
+      "noAccount": "Pas encore de compte ?",
+      "registerLink": "S'inscrire"
+    },
+    "register": {
+      "title": "Créer un compte",
+      "submit": "Créer un compte",
+      "confirmPassword": "Confirmer le mot de passe",
+      "confirmPasswordPlaceholder": "Confirmez votre mot de passe",
+      "passwordHint": "Au moins 8 caractères avec lettres et chiffres",
+      "privacyNotice": "En créant un compte, vous acceptez notre",
+      "privacyLink": "Politique de confidentialité",
+      "hasAccount": "Déjà un compte ?",
+      "loginLink": "Se connecter"
+    },
+    "errors": {
+      "invalidCredentials": "E-mail ou mot de passe invalide",
+      "emailExists": "Un compte avec cet e-mail existe déjà",
+      "validationError": "Veuillez vérifier vos informations",
+      "rateLimited": "Trop de tentatives. Veuillez patienter.",
+      "connectionError": "Erreur de connexion. Veuillez réessayer.",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères",
+      "generic": "Une erreur s'est produite. Veuillez réessayer."
+    }
+  },
+  "account": {
+    "title": "Compte",
+    "logout": "Déconnexion",
+    "profile": {
+      "title": "Profil",
+      "emailStatus": "Statut e-mail",
+      "verified": "Vérifié",
+      "unverified": "Non vérifié",
+      "resendVerification": "Renvoyer l'e-mail de vérification",
+      "resendIn": "Renvoyer dans {seconds}s",
+      "verificationSent": "E-mail de vérification envoyé !"
+    },
+    "subscription": {
+      "title": "Abonnement",
+      "plan": "Plan",
+      "free": "Gratuit",
+      "usage": "Utilisation cette période",
+      "upgrade": "Passer à Helvetra+"
+    }
   },
   "translate": {
     "placeholder": "Entrez le texte à traduire...",
