@@ -130,7 +130,11 @@
       "privacyNotice": "By creating an account, you agree to our",
       "privacyLink": "Privacy Policy",
       "hasAccount": "Already have an account?",
-      "loginLink": "Log in"
+      "loginLink": "Log in",
+      "checkEmail": "Check your email",
+      "checkEmailDescription": "We sent a verification link to {email}. Click the link to verify your account.",
+      "continueToApp": "Continue to Helvetra",
+      "noEmail": "Didn't receive the email?"
     },
     "errors": {
       "invalidCredentials": "Invalid email or password",
@@ -142,6 +146,17 @@
       "passwordTooShort": "Password must be at least 8 characters",
       "generic": "Something went wrong. Please try again."
     }
+  },
+  "verification": {
+    "title": "Email Verification",
+    "verifying": "Verifying your email...",
+    "success": "Email verified!",
+    "successDescription": "Your email has been verified. You now have full access to your account.",
+    "continueToApp": "Continue to Helvetra",
+    "error": "Verification failed",
+    "errorDescription": "This verification link is invalid or has expired. Please request a new verification email.",
+    "backToLogin": "Back to login",
+    "banner": "Please verify your email to secure your account."
   },
   "account": {
     "title": "Account",

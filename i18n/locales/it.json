@@ -130,7 +130,11 @@
       "privacyNotice": "Creando un account, accetti la nostra",
       "privacyLink": "Informativa sulla privacy",
       "hasAccount": "Hai già un account?",
-      "loginLink": "Accedi"
+      "loginLink": "Accedi",
+      "checkEmail": "Controlla la tua e-mail",
+      "checkEmailDescription": "Abbiamo inviato un link di verifica a {email}. Clicca sul link per verificare il tuo account.",
+      "continueToApp": "Continua su Helvetra",
+      "noEmail": "Non hai ricevuto l'e-mail?"
     },
     "errors": {
       "invalidCredentials": "E-mail o password non validi",
@@ -142,6 +146,17 @@
       "passwordTooShort": "La password deve essere di almeno 8 caratteri",
       "generic": "Qualcosa è andato storto. Riprova."
     }
+  },
+  "verification": {
+    "title": "Verifica e-mail",
+    "verifying": "Verifica in corso...",
+    "success": "E-mail verificata!",
+    "successDescription": "La tua e-mail è stata verificata. Ora hai pieno accesso al tuo account.",
+    "continueToApp": "Continua su Helvetra",
+    "error": "Verifica fallita",
+    "errorDescription": "Questo link di verifica non è valido o è scaduto. Richiedi una nuova e-mail di verifica.",
+    "backToLogin": "Torna al login",
+    "banner": "Verifica la tua e-mail per proteggere il tuo account."
   },
   "account": {
     "title": "Account",

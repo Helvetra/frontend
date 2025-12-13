@@ -130,7 +130,11 @@
       "privacyNotice": "Mit em Erstelle vomene Konto stimmsch du üsere",
       "privacyLink": "Dateschutzerchlärig",
       "hasAccount": "Scho es Konto?",
-      "loginLink": "Amälde"
+      "loginLink": "Amälde",
+      "checkEmail": "Lueg i dini E-Mail",
+      "checkEmailDescription": "Mir hend en Bestätigigslink a {email} gschickt. Klick uf de Link zum dis Konto verifiziere.",
+      "continueToApp": "Wiiter zu Helvetra",
+      "noEmail": "Kei E-Mail becho?"
     },
     "errors": {
       "invalidCredentials": "Ungültigi E-Mail oder Passwort",
@@ -142,6 +146,17 @@
       "passwordTooShort": "Passwort mues mindestens 8 Zeiche lang sii",
       "generic": "Öppis isch schief gloffe. Bitte probier's nomal."
     }
+  },
+  "verification": {
+    "title": "E-Mail-Verifizierig",
+    "verifying": "E-Mail wird verifiziert...",
+    "success": "E-Mail verifiziert!",
+    "successDescription": "Dini E-Mail isch verifiziert. Du hesch jetzt volle Zuegang zu dim Konto.",
+    "continueToApp": "Wiiter zu Helvetra",
+    "error": "Verifizierig fählgschlage",
+    "errorDescription": "De Verifizieriggslink isch ungültig oder abgloffe. Bitte fordere en neui Bestätigigsmail aa.",
+    "backToLogin": "Zrugg zur Amäldig",
+    "banner": "Bitte verifizier dini E-Mail zum dis Konto z'sichre."
   },
   "account": {
     "title": "Konto",

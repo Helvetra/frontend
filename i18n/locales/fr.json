@@ -130,7 +130,11 @@
       "privacyNotice": "En créant un compte, vous acceptez notre",
       "privacyLink": "Politique de confidentialité",
       "hasAccount": "Déjà un compte ?",
-      "loginLink": "Se connecter"
+      "loginLink": "Se connecter",
+      "checkEmail": "Vérifiez votre e-mail",
+      "checkEmailDescription": "Nous avons envoyé un lien de vérification à {email}. Cliquez sur le lien pour confirmer votre compte.",
+      "continueToApp": "Continuer vers Helvetra",
+      "noEmail": "Vous n'avez pas reçu l'e-mail ?"
     },
     "errors": {
       "invalidCredentials": "E-mail ou mot de passe invalide",
@@ -142,6 +146,17 @@
       "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères",
       "generic": "Une erreur s'est produite. Veuillez réessayer."
     }
+  },
+  "verification": {
+    "title": "Vérification de l'e-mail",
+    "verifying": "Vérification en cours...",
+    "success": "E-mail vérifié !",
+    "successDescription": "Votre e-mail a été vérifié. Vous avez maintenant un accès complet à votre compte.",
+    "continueToApp": "Continuer vers Helvetra",
+    "error": "Échec de la vérification",
+    "errorDescription": "Ce lien de vérification est invalide ou a expiré. Veuillez demander un nouvel e-mail de vérification.",
+    "backToLogin": "Retour à la connexion",
+    "banner": "Veuillez vérifier votre e-mail pour sécuriser votre compte."
   },
   "account": {
     "title": "Compte",

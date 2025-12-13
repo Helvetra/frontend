@@ -359,6 +359,83 @@ export function useAuth() {
     }
   }
 
+  /**
+   * Verify email with token from verification link.
+   */
+  async function verifyEmail(token: string): Promise<boolean> {
+    isLoading.value = true
+    error.value = null
+
+    try {
+      const response = await $fetch<MessageResponse>(
+        `${config.public.apiBase}/v1/auth/verify-email`,
+        {
+          method: 'POST',
+          body: { token },
+        }
+      )
+
+      if (response.success) {
+        // Update local user state
+        if (user.value) {
+          user.value.emailVerified = true
+        }
+        return true
+      }
+
+      error.value = 'VERIFICATION_FAILED'
+      return false
+    } catch (e) {
+      const fetchError = e as { statusCode?: number }
+
+      if (fetchError.statusCode === 400) {
+        error.value = 'INVALID_TOKEN'
+      } else {
+        error.value = 'VERIFICATION_FAILED'
+      }
+
+      return false
+    } finally {
+      isLoading.value = false
+    }
+  }
+
+  /**
+   * Resend verification email.
+   */
+  async function resendVerification(
+    email: string,
+    locale?: string
+  ): Promise<{ success: boolean; retryAfter?: number }> {
+    isLoading.value = true
+    error.value = null
+
+    try {
+      const response = await $fetch<MessageResponse>(
+        `${config.public.apiBase}/v1/auth/resend-verification`,
+        {
+          method: 'POST',
+          body: { email, locale },
+        }
+      )
+
+      return { success: response.success }
+    } catch (e) {
+      const fetchError = e as { statusCode?: number; data?: { detail?: string }; response?: { headers?: Headers } }
+
+      if (fetchError.statusCode === 429) {
+        const retryAfter = parseInt(fetchError.data?.detail?.match(/(\d+)/)?.[1] || '60')
+        error.value = 'RESEND_RATE_LIMITED'
+        return { success: false, retryAfter }
+      }
+
+      error.value = 'RESEND_FAILED'
+      return { success: false }
+    } finally {
+      isLoading.value = false
+    }
+  }
+
   return {
     user,
     isAuthenticated,
@@ -371,5 +448,7 @@ export function useAuth() {
     fetchUser,
     initialize,
     getAuthHeader,
+    verifyEmail,
+    resendVerification,
   }
 }
