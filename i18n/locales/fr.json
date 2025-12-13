@@ -158,9 +158,12 @@
     "subscription": {
       "title": "Abonnement",
       "plan": "Plan",
-      "free": "Gratuit",
+      "free": "Basic",
+      "active": "Actif",
+      "renewsOn": "Se renouvelle le",
       "usage": "Utilisation cette période",
-      "upgrade": "Passer à Helvetra+"
+      "upgrade": "Passer à Helvetra+",
+      "manageInfo": "Pour gérer votre abonnement, contactez-nous à"
     }
   },
   "translate": {
@@ -203,6 +206,48 @@
     "registerCta": "Créer un compte gratuit",
     "alreadyAccount": "Déjà un compte ?",
     "loginLink": "Se connecter"
+  },
+  "pricing": {
+    "title": "Tarifs",
+    "subtitle": "Choisissez le plan qui vous convient. Passez à la version supérieure à tout moment.",
+    "perMonth": "/mois",
+    "popular": "Le plus populaire",
+    "currentPlan": "Plan actuel",
+    "paymentMethods": "Paiement sécurisé avec",
+    "questions": "Des questions ? Contactez-nous à",
+    "free": {
+      "name": "Basic",
+      "description": "Pour les traductions occasionnelles",
+      "price": "Gratuit",
+      "featureLimit": "10'000 caractères par mois",
+      "feature1": "Jusqu'à 1'000 caractères par traduction",
+      "feature2": "Toutes les langues suisses supportées",
+      "featureFormality": "Bascule tutoiement/vouvoiement",
+      "feature3": "Pas de tracking, confidentialité totale",
+      "cta": "Commencer gratuitement"
+    },
+    "pro": {
+      "name": "Helvetra+",
+      "description": "Pour les traducteurs réguliers",
+      "featureBasic": "Toutes les fonctionnalités Basic incluses",
+      "featureLimit": "500'000 caractères par mois",
+      "feature1": "Jusqu'à 5'000 caractères par traduction",
+      "feature2": "Traitement prioritaire",
+      "feature3": "Soutenez le développement suisse",
+      "cta": "Passer à Helvetra+"
+    },
+    "success": {
+      "title": "Bienvenue sur Helvetra+!",
+      "description": "Votre abonnement est maintenant actif. Merci de soutenir le développement suisse !",
+      "accountCta": "Voir votre compte",
+      "translateCta": "Commencer à traduire"
+    },
+    "cancel": {
+      "title": "Paiement annulé",
+      "description": "Pas de souci ! Votre paiement a été annulé. Vous pouvez réessayer quand vous voulez.",
+      "retryCta": "Retour aux tarifs",
+      "homeCta": "Retour à Helvetra"
+    }
   },
   "errors": {
     "TEXT_TOO_LONG": "Texte trop long. Cette première version supporte jusqu'à 1'000 caractères. Besoin de plus ? Écrivez-nous à gruezi{'@'}helvetra.ch",

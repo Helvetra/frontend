@@ -66,12 +66,26 @@
         <div class="space-y-3">
           <div class="flex justify-between items-center">
             <span class="text-neutral-600">{{ $t('account.subscription.plan') }}</span>
-            <span class="text-neutral-900 font-medium capitalize">
-              {{ user.tier === 'free' ? $t('account.subscription.free') : 'Helvetra+' }}
+            <span class="flex items-center gap-2">
+              <span
+                v-if="user.tier !== 'free'"
+                class="px-2 py-0.5 bg-swiss-red text-white text-xs font-medium rounded"
+              >
+                {{ $t('account.subscription.active') }}
+              </span>
+              <span class="text-neutral-900 font-medium">
+                {{ user.tier === 'free' ? $t('account.subscription.free') : 'Helvetra+' }}
+              </span>
             </span>
           </div>
 
-          <!-- Usage display for free tier -->
+          <!-- Subscription period for pro users -->
+          <div v-if="subscription && subscription.periodEnd && user.tier !== 'free'" class="flex justify-between items-center">
+            <span class="text-neutral-600">{{ $t('account.subscription.renewsOn') }}</span>
+            <span class="text-neutral-900">{{ formatDate(subscription.periodEnd) }}</span>
+          </div>
+
+          <!-- Usage display -->
           <div v-if="subscription" class="flex justify-between items-center">
             <span class="text-neutral-600">{{ $t('account.subscription.usage') }}</span>
             <span class="text-neutral-900">
@@ -98,6 +112,14 @@
             {{ $t('account.subscription.upgrade') }}
             <span aria-hidden="true">&rarr;</span>
           </NuxtLink>
+        </div>
+
+        <!-- Manage subscription for pro users -->
+        <div v-else class="mt-4 pt-4 border-t border-neutral-100">
+          <p class="text-sm text-neutral-500">
+            {{ $t('account.subscription.manageInfo') }}
+            <a href="mailto:gruezi@helvetra.ch" class="text-swiss-red hover:underline">gruezi@helvetra.ch</a>
+          </p>
         </div>
       </section>
 
@@ -146,6 +168,15 @@ const usagePercent = computed(() => {
 
 function formatNumber(num: number): string {
   return num.toLocaleString()
+}
+
+function formatDate(dateStr: string): string {
+  const date = new Date(dateStr)
+  return date.toLocaleDateString(locale.value, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
 }
 
 async function fetchSubscription() {

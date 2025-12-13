@@ -158,9 +158,12 @@
     "subscription": {
       "title": "Abonnement",
       "plan": "Plan",
-      "free": "Kostenlos",
+      "free": "Basic",
+      "active": "Aktiv",
+      "renewsOn": "Verlängert sich am",
       "usage": "Nutzung in dieser Periode",
-      "upgrade": "Auf Helvetra+ upgraden"
+      "upgrade": "Auf Helvetra+ upgraden",
+      "manageInfo": "Um Ihr Abonnement zu verwalten, kontaktieren Sie uns unter"
     }
   },
   "translate": {
@@ -203,6 +206,48 @@
     "registerCta": "Kostenloses Konto erstellen",
     "alreadyAccount": "Bereits ein Konto?",
     "loginLink": "Anmelden"
+  },
+  "pricing": {
+    "title": "Preise",
+    "subtitle": "Wählen Sie den Plan, der zu Ihnen passt. Jederzeit upgraden für mehr Funktionen.",
+    "perMonth": "/Monat",
+    "popular": "Beliebteste",
+    "currentPlan": "Aktueller Plan",
+    "paymentMethods": "Sichere Zahlung mit",
+    "questions": "Fragen? Kontaktieren Sie uns unter",
+    "free": {
+      "name": "Basic",
+      "description": "Für gelegentliche Übersetzungen",
+      "price": "Kostenlos",
+      "featureLimit": "10'000 Zeichen pro Monat",
+      "feature1": "Bis zu 1'000 Zeichen pro Übersetzung",
+      "feature2": "Alle Schweizer Sprachen unterstützt",
+      "featureFormality": "Du/Sie-Umschalter",
+      "feature3": "Kein Tracking, volle Privatsphäre",
+      "cta": "Kostenlos starten"
+    },
+    "pro": {
+      "name": "Helvetra+",
+      "description": "Für häufige Übersetzer",
+      "featureBasic": "Alle Basic-Funktionen inklusive",
+      "featureLimit": "500'000 Zeichen pro Monat",
+      "feature1": "Bis zu 5'000 Zeichen pro Übersetzung",
+      "feature2": "Prioritätsverarbeitung",
+      "feature3": "Unterstützen Sie Schweizer Entwicklung",
+      "cta": "Auf Helvetra+ upgraden"
+    },
+    "success": {
+      "title": "Willkommen bei Helvetra+!",
+      "description": "Ihr Abonnement ist jetzt aktiv. Danke, dass Sie die Schweizer Entwicklung unterstützen!",
+      "accountCta": "Ihr Konto ansehen",
+      "translateCta": "Übersetzen starten"
+    },
+    "cancel": {
+      "title": "Zahlung abgebrochen",
+      "description": "Kein Problem! Ihre Zahlung wurde abgebrochen. Sie können es jederzeit erneut versuchen.",
+      "retryCta": "Zurück zu den Preisen",
+      "homeCta": "Zurück zu Helvetra"
+    }
   },
   "errors": {
     "TEXT_TOO_LONG": "Text zu lang. Diese erste Version unterstützt bis zu 1'000 Zeichen. Mehr benötigt? Schreiben Sie uns an gruezi{'@'}helvetra.ch",

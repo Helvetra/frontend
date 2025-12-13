@@ -158,9 +158,12 @@
     "subscription": {
       "title": "Subscription",
       "plan": "Plan",
-      "free": "Free",
+      "free": "Basic",
+      "active": "Active",
+      "renewsOn": "Renews on",
       "usage": "Usage this period",
-      "upgrade": "Upgrade to Helvetra+"
+      "upgrade": "Upgrade to Helvetra+",
+      "manageInfo": "To manage your subscription, contact us at"
     }
   },
   "translate": {
@@ -203,6 +206,48 @@
     "registerCta": "Create a free account",
     "alreadyAccount": "Already have an account?",
     "loginLink": "Log in"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Choose the plan that's right for you. Upgrade anytime to unlock more features.",
+    "perMonth": "/month",
+    "popular": "Most popular",
+    "currentPlan": "Current plan",
+    "paymentMethods": "Secure payment with",
+    "questions": "Questions? Contact us at",
+    "free": {
+      "name": "Basic",
+      "description": "For occasional translations",
+      "price": "Free",
+      "featureLimit": "10,000 characters per month",
+      "feature1": "Up to 1,000 characters per translation",
+      "feature2": "All Swiss languages supported",
+      "featureFormality": "Formal/informal tone toggle",
+      "feature3": "No tracking, full privacy",
+      "cta": "Get started free"
+    },
+    "pro": {
+      "name": "Helvetra+",
+      "description": "For frequent translators",
+      "featureBasic": "All Basic features included",
+      "featureLimit": "500,000 characters per month",
+      "feature1": "Up to 5,000 characters per translation",
+      "feature2": "Priority processing",
+      "feature3": "Support Swiss development",
+      "cta": "Upgrade to Helvetra+"
+    },
+    "success": {
+      "title": "Welcome to Helvetra+!",
+      "description": "Your subscription is now active. Thank you for supporting Swiss development!",
+      "accountCta": "View your account",
+      "translateCta": "Start translating"
+    },
+    "cancel": {
+      "title": "Payment cancelled",
+      "description": "No worries! Your payment was cancelled. You can try again anytime.",
+      "retryCta": "Back to pricing",
+      "homeCta": "Back to Helvetra"
+    }
   },
   "errors": {
     "TEXT_TOO_LONG": "Text too long. This first version supports up to 1'000 characters. Need more? Let us know at gruezi{'@'}helvetra.ch",
