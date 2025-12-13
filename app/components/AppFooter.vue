@@ -7,15 +7,15 @@
     <div class="container mx-auto px-4 md:px-8">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
         <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-          <NuxtLink to="/" class="flex items-center gap-2">
+          <NuxtLink :to="localePath('/')" class="flex items-center gap-2">
             <img src="/img/logo.svg" alt="Helvetra" class="h-6" />
           </NuxtLink>
 
           <nav class="flex gap-6 text-sm">
-            <NuxtLink to="/about" class="text-neutral-500 hover:text-neutral-900 transition-colors">
+            <NuxtLink :to="localePath('/about')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
               {{ $t('nav.about') }}
             </NuxtLink>
-            <NuxtLink to="/privacy" class="text-neutral-500 hover:text-neutral-900 transition-colors">
+            <NuxtLink :to="localePath('/privacy')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
               {{ $t('nav.privacy') }}
             </NuxtLink>
             <a href="mailto:gruezi@helvetra.ch" class="text-neutral-500 hover:text-neutral-900 transition-colors">
@@ -57,3 +57,7 @@
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+const localePath = useLocalePath()
+</script>
