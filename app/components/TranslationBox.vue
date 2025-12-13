@@ -93,9 +93,32 @@
       <div class="relative bg-neutral-50 h-40 md:h-64">
         <!-- Scrollable content area -->
         <div class="h-full overflow-y-auto p-4 pb-12">
-          <!-- Error message -->
+          <!-- Registration invite for character limit (anonymous users) -->
           <div
-            v-if="error && !isLoading"
+            v-if="error === 'TEXT_TOO_LONG' && !isAuthenticated && !isLoading"
+            class="h-full flex items-center justify-center"
+          >
+            <div class="text-center px-4">
+              <p class="text-sm text-neutral-700 mb-3">{{ $t('limits.wantMore') }}</p>
+              <NuxtLink
+                :to="localePath('/register')"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-swiss-red text-white text-sm font-medium rounded-lg hover:bg-red-700 transition-colors"
+              >
+                {{ $t('limits.registerCta') }}
+                <span aria-hidden="true">&rarr;</span>
+              </NuxtLink>
+              <p class="text-xs text-neutral-500 mt-2">
+                {{ $t('limits.alreadyAccount') }}
+                <NuxtLink :to="localePath('/login')" class="text-swiss-red hover:underline">
+                  {{ $t('limits.loginLink') }}
+                </NuxtLink>
+              </p>
+            </div>
+          </div>
+
+          <!-- Regular error message -->
+          <div
+            v-else-if="error && !isLoading"
             class="h-full flex items-center justify-center"
           >
             <p class="text-sm text-red-500 text-center">{{ $t(`errors.${error}`) }}</p>
@@ -188,6 +211,8 @@
 <script setup lang="ts">
 const { translate, isLoading, error } = useTranslation()
 const { submitFeedback, hasStoredConsent } = useFeedback()
+const { isAuthenticated } = useAuth()
+const localePath = useLocalePath()
 
 const STORAGE_KEY_SOURCE = 'helvetra_source_lang'
 const STORAGE_KEY_TARGET = 'helvetra_target_lang'

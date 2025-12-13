@@ -198,6 +198,12 @@
     "fr": "French",
     "it": "Italian"
   },
+  "limits": {
+    "wantMore": "Want to translate longer texts?",
+    "registerCta": "Create a free account",
+    "alreadyAccount": "Already have an account?",
+    "loginLink": "Log in"
+  },
   "errors": {
     "TEXT_TOO_LONG": "Text too long. This first version supports up to 1'000 characters. Need more? Let us know at gruezi{'@'}helvetra.ch",
     "VALIDATION_ERROR": "Invalid request. Please try again.",

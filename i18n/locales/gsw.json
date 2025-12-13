@@ -198,6 +198,12 @@
     "fr": "Französisch",
     "it": "Italiänisch"
   },
+  "limits": {
+    "wantMore": "Wotsch längeri Texter übersetze?",
+    "registerCta": "Gratis Konto erstelle",
+    "alreadyAccount": "Scho es Konto?",
+    "loginLink": "Amälde"
+  },
   "errors": {
     "TEXT_TOO_LONG": "Text z'lang. Die erschti Version unterstützt bis zu 1'000 Zeiche. Meh bruucht? Schrib eus a gruezi{'@'}helvetra.ch",
     "VALIDATION_ERROR": "Ungültigi Afrag. Bitte probier's nomal.",
