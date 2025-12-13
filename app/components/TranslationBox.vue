@@ -83,9 +83,9 @@
         />
         <div
           class="absolute bottom-2 right-2 text-xs"
-          :class="sourceText.length > 1000 ? 'text-red-500 font-medium' : 'text-neutral-400'"
+          :class="sourceText.length > charLimit ? 'text-red-500 font-medium' : 'text-neutral-400'"
         >
-          {{ sourceText.length.toLocaleString() }} / 1'000
+          {{ sourceText.length.toLocaleString() }} / {{ charLimit.toLocaleString() }}
         </div>
       </div>
 
@@ -211,8 +211,12 @@
 <script setup lang="ts">
 const { translate, isLoading, error } = useTranslation()
 const { submitFeedback, hasStoredConsent } = useFeedback()
-const { isAuthenticated } = useAuth()
+const { isAuthenticated, getAuthHeader } = useAuth()
 const localePath = useLocalePath()
+const config = useRuntimeConfig()
+
+// Character limit based on tier (default to anonymous limit)
+const charLimit = ref(400)
 
 const STORAGE_KEY_SOURCE = 'helvetra_source_lang'
 const STORAGE_KEY_TARGET = 'helvetra_target_lang'
@@ -251,6 +255,21 @@ const showFeedbackModal = ref(false)
 const pendingVote = ref<'like' | 'dislike'>('like')
 const feedbackSubmitted = ref(false)
 
+/**
+ * Fetch tier limits from the API to show correct character limit.
+ */
+async function fetchTierLimits() {
+  try {
+    const response = await $fetch<{ max_chars_per_request: number }>(
+      `${config.public.apiBase}/v1/subscription/limits`,
+      { headers: getAuthHeader() }
+    )
+    charLimit.value = response.max_chars_per_request
+  } catch {
+    // Keep default limit on error
+  }
+}
+
 // Load saved preferences from localStorage
 onMounted(() => {
   if (import.meta.client) {
@@ -267,6 +286,9 @@ onMounted(() => {
     if (savedFormality === 'informal' || savedFormality === 'formal') {
       formality.value = savedFormality
     }
+
+    // Fetch tier limits
+    fetchTierLimits()
   }
 })
 
@@ -369,6 +391,11 @@ watch(targetLanguage, (newLang, oldLang) => {
   }
   saveLanguagePreferences()
   performTranslation()
+})
+
+// Re-fetch tier limits when auth state changes (login/logout)
+watch(isAuthenticated, () => {
+  fetchTierLimits()
 })
 
 function swapLanguages() {
