@@ -186,8 +186,9 @@
     "placeholder": "Enter text to translate...",
     "button": "Translate",
     "swap": "Swap languages",
-    "copy": "Copy translation",
-    "copied": "Copied!"
+    "copy": "Copy",
+    "copied": "Copied!",
+    "clear": "Clear"
   },
   "formality": {
     "label": "Tone",

@@ -186,8 +186,9 @@
     "placeholder": "Text zum Übersetzen eingeben...",
     "button": "Übersetzen",
     "swap": "Sprachen tauschen",
-    "copy": "Übersetzung kopieren",
-    "copied": "Kopiert!"
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "clear": "Löschen"
   },
   "formality": {
     "label": "Anrede",

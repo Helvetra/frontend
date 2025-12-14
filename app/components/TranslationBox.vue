@@ -81,6 +81,19 @@
           class="w-full h-56 md:h-96 p-4 resize-none border-none focus:outline-none focus:ring-0 text-neutral-900 placeholder-neutral-400"
           @focus="scrollIntoViewOnMobile"
         />
+        <!-- Clear button -->
+        <button
+          v-if="sourceText"
+          type="button"
+          :title="$t('translate.clear')"
+          class="absolute bottom-2 left-2 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-200 text-neutral-700 hover:bg-neutral-300 transition-colors"
+          @click="clearText"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          <span class="text-sm font-medium">{{ $t('translate.clear') }}</span>
+        </button>
         <div
           class="absolute bottom-2 right-2 text-xs"
           :class="sourceText.length > charLimit ? 'text-red-500 font-medium' : 'text-neutral-400'"
@@ -427,6 +440,14 @@ function swapLanguages() {
   targetText.value = tempText
 
   saveLanguagePreferences()
+}
+
+/**
+ * Clear both source and translated text.
+ */
+function clearText() {
+  sourceText.value = ''
+  targetText.value = ''
 }
 
 /**
