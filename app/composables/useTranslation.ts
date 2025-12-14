@@ -23,6 +23,7 @@ interface TranslationResponse {
 
 export function useTranslation() {
   const config = useRuntimeConfig()
+  const { getAuthHeader } = useAuth()
   const isLoading = ref(false)
   const error = ref<string | null>(null)
 
@@ -44,6 +45,7 @@ export function useTranslation() {
         `${config.public.apiBase}/v1/translate`,
         {
           method: 'POST',
+          headers: getAuthHeader(),
           body: {
             text,
             source_lang: sourceLang,
