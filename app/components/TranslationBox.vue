@@ -92,7 +92,7 @@
       <!-- Target text -->
       <div class="relative bg-neutral-50 h-40 md:h-64">
         <!-- Scrollable content area -->
-        <div class="h-full overflow-y-auto p-4 pb-12">
+        <div ref="outputContainer" class="h-full overflow-y-auto p-4 pb-12">
           <!-- Registration invite for character limit (anonymous users) -->
           <div
             v-if="error === 'TEXT_TOO_LONG' && !isAuthenticated && !isLoading"
@@ -232,6 +232,7 @@ const targetText = ref('')
 const copied = ref(false)
 const formality = ref<'informal' | 'formal'>('informal')
 const sourceTextarea = ref<HTMLTextAreaElement | null>(null)
+const outputContainer = ref<HTMLDivElement | null>(null)
 
 /**
  * Scroll textarea into view on mobile when keyboard appears.
@@ -243,6 +244,17 @@ function scrollIntoViewOnMobile() {
       sourceTextarea.value?.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }, 300)
   }
+}
+
+/**
+ * Scroll output container to bottom after translation completes.
+ */
+function scrollOutputToBottom() {
+  nextTick(() => {
+    if (outputContainer.value) {
+      outputContainer.value.scrollTop = outputContainer.value.scrollHeight
+    }
+  })
 }
 
 // Show formality toggle only for languages with T-V distinction
@@ -344,6 +356,7 @@ async function performTranslation() {
 
   if (result !== null) {
     targetText.value = result
+    scrollOutputToBottom()
   }
 }
 
