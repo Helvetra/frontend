@@ -6,27 +6,47 @@
   <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden" style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), 0 0 60px 20px rgba(218, 41, 28, 0.12);">
     <!-- Language selectors row -->
     <div class="grid grid-cols-3 items-center border-b border-neutral-200 px-4 py-3 bg-neutral-50">
-      <!-- Source language -->
+      <!-- Source language (hidden until text is entered) -->
       <div class="justify-self-start">
-        <LanguageDropdown
-          v-model="sourceLanguage"
-          :options="languageOptions"
-        />
+        <Transition
+          enter-active-class="transition ease-out duration-200"
+          enter-from-class="opacity-0 -translate-x-2"
+          enter-to-class="opacity-100 translate-x-0"
+          leave-active-class="transition ease-in duration-150"
+          leave-from-class="opacity-100 translate-x-0"
+          leave-to-class="opacity-0 -translate-x-2"
+        >
+          <LanguageDropdown
+            v-if="showSourceDropdown"
+            v-model="sourceLanguage"
+            :options="languageOptions"
+          />
+        </Transition>
       </div>
 
-      <!-- Swap button -->
+      <!-- Swap button (only visible when source dropdown is shown) -->
       <div class="justify-self-center">
-        <button
-          type="button"
-          :title="$t('translate.swap')"
-          class="p-3 md:p-2 rounded-full hover:bg-neutral-200 transition-colors text-neutral-500 hover:text-neutral-700"
-          :disabled="isLoading"
-          @click="swapLanguages"
+        <Transition
+          enter-active-class="transition ease-out duration-200"
+          enter-from-class="opacity-0 scale-75"
+          enter-to-class="opacity-100 scale-100"
+          leave-active-class="transition ease-in duration-150"
+          leave-from-class="opacity-100 scale-100"
+          leave-to-class="opacity-0 scale-75"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-          </svg>
-        </button>
+          <button
+            v-if="showSourceDropdown"
+            type="button"
+            :title="$t('translate.swap')"
+            class="p-3 md:p-2 rounded-full hover:bg-neutral-200 transition-colors text-neutral-500 hover:text-neutral-700"
+            :disabled="isLoading"
+            @click="swapLanguages"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+            </svg>
+          </button>
+        </Transition>
       </div>
 
       <!-- Target language -->
@@ -34,37 +54,59 @@
         <LanguageDropdown
           v-model="targetLanguage"
           :options="languageOptions"
+          align="right"
         />
       </div>
     </div>
 
-    <!-- Formality toggle (only for languages with T-V distinction) -->
+    <!-- Formality toggle and dialect selector -->
     <div
       v-if="showFormalityToggle"
-      class="flex items-center justify-end gap-2 px-4 py-2 border-b border-neutral-200 bg-neutral-50/50"
+      class="flex items-center justify-end gap-4 px-4 py-2 border-b border-neutral-200 bg-neutral-50/50"
     >
-      <span class="text-xs text-neutral-500">{{ $t('formality.label') }}:</span>
-      <div class="flex rounded-lg bg-neutral-200/50 p-0.5">
-        <button
-          type="button"
-          class="px-3 py-1 text-xs font-medium rounded-md transition-colors"
-          :class="formality === 'informal'
-            ? 'bg-white text-neutral-900 shadow-sm'
-            : 'text-neutral-600 hover:text-neutral-900'"
-          @click="setFormality('informal')"
+      <!-- Formality toggle -->
+      <div class="flex items-center gap-2">
+        <span class="text-xs text-neutral-500">{{ $t('formality.label') }}:</span>
+        <div class="flex rounded-lg bg-neutral-200/50 p-0.5">
+          <button
+            type="button"
+            class="px-3 py-1 text-xs font-medium rounded-md transition-colors"
+            :class="formality === 'informal'
+              ? 'bg-white text-neutral-900 shadow-sm'
+              : 'text-neutral-600 hover:text-neutral-900'"
+            @click="setFormality('informal')"
+          >
+            {{ $t('formality.informal') }}
+          </button>
+          <button
+            type="button"
+            class="px-3 py-1 text-xs font-medium rounded-md transition-colors"
+            :class="formality === 'formal'
+              ? 'bg-white text-neutral-900 shadow-sm'
+              : 'text-neutral-600 hover:text-neutral-900'"
+            @click="setFormality('formal')"
+          >
+            {{ $t('formality.formal') }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Dialect selector (only for Swiss German) -->
+      <div v-if="showDialectSelector" class="flex items-center gap-2">
+        <span class="text-xs text-neutral-500">{{ $t('dialect.label') }}:</span>
+        <select
+          :value="dialect"
+          class="text-xs font-medium bg-white border border-neutral-200 rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-swiss-red focus:border-transparent"
+          @change="setDialect(($event.target as HTMLSelectElement).value)"
         >
-          {{ $t('formality.informal') }}
-        </button>
-        <button
-          type="button"
-          class="px-3 py-1 text-xs font-medium rounded-md transition-colors"
-          :class="formality === 'formal'
-            ? 'bg-white text-neutral-900 shadow-sm'
-            : 'text-neutral-600 hover:text-neutral-900'"
-          @click="setFormality('formal')"
-        >
-          {{ $t('formality.formal') }}
-        </button>
+          <option
+            v-for="d in SWISS_DIALECTS"
+            :key="d.code"
+            :value="d.code"
+          >
+            {{ d.label }}
+          </option>
+        </select>
       </div>
     </div>
 
@@ -249,6 +291,7 @@
 const { translate, isLoading, error } = useTranslation()
 const { submitFeedback, hasStoredConsent } = useFeedback()
 const { isAuthenticated, getAuthHeader } = useAuth()
+const { detectLanguage } = useLanguageDetection()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
 
@@ -258,9 +301,26 @@ const charLimit = ref(400)
 const STORAGE_KEY_SOURCE = 'helvetra_source_lang'
 const STORAGE_KEY_TARGET = 'helvetra_target_lang'
 const STORAGE_KEY_FORMALITY = 'helvetra_formality'
+const STORAGE_KEY_DIALECT = 'helvetra_dialect'
 
 // Languages with T-V distinction (informal/formal address)
 const FORMALITY_LANGUAGES = ['de', 'gsw', 'fr', 'it']
+
+// Swiss German dialects
+const SWISS_DIALECTS = [
+  { code: 'bern', label: 'Bärndütsch' },
+  { code: 'zurich', label: 'Züritüütsch' },
+  { code: 'basel', label: 'Baseldytsch' },
+  { code: 'stgallen', label: 'Sanggallerdütsch' },
+  { code: 'wallis', label: 'Walliserdütsch' },
+  { code: 'luzern', label: 'Luzärndütsch' },
+]
+
+// Minimum characters before attempting language detection
+const MIN_CHARS_FOR_DETECTION = 15
+
+// Maximum LLM detection calls per session (cost control)
+const MAX_LLM_DETECTIONS_PER_SESSION = 3
 
 const sourceLanguage = ref('de')
 const targetLanguage = ref('en')
@@ -268,8 +328,23 @@ const sourceText = ref('')
 const targetText = ref('')
 const copied = ref(false)
 const formality = ref<'informal' | 'formal'>('informal')
+const dialect = ref('bern')  // Default to Bärndütsch
 const sourceTextarea = ref<HTMLTextAreaElement | null>(null)
 const outputContainer = ref<HTMLDivElement | null>(null)
+
+// Language detection state
+const isAutoDetectMode = ref(true)
+const userOverrodeSource = ref(false)
+const detectedLanguage = ref<string | null>(null)
+
+// LLM detection session counter (for Swiss German vs German disambiguation)
+const llmDetectionCount = ref(0)
+const pendingLlmDetection = ref(false)
+
+// Show source language dropdown only after detection or manual override
+const showSourceDropdown = computed(() =>
+  userOverrodeSource.value || detectedLanguage.value !== null
+)
 
 /**
  * Scroll textarea into view on mobile when keyboard appears.
@@ -299,6 +374,9 @@ const showFormalityToggle = computed(() =>
   FORMALITY_LANGUAGES.includes(targetLanguage.value)
 )
 
+// Show dialect selector only when target is Swiss German
+const showDialectSelector = computed(() => targetLanguage.value === 'gsw')
+
 // Feedback state
 const showFeedbackModal = ref(false)
 const pendingVote = ref<'like' | 'dislike'>('like')
@@ -325,6 +403,7 @@ onMounted(() => {
     const savedSource = localStorage.getItem(STORAGE_KEY_SOURCE)
     const savedTarget = localStorage.getItem(STORAGE_KEY_TARGET)
     const savedFormality = localStorage.getItem(STORAGE_KEY_FORMALITY)
+    const savedDialect = localStorage.getItem(STORAGE_KEY_DIALECT)
 
     if (savedSource && availableLanguages.some(l => l.code === savedSource)) {
       sourceLanguage.value = savedSource
@@ -334,6 +413,9 @@ onMounted(() => {
     }
     if (savedFormality === 'informal' || savedFormality === 'formal') {
       formality.value = savedFormality
+    }
+    if (savedDialect && SWISS_DIALECTS.some(d => d.code === savedDialect)) {
+      dialect.value = savedDialect
     }
 
     // Fetch tier limits
@@ -347,12 +429,20 @@ function saveLanguagePreferences() {
     localStorage.setItem(STORAGE_KEY_SOURCE, sourceLanguage.value)
     localStorage.setItem(STORAGE_KEY_TARGET, targetLanguage.value)
     localStorage.setItem(STORAGE_KEY_FORMALITY, formality.value)
+    localStorage.setItem(STORAGE_KEY_DIALECT, dialect.value)
   }
 }
 
 // Set formality and trigger re-translation
 function setFormality(value: 'informal' | 'formal') {
   formality.value = value
+  saveLanguagePreferences()
+  performTranslation()
+}
+
+// Set dialect and trigger re-translation
+function setDialect(value: string) {
+  dialect.value = value
   saveLanguagePreferences()
   performTranslation()
 }
@@ -392,15 +482,48 @@ async function performTranslation() {
     ? formality.value
     : 'auto'
 
+  // Determine source language to send
+  // When franc detected German and we haven't exceeded LLM quota, use 'auto' for LLM disambiguation
+  let sourceLangToSend = sourceLanguage.value
+  const shouldUseLlmDetection =
+    pendingLlmDetection.value &&
+    llmDetectionCount.value < MAX_LLM_DETECTIONS_PER_SESSION
+
+  if (shouldUseLlmDetection) {
+    sourceLangToSend = 'auto'
+  }
+
+  // Only pass dialect when translating to Swiss German
+  const effectiveDialect = targetLanguage.value === 'gsw' ? dialect.value : null
+
   const result = await translate(
     sourceText.value,
-    sourceLanguage.value,
+    sourceLangToSend,
     targetLanguage.value,
-    effectiveFormality
+    effectiveFormality,
+    effectiveDialect
   )
 
   if (result !== null) {
-    targetText.value = result
+    targetText.value = result.translation
+
+    // Handle LLM-detected source language
+    if (result.detected_source_lang && shouldUseLlmDetection) {
+      llmDetectionCount.value++
+      pendingLlmDetection.value = false
+
+      // Update detected language if different from client-side detection
+      if (result.detected_source_lang !== detectedLanguage.value) {
+        detectedLanguage.value = result.detected_source_lang
+        sourceLanguage.value = result.detected_source_lang
+
+        // Make sure target is different
+        if (result.detected_source_lang === targetLanguage.value) {
+          targetLanguage.value = result.detected_source_lang === 'en' ? 'de' : 'en'
+        }
+      }
+    }
+
     scrollOutputToBottom()
   }
 }
@@ -432,13 +555,61 @@ function debouncedTranslate() {
   }, 1000)
 }
 
-// Watch for changes that trigger translation
-watch(sourceText, debouncedTranslate)
+/**
+ * Attempt to detect the source language from input text.
+ * When franc detects German, flags for LLM verification to distinguish German from Swiss German.
+ */
+function tryDetectLanguage() {
+  // Skip if user has manually selected a language
+  if (userOverrodeSource.value) return
+
+  // Need enough text for reliable detection
+  if (sourceText.value.length < MIN_CHARS_FOR_DETECTION) return
+
+  const detected = detectLanguage(sourceText.value)
+  if (detected && detected !== detectedLanguage.value) {
+    detectedLanguage.value = detected
+    // Update source language to detected language
+    sourceLanguage.value = detected
+    // Make sure target is different
+    if (detected === targetLanguage.value) {
+      targetLanguage.value = detected === 'en' ? 'de' : 'en'
+    }
+
+    // When franc detects German, trigger LLM verification for Swiss German disambiguation
+    // Only if we haven't exceeded the session quota
+    if (detected === 'de' && llmDetectionCount.value < MAX_LLM_DETECTIONS_PER_SESSION) {
+      pendingLlmDetection.value = true
+    }
+  }
+}
+
+// Watch for changes that trigger translation and detection
+watch(sourceText, (newText) => {
+  debouncedTranslate()
+
+  // Reset detection state when text is cleared
+  if (!newText.trim()) {
+    detectedLanguage.value = null
+    userOverrodeSource.value = false
+    pendingLlmDetection.value = false
+  } else {
+    // Try to detect language
+    tryDetectLanguage()
+  }
+})
+
 watch(sourceLanguage, (newLang, oldLang) => {
   // If user selects same language as target, swap them
   if (newLang === targetLanguage.value) {
     targetLanguage.value = oldLang
   }
+
+  // Mark as user override if changed manually (not from detection)
+  if (detectedLanguage.value !== null && newLang !== detectedLanguage.value) {
+    userOverrodeSource.value = true
+  }
+
   saveLanguagePreferences()
   performTranslation()
 })

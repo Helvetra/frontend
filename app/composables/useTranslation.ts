@@ -9,6 +9,7 @@ interface TranslationResponse {
     translation: string
     source_lang: string
     target_lang: string
+    detected_source_lang?: string
   }
   meta?: {
     characters: number
@@ -21,6 +22,11 @@ interface TranslationResponse {
   }
 }
 
+export interface TranslationResult {
+  translation: string
+  detected_source_lang?: string
+}
+
 export function useTranslation() {
   const config = useRuntimeConfig()
   const { getAuthHeader } = useAuth()
@@ -31,8 +37,9 @@ export function useTranslation() {
     text: string,
     sourceLang: string,
     targetLang: string,
-    formality: 'informal' | 'formal' | 'auto' = 'auto'
-  ): Promise<string | null> {
+    formality: 'informal' | 'formal' | 'auto' = 'auto',
+    dialect: string | null = null
+  ): Promise<TranslationResult | null> {
     if (!text.trim()) {
       return null
     }
@@ -41,22 +48,31 @@ export function useTranslation() {
     error.value = null
 
     try {
+      const body: Record<string, string | null> = {
+        text,
+        source_lang: sourceLang,
+        target_lang: targetLang,
+        formality,
+      }
+      // Only include dialect when translating to Swiss German
+      if (targetLang === 'gsw' && dialect) {
+        body.dialect = dialect
+      }
+
       const response = await $fetch<TranslationResponse>(
         `${config.public.apiBase}/v1/translate`,
         {
           method: 'POST',
           headers: getAuthHeader(),
-          body: {
-            text,
-            source_lang: sourceLang,
-            target_lang: targetLang,
-            formality,
-          },
+          body,
         }
       )
 
       if (response.success && response.data) {
-        return response.data.translation
+        return {
+          translation: response.data.translation,
+          detected_source_lang: response.data.detected_source_lang,
+        }
       }
 
       if (response.error) {

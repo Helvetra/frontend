@@ -195,6 +195,9 @@
     "informal": "Tu",
     "formal": "Vous"
   },
+  "dialect": {
+    "label": "Dialecte"
+  },
   "feedback": {
     "like": "Bonne traduction",
     "dislike": "Mauvaise traduction",

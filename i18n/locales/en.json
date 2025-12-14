@@ -195,6 +195,9 @@
     "informal": "Casual",
     "formal": "Formal"
   },
+  "dialect": {
+    "label": "Dialect"
+  },
   "feedback": {
     "like": "Good translation",
     "dislike": "Poor translation",

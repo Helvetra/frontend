@@ -39,6 +39,7 @@
         :aria-activedescendant="activeId"
         tabindex="-1"
         class="absolute z-50 mt-1 min-w-[140px] bg-white border border-neutral-200 rounded-lg shadow-lg py-1 focus:outline-none"
+        :class="align === 'right' ? 'right-0' : 'left-0'"
         @keydown="handleListKeydown"
       >
         <li
@@ -70,10 +71,13 @@ interface Option {
   label: string
 }
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   modelValue: string
   options: Option[]
-}>()
+  align?: 'left' | 'right'
+}>(), {
+  align: 'left'
+})
 
 const emit = defineEmits<{
   'update:modelValue': [value: string]
