@@ -182,13 +182,19 @@
           <button
             type="button"
             :title="$t('translate.copy')"
-            class="p-3 md:p-2 rounded-lg hover:bg-neutral-200 transition-colors text-neutral-500 hover:text-neutral-700"
+            class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors"
+            :class="copied
+              ? 'bg-green-100 text-green-700'
+              : 'bg-neutral-200 text-neutral-700 hover:bg-neutral-300'"
             @click="copyTranslation"
           >
-            <svg v-if="!copied" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-4 md:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg v-if="!copied" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
-            <span v-else class="text-xs text-swiss-red font-medium">{{ $t('translate.copied') }}</span>
+            <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-sm font-medium">{{ copied ? $t('translate.copied') : $t('translate.copy') }}</span>
           </button>
         </div>
       </div>
