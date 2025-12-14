@@ -135,12 +135,14 @@ function handleListKeydown(event: KeyboardEvent) {
       focusedIndex.value = Math.max(focusedIndex.value - 1, 0)
       break
     case 'Enter':
-    case ' ':
+    case ' ': {
       event.preventDefault()
-      if (focusedIndex.value >= 0) {
-        select(props.options[focusedIndex.value].value)
+      const selectedOption = props.options[focusedIndex.value]
+      if (focusedIndex.value >= 0 && selectedOption) {
+        select(selectedOption.value)
       }
       break
+    }
     case 'Escape':
       event.preventDefault()
       close()

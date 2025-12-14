@@ -72,8 +72,8 @@ export function useTranslation() {
         statusCode?: number
       }
 
-      if (fetchError.data?.error) {
-        error.value = (fetchError.data as TranslationResponse).error!.message
+      if (fetchError.data && 'error' in fetchError.data && fetchError.data.error) {
+        error.value = fetchError.data.error.message
       } else if (fetchError.statusCode === 422) {
         // Pydantic validation error
         const detail = (fetchError.data as { detail?: Array<{ type: string; msg: string }> })?.detail

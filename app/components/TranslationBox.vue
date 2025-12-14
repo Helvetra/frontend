@@ -5,31 +5,37 @@
 <template>
   <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden" style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), 0 0 60px 20px rgba(218, 41, 28, 0.12);">
     <!-- Language selectors row -->
-    <div class="flex items-center justify-between border-b border-neutral-200 px-4 py-3 bg-neutral-50">
+    <div class="grid grid-cols-3 items-center border-b border-neutral-200 px-4 py-3 bg-neutral-50">
       <!-- Source language -->
-      <LanguageDropdown
-        v-model="sourceLanguage"
-        :options="languageOptions"
-      />
+      <div class="justify-self-start">
+        <LanguageDropdown
+          v-model="sourceLanguage"
+          :options="languageOptions"
+        />
+      </div>
 
       <!-- Swap button -->
-      <button
-        type="button"
-        :title="$t('translate.swap')"
-        class="p-3 md:p-2 rounded-full hover:bg-neutral-200 transition-colors text-neutral-500 hover:text-neutral-700"
-        :disabled="isLoading"
-        @click="swapLanguages"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-        </svg>
-      </button>
+      <div class="justify-self-center">
+        <button
+          type="button"
+          :title="$t('translate.swap')"
+          class="p-3 md:p-2 rounded-full hover:bg-neutral-200 transition-colors text-neutral-500 hover:text-neutral-700"
+          :disabled="isLoading"
+          @click="swapLanguages"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+          </svg>
+        </button>
+      </div>
 
       <!-- Target language -->
-      <LanguageDropdown
-        v-model="targetLanguage"
-        :options="languageOptions"
-      />
+      <div class="justify-self-end">
+        <LanguageDropdown
+          v-model="targetLanguage"
+          :options="languageOptions"
+        />
+      </div>
     </div>
 
     <!-- Formality toggle (only for languages with T-V distinction) -->
@@ -65,32 +71,35 @@
     <!-- Text areas -->
     <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-neutral-200">
       <!-- Source text -->
-      <div class="relative">
+      <div class="flex flex-col h-56 md:h-96">
         <textarea
           v-model="sourceText"
           :placeholder="$t('translate.placeholder')"
           ref="sourceTextarea"
-          class="w-full h-56 md:h-96 p-4 resize-none border-none focus:outline-none focus:ring-0 text-neutral-900 placeholder-neutral-400"
+          class="flex-1 w-full p-4 resize-none border-none focus:outline-none focus:ring-0 text-neutral-900 placeholder-neutral-400"
           @focus="scrollIntoViewOnMobile"
         />
-        <!-- Clear button -->
-        <button
-          v-if="sourceText"
-          type="button"
-          :title="$t('translate.clear')"
-          class="absolute bottom-2 left-2 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-200 text-neutral-700 hover:bg-neutral-300 transition-colors"
-          @click="clearText"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-          <span class="text-sm font-medium">{{ $t('translate.clear') }}</span>
-        </button>
-        <div
-          class="absolute bottom-2 right-2 text-xs"
-          :class="sourceText.length > charLimit ? 'text-red-500 font-medium' : 'text-neutral-400'"
-        >
-          {{ sourceText.length.toLocaleString() }} / {{ charLimit.toLocaleString() }}
+        <!-- Source footer: clear button and character count -->
+        <div class="flex items-center justify-between px-2 py-2">
+          <button
+            v-if="sourceText"
+            type="button"
+            :title="$t('translate.clear')"
+            class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-200 text-neutral-700 hover:bg-neutral-300 transition-colors"
+            @click="clearText"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            <span class="text-sm font-medium">{{ $t('translate.clear') }}</span>
+          </button>
+          <div v-else />
+          <div
+            class="text-xs"
+            :class="sourceText.length > charLimit ? 'text-red-500 font-medium' : 'text-neutral-400'"
+          >
+            {{ sourceText.length.toLocaleString() }} / {{ charLimit.toLocaleString() }}
+          </div>
         </div>
       </div>
 
@@ -118,6 +127,23 @@
                   {{ $t('limits.loginLink') }}
                 </NuxtLink>
               </p>
+            </div>
+          </div>
+
+          <!-- Upgrade invite for character limit (authenticated free users) -->
+          <div
+            v-else-if="error === 'TEXT_TOO_LONG' && isAuthenticated && !isLoading"
+            class="h-full flex items-center justify-center"
+          >
+            <div class="text-center px-4">
+              <p class="text-sm text-neutral-700 mb-3">{{ $t('limits.wantMorePro') }}</p>
+              <NuxtLink
+                :to="localePath('/pricing')"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-swiss-red text-white text-sm font-medium rounded-lg hover:bg-red-700 transition-colors"
+              >
+                {{ $t('limits.upgradeCta') }}
+                <span aria-hidden="true">&rarr;</span>
+              </NuxtLink>
             </div>
           </div>
 

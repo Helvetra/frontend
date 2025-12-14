@@ -222,7 +222,9 @@
     "wantMore": "Möchten Sie längere Texte übersetzen?",
     "registerCta": "Kostenloses Konto erstellen",
     "alreadyAccount": "Bereits ein Konto?",
-    "loginLink": "Anmelden"
+    "loginLink": "Anmelden",
+    "wantMorePro": "Längere Texte übersetzen?",
+    "upgradeCta": "Zu Helvetra+ wechseln"
   },
   "pricing": {
     "title": "Preise",

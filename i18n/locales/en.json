@@ -222,7 +222,9 @@
     "wantMore": "Want to translate longer texts?",
     "registerCta": "Create a free account",
     "alreadyAccount": "Already have an account?",
-    "loginLink": "Log in"
+    "loginLink": "Log in",
+    "wantMorePro": "Need to translate longer texts?",
+    "upgradeCta": "Upgrade to Helvetra+"
   },
   "pricing": {
     "title": "Pricing",
