@@ -7,14 +7,10 @@
     <!-- Language selectors row -->
     <div class="flex items-center justify-between border-b border-neutral-200 px-4 py-3 bg-neutral-50">
       <!-- Source language -->
-      <select
+      <LanguageDropdown
         v-model="sourceLanguage"
-        class="bg-transparent border-none text-sm font-medium text-neutral-700 cursor-pointer focus:outline-none focus:ring-0"
-      >
-        <option v-for="lang in availableLanguages" :key="lang.code" :value="lang.code">
-          {{ $t(`languages.${lang.code}`) }}
-        </option>
-      </select>
+        :options="languageOptions"
+      />
 
       <!-- Swap button -->
       <button
@@ -30,14 +26,10 @@
       </button>
 
       <!-- Target language -->
-      <select
+      <LanguageDropdown
         v-model="targetLanguage"
-        class="bg-transparent border-none text-sm font-medium text-neutral-700 cursor-pointer focus:outline-none focus:ring-0"
-      >
-        <option v-for="lang in availableLanguages" :key="lang.code" :value="lang.code">
-          {{ $t(`languages.${lang.code}`) }}
-        </option>
-      </select>
+        :options="languageOptions"
+      />
     </div>
 
     <!-- Formality toggle (only for languages with T-V distinction) -->
@@ -346,6 +338,14 @@ const availableLanguages = [
   { code: 'fr' },
   { code: 'it' },
 ]
+
+const { t } = useI18n()
+const languageOptions = computed(() =>
+  availableLanguages.map(lang => ({
+    value: lang.code,
+    label: t(`languages.${lang.code}`),
+  }))
+)
 
 // Two-phase debounce timers
 let loadingIndicatorTimer: ReturnType<typeof setTimeout> | null = null
