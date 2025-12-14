@@ -1,6 +1,6 @@
 <!--
   Pricing page showing tier comparison and upgrade options.
-  Redirects to Payrexx for payment processing.
+  Supports monthly and yearly billing with discount highlight.
 -->
 <template>
   <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
@@ -11,6 +11,41 @@
       <p class="text-neutral-600 max-w-xl mx-auto">
         {{ $t('pricing.subtitle') }}
       </p>
+    </div>
+
+    <!-- Billing toggle -->
+    <div class="flex flex-row flex-nowrap items-center justify-center gap-3 mb-8">
+      <span
+        class="text-sm font-medium whitespace-nowrap"
+        :class="billingPeriod === 'monthly' ? 'text-neutral-900' : 'text-neutral-500'"
+      >
+        {{ $t('pricing.monthly') }}
+      </span>
+      <button
+        type="button"
+        class="relative inline-flex h-6 w-11 min-w-[2.75rem] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-swiss-red focus:ring-offset-2"
+        :class="billingPeriod === 'yearly' ? 'bg-swiss-red' : 'bg-neutral-200'"
+        role="switch"
+        :aria-checked="billingPeriod === 'yearly'"
+        @click="billingPeriod = billingPeriod === 'monthly' ? 'yearly' : 'monthly'"
+      >
+        <span
+          class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+          :class="billingPeriod === 'yearly' ? 'translate-x-5' : 'translate-x-0'"
+        />
+      </button>
+      <span
+        class="text-sm font-medium whitespace-nowrap"
+        :class="billingPeriod === 'yearly' ? 'text-neutral-900' : 'text-neutral-500'"
+      >
+        {{ $t('pricing.yearly') }}
+      </span>
+      <span
+        v-if="billingPeriod === 'yearly'"
+        class="ml-1 inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 whitespace-nowrap"
+      >
+        {{ $t('pricing.save40') }}
+      </span>
     </div>
 
     <!-- Pricing cards -->
@@ -87,8 +122,20 @@
         </div>
 
         <div class="mb-6">
-          <span class="text-3xl font-bold text-neutral-900">CHF 4.99</span>
-          <span class="text-neutral-500">{{ $t('pricing.perMonth') }}</span>
+          <template v-if="billingPeriod === 'yearly'">
+            <span class="text-3xl font-bold text-neutral-900">CHF 4.99</span>
+            <span class="text-neutral-500">{{ $t('pricing.perMonth') }}</span>
+            <div class="text-sm text-neutral-500 mt-1">
+              {{ $t('pricing.billedYearly', { total: 'CHF 59.88' }) }}
+            </div>
+          </template>
+          <template v-else>
+            <span class="text-3xl font-bold text-neutral-900">CHF 7.99</span>
+            <span class="text-neutral-500">{{ $t('pricing.perMonth') }}</span>
+            <div class="text-sm text-neutral-500 mt-1">
+              {{ $t('pricing.billedMonthly') }}
+            </div>
+          </template>
         </div>
 
         <ul class="space-y-3 mb-6">
@@ -171,10 +218,15 @@ const localePath = useLocalePath()
 const { user, isAuthenticated } = useAuth()
 const config = useRuntimeConfig()
 
+const billingPeriod = ref<'monthly' | 'yearly'>('yearly')
 const upgradeLoading = ref(false)
 
+const payrexxUrls = {
+  yearly: 'https://helvetra.payrexx.com/de/pay?tid=e84e0dd3',
+  monthly: 'https://helvetra.payrexx.com/de/pay?tid=0f0ee2ce',
+}
+
 async function handleUpgrade() {
-  // If not logged in, redirect to register first
   if (!isAuthenticated.value) {
     navigateTo(localePath('/register'))
     return
@@ -182,12 +234,8 @@ async function handleUpgrade() {
 
   upgradeLoading.value = true
 
-  // Redirect to Payrexx payment page
-  // The payment page will redirect back to /pricing/success or /pricing/cancel
-  const payrexxUrl = config.public.payrexxProUrl || 'https://helvetra.payrexx.com/de/pay?tid=e84e0dd3'
-
-  // Add user email as reference for webhook matching
-  const urlWithRef = `${payrexxUrl}&referenceId=${encodeURIComponent(user.value?.email || '')}`
+  const baseUrl = payrexxUrls[billingPeriod.value]
+  const urlWithRef = `${baseUrl}&referenceId=${encodeURIComponent(user.value?.email || '')}`
 
   window.location.href = urlWithRef
 }
