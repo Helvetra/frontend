@@ -78,7 +78,7 @@
           v-model="sourceText"
           :placeholder="$t('translate.placeholder')"
           ref="sourceTextarea"
-          class="w-full h-40 md:h-64 p-4 resize-none border-none focus:outline-none focus:ring-0 text-neutral-900 placeholder-neutral-400"
+          class="w-full h-56 md:h-96 p-4 resize-none border-none focus:outline-none focus:ring-0 text-neutral-900 placeholder-neutral-400"
           @focus="scrollIntoViewOnMobile"
         />
         <div
@@ -90,7 +90,7 @@
       </div>
 
       <!-- Target text -->
-      <div class="relative bg-neutral-50 h-40 md:h-64">
+      <div class="relative bg-neutral-50 h-56 md:h-96">
         <!-- Scrollable content area -->
         <div ref="outputContainer" class="h-full overflow-y-auto p-4 pb-12">
           <!-- Registration invite for character limit (anonymous users) -->
