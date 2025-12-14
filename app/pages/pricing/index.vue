@@ -1,9 +1,58 @@
 <!--
   Pricing page showing tier comparison and upgrade options.
-  Supports monthly and yearly billing with discount highlight.
+  Uses custom modal with Payrexx iframe for seamless in-page checkout.
 -->
 <template>
   <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <!-- Payrexx Payment Modal -->
+    <Teleport to="body">
+      <Transition name="modal">
+        <div
+          v-if="showPaymentModal"
+          class="fixed inset-0 z-50 flex items-center justify-center p-4"
+          @click.self="closePaymentModal"
+        >
+          <!-- Backdrop -->
+          <div class="absolute inset-0 bg-black/60" />
+
+          <!-- Modal -->
+          <div class="relative w-full max-w-lg bg-white rounded-xl shadow-2xl overflow-hidden">
+            <!-- Header -->
+            <div class="flex items-center justify-between px-4 py-3 border-b border-neutral-200">
+              <h3 class="font-semibold text-neutral-900">{{ $t('pricing.checkout') }}</h3>
+              <button
+                type="button"
+                class="p-1 text-neutral-400 hover:text-neutral-600 transition-colors"
+                @click="closePaymentModal"
+              >
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Iframe container -->
+            <div class="relative" style="height: 75vh; min-height: 500px; max-height: 750px;">
+              <div v-if="iframeLoading" class="absolute inset-0 flex items-center justify-center bg-neutral-50">
+                <div class="flex flex-col items-center gap-3">
+                  <svg class="w-8 h-8 text-swiss-red animate-spin" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                  </svg>
+                  <span class="text-sm text-neutral-500">{{ $t('auth.loading') }}</span>
+                </div>
+              </div>
+              <iframe
+                v-if="showPaymentModal"
+                :src="payrexxUrl"
+                class="w-full h-full border-0"
+                @load="iframeLoading = false"
+              />
+            </div>
+          </div>
+        </div>
+      </Transition>
+    </Teleport>
     <div class="text-center mb-10">
       <h1 class="text-3xl font-bold text-neutral-900 mb-3">
         {{ $t('pricing.title') }}
@@ -176,15 +225,22 @@
             {{ $t('pricing.currentPlan') }}
           </span>
         </div>
+        <!-- Modal trigger for authenticated users -->
         <button
-          v-else
-          @click="handleUpgrade"
-          :disabled="upgradeLoading"
-          class="block w-full py-2.5 px-4 bg-swiss-red text-white font-medium rounded-lg hover:bg-red-700 transition-colors text-center disabled:opacity-50"
+          v-else-if="isAuthenticated"
+          @click="openPaymentModal"
+          class="block w-full py-2.5 px-4 bg-swiss-red text-white font-medium rounded-lg hover:bg-red-700 transition-colors text-center cursor-pointer"
         >
-          <span v-if="upgradeLoading">{{ $t('auth.loading') }}</span>
-          <span v-else>{{ $t('pricing.pro.cta') }}</span>
+          {{ $t('pricing.pro.cta') }}
         </button>
+        <!-- Redirect to register for non-authenticated users -->
+        <NuxtLink
+          v-else
+          :to="localePath('/register')"
+          class="block w-full py-2.5 px-4 bg-swiss-red text-white font-medium rounded-lg hover:bg-red-700 transition-colors text-center"
+        >
+          {{ $t('pricing.pro.cta') }}
+        </NuxtLink>
       </div>
     </div>
 
@@ -216,31 +272,76 @@
 const { t } = useI18n()
 const localePath = useLocalePath()
 const { user, isAuthenticated } = useAuth()
-const config = useRuntimeConfig()
 
 const billingPeriod = ref<'monthly' | 'yearly'>('yearly')
-const upgradeLoading = ref(false)
+const showPaymentModal = ref(false)
+const iframeLoading = ref(true)
 
-const payrexxUrls = {
-  yearly: 'https://helvetra.payrexx.com/de/pay?tid=e84e0dd3',
-  monthly: 'https://helvetra.payrexx.com/de/pay?tid=0f0ee2ce',
+const payrexxBaseUrls = {
+  yearly: 'https://helvetra.payrexx.com/pay?tid=e84e0dd3',
+  monthly: 'https://helvetra.payrexx.com/pay?tid=0f0ee2ce',
 }
 
-async function handleUpgrade() {
-  if (!isAuthenticated.value) {
-    navigateTo(localePath('/register'))
-    return
+const payrexxUrl = computed(() => {
+  const baseUrl = payrexxBaseUrls[billingPeriod.value]
+  const email = user.value?.email || ''
+  const params = new URLSearchParams()
+  if (email) {
+    params.set('contact_email', email)
+    params.set('referenceId', email)
   }
+  return `${baseUrl}&${params.toString()}`
+})
 
-  upgradeLoading.value = true
-
-  const baseUrl = payrexxUrls[billingPeriod.value]
-  const urlWithRef = `${baseUrl}&referenceId=${encodeURIComponent(user.value?.email || '')}`
-
-  window.location.href = urlWithRef
+function openPaymentModal(): void {
+  iframeLoading.value = true
+  showPaymentModal.value = true
+  // Prevent body scroll when modal is open
+  document.body.style.overflow = 'hidden'
 }
+
+function closePaymentModal(): void {
+  showPaymentModal.value = false
+  document.body.style.overflow = ''
+}
+
+// Close modal on Escape key
+onMounted(() => {
+  const handleEscape = (e: KeyboardEvent) => {
+    if (e.key === 'Escape' && showPaymentModal.value) {
+      closePaymentModal()
+    }
+  }
+  window.addEventListener('keydown', handleEscape)
+  onUnmounted(() => {
+    window.removeEventListener('keydown', handleEscape)
+    document.body.style.overflow = ''
+  })
+})
 
 useHead({
   title: () => `${t('pricing.title')} - Helvetra`,
 })
 </script>
+
+<style scoped>
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+
+.modal-enter-active > div:last-child,
+.modal-leave-active > div:last-child {
+  transition: transform 0.2s ease;
+}
+
+.modal-enter-from > div:last-child,
+.modal-leave-to > div:last-child {
+  transform: scale(0.95);
+}
+</style>
