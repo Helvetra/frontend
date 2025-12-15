@@ -269,6 +269,11 @@
     "success": {
       "title": "Welcome to Helvetra+!",
       "description": "Your subscription is now active. Thank you for supporting Swiss development!",
+      "benefitsTitle": "Your new benefits",
+      "benefit1": "500,000 characters per month",
+      "benefit2": "Up to 5,000 characters per translation",
+      "benefit3": "Priority processing",
+      "benefit4": "Support Swiss development",
       "accountCta": "View your account",
       "translateCta": "Start translating"
     },

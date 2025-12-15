@@ -269,6 +269,11 @@
     "success": {
       "title": "Bienvenue sur Helvetra+!",
       "description": "Votre abonnement est maintenant actif. Merci de soutenir le développement suisse !",
+      "benefitsTitle": "Vos nouveaux avantages",
+      "benefit1": "500'000 caractères par mois",
+      "benefit2": "Jusqu'à 5'000 caractères par traduction",
+      "benefit3": "Traitement prioritaire",
+      "benefit4": "Soutien au développement suisse",
       "accountCta": "Voir votre compte",
       "translateCta": "Commencer à traduire"
     },
