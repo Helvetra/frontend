@@ -115,9 +115,9 @@
       <!-- Source text -->
       <div class="flex flex-col h-56 md:h-96">
         <textarea
+          ref="sourceTextarea"
           v-model="sourceText"
           :placeholder="$t('translate.placeholder')"
-          ref="sourceTextarea"
           class="flex-1 w-full p-4 resize-none border-none focus:outline-none focus:ring-0 text-neutral-900 placeholder-neutral-400"
           @focus="scrollIntoViewOnMobile"
         />

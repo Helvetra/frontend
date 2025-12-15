@@ -8,7 +8,7 @@
       <div class="flex justify-between items-center">
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center gap-3">
-          <img src="/img/logo.svg" alt="Helvetra" class="h-8 md:h-10" />
+          <img src="/img/logo.svg" alt="Helvetra" class="h-8 md:h-10" >
         </NuxtLink>
 
         <!-- Desktop Navigation -->

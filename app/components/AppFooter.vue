@@ -8,7 +8,7 @@
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
         <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
           <NuxtLink :to="localePath('/')" class="flex items-center gap-2">
-            <img src="/img/logo.svg" alt="Helvetra" class="h-6" />
+            <img src="/img/logo.svg" alt="Helvetra" class="h-6" >
           </NuxtLink>
 
           <nav class="flex gap-6 text-sm">

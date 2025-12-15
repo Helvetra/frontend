@@ -41,9 +41,9 @@
         <!-- Resend verification -->
         <div v-if="!user.emailVerified" class="mt-4 pt-4 border-t border-neutral-100">
           <button
-            @click="handleResendVerification"
             :disabled="resendLoading || resendCooldown > 0"
             class="text-sm text-swiss-red hover:underline disabled:opacity-50 disabled:cursor-not-allowed"
+            @click="handleResendVerification"
           >
             <span v-if="resendCooldown > 0">
               {{ $t('account.profile.resendIn', { seconds: resendCooldown }) }}
@@ -125,8 +125,8 @@
 
       <!-- Logout button -->
       <button
-        @click="handleLogout"
         class="w-full py-2.5 px-4 border border-neutral-300 text-neutral-700 font-medium rounded-lg hover:bg-neutral-50 transition-colors"
+        @click="handleLogout"
       >
         {{ $t('account.logout') }}
       </button>

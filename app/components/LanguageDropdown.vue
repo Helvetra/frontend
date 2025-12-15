@@ -3,7 +3,7 @@
   Supports keyboard navigation and screen readers.
 -->
 <template>
-  <div class="relative" ref="containerRef">
+  <div ref="containerRef" class="relative">
     <button
       type="button"
       class="flex items-center gap-1 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-swiss-red focus-visible:ring-offset-2 rounded"
@@ -44,8 +44,8 @@
       >
         <li
           v-for="(option, index) in options"
-          :key="option.value"
           :id="`${uid}-option-${index}`"
+          :key="option.value"
           role="option"
           :aria-selected="option.value === modelValue"
           class="px-3 py-2 text-sm cursor-pointer transition-colors"

@@ -9,7 +9,7 @@
         {{ $t('auth.login.title') }}
       </h1>
 
-      <form @submit.prevent="handleSubmit" class="space-y-4">
+      <form class="space-y-4" @submit.prevent="handleSubmit">
         <!-- Email -->
         <div>
           <label for="email" class="block text-sm font-medium text-neutral-700 mb-1">
@@ -23,7 +23,7 @@
             autocomplete="email"
             class="w-full px-3 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-swiss-red focus:border-transparent outline-none transition-shadow"
             :placeholder="$t('auth.emailPlaceholder')"
-          />
+          >
         </div>
 
         <!-- Password -->
@@ -39,7 +39,7 @@
             autocomplete="current-password"
             class="w-full px-3 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-swiss-red focus:border-transparent outline-none transition-shadow"
             :placeholder="$t('auth.passwordPlaceholder')"
-          />
+          >
         </div>
 
         <!-- Error message -->
