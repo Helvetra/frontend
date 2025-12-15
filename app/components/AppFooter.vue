@@ -15,12 +15,15 @@
             <NuxtLink :to="localePath('/about')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
               {{ $t('nav.about') }}
             </NuxtLink>
+            <NuxtLink :to="localePath('/impressum')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
+              {{ $t('nav.impressum') }}
+            </NuxtLink>
+            <NuxtLink :to="localePath('/terms')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
+              {{ $t('nav.terms') }}
+            </NuxtLink>
             <NuxtLink :to="localePath('/privacy')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
               {{ $t('nav.privacy') }}
             </NuxtLink>
-            <a href="mailto:gruezi@helvetra.ch" class="text-neutral-500 hover:text-neutral-900 transition-colors">
-              gruezi@helvetra.ch
-            </a>
           </nav>
         </div>
 

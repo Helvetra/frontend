@@ -64,7 +64,7 @@
         },
         "different": {
           "q": "Qu'est-ce qui différencie Helvetra de Google Translate ou DeepL ?",
-          "a": "Pas de tracking, et vos données restent en Suisse — pas aux États-Unis (Google) ni dans l'UE (DeepL). En plus, un focus unique sur la traduction, sans distractions."
+          "a": "Pas de tracking, et vos données restent en Suisse, pas aux États-Unis (Google) ni dans l'UE (DeepL). En plus, un focus unique sur la traduction, sans distractions."
         },
         "swissGerman": {
           "q": "Helvetra comprend-elle vraiment le suisse allemand ?",
@@ -76,11 +76,11 @@
         },
         "apertus": {
           "q": "Qu'est-ce qu'Apertus ?",
-          "a": "Apertus est le modèle de langage IA open source suisse, développé par l'ETH Zurich, l'EPFL et le CSCS. Entraîné sur plus de 15 billions de tokens dans plus de 1'000 langues — dont le suisse allemand et le romanche — il est conçu pour la transparence et le bien commun. Helvetra n'est pas affiliée à Apertus mais a choisi de s'appuyer sur lui car nous croyons en sa mission. En savoir plus sur <a href=\"https://www.swiss-ai.org\" target=\"_blank\" rel=\"noopener\" class=\"text-swiss-red hover:underline\">Swiss AI</a>, <a href=\"https://ai.epfl.ch\" target=\"_blank\" rel=\"noopener\" class=\"text-swiss-red hover:underline\">EPFL AI</a> et <a href=\"https://ai.ethz.ch\" target=\"_blank\" rel=\"noopener\" class=\"text-swiss-red hover:underline\">ETH AI</a>."
+          "a": "Apertus est le modèle de langage IA open source suisse, développé par l'ETH Zurich, l'EPFL et le CSCS. Entraîné sur plus de 15 billions de tokens dans plus de 1'000 langues, dont le suisse allemand et le romanche. Il est conçu pour la transparence et le bien commun. Helvetra n'est pas affiliée à Apertus mais a choisi de s'appuyer sur lui car nous croyons en sa mission. En savoir plus sur <a href=\"https://www.swiss-ai.org\" target=\"_blank\" rel=\"noopener\" class=\"text-swiss-red hover:underline\">Swiss AI</a>, <a href=\"https://ai.epfl.ch\" target=\"_blank\" rel=\"noopener\" class=\"text-swiss-red hover:underline\">EPFL AI</a> et <a href=\"https://ai.ethz.ch\" target=\"_blank\" rel=\"noopener\" class=\"text-swiss-red hover:underline\">ETH AI</a>."
         },
         "infomaniak": {
           "q": "Pourquoi Infomaniak ?",
-          "a": "Infomaniak est une entreprise suisse offrant une infrastructure IA open source alimentée à 100% par des énergies renouvelables. Vos données restent en Suisse, aucune requête n'est stockée, et l'énergie utilisée est récupérée pour le chauffage. Helvetra n'est pas affiliée à Infomaniak — nous les avons choisis car ils partagent nos valeurs. <a href=\"https://www.infomaniak.com/fr/hebergement/ai-services\" target=\"_blank\" rel=\"noopener\" class=\"text-swiss-red hover:underline\">En savoir plus</a>."
+          "a": "Infomaniak est une entreprise suisse offrant une infrastructure IA open source alimentée à 100% par des énergies renouvelables. Vos données restent en Suisse, aucune requête n'est stockée, et l'énergie utilisée est récupérée pour le chauffage. Helvetra n'est pas affiliée à Infomaniak. Nous les avons choisis car ils partagent nos valeurs. <a href=\"https://www.infomaniak.com/fr/hebergement/ai-services\" target=\"_blank\" rel=\"noopener\" class=\"text-swiss-red hover:underline\">En savoir plus</a>."
         },
         "api": {
           "q": "Y a-t-il une API pour les entreprises ?",
@@ -88,7 +88,7 @@
         },
         "contribute": {
           "q": "Puis-je contribuer ?",
-          "a": "Bien sûr ! <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Contactez-nous</a> — nous serions ravis d'échanger avec vous."
+          "a": "Bien sûr ! <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Contactez-nous</a>. Nous serions ravis d'échanger avec vous."
         }
       }
     },
@@ -105,6 +105,8 @@
     "home": "Accueil",
     "about": "À propos",
     "pricing": "Tarifs",
+    "impressum": "Mentions légales",
+    "terms": "CGV",
     "privacy": "Confidentialité",
     "login": "Connexion",
     "register": "S'inscrire",
@@ -289,36 +291,113 @@
   },
   "about": {
     "title": "À propos de Helvetra",
-    "pretensions": {
-      "title": "Sans prétention",
-      "text1": "Nous ne sommes pas linguistes. Nous ne sommes pas experts en traduction. Nous ne prétendons pas qu'Helvetra traduit mieux que DeepL, Google ou quiconque.",
-      "text2": "Nous sommes une petite équipe en Suisse qui a trouvé amusant de créer une application de traduction avec de la technologie suisse — et de voir où ça mène."
+    "mission": {
+      "title": "Notre mission",
+      "text1": "Helvetra existe pour une raison : offrir à la Suisse un outil de traduction qui respecte les valeurs suisses. Confidentialité, qualité et indépendance.",
+      "text2": "Vos mots méritent de rester en Suisse. Pas sur des serveurs aux États-Unis ou dans l'UE. Pas utilisés pour entraîner des modèles d'IA étrangers. Simplement traduits, en privé, et oubliés."
     },
-    "swiss": {
-      "title": "Swiss-Made, propulsé par l'IA",
-      "text1": "Helvetra est propulsé par Apertus, un modèle d'IA développé par l'ETHZ et l'EPFL, hébergé par Infomaniak. Apertus n'a pas été conçu spécifiquement pour la traduction grand public — mais nous trouvons beau d'utiliser la recherche suisse pour quelque chose de pratique et accessible.",
-      "text2": "La plupart du contenu de ce site et de l'application a été généré et traduit par Apertus. Pas par des humains. Nous apprenons en chemin."
+    "technology": {
+      "title": "Technologie suisse",
+      "text1": "Helvetra est propulsé par Apertus, le modèle de langage IA suisse développé par l'ETH Zurich et l'EPFL, deux des meilleures universités techniques au monde. C'est l'excellence de la recherche suisse, rendue accessible.",
+      "text2": "Notre infrastructure fonctionne sur Infomaniak, le principal fournisseur cloud indépendant suisse. 100% d'énergie renouvelable, 100% de centres de données suisses, zéro conservation de données."
     },
-    "output": {
-      "title": "Nous ne contrôlons pas les résultats",
-      "text1": "L'IA traduit. Nous ne vérifions pas chaque résultat. Les traductions peuvent être imparfaites, maladroites ou fausses. C'est la réalité du travail avec l'IA.",
-      "text2": "Si vous remarquez quelque chose — <a href=\"mailto:gruezi{'@'}helvetra.ch\" class=\"text-swiss-red hover:underline\">dites-le nous</a>. Vos retours rendent Helvetra meilleur."
+    "privacy": {
+      "title": "Confidentialité par conception",
+      "text1": "Nous avons construit Helvetra avec un principe : vos données vous appartiennent. Les traductions sont traitées et immédiatement supprimées. Nous ne stockons pas ce que vous écrivez. Nous ne suivons pas comment vous utilisez l'application.",
+      "text2": "La seule exception : si vous choisissez de donner votre avis, vous consentez explicitement à partager cette traduction spécifique. Rien ne se passe sans votre permission."
     },
-    "money": {
-      "title": "Où va l'argent",
-      "text": "Les revenus vont directement à Helvetra. Pas de commission pour Apertus, Infomaniak ou Payrexx — juste leurs frais standards. Nous sommes indépendants."
+    "independence": {
+      "title": "Indépendant & transparent",
+      "text1": "Helvetra est une entreprise suisse indépendante. Les revenus vont directement à la maintenance et à l'amélioration du service. Pas de commissions cachées, pas de pression des investisseurs, pas de monétisation des données.",
+      "text2": "Nous utilisons Apertus et Infomaniak parce qu'ils correspondent à nos valeurs, pas parce que nous sommes affiliés. Nous payons des frais standards comme tout client. Notre seule obligation est envers vous."
     },
-    "fun": {
-      "title": "Un projet pour le plaisir",
-      "text1": "C'est un expériment. Une lettre d'amour à la technologie suisse.",
-      "text2": "Si vous souhaitez voir Helvetra évoluer, partagez-le, utilisez-le, donnez votre avis. C'est tout ce que nous demandons."
-    },
-    "backLink": "Retour à Helvetra"
+    "vision": {
+      "title": "Construit pour la Suisse",
+      "text1": "Helvetra est une lettre d'amour à la technologie suisse. Nous croyons que la Suisse peut créer des outils numériques de classe mondiale qui reflètent nos valeurs nationales.",
+      "text2": "Questions ou commentaires ? Nous serions ravis de vous entendre : <a href=\"mailto:gruezi{'@'}helvetra.ch\" class=\"text-swiss-red hover:underline\">gruezi{'@'}helvetra.ch</a>"
+    }
   },
   "confirm": {
     "title": "Encore une étape !",
     "instruction": "Veuillez consulter votre boîte de réception et cliquer sur le lien de confirmation pour finaliser votre inscription.",
     "backButton": "Retour à Helvetra"
+  },
+  "impressum": {
+    "title": "Mentions légales",
+    "responsible": {
+      "title": "Personne responsable",
+      "country": "Suisse"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "E-mail"
+    },
+    "disclaimer": {
+      "title": "Avertissement",
+      "text": "Helvetra utilise l'IA pour les traductions. Nous ne garantissons pas l'exactitude ou l'exhaustivité des traductions. Utilisation à vos propres risques."
+    }
+  },
+  "terms": {
+    "title": "Conditions générales",
+    "lastUpdated": "Dernière mise à jour",
+    "scope": {
+      "title": "Champ d'application",
+      "text": "Les présentes Conditions générales régissent l'utilisation des services de traduction de Helvetra. En utilisant Helvetra, vous acceptez ces conditions."
+    },
+    "service": {
+      "title": "Description du service",
+      "text": "Helvetra fournit des services de traduction assistés par IA entre l'allemand, le suisse allemand, le français, l'italien, le romanche et l'anglais. Les traductions sont générées par Apertus, un modèle d'IA suisse, et sont fournies telles quelles sans garantie d'exactitude."
+    },
+    "tiers": {
+      "title": "Niveaux de service",
+      "intro": "Helvetra propose les niveaux de service suivants :",
+      "anonymous": {
+        "name": "Anonyme",
+        "desc": "Jusqu'à 400 caractères par traduction, maximum 2 000 caractères par semaine. Aucune inscription requise."
+      },
+      "free": {
+        "name": "Basic (Gratuit)",
+        "desc": "Jusqu'à 10 000 caractères par mois. Inscription requise."
+      },
+      "plus": {
+        "name": "Helvetra+",
+        "desc": "Jusqu'à 500 000 caractères par mois. Abonnement payant."
+      }
+    },
+    "pricing": {
+      "title": "Tarifs",
+      "text": "Tarifs de l'abonnement Helvetra+ :",
+      "yearly": "Annuel : CHF 4.99/mois (facturé annuellement)",
+      "monthly": "Mensuel : CHF 7.99/mois"
+    },
+    "cancellation": {
+      "title": "Résiliation",
+      "text": "Vous pouvez résilier votre abonnement à tout moment. Les abonnements sont renouvelés uniquement sur demande explicite. Après résiliation, vous conservez l'accès jusqu'à la fin de votre période de facturation."
+    },
+    "refunds": {
+      "title": "Remboursements",
+      "text": "Tous les paiements sont définitifs. Aucun remboursement n'est accordé pour les frais d'abonnement."
+    },
+    "data": {
+      "title": "Traitement des données",
+      "text": "Helvetra ne stocke pas vos traductions. Le texte est traité et supprimé immédiatement. La seule exception est lorsque vous donnez votre avis et acceptez explicitement de partager la traduction à des fins d'amélioration de la qualité."
+    },
+    "liability": {
+      "title": "Limitation de responsabilité",
+      "text": "Helvetra est fourni tel quel. Nous ne sommes pas responsables des dommages résultant de l'utilisation de notre service, y compris, mais sans s'y limiter, les traductions inexactes. Les utilisateurs sont responsables de vérifier l'exactitude des traductions pour les cas d'utilisation critiques."
+    },
+    "changes": {
+      "title": "Modifications des conditions",
+      "text": "Nous pouvons mettre à jour ces conditions à tout moment. L'utilisation continue de Helvetra après les modifications constitue une acceptation des nouvelles conditions."
+    },
+    "jurisdiction": {
+      "title": "Juridiction",
+      "text": "Ces conditions sont régies par le droit suisse. Tout litige sera résolu devant les tribunaux de Berne, Suisse."
+    },
+    "contact": {
+      "title": "Contact",
+      "text": "Pour toute question concernant ces conditions, contactez-nous à"
+    }
   },
   "privacy": {
     "title": "Politique de confidentialité",

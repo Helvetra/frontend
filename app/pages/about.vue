@@ -1,94 +1,83 @@
 <!--
-  About page with transparency sections about Helvetra.
+  About page explaining Helvetra's mission, technology, and values.
 -->
 <template>
-  <div class="py-16 md:py-24">
-      <div class="max-w-[800px] mx-auto px-4 md:px-8">
-        <h1 class="text-[2.5rem] font-normal text-black mb-12">
-          {{ $t('about.title') }}
-        </h1>
+  <div class="max-w-3xl mx-auto px-4 py-8 md:py-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-8">
+      {{ $t('about.title') }}
+    </h1>
 
-        <!-- No Pretensions -->
-        <section class="mb-12">
-          <h2 class="text-xl font-medium text-black mb-4">
-            {{ $t('about.pretensions.title') }}
-          </h2>
-          <p class="text-neutral-600 leading-relaxed mb-4">
-            {{ $t('about.pretensions.text1') }}
-          </p>
-          <p class="text-neutral-600 leading-relaxed">
-            {{ $t('about.pretensions.text2') }}
-          </p>
-        </section>
+    <div class="prose prose-neutral max-w-none">
+      <!-- Our Mission -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-neutral-900 mb-3">
+          {{ $t('about.mission.title') }}
+        </h2>
+        <p class="text-neutral-600 mb-4">
+          {{ $t('about.mission.text1') }}
+        </p>
+        <p class="text-neutral-600">
+          {{ $t('about.mission.text2') }}
+        </p>
+      </section>
 
-        <!-- Swiss-Made, AI-Powered -->
-        <section class="mb-12">
-          <h2 class="text-xl font-medium text-black mb-4">
-            {{ $t('about.swiss.title') }}
-          </h2>
-          <p class="text-neutral-600 leading-relaxed mb-4">
-            {{ $t('about.swiss.text1') }}
-          </p>
-          <p class="text-neutral-600 leading-relaxed">
-            {{ $t('about.swiss.text2') }}
-          </p>
-        </section>
+      <!-- Swiss Technology -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-neutral-900 mb-3">
+          {{ $t('about.technology.title') }}
+        </h2>
+        <p class="text-neutral-600 mb-4">
+          {{ $t('about.technology.text1') }}
+        </p>
+        <p class="text-neutral-600">
+          {{ $t('about.technology.text2') }}
+        </p>
+      </section>
 
-        <!-- We Don't Control the Output -->
-        <section class="mb-12">
-          <h2 class="text-xl font-medium text-black mb-4">
-            {{ $t('about.output.title') }}
-          </h2>
-          <p class="text-neutral-600 leading-relaxed mb-4">
-            {{ $t('about.output.text1') }}
-          </p>
-          <p class="text-neutral-600 leading-relaxed" v-html="$t('about.output.text2')"></p>
-        </section>
+      <!-- Privacy by Design -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-neutral-900 mb-3">
+          {{ $t('about.privacy.title') }}
+        </h2>
+        <p class="text-neutral-600 mb-4">
+          {{ $t('about.privacy.text1') }}
+        </p>
+        <p class="text-neutral-600">
+          {{ $t('about.privacy.text2') }}
+        </p>
+      </section>
 
-        <!-- Where the Money Goes -->
-        <section class="mb-12">
-          <h2 class="text-xl font-medium text-black mb-4">
-            {{ $t('about.money.title') }}
-          </h2>
-          <p class="text-neutral-600 leading-relaxed">
-            {{ $t('about.money.text') }}
-          </p>
-        </section>
+      <!-- Independent & Transparent -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-neutral-900 mb-3">
+          {{ $t('about.independence.title') }}
+        </h2>
+        <p class="text-neutral-600 mb-4">
+          {{ $t('about.independence.text1') }}
+        </p>
+        <p class="text-neutral-600">
+          {{ $t('about.independence.text2') }}
+        </p>
+      </section>
 
-        <!-- A Fun Project -->
-        <section class="mb-12">
-          <h2 class="text-xl font-medium text-black mb-4">
-            {{ $t('about.fun.title') }}
-          </h2>
-          <p class="text-neutral-600 leading-relaxed mb-4">
-            {{ $t('about.fun.text1') }}
-          </p>
-          <p class="text-neutral-600 leading-relaxed">
-            {{ $t('about.fun.text2') }}
-          </p>
-        </section>
-
-        <!-- Back link -->
-        <NuxtLink
-          :to="localePath('/')"
-          class="inline-flex items-center gap-2 text-swiss-red hover:underline"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M19 12H5M12 19l-7-7 7-7" />
-          </svg>
-          {{ $t('about.backLink') }}
-        </NuxtLink>
-      </div>
+      <!-- Built for Switzerland -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-neutral-900 mb-3">
+          {{ $t('about.vision.title') }}
+        </h2>
+        <p class="text-neutral-600 mb-4">
+          {{ $t('about.vision.text1') }}
+        </p>
+        <p class="text-neutral-600" v-html="$t('about.vision.text2')" />
+      </section>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const localePath = useLocalePath()
+const { t } = useI18n()
 
 useHead({
-  title: 'About — Helvetra',
-  meta: [
-    { name: 'description', content: 'What Helvetra is about: a small Swiss experiment in translation, powered by Swiss AI.' },
-  ],
+  title: () => `${t('about.title')} - Helvetra`,
 })
 </script>
