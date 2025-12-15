@@ -171,11 +171,13 @@ function formatNumber(num: number): string {
 }
 
 function formatDate(dateStr: string): string {
+  // Parse and display as UTC to avoid timezone shifts for billing dates
   const date = new Date(dateStr)
   return date.toLocaleDateString(locale.value, {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZone: 'UTC',
   })
 }
 
