@@ -68,19 +68,19 @@
             <span class="text-neutral-600">{{ $t('account.subscription.plan') }}</span>
             <span class="flex items-center gap-2">
               <span
-                v-if="user.tier !== 'free'"
+                v-if="currentTier !== 'free'"
                 class="px-2 py-0.5 bg-swiss-red text-white text-xs font-medium rounded"
               >
                 {{ $t('account.subscription.active') }}
               </span>
               <span class="text-neutral-900 font-medium">
-                {{ user.tier === 'free' ? $t('account.subscription.free') : 'Helvetra+' }}
+                {{ currentTier === 'free' ? $t('account.subscription.free') : 'Helvetra+' }}
               </span>
             </span>
           </div>
 
           <!-- Subscription period for pro users -->
-          <div v-if="subscription && subscription.periodEnd && user.tier !== 'free'" class="flex justify-between items-center">
+          <div v-if="subscription && subscription.periodEnd && currentTier !== 'free'" class="flex justify-between items-center">
             <span class="text-neutral-600">{{ $t('account.subscription.renewsOn') }}</span>
             <span class="text-neutral-900">{{ formatDate(subscription.periodEnd) }}</span>
           </div>
@@ -104,7 +104,7 @@
         </div>
 
         <!-- Upgrade CTA for free users -->
-        <div v-if="user.tier === 'free'" class="mt-4 pt-4 border-t border-neutral-100">
+        <div v-if="currentTier === 'free'" class="mt-4 pt-4 border-t border-neutral-100">
           <NuxtLink
             :to="localePath('/pricing')"
             class="inline-flex items-center gap-2 text-swiss-red hover:underline font-medium"
@@ -165,6 +165,9 @@ const usagePercent = computed(() => {
   if (!subscription.value) return 0
   return (subscription.value.charactersUsed / subscription.value.charactersLimit) * 100
 })
+
+// Use subscription tier from API (more accurate after payment) with fallback to user tier
+const currentTier = computed(() => subscription.value?.tier || user.value?.tier || 'free')
 
 function formatNumber(num: number): string {
   return num.toLocaleString()
