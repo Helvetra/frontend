@@ -229,7 +229,9 @@
     "alreadyAccount": "Hai già un account?",
     "loginLink": "Accedi",
     "wantMorePro": "Hai bisogno di tradurre testi più lunghi?",
-    "upgradeCta": "Passa a Helvetra+"
+    "upgradeCta": "Passa a Helvetra+",
+    "weeklyLimitReached": "Hai raggiunto il limite settimanale per gli utenti anonimi.",
+    "usageLimitReached": "Hai raggiunto il limite di utilizzo per questo periodo."
   },
   "pricing": {
     "title": "Prezzi",

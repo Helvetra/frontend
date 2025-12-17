@@ -84,7 +84,7 @@ export function useTranslation() {
       return null
     } catch (e) {
       const fetchError = e as {
-        data?: TranslationResponse | { detail?: Array<{ type: string; msg: string }> }
+        data?: TranslationResponse | { detail?: { code?: string; message?: string } | Array<{ type: string; msg: string }> }
         statusCode?: number
       }
 
@@ -99,7 +99,13 @@ export function useTranslation() {
           error.value = 'VALIDATION_ERROR'
         }
       } else if (fetchError.statusCode === 429) {
-        error.value = 'RATE_LIMITED'
+        // Check for specific limit error codes from backend
+        const detail = (fetchError.data as { detail?: { code?: string } })?.detail
+        if (detail?.code === 'WEEKLY_LIMIT_EXCEEDED') {
+          error.value = 'WEEKLY_LIMIT_EXCEEDED'
+        } else {
+          error.value = 'RATE_LIMITED'
+        }
       } else {
         error.value = 'CONNECTION_ERROR'
       }

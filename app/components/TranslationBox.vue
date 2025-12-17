@@ -189,6 +189,69 @@
             </div>
           </div>
 
+          <!-- Registration invite for weekly limit (anonymous users) -->
+          <div
+            v-else-if="error === 'WEEKLY_LIMIT_EXCEEDED' && !isAuthenticated && !isLoading"
+            class="h-full flex items-center justify-center"
+          >
+            <div class="text-center px-4">
+              <p class="text-sm text-neutral-700 mb-3">{{ $t('limits.weeklyLimitReached') }}</p>
+              <NuxtLink
+                :to="localePath('/register')"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-swiss-red text-white text-sm font-medium rounded-lg hover:bg-red-700 transition-colors"
+              >
+                {{ $t('limits.registerCta') }}
+                <span aria-hidden="true">&rarr;</span>
+              </NuxtLink>
+              <p class="text-xs text-neutral-500 mt-2">
+                {{ $t('limits.alreadyAccount') }}
+                <NuxtLink :to="localePath('/login')" class="text-swiss-red hover:underline">
+                  {{ $t('limits.loginLink') }}
+                </NuxtLink>
+              </p>
+            </div>
+          </div>
+
+          <!-- Upgrade invite for usage limit (authenticated free users) -->
+          <div
+            v-else-if="(error === 'WEEKLY_LIMIT_EXCEEDED' || error === 'RATE_LIMITED') && isAuthenticated && !isLoading"
+            class="h-full flex items-center justify-center"
+          >
+            <div class="text-center px-4">
+              <p class="text-sm text-neutral-700 mb-3">{{ $t('limits.usageLimitReached') }}</p>
+              <NuxtLink
+                :to="localePath('/pricing')"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-swiss-red text-white text-sm font-medium rounded-lg hover:bg-red-700 transition-colors"
+              >
+                {{ $t('limits.upgradeCta') }}
+                <span aria-hidden="true">&rarr;</span>
+              </NuxtLink>
+            </div>
+          </div>
+
+          <!-- Registration invite for rate limit (anonymous users) -->
+          <div
+            v-else-if="error === 'RATE_LIMITED' && !isAuthenticated && !isLoading"
+            class="h-full flex items-center justify-center"
+          >
+            <div class="text-center px-4">
+              <p class="text-sm text-neutral-700 mb-3">{{ $t('limits.weeklyLimitReached') }}</p>
+              <NuxtLink
+                :to="localePath('/register')"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-swiss-red text-white text-sm font-medium rounded-lg hover:bg-red-700 transition-colors"
+              >
+                {{ $t('limits.registerCta') }}
+                <span aria-hidden="true">&rarr;</span>
+              </NuxtLink>
+              <p class="text-xs text-neutral-500 mt-2">
+                {{ $t('limits.alreadyAccount') }}
+                <NuxtLink :to="localePath('/login')" class="text-swiss-red hover:underline">
+                  {{ $t('limits.loginLink') }}
+                </NuxtLink>
+              </p>
+            </div>
+          </div>
+
           <!-- Regular error message -->
           <div
             v-else-if="error && !isLoading"
