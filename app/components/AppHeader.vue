@@ -158,7 +158,7 @@ type LocaleCode = 'en' | 'de' | 'fr' | 'it'
 const { locale: currentLocale } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const localePath = useLocalePath()
-const { user, isAuthenticated, initialize } = useAuth()
+const { user, isAuthenticated } = useAuth()
 
 const mobileMenuOpen = ref(false)
 
@@ -180,8 +180,4 @@ watch(() => route.path, () => {
   mobileMenuOpen.value = false
 })
 
-// Initialize auth state on mount
-onMounted(() => {
-  initialize()
-})
 </script>
