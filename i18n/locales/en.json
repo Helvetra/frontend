@@ -104,6 +104,7 @@
   "nav": {
     "home": "Home",
     "about": "About",
+    "compare": "vs Google",
     "pricing": "Pricing",
     "impressum": "Legal Notice",
     "terms": "Terms",
@@ -446,6 +447,118 @@
     "contact": {
       "title": "Contact Us",
       "text": "For privacy questions or data requests, contact us at"
+    }
+  },
+  "compare": {
+    "google": {
+      "meta": {
+        "title": "Helvetra vs Google Translate: Which Is Right for You?",
+        "description": "An honest comparison of Helvetra and Google Translate. We break down privacy, features, pricing, and Swiss language support to help you choose the right translation tool."
+      },
+      "title": "Helvetra vs Google Translate",
+      "subtitle": "Two free translation tools built on fundamentally different philosophies. Here's an honest look at where each one shines — and where it falls short.",
+      "table": {
+        "price": "Price",
+        "helvetraPrice": "Free / CHF 4.99/mo",
+        "googlePrice": "Free (unlimited)",
+        "languages": "Languages",
+        "helvetraLangs": "5 (Swiss focus)",
+        "googleLangs": "133",
+        "swissGerman": "Swiss German",
+        "yes": "Yes",
+        "no": "No",
+        "dataPrivacy": "Data Privacy",
+        "helvetraPrivacy": "Zero tracking, Swiss servers",
+        "googlePrivacy": "Data collected, US servers",
+        "bestFor": "Best For",
+        "helvetraBestFor": "Privacy-conscious Swiss users",
+        "googleBestFor": "Global reach, rare languages"
+      },
+      "intro": {
+        "p1": "If you've ever needed to translate something, you've probably used Google Translate. It's everywhere — built into Chrome, Android, and countless apps. It's free, it's fast, and it supports over 130 languages. For most people, it's the default choice.",
+        "p2": "Helvetra takes a different approach. Instead of trying to translate everything for everyone, we focus on doing one thing well: private, high-quality translation for Swiss languages. Neither tool is objectively \"better\" — it depends entirely on what you need. Let's break it down honestly."
+      },
+      "googleWins": {
+        "title": "Where Google Translate Wins",
+        "coverage": {
+          "title": "Unmatched Language Coverage",
+          "p1": "Google Translate supports 133 languages — from Afrikaans to Zulu, including many regional and endangered languages. If you need to translate Thai, Swahili, or Welsh, Google is essentially your only free option. Helvetra supports five languages (German, French, Italian, English, and Swiss German), which covers Switzerland well but won't help you on a trip to Tokyo.",
+          "p2": "This isn't a weakness we're trying to fix. Helvetra is intentionally focused on Swiss languages because that's where we can add real value. If you regularly work with languages outside this scope, Google Translate is the practical choice."
+        },
+        "free": {
+          "title": "Truly Unlimited and Free",
+          "p1": "Google Translate has no character limits, no daily caps, and no premium tier you're being nudged toward. You can translate entire documents, websites, even real-time conversations — all without paying a cent or creating an account. This is possible because Google's business model doesn't rely on charging for translation; it relies on the data you provide while using the service."
+        },
+        "ecosystem": {
+          "title": "Deep Ecosystem Integration",
+          "p1": "Google Translate is woven into the fabric of the internet. Right-click any text in Chrome and translate it. Point your phone camera at a sign in a foreign language and see the translation overlaid in real-time. Have a conversation with someone who speaks a different language using the app's conversation mode. If you live in Google's ecosystem, the convenience is hard to beat."
+        },
+        "verdict": "Bottom line: If you need to translate exotic languages, want unlimited free usage, or love the convenience of Google's ecosystem integration, Google Translate is genuinely excellent at what it does."
+      },
+      "helvetraWins": {
+        "title": "Where Helvetra Wins",
+        "privacy": {
+          "title": "Privacy as a Foundation, Not a Feature",
+          "p1": "This is the fundamental difference between us. Google Translate is a free service because you pay with your data. Your translations can be stored, analyzed, and used to train Google's AI models. For casual use — looking up a word, translating a menu — this is a fair trade for most people.",
+          "p2": "But what about translating a confidential business email? A legal document? Personal medical information? A love letter? This is where Helvetra's approach matters. We don't store your translations. We don't use them for training. They're processed on Swiss servers by Swiss AI and immediately deleted. Swiss privacy law — which is stricter than GDPR — applies to everything we do."
+        },
+        "swissAi": {
+          "title": "Built on Swiss AI Technology",
+          "p1": "Helvetra is powered by Apertus, the Swiss large language model developed by ETH Zürich, EPFL, and the Swiss National Supercomputing Centre. This isn't just a badge — it's a fundamentally different approach to AI. Apertus is open-source, research-driven, and built for transparency rather than profit extraction.",
+          "p2": "When you use Helvetra, you're supporting the Swiss technology ecosystem instead of feeding more data to Big Tech. Your translations help fund Swiss research and infrastructure, not advertising algorithms in California."
+        },
+        "swissGerman": {
+          "title": "The Only Swiss German Translator",
+          "p1": "Google Translate doesn't support Swiss German. Neither does DeepL, Microsoft Translator, or any other major translation service. Helvetra is currently the only tool that can translate to and from Swiss German, with support for regional dialects like Zürich, Bern, Basel, and more. The quality is still improving — Swiss German is genuinely hard — but we're the only ones working on it."
+        },
+        "simplicity": {
+          "title": "Simplicity by Design",
+          "p1": "Helvetra does one thing: translate text. There's no account required for basic use, no ads, no dark patterns trying to upsell you, no features you'll never use cluttering the interface. Google Translate has grown increasingly complex over the years — conversation mode, camera translation, saved translations, starred phrases, integration with dozens of other services. If you just want to paste some text and get a translation, Helvetra gets out of your way."
+        },
+        "verdict": "Bottom line: If you work primarily with Swiss languages, care about where your data goes, or simply want a clean translation tool without the complexity, Helvetra was built for you."
+      },
+      "privacyTradeoff": {
+        "title": "The Privacy Trade-off (Honestly)",
+        "intro": "Let's be direct about what \"free\" means for each service. Google Translate is free because your usage data has value to Google — for improving their AI, for understanding language patterns, for building better products. Helvetra's free tier exists to let you try the service, with a paid tier for heavy users. Here's exactly what each service collects:",
+        "googleCollects": {
+          "title": "What Google collects",
+          "point1": "Your translation history (stored in your Google account unless you turn this off)",
+          "point2": "Translation data used to improve Google's machine learning models",
+          "point3": "Subject to US law, including the CLOUD Act which allows government data requests"
+        },
+        "helvetraCollects": {
+          "title": "What Helvetra collects",
+          "point1": "Nothing. Translations are processed and immediately deleted from our servers.",
+          "point2": "The only exception: if you voluntarily submit feedback, we store that specific translation to improve quality."
+        },
+        "honestTruth": "Here's the honest truth: if you don't care about privacy, Google's data collection will be completely invisible to you. The service works great. But if you're translating anything sensitive — business documents, legal text, personal correspondence — you should know where that data goes and who can access it."
+      },
+      "useCases": {
+        "title": "Which Should You Choose?",
+        "chooseGoogle": {
+          "title": "Choose Google Translate if:",
+          "point1": "You need languages beyond German, French, Italian, English, and Swiss German",
+          "point2": "You translate casually and aren't concerned about data privacy",
+          "point3": "You want camera translation, voice input, or conversation mode",
+          "point4": "You're already invested in Google's ecosystem and value the integration"
+        },
+        "chooseHelvetra": {
+          "title": "Choose Helvetra if:",
+          "point1": "You work primarily with Swiss languages and want optimized quality",
+          "point2": "Privacy matters — for business, legal, or personal reasons",
+          "point3": "You need Swiss German translation (we're the only option)",
+          "point4": "You prefer a simple, focused tool over a feature-packed platform",
+          "point5": "You want to support Swiss technology instead of Big Tech"
+        }
+      },
+      "conclusion": {
+        "title": "The Bottom Line",
+        "p1": "Google Translate is an incredible tool. It's free, it's everywhere, and it handles 133 languages with impressive quality. For casual use and global language coverage, nothing beats it. We're not trying to compete with that.",
+        "p2": "Helvetra exists for a different purpose: to give Swiss users a translation tool that respects their privacy, supports their languages (including Swiss German), and keeps their data in Switzerland. If that matters to you, we built this for you.",
+        "p3": "The best translation tool is the one that fits your values and your needs. Now you have the information to choose.",
+        "cta": "Ready to try a translation tool that respects your privacy?",
+        "tryHelvetra": "Try Helvetra Free"
+      }
     }
   }
 }

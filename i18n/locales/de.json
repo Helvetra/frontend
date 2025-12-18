@@ -104,6 +104,7 @@
   "nav": {
     "home": "Startseite",
     "about": "Über uns",
+    "compare": "vs Google",
     "pricing": "Preise",
     "impressum": "Impressum",
     "terms": "AGB",
@@ -446,6 +447,118 @@
     "contact": {
       "title": "Kontakt",
       "text": "Bei Datenschutzfragen oder Datenanfragen kontaktieren Sie uns unter"
+    }
+  },
+  "compare": {
+    "google": {
+      "meta": {
+        "title": "Helvetra vs Google Translate: Was ist das Richtige für Sie?",
+        "description": "Ein ehrlicher Vergleich von Helvetra und Google Translate. Wir analysieren Datenschutz, Funktionen, Preise und Schweizer Sprachunterstützung, um Ihnen bei der Wahl des richtigen Übersetzungstools zu helfen."
+      },
+      "title": "Helvetra vs Google Translate",
+      "subtitle": "Zwei kostenlose Übersetzungstools mit grundlegend unterschiedlichen Philosophien. Hier ist ein ehrlicher Blick darauf, wo jedes glänzt — und wo es Schwächen hat.",
+      "table": {
+        "price": "Preis",
+        "helvetraPrice": "Gratis / CHF 4.99/Mt.",
+        "googlePrice": "Gratis (unbegrenzt)",
+        "languages": "Sprachen",
+        "helvetraLangs": "5 (Schweizer Fokus)",
+        "googleLangs": "133",
+        "swissGerman": "Schweizerdeutsch",
+        "yes": "Ja",
+        "no": "Nein",
+        "dataPrivacy": "Datenschutz",
+        "helvetraPrivacy": "Kein Tracking, Schweizer Server",
+        "googlePrivacy": "Daten werden gesammelt, US-Server",
+        "bestFor": "Ideal für",
+        "helvetraBestFor": "Datenschutzbewusste Schweizer Nutzer",
+        "googleBestFor": "Globale Reichweite, seltene Sprachen"
+      },
+      "intro": {
+        "p1": "Wenn Sie jemals etwas übersetzen mussten, haben Sie wahrscheinlich Google Translate verwendet. Es ist überall — eingebaut in Chrome, Android und unzählige Apps. Es ist kostenlos, schnell und unterstützt über 130 Sprachen. Für die meisten Menschen ist es die Standardwahl.",
+        "p2": "Helvetra verfolgt einen anderen Ansatz. Anstatt alles für jeden zu übersetzen, konzentrieren wir uns darauf, eine Sache gut zu machen: private, hochwertige Übersetzung für Schweizer Sprachen. Keines der beiden Tools ist objektiv \"besser\" — es hängt ganz davon ab, was Sie brauchen. Lassen Sie uns das ehrlich aufschlüsseln."
+      },
+      "googleWins": {
+        "title": "Wo Google Translate gewinnt",
+        "coverage": {
+          "title": "Unerreichte Sprachabdeckung",
+          "p1": "Google Translate unterstützt 133 Sprachen — von Afrikaans bis Zulu, einschliesslich vieler regionaler und bedrohter Sprachen. Wenn Sie Thai, Swahili oder Walisisch übersetzen müssen, ist Google im Grunde Ihre einzige kostenlose Option. Helvetra unterstützt fünf Sprachen (Deutsch, Französisch, Italienisch, Englisch und Schweizerdeutsch), was die Schweiz gut abdeckt, Ihnen aber auf einer Reise nach Tokio nicht hilft.",
+          "p2": "Das ist keine Schwäche, die wir beheben wollen. Helvetra konzentriert sich bewusst auf Schweizer Sprachen, weil wir dort echten Mehrwert bieten können. Wenn Sie regelmässig mit Sprachen ausserhalb dieses Bereichs arbeiten, ist Google Translate die praktische Wahl."
+        },
+        "free": {
+          "title": "Wirklich unbegrenzt und kostenlos",
+          "p1": "Google Translate hat keine Zeichenbegrenzungen, keine täglichen Limits und kein Premium-Abo, zu dem Sie gedrängt werden. Sie können ganze Dokumente, Websites, sogar Echtzeitgespräche übersetzen — alles ohne einen Cent zu zahlen oder ein Konto zu erstellen. Das ist möglich, weil Googles Geschäftsmodell nicht auf Übersetzungsgebühren basiert, sondern auf den Daten, die Sie bei der Nutzung des Dienstes liefern."
+        },
+        "ecosystem": {
+          "title": "Tiefe Ökosystem-Integration",
+          "p1": "Google Translate ist in das Gefüge des Internets eingewoben. Klicken Sie mit der rechten Maustaste auf einen beliebigen Text in Chrome und übersetzen Sie ihn. Richten Sie Ihre Handykamera auf ein Schild in einer Fremdsprache und sehen Sie die Übersetzung in Echtzeit eingeblendet. Führen Sie ein Gespräch mit jemandem, der eine andere Sprache spricht, im Konversationsmodus der App. Wenn Sie in Googles Ökosystem leben, ist die Bequemlichkeit kaum zu übertreffen."
+        },
+        "verdict": "Fazit: Wenn Sie exotische Sprachen übersetzen müssen, unbegrenzte kostenlose Nutzung wollen oder die Bequemlichkeit von Googles Ökosystem-Integration lieben, ist Google Translate wirklich ausgezeichnet in dem, was es tut."
+      },
+      "helvetraWins": {
+        "title": "Wo Helvetra gewinnt",
+        "privacy": {
+          "title": "Datenschutz als Grundlage, nicht als Feature",
+          "p1": "Das ist der fundamentale Unterschied zwischen uns. Google Translate ist ein kostenloser Dienst, weil Sie mit Ihren Daten bezahlen. Ihre Übersetzungen können gespeichert, analysiert und zum Training von Googles KI-Modellen verwendet werden. Für die gelegentliche Nutzung — ein Wort nachschlagen, eine Speisekarte übersetzen — ist das für die meisten Menschen ein fairer Tausch.",
+          "p2": "Aber was ist mit der Übersetzung einer vertraulichen Geschäfts-E-Mail? Eines Rechtsdokuments? Persönlicher medizinischer Informationen? Eines Liebesbriefs? Hier ist Helvetras Ansatz wichtig. Wir speichern Ihre Übersetzungen nicht. Wir verwenden sie nicht für Training. Sie werden auf Schweizer Servern von Schweizer KI verarbeitet und sofort gelöscht. Schweizer Datenschutzrecht — das strenger als die DSGVO ist — gilt für alles, was wir tun."
+        },
+        "swissAi": {
+          "title": "Aufgebaut auf Schweizer KI-Technologie",
+          "p1": "Helvetra wird von Apertus angetrieben, dem Schweizer Large Language Model, entwickelt von ETH Zürich, EPFL und dem Schweizer Nationalen Supercomputing Centre. Das ist nicht nur ein Abzeichen — es ist ein fundamental anderer Ansatz für KI. Apertus ist Open-Source, forschungsgetrieben und auf Transparenz statt Profitmaximierung ausgerichtet.",
+          "p2": "Wenn Sie Helvetra nutzen, unterstützen Sie das Schweizer Technologie-Ökosystem, anstatt mehr Daten an Big Tech zu liefern. Ihre Übersetzungen finanzieren Schweizer Forschung und Infrastruktur, nicht Werbealgorithmen in Kalifornien."
+        },
+        "swissGerman": {
+          "title": "Der einzige Schweizerdeutsch-Übersetzer",
+          "p1": "Google Translate unterstützt kein Schweizerdeutsch. DeepL, Microsoft Translator und kein anderer grosser Übersetzungsdienst auch nicht. Helvetra ist derzeit das einzige Tool, das von und nach Schweizerdeutsch übersetzen kann, mit Unterstützung für regionale Dialekte wie Zürich, Bern, Basel und mehr. Die Qualität verbessert sich noch — Schweizerdeutsch ist wirklich schwer — aber wir sind die Einzigen, die daran arbeiten."
+        },
+        "simplicity": {
+          "title": "Einfachheit als Design-Prinzip",
+          "p1": "Helvetra macht eine Sache: Text übersetzen. Für die Grundnutzung ist kein Konto erforderlich, keine Werbung, keine Dark Patterns, die Sie zum Upgrade drängen, keine Funktionen, die Sie nie nutzen werden und die Oberfläche überladen. Google Translate ist über die Jahre zunehmend komplex geworden — Konversationsmodus, Kameraübersetzung, gespeicherte Übersetzungen, markierte Phrasen, Integration mit Dutzenden anderen Diensten. Wenn Sie einfach nur Text einfügen und eine Übersetzung bekommen wollen, steht Ihnen Helvetra nicht im Weg."
+        },
+        "verdict": "Fazit: Wenn Sie hauptsächlich mit Schweizer Sprachen arbeiten, sich darum kümmern, wohin Ihre Daten gehen, oder einfach ein sauberes Übersetzungstool ohne die Komplexität wollen, wurde Helvetra für Sie gebaut."
+      },
+      "privacyTradeoff": {
+        "title": "Der Datenschutz-Kompromiss (ehrlich)",
+        "intro": "Lassen Sie uns direkt sein, was \"kostenlos\" für jeden Dienst bedeutet. Google Translate ist kostenlos, weil Ihre Nutzungsdaten für Google wertvoll sind — um ihre KI zu verbessern, Sprachmuster zu verstehen, bessere Produkte zu bauen. Helvetras kostenlose Stufe existiert, damit Sie den Dienst ausprobieren können, mit einer bezahlten Stufe für Vielnutzer. Hier ist genau, was jeder Dienst sammelt:",
+        "googleCollects": {
+          "title": "Was Google sammelt",
+          "point1": "Ihren Übersetzungsverlauf (in Ihrem Google-Konto gespeichert, es sei denn, Sie schalten dies aus)",
+          "point2": "Übersetzungsdaten zur Verbesserung von Googles Machine-Learning-Modellen",
+          "point3": "Unterliegt US-Recht, einschliesslich dem CLOUD Act, der Regierungsdatenanfragen erlaubt"
+        },
+        "helvetraCollects": {
+          "title": "Was Helvetra sammelt",
+          "point1": "Nichts. Übersetzungen werden verarbeitet und sofort von unseren Servern gelöscht.",
+          "point2": "Die einzige Ausnahme: Wenn Sie freiwillig Feedback geben, speichern wir diese spezifische Übersetzung zur Qualitätsverbesserung."
+        },
+        "honestTruth": "Hier ist die ehrliche Wahrheit: Wenn Ihnen Datenschutz egal ist, wird Googles Datensammlung für Sie völlig unsichtbar sein. Der Dienst funktioniert grossartig. Aber wenn Sie etwas Sensibles übersetzen — Geschäftsdokumente, Rechtstexte, persönliche Korrespondenz — sollten Sie wissen, wohin diese Daten gehen und wer darauf zugreifen kann."
+      },
+      "useCases": {
+        "title": "Was sollten Sie wählen?",
+        "chooseGoogle": {
+          "title": "Wählen Sie Google Translate, wenn:",
+          "point1": "Sie Sprachen jenseits von Deutsch, Französisch, Italienisch, Englisch und Schweizerdeutsch brauchen",
+          "point2": "Sie gelegentlich übersetzen und sich nicht um Datenschutz sorgen",
+          "point3": "Sie Kameraübersetzung, Spracheingabe oder Konversationsmodus wollen",
+          "point4": "Sie bereits in Googles Ökosystem investiert sind und die Integration schätzen"
+        },
+        "chooseHelvetra": {
+          "title": "Wählen Sie Helvetra, wenn:",
+          "point1": "Sie hauptsächlich mit Schweizer Sprachen arbeiten und optimierte Qualität wollen",
+          "point2": "Datenschutz wichtig ist — aus geschäftlichen, rechtlichen oder persönlichen Gründen",
+          "point3": "Sie Schweizerdeutsch-Übersetzung brauchen (wir sind die einzige Option)",
+          "point4": "Sie ein einfaches, fokussiertes Tool einer funktionsreichen Plattform vorziehen",
+          "point5": "Sie Schweizer Technologie statt Big Tech unterstützen wollen"
+        }
+      },
+      "conclusion": {
+        "title": "Das Fazit",
+        "p1": "Google Translate ist ein unglaubliches Tool. Es ist kostenlos, es ist überall, und es bewältigt 133 Sprachen mit beeindruckender Qualität. Für die gelegentliche Nutzung und globale Sprachabdeckung ist es unschlagbar. Wir versuchen nicht, damit zu konkurrieren.",
+        "p2": "Helvetra existiert für einen anderen Zweck: Schweizer Nutzern ein Übersetzungstool zu geben, das ihre Privatsphäre respektiert, ihre Sprachen unterstützt (einschliesslich Schweizerdeutsch) und ihre Daten in der Schweiz behält. Wenn Ihnen das wichtig ist, haben wir das für Sie gebaut.",
+        "p3": "Das beste Übersetzungstool ist das, das zu Ihren Werten und Bedürfnissen passt. Jetzt haben Sie die Informationen, um zu wählen.",
+        "cta": "Bereit, ein Übersetzungstool zu testen, das Ihre Privatsphäre respektiert?",
+        "tryHelvetra": "Helvetra kostenlos testen"
+      }
     }
   }
 }

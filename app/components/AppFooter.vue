@@ -15,6 +15,9 @@
             <NuxtLink :to="localePath('/about')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
               {{ $t('nav.about') }}
             </NuxtLink>
+            <NuxtLink :to="localePath('/compare/google-translate')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
+              {{ $t('nav.compare') }}
+            </NuxtLink>
             <NuxtLink :to="localePath('/impressum')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
               {{ $t('nav.impressum') }}
             </NuxtLink>
