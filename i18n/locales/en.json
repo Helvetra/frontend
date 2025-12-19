@@ -104,9 +104,7 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "compareGoogle": "vs Google",
-    "compareDeepL": "vs DeepL",
-    "compareSupertext": "vs Supertext",
+    "compare": "Compare",
     "pricing": "Pricing",
     "impressum": "Legal Notice",
     "terms": "Terms",
@@ -452,6 +450,39 @@
     }
   },
   "compare": {
+    "hub": {
+      "meta": {
+        "title": "Compare Helvetra to Other Translation Tools",
+        "description": "Honest comparisons between Helvetra and popular translation services. See how we stack up on privacy, Swiss German support, and pricing."
+      },
+      "title": "Compare Translation Tools",
+      "subtitle": "Honest, balanced comparisons to help you choose the right translation tool for your needs.",
+      "google": {
+        "title": "vs Google Translate",
+        "description": "The world's most popular free translator. Great for global languages, but your data goes to US servers."
+      },
+      "deepl": {
+        "title": "vs DeepL",
+        "description": "Known for quality European translations. Premium pricing, no Swiss German support."
+      },
+      "supertext": {
+        "title": "vs Supertext",
+        "description": "Swiss company with human translators. Ironically, no Swiss German support from Zurich."
+      },
+      "tags": {
+        "privacy": "Privacy",
+        "free": "Free tier",
+        "quality": "Quality",
+        "pricing": "Pricing",
+        "swiss": "Swiss",
+        "swissGerman": "Swiss German"
+      },
+      "why": {
+        "title": "Why we publish these comparisons",
+        "p1": "We believe in honest, transparent comparisons. Every tool has strengths and weaknesses, including Helvetra. Our goal is to help you make an informed choice, not to claim we're the best at everything.",
+        "p2": "If you need 133 languages, choose Google. If you need premium European translation quality, consider DeepL. If you need Swiss German, privacy, and Swiss data sovereignty, that's where Helvetra shines."
+      }
+    },
     "google": {
       "meta": {
         "title": "Helvetra vs Google Translate: Which Is Right for You?",

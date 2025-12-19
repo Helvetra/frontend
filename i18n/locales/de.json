@@ -104,9 +104,7 @@
   "nav": {
     "home": "Startseite",
     "about": "Über uns",
-    "compareGoogle": "vs Google",
-    "compareDeepL": "vs DeepL",
-    "compareSupertext": "vs Supertext",
+    "compare": "Vergleich",
     "pricing": "Preise",
     "impressum": "Impressum",
     "terms": "AGB",
@@ -452,6 +450,39 @@
     }
   },
   "compare": {
+    "hub": {
+      "meta": {
+        "title": "Helvetra mit anderen Übersetzungstools vergleichen",
+        "description": "Ehrliche Vergleiche zwischen Helvetra und beliebten Übersetzungsdiensten. Sehen Sie, wie wir bei Datenschutz, Schweizerdeutsch und Preisen abschneiden."
+      },
+      "title": "Übersetzungstools vergleichen",
+      "subtitle": "Ehrliche, ausgewogene Vergleiche, um Ihnen bei der Wahl des richtigen Übersetzungstools zu helfen.",
+      "google": {
+        "title": "vs Google Translate",
+        "description": "Der weltweit beliebteste kostenlose Übersetzer. Gut für globale Sprachen, aber Ihre Daten gehen auf US-Server."
+      },
+      "deepl": {
+        "title": "vs DeepL",
+        "description": "Bekannt für hochwertige europäische Übersetzungen. Premium-Preise, kein Schweizerdeutsch."
+      },
+      "supertext": {
+        "title": "vs Supertext",
+        "description": "Schweizer Unternehmen mit menschlichen Übersetzern. Ironischerweise kein Schweizerdeutsch aus Zürich."
+      },
+      "tags": {
+        "privacy": "Datenschutz",
+        "free": "Gratis-Version",
+        "quality": "Qualität",
+        "pricing": "Preise",
+        "swiss": "Schweiz",
+        "swissGerman": "Schweizerdeutsch"
+      },
+      "why": {
+        "title": "Warum wir diese Vergleiche veröffentlichen",
+        "p1": "Wir glauben an ehrliche, transparente Vergleiche. Jedes Tool hat Stärken und Schwächen, einschliesslich Helvetra. Unser Ziel ist es, Ihnen bei einer informierten Entscheidung zu helfen, nicht zu behaupten, dass wir in allem die Besten sind.",
+        "p2": "Wenn Sie 133 Sprachen brauchen, wählen Sie Google. Wenn Sie Premium-Übersetzungsqualität für europäische Sprachen brauchen, ziehen Sie DeepL in Betracht. Wenn Sie Schweizerdeutsch, Datenschutz und Schweizer Datensouveränität brauchen, da glänzt Helvetra."
+      }
+    },
     "google": {
       "meta": {
         "title": "Helvetra vs Google Translate: Was ist das Richtige für Sie?",

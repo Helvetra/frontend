@@ -104,9 +104,7 @@
   "nav": {
     "home": "Home",
     "about": "Chi siamo",
-    "compareGoogle": "vs Google",
-    "compareDeepL": "vs DeepL",
-    "compareSupertext": "vs Supertext",
+    "compare": "Confronta",
     "pricing": "Prezzi",
     "impressum": "Note legali",
     "terms": "Termini",
@@ -452,6 +450,39 @@
     }
   },
   "compare": {
+    "hub": {
+      "meta": {
+        "title": "Confronta Helvetra con altri strumenti di traduzione",
+        "description": "Confronti onesti tra Helvetra e i servizi di traduzione popolari. Scopri come ci posizioniamo su privacy, svizzero tedesco e prezzi."
+      },
+      "title": "Confronta gli strumenti di traduzione",
+      "subtitle": "Confronti onesti ed equilibrati per aiutarti a scegliere lo strumento di traduzione giusto.",
+      "google": {
+        "title": "vs Google Translate",
+        "description": "Il traduttore gratuito più popolare al mondo. Ottimo per le lingue globali, ma i tuoi dati vanno su server USA."
+      },
+      "deepl": {
+        "title": "vs DeepL",
+        "description": "Noto per la qualità delle traduzioni europee. Prezzi premium, nessun supporto svizzero tedesco."
+      },
+      "supertext": {
+        "title": "vs Supertext",
+        "description": "Azienda svizzera con traduttori umani. Ironicamente, nessun svizzero tedesco da Zurigo."
+      },
+      "tags": {
+        "privacy": "Privacy",
+        "free": "Versione gratuita",
+        "quality": "Qualità",
+        "pricing": "Prezzi",
+        "swiss": "Svizzera",
+        "swissGerman": "Svizzero tedesco"
+      },
+      "why": {
+        "title": "Perché pubblichiamo questi confronti",
+        "p1": "Crediamo in confronti onesti e trasparenti. Ogni strumento ha punti di forza e debolezze, incluso Helvetra. Il nostro obiettivo è aiutarti a fare una scelta informata, non affermare di essere i migliori in tutto.",
+        "p2": "Se hai bisogno di 133 lingue, scegli Google. Se hai bisogno di qualità di traduzione premium per le lingue europee, considera DeepL. Se hai bisogno dello svizzero tedesco, della privacy e della sovranità dei dati svizzera, è lì che Helvetra brilla."
+      }
+    },
     "google": {
       "meta": {
         "title": "Helvetra vs Google Translate: qual è quello giusto per te?",

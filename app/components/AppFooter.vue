@@ -15,14 +15,8 @@
             <NuxtLink :to="localePath('/about')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
               {{ $t('nav.about') }}
             </NuxtLink>
-            <NuxtLink :to="localePath('/compare/google-translate')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
-              {{ $t('nav.compareGoogle') }}
-            </NuxtLink>
-            <NuxtLink :to="localePath('/compare/deepl')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
-              {{ $t('nav.compareDeepL') }}
-            </NuxtLink>
-            <NuxtLink :to="localePath('/compare/supertext')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
-              {{ $t('nav.compareSupertext') }}
+            <NuxtLink :to="localePath('/compare')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
+              {{ $t('nav.compare') }}
             </NuxtLink>
             <NuxtLink :to="localePath('/impressum')" class="text-neutral-500 hover:text-neutral-900 transition-colors">
               {{ $t('nav.impressum') }}

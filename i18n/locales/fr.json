@@ -104,9 +104,7 @@
   "nav": {
     "home": "Accueil",
     "about": "À propos",
-    "compareGoogle": "vs Google",
-    "compareDeepL": "vs DeepL",
-    "compareSupertext": "vs Supertext",
+    "compare": "Comparer",
     "pricing": "Tarifs",
     "impressum": "Mentions légales",
     "terms": "CGV",
@@ -452,6 +450,39 @@
     }
   },
   "compare": {
+    "hub": {
+      "meta": {
+        "title": "Comparez Helvetra aux autres outils de traduction",
+        "description": "Comparaisons honnêtes entre Helvetra et les services de traduction populaires. Découvrez nos performances en matière de confidentialité, suisse allemand et tarifs."
+      },
+      "title": "Comparer les outils de traduction",
+      "subtitle": "Comparaisons honnêtes et équilibrées pour vous aider à choisir le bon outil de traduction.",
+      "google": {
+        "title": "vs Google Translate",
+        "description": "Le traducteur gratuit le plus populaire au monde. Idéal pour les langues mondiales, mais vos données vont sur des serveurs US."
+      },
+      "deepl": {
+        "title": "vs DeepL",
+        "description": "Réputé pour la qualité des traductions européennes. Prix premium, pas de suisse allemand."
+      },
+      "supertext": {
+        "title": "vs Supertext",
+        "description": "Entreprise suisse avec traducteurs humains. Ironiquement, pas de suisse allemand depuis Zurich."
+      },
+      "tags": {
+        "privacy": "Confidentialité",
+        "free": "Version gratuite",
+        "quality": "Qualité",
+        "pricing": "Tarifs",
+        "swiss": "Suisse",
+        "swissGerman": "Suisse allemand"
+      },
+      "why": {
+        "title": "Pourquoi nous publions ces comparaisons",
+        "p1": "Nous croyons en des comparaisons honnêtes et transparentes. Chaque outil a ses forces et faiblesses, y compris Helvetra. Notre objectif est de vous aider à faire un choix éclairé, pas de prétendre être les meilleurs en tout.",
+        "p2": "Si vous avez besoin de 133 langues, choisissez Google. Si vous avez besoin d'une qualité de traduction premium pour les langues européennes, envisagez DeepL. Si vous avez besoin du suisse allemand, de la confidentialité et de la souveraineté des données suisse, c'est là qu'Helvetra excelle."
+      }
+    },
     "google": {
       "meta": {
         "title": "Helvetra vs Google Translate : lequel vous convient ?",
