@@ -104,7 +104,8 @@
   "nav": {
     "home": "Accueil",
     "about": "À propos",
-    "compare": "vs Google",
+    "compareGoogle": "vs Google",
+    "compareDeepL": "vs DeepL",
     "pricing": "Tarifs",
     "impressum": "Mentions légales",
     "terms": "CGV",
@@ -557,6 +558,143 @@
         "p2": "Helvetra existe pour un objectif différent : donner aux utilisateurs suisses un outil de traduction qui respecte leur vie privée, supporte leurs langues (y compris le suisse allemand), et garde leurs données en Suisse. Si cela compte pour vous, nous l'avons construit pour vous.",
         "p3": "Le meilleur outil de traduction est celui qui correspond à vos valeurs et vos besoins. Maintenant vous avez les informations pour choisir.",
         "cta": "Prêt à essayer un outil de traduction qui respecte votre vie privée ?",
+        "tryHelvetra": "Essayer Helvetra gratuitement"
+      }
+    },
+    "deepl": {
+      "meta": {
+        "title": "Helvetra vs DeepL : Quel traducteur vous convient ?",
+        "description": "Une comparaison honnête d'Helvetra et DeepL. Nous analysons qualité, prix, support du suisse allemand et confidentialité des données pour vous aider à choisir."
+      },
+      "title": "Helvetra vs DeepL",
+      "subtitle": "DeepL a mérité sa réputation de qualité. Mais est-ce le bon choix pour les utilisateurs suisses ? Voici un regard honnête sur les forces de chaque outil.",
+      "table": {
+        "price": "Prix Pro",
+        "helvetraPrice": "CHF 4.99/mois",
+        "deeplPrice": "€8.99/mois",
+        "freeTier": "Version gratuite",
+        "helvetraFree": "20K car./mois",
+        "deeplFree": "50K car./mois",
+        "languages": "Langues",
+        "helvetraLangs": "5 (focus suisse)",
+        "deeplLangs": "31+",
+        "swissGerman": "Suisse allemand",
+        "yes": "Oui",
+        "no": "Non",
+        "dataLocation": "Localisation données",
+        "helvetraData": "Suisse",
+        "deeplData": "UE (Allemagne)",
+        "bestFor": "Idéal pour",
+        "helvetraBestFor": "Langues suisses & confidentialité",
+        "deeplBestFor": "Qualité langues européennes"
+      },
+      "intro": {
+        "p1": "DeepL s'est forgé une réputation bien méritée comme l'un des meilleurs outils de traduction disponibles. Ses traductions se lisent souvent plus naturellement que celles des concurrents, surtout pour les langues européennes. Quand DeepL a été lancé, il a véritablement relevé la barre de la qualité de traduction automatique.",
+        "p2": "Alors pourquoi choisir Helvetra plutôt que DeepL ? Pas parce que nous prétendons être meilleurs en tout — nous ne le sommes pas. Mais parce que nous résolvons des problèmes différents. Si vous travaillez principalement avec des langues suisses, si la souveraineté des données vous importe, ou si vous avez besoin du suisse allemand, Helvetra offre quelque chose que DeepL ne peut simplement pas. Analysons honnêtement les différences."
+      },
+      "deeplWins": {
+        "title": "Où DeepL l'emporte",
+        "quality": {
+          "title": "Qualité de traduction pour les langues européennes",
+          "p1": "Le réseau neuronal de DeepL produit des traductions remarquablement naturelles, particulièrement entre grandes langues européennes comme l'allemand, le français, l'anglais et l'espagnol. Dans des tests à l'aveugle, les utilisateurs préfèrent souvent les résultats de DeepL à Google Translate et autres concurrents. Les traductions semblent moins mécaniques et capturent mieux les nuances.",
+          "p2": "Cette qualité vient d'années de développement ciblé et d'énormes ensembles de données d'entraînement. Pour des traductions simples allemand-anglais ou français-espagnol, DeepL est vraiment excellent. Nous ne prétendrons pas le contraire."
+        },
+        "documents": {
+          "title": "Traduction de documents",
+          "p1": "DeepL traite des documents entiers — fichiers Word, PowerPoints, PDFs — tout en préservant la mise en forme. Téléchargez un rapport de 50 pages et récupérez-le traduit avec la mise en page intacte. Helvetra se concentre actuellement uniquement sur la traduction de texte. Si vous devez régulièrement traduire des documents formatés, la gestion documentaire de DeepL est un avantage significatif."
+        },
+        "api": {
+          "title": "API pour développeurs",
+          "p1": "DeepL offre une API robuste pour les développeurs qui veulent intégrer la traduction dans leurs applications. La documentation est solide et le service fiable. Helvetra n'offre pas actuellement d'API (bien que ce soit dans notre feuille de route). Si vous développez un logiciel nécessitant des capacités de traduction, DeepL est le choix pratique aujourd'hui."
+        },
+        "languages": {
+          "title": "Couverture linguistique plus large",
+          "p1": "DeepL supporte 31+ langues contre 5 pour Helvetra. Besoin du japonais, portugais ou polonais ? DeepL vous couvre. Helvetra se concentre exclusivement sur les langues suisses : allemand, français, italien, anglais et suisse allemand. C'est intentionnel — nous préférons faire cinq langues excellemment que trente médiocrement."
+        },
+        "verdict": "En résumé : DeepL est un outil de traduction premium qui mérite sa réputation. Pour la qualité des langues européennes, la traduction de documents et l'accès API, c'est un excellent choix."
+      },
+      "helvetraWins": {
+        "title": "Où Helvetra l'emporte",
+        "swissGerman": {
+          "title": "Traduction du suisse allemand",
+          "p1": "DeepL ne supporte pas le suisse allemand. Google Translate, Microsoft Translator et aucun autre grand service de traduction non plus. Helvetra est le seul outil capable de traduire depuis et vers le suisse allemand, avec support des dialectes régionaux incluant Zürich, Berne, Bâle, Argovie et plus.",
+          "p2": "Si vous devez traduire un message en Mundart d'un collègue, communiquer avec des membres de la famille parlant suisse allemand, ou localiser du contenu pour des audiences suisses, nous sommes votre seule option. Le suisse allemand est vraiment difficile — il varie significativement par région et n'a pas de forme écrite standardisée — mais nous améliorons activement notre support des dialectes."
+        },
+        "privacy": {
+          "title": "Souveraineté des données suisse",
+          "p1": "DeepL est une entreprise allemande, ce qui signifie que vos données sont soumises aux réglementations de l'UE et stockées dans des centres de données de l'UE. C'est mieux que les services basés aux États-Unis, mais ce n'est pas la Suisse. Pour les entreprises suisses, les professionnels et les personnes soucieuses de leur vie privée, la différence compte.",
+          "p2": "Helvetra traite toutes les traductions en Suisse avec une IA suisse (Apertus) sur une infrastructure suisse (Infomaniak). Votre texte ne quitte jamais la Suisse. Le droit suisse de la protection des données s'applique. Pour les communications commerciales sensibles, les documents juridiques ou la correspondance personnelle, c'est plus qu'une formalité — c'est la tranquillité d'esprit."
+        },
+        "pricing": {
+          "title": "Tarification plus simple et abordable",
+          "p1": "Les prix de DeepL commencent à €8.99/mois pour le plan Starter, qui vous donne 200K caractères. Vous en voulez plus ? Le plan Advanced coûte €29.99/mois. Besoin d'illimité ? C'est €59.99/mois. La version gratuite est généreuse (50K caractères/mois) mais le saut vers le payant est abrupt.",
+          "p2": "Helvetra+ coûte CHF 4.99/mois et vous donne 500'000 caractères — c'est plus que le plan Advanced de DeepL à €29.99 pour environ un sixième du prix. Pas de structure de paliers complexe, pas de fonctionnalités verrouillées. Juste un plan simple pour les gens qui traduisent régulièrement."
+        },
+        "simplicity": {
+          "title": "Simplicité ciblée",
+          "p1": "DeepL est devenu une plateforme riche en fonctionnalités avec glossaires, paramètres de formalité, traduction de documents, fonctions d'équipe et accès API. Si vous avez besoin de ces fonctionnalités, elles sont précieuses. Mais si vous voulez juste traduire du texte rapidement et en privé, toute cette complexité est du bruit. Helvetra fait une chose : traduire du texte pour les langues suisses. Pas de compte requis pour l'utilisation de base, pas de pression pour upgrader, pas de fonctionnalités que vous ne toucherez jamais."
+        },
+        "verdict": "En résumé : Si le support du suisse allemand, la souveraineté des données suisse, ou une tarification abordable pour une utilisation intensive vous importent, Helvetra a été construit spécifiquement pour vos besoins."
+      },
+      "qualityQuestion": {
+        "title": "La question de la qualité",
+        "intro": "Abordons cela directement : la qualité de traduction d'Helvetra est-elle aussi bonne que celle de DeepL ? Pour les paires de langues européennes standard, DeepL a une longueur d'avance — des années de développement et des données d'entraînement massives. Mais la qualité dépend de ce que vous traduisez et pour qui.",
+        "deeplQuality": {
+          "title": "Forces de DeepL",
+          "point1": "Résultats soignés pour les grandes paires de langues européennes",
+          "point2": "Meilleure gestion des structures de phrases complexes",
+          "point3": "Traductions de prose plus naturelles"
+        },
+        "helvetraQuality": {
+          "title": "Forces d'Helvetra",
+          "point1": "Capacité suisse allemand (DeepL : aucune)",
+          "point2": "Optimisé pour le contexte et la terminologie suisse",
+          "point3": "S'améliore rapidement grâce aux retours utilisateurs"
+        },
+        "honestTruth": "La vérité honnête : pour un email professionnel allemand-français, les deux outils produisent de bons résultats. DeepL pourrait avoir l'avantage pour la prose littéraire. Mais pour tout ce qui implique le suisse allemand ou un contexte spécifiquement suisse, Helvetra est votre seule vraie option — et nous travaillons dur pour combler tout écart de qualité dans les autres domaines."
+      },
+      "pricingSection": {
+        "title": "Détail des prix",
+        "intro": "Les outils de traduction varient énormément dans leur tarification. Voici une comparaison directe de ce que vous obtenez pour votre argent :",
+        "deeplPricing": {
+          "title": "Prix DeepL",
+          "point1": "Gratuit : 50'000 caractères/mois",
+          "point2": "Starter : €8.99/mois (200K car.)",
+          "point3": "Advanced : €29.99/mois (500K car.)",
+          "point4": "Ultimate : €59.99/mois (illimité)"
+        },
+        "helvetraPricing": {
+          "title": "Prix Helvetra",
+          "point1": "Gratuit : 20'000 caractères/mois",
+          "point2": "Helvetra+ : CHF 4.99/mois (500K car.)",
+          "point3": "Pas de paliers complexes ni de fonctionnalités verrouillées"
+        },
+        "conclusion": "La version gratuite de DeepL est plus généreuse (50K vs 20K caractères). Mais si vous traduisez régulièrement et avez besoin d'un plan payant, Helvetra+ offre la même limite de caractères que DeepL Advanced pour un sixième du prix. La question est de savoir si les fonctionnalités supplémentaires de DeepL — traduction de documents, accès API, glossaires — valent le surcoût pour votre cas d'usage."
+      },
+      "useCases": {
+        "title": "Que devriez-vous choisir ?",
+        "chooseDeepL": {
+          "title": "Choisissez DeepL si :",
+          "point1": "Vous avez besoin de traduction de documents avec mise en forme préservée",
+          "point2": "Vous intégrez la traduction dans un logiciel via API",
+          "point3": "Vous travaillez avec des langues au-delà de l'allemand, français, italien et anglais",
+          "point4": "La qualité pour la prose littéraire ou technique complexe est primordiale"
+        },
+        "chooseHelvetra": {
+          "title": "Choisissez Helvetra si :",
+          "point1": "Vous avez besoin de traduction suisse allemand (nous sommes la seule option)",
+          "point2": "La souveraineté des données compte — serveurs suisses, loi suisse",
+          "point3": "Vous voulez des prix abordables pour une utilisation intensive",
+          "point4": "Vous préférez la simplicité aux fonctionnalités que vous n'utiliserez pas",
+          "point5": "Vous voulez soutenir la technologie suisse plutôt que Big Tech"
+        }
+      },
+      "conclusion": {
+        "title": "Le verdict",
+        "p1": "DeepL est un excellent outil de traduction. Sa qualité pour les grandes langues européennes est la meilleure du marché, et des fonctionnalités comme la traduction de documents et l'accès API sont précieuses pour les utilisateurs professionnels. Si vous avez besoin de ces capacités, cela vaut le surcoût.",
+        "p2": "Helvetra existe pour un objectif différent : servir les utilisateurs suisses qui ont besoin du support suisse allemand, veulent que leurs données restent en Suisse, ou veulent simplement un outil de traduction abordable et ciblé sans la complexité. Nous n'essayons pas de remplacer DeepL pour tout le monde — nous construisons la meilleure option pour les utilisateurs dont les besoins correspondent à nos forces.",
+        "p3": "Le bon choix dépend de vos priorités. Maintenant vous avez les informations pour décider.",
+        "cta": "Prêt à essayer la traduction faite pour la Suisse ?",
         "tryHelvetra": "Essayer Helvetra gratuitement"
       }
     }

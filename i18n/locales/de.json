@@ -104,7 +104,8 @@
   "nav": {
     "home": "Startseite",
     "about": "Über uns",
-    "compare": "vs Google",
+    "compareGoogle": "vs Google",
+    "compareDeepL": "vs DeepL",
     "pricing": "Preise",
     "impressum": "Impressum",
     "terms": "AGB",
@@ -557,6 +558,143 @@
         "p2": "Helvetra existiert für einen anderen Zweck: Schweizer Nutzern ein Übersetzungstool zu geben, das ihre Privatsphäre respektiert, ihre Sprachen unterstützt (einschliesslich Schweizerdeutsch) und ihre Daten in der Schweiz behält. Wenn Ihnen das wichtig ist, haben wir das für Sie gebaut.",
         "p3": "Das beste Übersetzungstool ist das, das zu Ihren Werten und Bedürfnissen passt. Jetzt haben Sie die Informationen, um zu wählen.",
         "cta": "Bereit, ein Übersetzungstool zu testen, das Ihre Privatsphäre respektiert?",
+        "tryHelvetra": "Helvetra kostenlos testen"
+      }
+    },
+    "deepl": {
+      "meta": {
+        "title": "Helvetra vs DeepL: Welcher Übersetzer ist der richtige für Sie?",
+        "description": "Ein ehrlicher Vergleich von Helvetra und DeepL. Wir analysieren Qualität, Preise, Schweizerdeutsch-Unterstützung und Datenschutz, um Ihnen bei der Wahl zu helfen."
+      },
+      "title": "Helvetra vs DeepL",
+      "subtitle": "DeepL hat sich seinen Ruf für Qualität verdient. Aber ist es die richtige Wahl für Schweizer Nutzer? Hier ist ein ehrlicher Blick auf die Stärken beider Tools.",
+      "table": {
+        "price": "Pro-Preis",
+        "helvetraPrice": "CHF 4.99/Mt.",
+        "deeplPrice": "€8.99/Mt.",
+        "freeTier": "Gratis-Version",
+        "helvetraFree": "20K Zeichen/Monat",
+        "deeplFree": "50K Zeichen/Monat",
+        "languages": "Sprachen",
+        "helvetraLangs": "5 (Schweiz-Fokus)",
+        "deeplLangs": "31+",
+        "swissGerman": "Schweizerdeutsch",
+        "yes": "Ja",
+        "no": "Nein",
+        "dataLocation": "Datenstandort",
+        "helvetraData": "Schweiz",
+        "deeplData": "EU (Deutschland)",
+        "bestFor": "Ideal für",
+        "helvetraBestFor": "Schweizer Sprachen & Datenschutz",
+        "deeplBestFor": "Europäische Sprachqualität"
+      },
+      "intro": {
+        "p1": "DeepL hat sich einen wohlverdienten Ruf als eines der besten verfügbaren Übersetzungstools aufgebaut. Seine Übersetzungen lesen sich oft natürlicher als die der Konkurrenz, besonders bei europäischen Sprachen. Als DeepL lancierte, hob es die Messlatte für maschinelle Übersetzungsqualität wirklich an.",
+        "p2": "Warum sollte also jemand Helvetra statt DeepL wählen? Nicht weil wir behaupten, in allem besser zu sein — das sind wir nicht. Sondern weil wir unterschiedliche Probleme lösen. Wenn Sie hauptsächlich mit Schweizer Sprachen arbeiten, Datensouveränität wichtig nehmen oder Schweizerdeutsch brauchen, bietet Helvetra etwas, das DeepL schlicht nicht kann. Lassen Sie uns die ehrlichen Unterschiede aufschlüsseln."
+      },
+      "deeplWins": {
+        "title": "Wo DeepL gewinnt",
+        "quality": {
+          "title": "Übersetzungsqualität für europäische Sprachen",
+          "p1": "DeepLs neuronales Netzwerk produziert bemerkenswert natürlich klingende Übersetzungen, besonders zwischen grossen europäischen Sprachen wie Deutsch, Französisch, Englisch und Spanisch. In Blindtests bevorzugen Nutzer oft DeepLs Output gegenüber Google Translate und anderen Konkurrenten. Die Übersetzungen wirken weniger mechanisch und erfassen Nuancen besser.",
+          "p2": "Diese Qualität kommt von Jahren fokussierter Entwicklung und riesigen Trainingsdatensätzen. Für einfache Deutsch-Englisch oder Französisch-Spanisch Übersetzungen ist DeepL wirklich ausgezeichnet. Wir werden nicht so tun als ob das nicht so wäre."
+        },
+        "documents": {
+          "title": "Dokumentenübersetzung",
+          "p1": "DeepL verarbeitet ganze Dokumente — Word-Dateien, PowerPoints, PDFs — und behält dabei die Formatierung bei. Laden Sie einen 50-seitigen Bericht hoch und erhalten Sie ihn übersetzt mit intaktem Layout zurück. Helvetra konzentriert sich derzeit nur auf Textübersetzung. Wenn Sie regelmässig formatierte Dokumente übersetzen müssen, ist DeepLs Dokumentenverarbeitung ein wesentlicher Vorteil."
+        },
+        "api": {
+          "title": "Entwickler-API",
+          "p1": "DeepL bietet eine robuste API für Entwickler, die Übersetzung in ihre Anwendungen integrieren wollen. Die Dokumentation ist solide und der Service zuverlässig. Helvetra bietet derzeit keine API an (obwohl es auf unserer Roadmap steht). Wenn Sie Software bauen, die Übersetzungsfunktionen braucht, ist DeepL heute die praktische Wahl."
+        },
+        "languages": {
+          "title": "Breitere Sprachabdeckung",
+          "p1": "DeepL unterstützt 31+ Sprachen im Vergleich zu Helvetras 5. Brauchen Sie Japanisch, Portugiesisch oder Polnisch? DeepL hat Sie abgedeckt. Helvetra konzentriert sich ausschliesslich auf Schweizer Sprachen: Deutsch, Französisch, Italienisch, Englisch und Schweizerdeutsch. Das ist beabsichtigt — wir machen lieber fünf Sprachen ausgezeichnet als dreissig mittelmässig."
+        },
+        "verdict": "Fazit: DeepL ist ein Premium-Übersetzungstool, das seinen Ruf verdient. Für europäische Sprachqualität, Dokumentenübersetzung und API-Zugang ist es eine ausgezeichnete Wahl."
+      },
+      "helvetraWins": {
+        "title": "Wo Helvetra gewinnt",
+        "swissGerman": {
+          "title": "Schweizerdeutsch-Übersetzung",
+          "p1": "DeepL unterstützt kein Schweizerdeutsch. Google Translate, Microsoft Translator und andere grosse Übersetzungsdienste auch nicht. Helvetra ist das einzige Tool, das von und nach Schweizerdeutsch übersetzen kann, mit Unterstützung für regionale Dialekte wie Zürich, Bern, Basel, Aargau und mehr.",
+          "p2": "Wenn Sie eine Mundart-Nachricht von einem Kollegen übersetzen, mit schweizerdeutsch-sprechenden Familienmitgliedern kommunizieren oder Inhalte für Schweizer Zielgruppen lokalisieren müssen, sind wir Ihre einzige Option. Schweizerdeutsch ist wirklich herausfordernd — es variiert erheblich nach Region und hat keine standardisierte Schriftform — aber wir verbessern aktiv unsere Dialektunterstützung."
+        },
+        "privacy": {
+          "title": "Schweizer Datensouveränität",
+          "p1": "DeepL ist ein deutsches Unternehmen, was bedeutet, dass Ihre Daten EU-Vorschriften unterliegen und in EU-Rechenzentren gespeichert werden. Das ist besser als US-basierte Dienste, aber es ist nicht Schweiz. Für Schweizer Unternehmen, Fachleute und datenschutzbewusste Personen macht der Unterschied etwas aus.",
+          "p2": "Helvetra verarbeitet alle Übersetzungen in der Schweiz mit Schweizer KI (Apertus) auf Schweizer Infrastruktur (Infomaniak). Ihr Text verlässt nie die Schweiz. Schweizer Datenschutzrecht gilt. Für sensible Geschäftskommunikation, juristische Dokumente oder persönliche Korrespondenz ist das mehr als eine Formalität — es ist Sicherheit."
+        },
+        "pricing": {
+          "title": "Einfachere, günstigere Preise",
+          "p1": "DeepLs Preise beginnen bei €8.99/Monat für den Starter-Plan, der Ihnen 200K Zeichen gibt. Wollen Sie mehr? Der Advanced-Plan kostet €29.99/Monat. Brauchen Sie unbegrenzt? Das sind €59.99/Monat. Die Gratis-Version ist grosszügig (50K Zeichen/Monat), aber der Sprung zu bezahlt ist steil.",
+          "p2": "Helvetra+ kostet CHF 4.99/Monat und gibt Ihnen 500'000 Zeichen — das ist mehr als DeepLs €29.99 Advanced-Plan zu etwa einem Sechstel des Preises. Keine komplexe Stufenstruktur, keine Funktionsbeschränkungen. Nur ein einfacher Plan für Leute, die regelmässig übersetzen."
+        },
+        "simplicity": {
+          "title": "Fokussierte Einfachheit",
+          "p1": "DeepL ist zu einer funktionsreichen Plattform gewachsen mit Glossaren, Formalitätseinstellungen, Dokumentenübersetzung, Team-Funktionen und API-Zugang. Wenn Sie diese Funktionen brauchen, sind sie wertvoll. Aber wenn Sie nur schnell und privat Text übersetzen wollen, ist all diese Komplexität Lärm. Helvetra macht eine Sache: Text für Schweizer Sprachen übersetzen. Kein Konto für die Grundnutzung erforderlich, kein Upselling-Druck, keine Funktionen, die Sie nie anfassen werden."
+        },
+        "verdict": "Fazit: Wenn Schweizerdeutsch-Unterstützung, Schweizer Datensouveränität oder günstige Preise für Vielnutzung für Sie wichtig sind, wurde Helvetra speziell für Ihre Bedürfnisse gebaut."
+      },
+      "qualityQuestion": {
+        "title": "Die Qualitätsfrage",
+        "intro": "Lassen Sie uns das direkt ansprechen: Ist Helvetras Übersetzungsqualität so gut wie DeepLs? Für Standard-Europäische Sprachpaare hat DeepL einen Vorsprung — Jahre der Entwicklung und massive Trainingsdaten. Aber Qualität hängt davon ab, was Sie übersetzen und für wen.",
+        "deeplQuality": {
+          "title": "DeepLs Stärken",
+          "point1": "Polierter Output für grosse europäische Sprachpaare",
+          "point2": "Bessere Handhabung komplexer Satzstrukturen",
+          "point3": "Natürlicher klingende Prosa-Übersetzungen"
+        },
+        "helvetraQuality": {
+          "title": "Helvetras Stärken",
+          "point1": "Schweizerdeutsch-Fähigkeit (DeepL: keine)",
+          "point2": "Optimiert für Schweizer Kontext und Terminologie",
+          "point3": "Verbessert sich schnell mit Nutzer-Feedback"
+        },
+        "honestTruth": "Die ehrliche Wahrheit: Für eine Deutsch-Französische Geschäfts-E-Mail produzieren beide Tools gute Ergebnisse. DeepL könnte bei literarischer Prosa vorne liegen. Aber für alles, was Schweizerdeutsch oder Schweiz-spezifischen Kontext beinhaltet, ist Helvetra Ihre einzige echte Option — und wir arbeiten hart daran, jede Qualitätslücke in anderen Bereichen zu schliessen."
+      },
+      "pricingSection": {
+        "title": "Preisaufschlüsselung",
+        "intro": "Übersetzungstools variieren stark in ihrer Preisgestaltung. Hier ist ein direkter Vergleich, was Sie für Ihr Geld bekommen:",
+        "deeplPricing": {
+          "title": "DeepL-Preise",
+          "point1": "Gratis: 50'000 Zeichen/Monat",
+          "point2": "Starter: €8.99/Mt. (200K Zeichen)",
+          "point3": "Advanced: €29.99/Mt. (500K Zeichen)",
+          "point4": "Ultimate: €59.99/Mt. (unbegrenzt)"
+        },
+        "helvetraPricing": {
+          "title": "Helvetra-Preise",
+          "point1": "Gratis: 20'000 Zeichen/Monat",
+          "point2": "Helvetra+: CHF 4.99/Mt. (500K Zeichen)",
+          "point3": "Keine komplexen Stufen oder Funktionsbeschränkungen"
+        },
+        "conclusion": "DeepLs Gratis-Version ist grosszügiger (50K vs 20K Zeichen). Aber wenn Sie regelmässig übersetzen und einen bezahlten Plan brauchen, bietet Helvetra+ dasselbe Zeichenlimit wie DeepL Advanced zu einem Sechstel des Preises. Die Frage ist, ob DeepLs zusätzliche Funktionen — Dokumentenübersetzung, API-Zugang, Glossare — den Aufpreis für Ihren Anwendungsfall wert sind."
+      },
+      "useCases": {
+        "title": "Was sollten Sie wählen?",
+        "chooseDeepL": {
+          "title": "Wählen Sie DeepL, wenn:",
+          "point1": "Sie Dokumentenübersetzung mit erhaltener Formatierung brauchen",
+          "point2": "Sie Übersetzung über API in Software integrieren",
+          "point3": "Sie mit Sprachen ausserhalb von Deutsch, Französisch, Italienisch und Englisch arbeiten",
+          "point4": "Qualität für komplexe literarische oder technische Prosa höchste Priorität hat"
+        },
+        "chooseHelvetra": {
+          "title": "Wählen Sie Helvetra, wenn:",
+          "point1": "Sie Schweizerdeutsch-Übersetzung brauchen (wir sind die einzige Option)",
+          "point2": "Datensouveränität wichtig ist — Schweizer Server, Schweizer Recht",
+          "point3": "Sie günstige Preise für Vielnutzung wollen",
+          "point4": "Sie Einfachheit gegenüber Funktionen bevorzugen, die Sie nicht nutzen werden",
+          "point5": "Sie Schweizer Technologie statt Big Tech unterstützen wollen"
+        }
+      },
+      "conclusion": {
+        "title": "Das Fazit",
+        "p1": "DeepL ist ein ausgezeichnetes Übersetzungstool. Seine Qualität für grosse europäische Sprachen ist branchenführend, und Funktionen wie Dokumentenübersetzung und API-Zugang sind für professionelle Nutzer wertvoll. Wenn Sie diese Funktionen brauchen, ist es den Aufpreis wert.",
+        "p2": "Helvetra existiert für einen anderen Zweck: Schweizer Nutzern zu dienen, die Schweizerdeutsch-Unterstützung brauchen, wollen, dass ihre Daten in der Schweiz bleiben, oder einfach ein günstiges, fokussiertes Übersetzungstool ohne Komplexität wollen. Wir versuchen nicht, DeepL für alle zu ersetzen — wir bauen die beste Option für Nutzer, deren Bedürfnisse mit unseren Stärken übereinstimmen.",
+        "p3": "Die richtige Wahl hängt von Ihren Prioritäten ab. Jetzt haben Sie die Informationen, um zu entscheiden.",
+        "cta": "Bereit, Übersetzung zu testen, die für die Schweiz gebaut wurde?",
         "tryHelvetra": "Helvetra kostenlos testen"
       }
     }
