@@ -106,6 +106,7 @@
     "about": "Chi siamo",
     "compareGoogle": "vs Google",
     "compareDeepL": "vs DeepL",
+    "compareSupertext": "vs Supertext",
     "pricing": "Prezzi",
     "impressum": "Note legali",
     "terms": "Termini",
@@ -695,6 +696,140 @@
         "p2": "Helvetra esiste per uno scopo diverso: servire gli utenti svizzeri che hanno bisogno del supporto svizzero tedesco, vogliono che i loro dati restino in Svizzera, o vogliono semplicemente uno strumento di traduzione accessibile e mirato senza la complessità. Non stiamo cercando di sostituire DeepL per tutti — stiamo costruendo la migliore opzione per gli utenti le cui esigenze si allineano con i nostri punti di forza.",
         "p3": "La scelta giusta dipende dalle tue priorità. Ora hai le informazioni per decidere.",
         "cta": "Pronto a provare la traduzione fatta per la Svizzera?",
+        "tryHelvetra": "Prova Helvetra gratis"
+      }
+    },
+    "supertext": {
+      "meta": {
+        "title": "Helvetra vs Supertext: Due soluzioni svizzere a confronto",
+        "description": "Un confronto onesto tra due aziende svizzere di traduzione. Analizziamo approcci, prezzi e supporto svizzero tedesco per aiutarti a scegliere."
+      },
+      "title": "Helvetra vs Supertext",
+      "subtitle": "Due aziende svizzere. Due approcci diversi. Un'ironia: l'azienda svizzera Supertext non supporta lo svizzero tedesco.",
+      "table": {
+        "type": "Tipo di servizio",
+        "helvetraType": "Traduzione IA",
+        "supertextType": "Traduzione umana + IA",
+        "price": "Prezzo",
+        "helvetraPrice": "CHF 4.99/mese",
+        "supertextPrice": "Da ~€0.14/parola",
+        "languages": "Lingue",
+        "helvetraLangs": "5 (focus svizzero)",
+        "supertextLangs": "100+",
+        "swissGerman": "Svizzero tedesco",
+        "yes": "Sì",
+        "no": "No",
+        "humanReview": "Revisione umana",
+        "bestFor": "Ideale per",
+        "helvetraBestFor": "Uso quotidiano & privacy",
+        "supertextBestFor": "Contenuti aziendali & marketing"
+      },
+      "intro": {
+        "p1": "Supertext è un'affermata azienda svizzera fondata a Zurigo, che offre servizi di traduzione dal 2005. Si è costruita una solida reputazione per traduzioni di qualità aziendale, particolarmente per contenuti marketing, siti web e documenti aziendali. Con oltre 3'000 traduttori professionisti e presenza in più mercati, è un attore importante nel settore della traduzione in Svizzera.",
+        "p2": "Helvetra adotta un approccio diverso. Siamo una piccola startup svizzera focalizzata su traduzione IA istantanea, privata e accessibile per gli utenti quotidiani. Nessuno dei due servizi è oggettivamente \"migliore\", servono esigenze diverse. Analizziamo onestamente le differenze."
+      },
+      "supertextWins": {
+        "title": "Dove vince Supertext",
+        "verdict": "In sintesi: per contenuti marketing, comunicazioni aziendali e documenti che necessitano un tocco umano, l'approccio di servizio di Supertext ha valore.",
+        "human": {
+          "title": "Revisione umana e garanzia qualità",
+          "p1": "La forza principale di Supertext è la rete di oltre 3'000 traduttori professionisti. Ogni traduzione può essere rivista da umani che capiscono contesto, voce del brand e sfumature culturali. Per contenuti marketing dove ogni parola conta, questa attenzione umana fa la differenza.",
+          "p2": "L'IA di Helvetra fornisce risultati istantanei ma senza opzione di revisione umana. Per un'email veloce, è perfetto. Per lo slogan della prossima campagna della tua azienda, un umano potrebbe valere l'investimento."
+        },
+        "enterprise": {
+          "title": "Servizi enterprise e workflow",
+          "p1": "Supertext offre funzionalità di livello enterprise: gestione progetti, strumenti collaborativi, plugin CMS e servizi di copywriting. Se sei un'azienda con esigenze di traduzione continue e processi di approvazione complessi, la loro infrastruttura è progettata per questo."
+        },
+        "languages": {
+          "title": "Copertura linguistica più ampia",
+          "p1": "Supertext supporta oltre 100 lingue attraverso la sua rete di traduttori. Hai bisogno di traduzioni in coreano, arabo o thai? Ti coprono. Helvetra si concentra esclusivamente su cinque lingue svizzere: tedesco, francese, italiano, inglese e svizzero tedesco."
+        },
+        "formats": {
+          "title": "Diversi tipi di contenuto",
+          "p1": "Oltre alla traduzione, Supertext offre copywriting, sottotitoli, localizzazione e transcreazione. Se hai bisogno di contenuti marketing adattati (non solo tradotti) per diverse culture, il loro approccio di servizio creativo aiuta."
+        }
+      },
+      "helvetraWins": {
+        "title": "Dove vince Helvetra",
+        "verdict": "In sintesi: per traduzioni quotidiane delle lingue svizzere con privacy e prezzi accessibili, Helvetra è stato costruito per te.",
+        "swissGerman": {
+          "title": "Supporto svizzero tedesco (l'ironia)",
+          "p1": "È la grande ironia: Supertext, un'azienda fondata e basata a Zurigo, non supporta la traduzione in svizzero tedesco. Possono tradurre in oltre 100 lingue da tutto il mondo, ma non la lingua parlata quotidianamente da 5 milioni di persone nel loro stesso paese.",
+          "p2": "Helvetra è attualmente l'unico strumento di traduzione che offre supporto svizzero tedesco, inclusi dialetti regionali di Zurigo, Berna, Basilea e altri. Se hai bisogno del Mundart, siamo la tua unica opzione, che sia vs Supertext, DeepL, Google o chiunque altro."
+        },
+        "pricing": {
+          "title": "Prezzi trasparenti e accessibili",
+          "p1": "Il modello di prezzo di Supertext addebita per parola (circa €0.14-0.21/parola a seconda del tipo di contenuto), che si accumula rapidamente. Un documento di 1'000 parole potrebbe costare €140-210. Per traduzioni regolari, i costi diventano significativi.",
+          "p2": "Helvetra+ costa CHF 4.99/mese per 500'000 caratteri. È circa il costo di una singola traduzione di documento da Supertext, dandoti un mese intero di traduzioni illimitate. Per esigenze quotidiane, i risparmi sono sostanziali."
+        },
+        "instant": {
+          "title": "Risultati istantanei",
+          "p1": "Con Helvetra, digiti o incolli il testo e ottieni una traduzione in secondi. Nessuna richiesta di preventivo, nessuna attesa dei traduttori, nessun tempo di risposta del progetto. Per comunicazioni quotidiane, questa immediatezza conta."
+        },
+        "simplicity": {
+          "title": "Semplicità per utenti individuali",
+          "p1": "I servizi di Supertext sono orientati verso clienti aziendali con budget e progetti ricorrenti. Se sei un individuo che ha solo bisogno di tradurre un'email o un messaggio, il loro modello non è ideale. Helvetra è progettato per utenti individuali: nessun account richiesto per uso base, nessun processo di vendita, solo traduzione."
+        }
+      },
+      "swissGermanIrony": {
+        "title": "L'ironia dello svizzero tedesco",
+        "intro": "È particolarmente notevole: Supertext ha sede a Zurigo, il cuore della Svizzera tedesca. I loro uffici sono in una città dove ogni chiacchierata al caffè, viaggio in tram e chat lavorativa avviene in svizzero tedesco. Eppure la loro piattaforma di traduzione non può gestirlo.",
+        "supertext": {
+          "title": "Situazione di Supertext",
+          "point1": "Fondata a Zurigo, Svizzera",
+          "point2": "Supporta 100+ lingue mondiali",
+          "point3": "Nessun supporto svizzero tedesco"
+        },
+        "helvetra": {
+          "title": "Approccio di Helvetra",
+          "point1": "Costruito specificamente per la Svizzera",
+          "point2": "Svizzero tedesco dal primo giorno",
+          "point3": "Supporto dialetti regionali (Zurigo, Berna, Basilea, ecc.)"
+        },
+        "conclusion": "Non lo diciamo per criticare Supertext. Lo svizzero tedesco è davvero difficile da tradurre, ecco perché nessun altro lo fa. Stiamo semplicemente evidenziando che essere un'azienda svizzera non significa automaticamente servire le esigenze linguistiche svizzere."
+      },
+      "pricingSection": {
+        "title": "Confronto prezzi",
+        "intro": "Questi due servizi hanno modelli di prezzo fondamentalmente diversi che riflettono i loro diversi approcci:",
+        "supertextPricing": {
+          "title": "Prezzi Supertext",
+          "point1": "Fatturazione per parola (circa €0.14-0.21/parola)",
+          "point2": "Preventivo richiesto per progetti",
+          "point3": "Tariffe extra per lavori urgenti",
+          "point4": "Approccio enterprise/agenzia"
+        },
+        "helvetraPricing": {
+          "title": "Prezzi Helvetra",
+          "point1": "Gratis: 20'000 caratteri/mese",
+          "point2": "Helvetra+: CHF 4.99/mese (500K car.)",
+          "point3": "Nessun preventivo, risultati istantanei"
+        },
+        "conclusion": "I prezzi di Supertext sono competitivi per servizi di traduzione professionale. Ma se sei un individuo che traduce regolarmente piuttosto che un'azienda con budget marketing, Helvetra offre molto più valore per le esigenze quotidiane."
+      },
+      "useCases": {
+        "title": "Cosa dovresti scegliere?",
+        "chooseSupertext": {
+          "title": "Scegli Supertext se:",
+          "point1": "Hai bisogno di contenuti marketing tradotti con sensibilità culturale",
+          "point2": "Vuoi revisione umana e garanzia qualità",
+          "point3": "Sei un'azienda con progetti di traduzione continui",
+          "point4": "Hai bisogno di copywriting, transcreazione o servizi creativi"
+        },
+        "chooseHelvetra": {
+          "title": "Scegli Helvetra se:",
+          "point1": "Hai bisogno di traduzione svizzero tedesco (siamo l'unica opzione)",
+          "point2": "Vuoi risultati istantanei senza processi di richiesta",
+          "point3": "Sei un individuo o piccola impresa con budget modesto",
+          "point4": "Traduci comunicazioni quotidiane piuttosto che contenuti marketing",
+          "point5": "Privacy e sovranità dei dati svizzera contano"
+        }
+      },
+      "conclusion": {
+        "title": "Il verdetto",
+        "p1": "Supertext ha trascorso quasi due decenni a costruire un rispettato servizio di traduzione professionale. Per le aziende che hanno bisogno di contenuti marketing tradotti con competenza e revisione umana, il loro approccio offre valore.",
+        "p2": "Helvetra esiste per uno scopo diverso: dare agli utenti svizzeri accesso istantaneo, accessibile e privato alla traduzione delle lingue svizzere, incluso lo svizzero tedesco che Supertext e altri non possono gestire. Serviamo esigenze quotidiane piuttosto che progetti enterprise.",
+        "p3": "La scelta giusta dipende da cosa stai traducendo, quanto stai traducendo e se hai bisogno di traduttori umani o risultati IA istantanei.",
+        "cta": "Hai bisogno di tradurre lingue svizzere velocemente e in privato?",
         "tryHelvetra": "Prova Helvetra gratis"
       }
     }

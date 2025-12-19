@@ -106,6 +106,7 @@
     "about": "Über uns",
     "compareGoogle": "vs Google",
     "compareDeepL": "vs DeepL",
+    "compareSupertext": "vs Supertext",
     "pricing": "Preise",
     "impressum": "Impressum",
     "terms": "AGB",
@@ -695,6 +696,140 @@
         "p2": "Helvetra existiert für einen anderen Zweck: Schweizer Nutzern zu dienen, die Schweizerdeutsch-Unterstützung brauchen, wollen, dass ihre Daten in der Schweiz bleiben, oder einfach ein günstiges, fokussiertes Übersetzungstool ohne Komplexität wollen. Wir versuchen nicht, DeepL für alle zu ersetzen — wir bauen die beste Option für Nutzer, deren Bedürfnisse mit unseren Stärken übereinstimmen.",
         "p3": "Die richtige Wahl hängt von Ihren Prioritäten ab. Jetzt haben Sie die Informationen, um zu entscheiden.",
         "cta": "Bereit, Übersetzung zu testen, die für die Schweiz gebaut wurde?",
+        "tryHelvetra": "Helvetra kostenlos testen"
+      }
+    },
+    "supertext": {
+      "meta": {
+        "title": "Helvetra vs Supertext: Zwei Schweizer Übersetzungsdienste im Vergleich",
+        "description": "Vergleich zweier Schweizer Übersetzungsdienste: Helvetra und Supertext. Wir analysieren Preise, Funktionen und die überraschende Schweizerdeutsch-Lücke."
+      },
+      "title": "Helvetra vs Supertext",
+      "subtitle": "Zwei Schweizer Unternehmen, zwei verschiedene Übersetzungsansätze. Eines fokussiert auf Geschäftskunden mit menschlicher Korrektur. Das andere auf Alltagsnutzer mit KI-Geschwindigkeit. So vergleichen sie sich.",
+      "table": {
+        "type": "Diensttyp",
+        "helvetraType": "KI-Sofortübersetzung",
+        "supertextType": "KI + menschliche Korrektur",
+        "price": "Startpreis",
+        "helvetraPrice": "Gratis / CHF 4.99/Mt.",
+        "supertextPrice": "CHF 9.90/Mt.",
+        "languages": "Sprachen",
+        "helvetraLangs": "5 (Schweiz-Fokus)",
+        "supertextLangs": "28",
+        "swissGerman": "Schweizerdeutsch",
+        "yes": "Ja",
+        "no": "Nein",
+        "humanReview": "Menschliche Korrektur",
+        "bestFor": "Ideal für",
+        "helvetraBestFor": "Schnelle, private Übersetzung",
+        "supertextBestFor": "Professionelle Dokumente"
+      },
+      "intro": {
+        "p1": "Supertext ist ein etabliertes Schweizer Übersetzungsunternehmen mit Sitz in Zürich. Sie bieten eine Kombination aus KI-gestützter Übersetzung und menschlichem Lektorat, ausgerichtet auf Unternehmen und Fachleute, die ausgefeilte, publikationsreife Inhalte brauchen. Ihre Kundenliste umfasst grosse Schweizer Marken.",
+        "p2": "Helvetra verfolgt einen anderen Ansatz. Wir konzentrieren uns auf sofortige KI-Übersetzung für Alltagsnutzer, die schnelle, private Ergebnisse ohne den Aufwand professioneller Dienste brauchen. Beide Unternehmen sind schweizerisch, beide legen Wert auf Qualität, aber wir bedienen unterschiedliche Bedürfnisse. Schauen wir uns an, wo jeder Dienst glänzt."
+      },
+      "supertextWins": {
+        "title": "Wo Supertext gewinnt",
+        "human": {
+          "title": "Option für menschliches Lektorat",
+          "p1": "Supertexts Hauptunterscheidungsmerkmal ist ihr Netzwerk professioneller Übersetzer und Lektoren. Nachdem KI eine erste Übersetzung erstellt hat, können menschliche Experten den Text überprüfen und verfeinern. Für Marketingtexte, juristische Dokumente oder alles, was veröffentlicht wird, fängt dieser menschliche Touch Nuancen auf, die KI möglicherweise verpasst.",
+          "p2": "Wenn Sie garantierte Genauigkeit für wichtige Inhalte brauchen, bietet eine menschliche Expertenkontrolle Ihrer Übersetzung Sicherheit, die reine KI nicht bieten kann."
+        },
+        "enterprise": {
+          "title": "Unternehmensfunktionen",
+          "p1": "Supertext bietet Team-Konten, Übersetzungsspeicher, Glossare und Projektmanagement-Tools. Grosse Organisationen mit laufendem Übersetzungsbedarf profitieren von diesen Workflow-Funktionen. Sie bieten auch dedizierte Account-Manager für Unternehmenskunden."
+        },
+        "languages": {
+          "title": "Breitere Sprachabdeckung",
+          "p1": "Supertext unterstützt 28 Sprachen im Vergleich zu Helvetras 5. Wenn Sie regelmässig Übersetzungen mit Portugiesisch, Japanisch, Arabisch oder anderen Sprachen ausserhalb der Schweizer Landessprachen brauchen, hat Supertext eine breitere Abdeckung."
+        },
+        "formats": {
+          "title": "Dokumentformat-Unterstützung",
+          "p1": "Supertext verarbeitet verschiedene Dateiformate einschliesslich Word-Dokumenten, PowerPoints und PDFs mit Layout-Erhaltung. Ihre Abonnementpläne basieren auf Dateizahlen statt Zeichenlimits, was dokumentenlastigen Workflows entgegenkommt."
+        },
+        "verdict": "Fazit: Supertext glänzt bei professioneller, wichtiger Übersetzung, wo menschliche Korrektur und Unternehmensfunktionen den Premium-Preis rechtfertigen."
+      },
+      "helvetraWins": {
+        "title": "Wo Helvetra gewinnt",
+        "swissGerman": {
+          "title": "Schweizerdeutsch-Unterstützung",
+          "p1": "Hier ist die Ironie: Supertext ist ein Schweizer Unternehmen mit Hauptsitz in Zürich, unterstützt aber kein Schweizerdeutsch. Ihre 28 Sprachen umfassen Hochdeutsch, aber nicht den Dialekt, den Millionen von Schweizern jeden Tag sprechen.",
+          "p2": "Helvetra ist derzeit der einzige Übersetzungsdienst, der Schweizerdeutsch unterstützt, mit Dialektoptionen für Zürich, Bern, Basel und andere Regionen. Wenn Sie Mundart-Nachrichten übersetzen oder auf Schweizerdeutsch kommunizieren müssen, sind wir Ihre einzige Option."
+        },
+        "pricing": {
+          "title": "Deutlich günstigere Preise",
+          "p1": "Supertexts günstigster Plan beginnt bei CHF 9.90/Monat für 20 Dateien. Ihr Advanced-Plan kostet CHF 24.90/Monat, und Pro ist CHF 49.90/Monat. Diese Preise machen Sinn für Unternehmen mit regelmässigem professionellem Übersetzungsbedarf.",
+          "p2": "Helvetra+ kostet CHF 4.99/Monat und gibt Ihnen 500'000 Zeichen Sofortübersetzung. Für Gelegenheitsnutzer, Studenten oder alle, die kein menschliches Lektorat brauchen, bedeutet das erhebliche Einsparungen."
+        },
+        "instant": {
+          "title": "Sofortige Ergebnisse",
+          "p1": "Helvetra liefert Übersetzungen in Sekunden. Tippen oder fügen Sie Ihren Text ein, erhalten Sie Ihre Übersetzung sofort. Kein Warten auf menschliche Prüfer, keine Projektwarteschlangen, keine Bearbeitungszeiten. Für schnelle Kommunikationsbedürfnisse schlägt sofort poliert."
+        },
+        "simplicity": {
+          "title": "Schnörkellose Einfachheit",
+          "p1": "Supertexts Plattform ist für professionelle Workflows gebaut mit Funktionen, die die meisten Gelegenheitsnutzer nie anfassen werden. Helvetra ist bewusst einfach: Text einfügen, Übersetzung erhalten, fertig. Kein Konto für die Grundnutzung erforderlich, keine Lernkurve, keine Komplexität."
+        },
+        "verdict": "Fazit: Helvetra gewinnt bei Schweizerdeutsch-Unterstützung, Preisen, Geschwindigkeit und Einfachheit. Wenn Sie kein menschliches Lektorat brauchen, bekommen Sie mehr für weniger."
+      },
+      "swissGermanIrony": {
+        "title": "Die Schweizerdeutsch-Frage",
+        "intro": "Sprechen wir das Offensichtliche an. Supertext ist ein stolz schweizerisches Unternehmen, gegründet in Zürich, für Schweizer Kunden. Dennoch unterstützen sie kein Schweizerdeutsch. Warum? Weil Schweizerdeutsch für Übersetzungsdienste wirklich schwierig ist.",
+        "supertext": {
+          "title": "Warum Supertext Schweizerdeutsch auslässt",
+          "point1": "Keine standardisierte Schriftform erschwert das Training von KI-Modellen",
+          "point2": "Regionale Variationen (Zürich vs Bern vs Basel) vervielfachen die Komplexität",
+          "point3": "Ihre menschlichen Übersetzer arbeiten mit standardisierten Schriftsprachen"
+        },
+        "helvetra": {
+          "title": "Warum Helvetra es trotzdem angeht",
+          "point1": "Schweizerdeutsch ist zentral für die Schweizer Identität, jemand muss es lösen",
+          "point2": "Apertus (Schweizer KI) wurde mit Schweizerdeutsch-Daten trainiert",
+          "point3": "Wir bieten Dialektauswahl für regionale Variationen"
+        },
+        "conclusion": "Wir behaupten nicht, dass unsere Schweizerdeutsch-Übersetzung perfekt ist. Es ist ein schwieriges Problem. Aber wir sind die einzigen, die daran arbeiten, und wir verbessern uns mit jedem Nutzer-Feedback."
+      },
+      "pricingSection": {
+        "title": "Preisvergleich",
+        "intro": "Die Preismodelle sind grundlegend verschieden. Supertext berechnet nach Dateien, ausgerichtet auf Dokumenten-Workflows. Helvetra berechnet nach Zeichen, ausgerichtet auf Textübersetzung.",
+        "supertextPricing": {
+          "title": "Supertext-Preise",
+          "point1": "Gratis: 3'000 Zeichen Testversion",
+          "point2": "Essential: CHF 9.90/Mt. (20 Dateien)",
+          "point3": "Advanced: CHF 24.90/Mt. (60 Dateien)",
+          "point4": "Pro: CHF 49.90/Mt. (120 Dateien)"
+        },
+        "helvetraPricing": {
+          "title": "Helvetra-Preise",
+          "point1": "Gratis: 20'000 Zeichen/Monat",
+          "point2": "Helvetra+: CHF 4.99/Mt. (500K Zeichen)",
+          "point3": "Keine Dateilimits, nur Zeichenzählung"
+        },
+        "conclusion": "Für dokumentenlastige professionelle Nutzung könnte Supertexts dateibasierte Preisgestaltung Sinn machen. Für alltägliche Textübersetzung ist Helvetras zeichenbasiertes Modell wirtschaftlicher und berechenbarer."
+      },
+      "useCases": {
+        "title": "Was sollten Sie wählen?",
+        "chooseSupertext": {
+          "title": "Wählen Sie Supertext, wenn:",
+          "point1": "Sie menschliches Lektorat für publikationsreife Inhalte brauchen",
+          "point2": "Sie ein Unternehmen mit laufendem professionellem Übersetzungsbedarf sind",
+          "point3": "Sie Sprachen ausserhalb von Deutsch, Französisch, Italienisch und Englisch brauchen",
+          "point4": "Sie Unternehmensfunktionen wie Glossare und Team-Konten wollen"
+        },
+        "chooseHelvetra": {
+          "title": "Wählen Sie Helvetra, wenn:",
+          "point1": "Sie Schweizerdeutsch-Übersetzung brauchen (einzige verfügbare Option)",
+          "point2": "Sie sofortige Ergebnisse ohne Warten auf menschliche Korrektur wollen",
+          "point3": "Sie einfache, günstige Preise bevorzugen",
+          "point4": "Sie gelegentlich übersetzen und keinen professionellen Schliff brauchen",
+          "point5": "Datenschutz wichtig ist und Sie Schweizer KI-Verarbeitung wollen"
+        }
+      },
+      "conclusion": {
+        "title": "Das Fazit",
+        "p1": "Supertext und Helvetra bedienen verschiedene Märkte. Supertext ist ein professioneller Übersetzungsdienst für Unternehmen, die menschlich geprüfte, publikationsfertige Inhalte brauchen. Ihre Preise und Funktionen spiegeln diesen Unternehmensfokus wider.",
+        "p2": "Helvetra ist für alle anderen: Menschen, die schnelle, private Übersetzung für alltägliche Kommunikation brauchen. Wir sind schneller, günstiger, einfacher, und wir sind die einzigen, die Schweizerdeutsch unterstützen. Wenn Sie keine menschlichen Lektoren brauchen, müssen Sie nicht dafür bezahlen.",
+        "p3": "Beide sind Schweizer Unternehmen, die sich der Qualität verpflichtet fühlen. Die richtige Wahl hängt davon ab, ob Sie professionellen Schliff oder alltägliche Bequemlichkeit brauchen.",
+        "cta": "Bereit für sofortige Schweizer Übersetzung ohne Enterprise-Preisschild?",
         "tryHelvetra": "Helvetra kostenlos testen"
       }
     }

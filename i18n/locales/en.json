@@ -106,6 +106,7 @@
     "about": "About",
     "compareGoogle": "vs Google",
     "compareDeepL": "vs DeepL",
+    "compareSupertext": "vs Supertext",
     "pricing": "Pricing",
     "impressum": "Legal Notice",
     "terms": "Terms",
@@ -695,6 +696,140 @@
         "p2": "Helvetra exists for a different purpose: to serve Swiss users who need Swiss German support, want their data to stay in Switzerland, or simply want an affordable, focused translation tool without the complexity. We're not trying to replace DeepL for everyone — we're building the best option for users whose needs align with our strengths.",
         "p3": "The right choice depends on your priorities. Now you have the information to decide.",
         "cta": "Ready to try translation built for Switzerland?",
+        "tryHelvetra": "Try Helvetra Free"
+      }
+    },
+    "supertext": {
+      "meta": {
+        "title": "Helvetra vs Supertext: Two Swiss Translation Services Compared",
+        "description": "Comparing two Swiss translation services: Helvetra and Supertext. We analyze pricing, features, and the surprising Swiss German gap to help you choose."
+      },
+      "title": "Helvetra vs Supertext",
+      "subtitle": "Two Swiss companies, two different approaches to translation. One focuses on enterprise clients with human review. The other focuses on everyday users with AI speed. Here's how they compare.",
+      "table": {
+        "type": "Service Type",
+        "helvetraType": "AI instant translation",
+        "supertextType": "AI + human review",
+        "price": "Starting Price",
+        "helvetraPrice": "Free / CHF 4.99/mo",
+        "supertextPrice": "CHF 9.90/mo",
+        "languages": "Languages",
+        "helvetraLangs": "5 (Swiss focus)",
+        "supertextLangs": "28",
+        "swissGerman": "Swiss German",
+        "yes": "Yes",
+        "no": "No",
+        "humanReview": "Human Review",
+        "bestFor": "Best For",
+        "helvetraBestFor": "Quick, private translation",
+        "supertextBestFor": "Professional documents"
+      },
+      "intro": {
+        "p1": "Supertext is a well-established Swiss translation company based in Zurich. They offer a combination of AI-powered translation and human proofreading, targeting businesses and professionals who need polished, publication-ready content. Their client list includes major Swiss brands.",
+        "p2": "Helvetra takes a different approach. We focus on instant AI translation for everyday users who need quick, private results without the overhead of professional services. Both companies are Swiss, both care about quality, but we serve different needs. Let's break down where each service shines."
+      },
+      "supertextWins": {
+        "title": "Where Supertext Wins",
+        "human": {
+          "title": "Human Proofreading Option",
+          "p1": "Supertext's key differentiator is their network of professional translators and editors. After AI generates an initial translation, human experts can review and polish the text. For marketing copy, legal documents, or anything that will be published, this human touch catches nuances that AI might miss.",
+          "p2": "If you need guaranteed accuracy for high-stakes content, having a human expert review your translation provides peace of mind that pure AI cannot match."
+        },
+        "enterprise": {
+          "title": "Enterprise Features",
+          "p1": "Supertext offers team accounts, translation memory, glossaries, and project management tools. Large organizations with ongoing translation needs benefit from these workflow features. They also provide dedicated account managers for enterprise clients."
+        },
+        "languages": {
+          "title": "Broader Language Coverage",
+          "p1": "Supertext supports 28 languages compared to Helvetra's 5. If you regularly need translations involving Portuguese, Japanese, Arabic, or other languages outside the Swiss national languages, Supertext has broader coverage."
+        },
+        "formats": {
+          "title": "Document Format Support",
+          "p1": "Supertext handles various file formats including Word documents, PowerPoints, and PDFs with layout preservation. Their subscription plans are based on file counts rather than character limits, which suits document-heavy workflows."
+        },
+        "verdict": "Bottom line: Supertext excels at professional, high-stakes translation where human review and enterprise features justify the premium pricing."
+      },
+      "helvetraWins": {
+        "title": "Where Helvetra Wins",
+        "swissGerman": {
+          "title": "Swiss German Support",
+          "p1": "Here's the irony: Supertext is a Swiss company, headquartered in Zurich, yet they don't support Swiss German. Their 28 languages include standard German but not the dialect spoken by millions of Swiss people every day.",
+          "p2": "Helvetra is currently the only translation service that supports Swiss German, with dialect options for Zurich, Bern, Basel, and other regions. If you need to translate Mundart messages or communicate in Swiss German, we're your only option."
+        },
+        "pricing": {
+          "title": "Dramatically Lower Pricing",
+          "p1": "Supertext's cheapest plan starts at CHF 9.90/month for 20 files. Their Advanced plan is CHF 24.90/month, and Pro is CHF 49.90/month. These prices make sense for businesses with regular professional translation needs.",
+          "p2": "Helvetra+ costs CHF 4.99/month and gives you 500,000 characters of instant translation. For casual users, students, or anyone who doesn't need human proofreading, this represents significant savings."
+        },
+        "instant": {
+          "title": "Instant Results",
+          "p1": "Helvetra provides translation in seconds. Type or paste your text, get your translation immediately. No waiting for human reviewers, no project queues, no turnaround times. For quick communication needs, instant beats polished."
+        },
+        "simplicity": {
+          "title": "No-Frills Simplicity",
+          "p1": "Supertext's platform is built for professional workflows with features most casual users will never touch. Helvetra is intentionally simple: paste text, get translation, done. No account required for basic use, no learning curve, no complexity."
+        },
+        "verdict": "Bottom line: Helvetra wins on Swiss German support, pricing, speed, and simplicity. If you don't need human proofreading, you get more for less."
+      },
+      "swissGermanIrony": {
+        "title": "The Swiss German Question",
+        "intro": "Let's address the elephant in the room. Supertext is a proudly Swiss company, founded in Zurich, serving Swiss clients. Yet they don't support Swiss German. Why? Because Swiss German is genuinely difficult for translation services.",
+        "supertext": {
+          "title": "Why Supertext skips Swiss German",
+          "point1": "No standardized written form makes training AI models challenging",
+          "point2": "Regional variations (Zurich vs Bern vs Basel) multiply complexity",
+          "point3": "Their human translators work with standard written languages"
+        },
+        "helvetra": {
+          "title": "Why Helvetra tackles it anyway",
+          "point1": "Swiss German is core to Swiss identity, someone needs to solve it",
+          "point2": "Apertus (Swiss AI) was trained with Swiss German data",
+          "point3": "We offer dialect selection to handle regional variations"
+        },
+        "conclusion": "We won't claim our Swiss German translation is perfect. It's a hard problem. But we're the only ones working on it, and we're improving with every user feedback submission."
+      },
+      "pricingSection": {
+        "title": "Pricing Comparison",
+        "intro": "The pricing models are fundamentally different. Supertext charges by files, targeting document workflows. Helvetra charges by characters, targeting text translation.",
+        "supertextPricing": {
+          "title": "Supertext Pricing",
+          "point1": "Free: 3,000 characters trial",
+          "point2": "Essential: CHF 9.90/mo (20 files)",
+          "point3": "Advanced: CHF 24.90/mo (60 files)",
+          "point4": "Pro: CHF 49.90/mo (120 files)"
+        },
+        "helvetraPricing": {
+          "title": "Helvetra Pricing",
+          "point1": "Free: 20,000 characters/month",
+          "point2": "Helvetra+: CHF 4.99/mo (500K characters)",
+          "point3": "No file limits, just character counts"
+        },
+        "conclusion": "For document-heavy professional use, Supertext's file-based pricing might make sense. For everyday text translation, Helvetra's character-based model is more economical and predictable."
+      },
+      "useCases": {
+        "title": "Which Should You Choose?",
+        "chooseSupertext": {
+          "title": "Choose Supertext if:",
+          "point1": "You need human proofreading for publication-ready content",
+          "point2": "You're a business with ongoing professional translation needs",
+          "point3": "You need languages beyond German, French, Italian, and English",
+          "point4": "You want enterprise features like glossaries and team accounts"
+        },
+        "chooseHelvetra": {
+          "title": "Choose Helvetra if:",
+          "point1": "You need Swiss German translation (only option available)",
+          "point2": "You want instant results without waiting for human review",
+          "point3": "You prefer simple, affordable pricing",
+          "point4": "You translate casually and don't need professional polish",
+          "point5": "Privacy matters and you want Swiss AI processing"
+        }
+      },
+      "conclusion": {
+        "title": "The Bottom Line",
+        "p1": "Supertext and Helvetra serve different markets. Supertext is a professional translation service for businesses who need human-reviewed, publication-quality content. Their pricing and features reflect this enterprise focus.",
+        "p2": "Helvetra is for everyone else: people who need quick, private translation for everyday communication. We're faster, cheaper, simpler, and we're the only ones supporting Swiss German. If you don't need human proofreaders, you don't need to pay for them.",
+        "p3": "Both are Swiss companies committed to quality. The right choice depends on whether you need professional polish or everyday convenience.",
+        "cta": "Ready for instant Swiss translation without the enterprise price tag?",
         "tryHelvetra": "Try Helvetra Free"
       }
     }
