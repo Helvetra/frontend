@@ -222,7 +222,8 @@
     "de": "German",
     "gsw": "Swiss German",
     "fr": "French",
-    "it": "Italian"
+    "it": "Italian",
+    "rm": "Romansh"
   },
   "limits": {
     "wantMore": "Want to translate longer texts?",

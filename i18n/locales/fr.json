@@ -222,7 +222,8 @@
     "de": "Allemand",
     "gsw": "Suisse allemand",
     "fr": "Français",
-    "it": "Italien"
+    "it": "Italien",
+    "rm": "Romanche"
   },
   "limits": {
     "wantMore": "Envie de traduire des textes plus longs ?",

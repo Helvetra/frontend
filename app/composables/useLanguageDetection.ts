@@ -6,12 +6,14 @@
 import { franc } from 'franc'
 
 // Map ISO 639-3 codes (franc) to our language codes
+// Note: Romansh (roh) is not supported by franc, so LLM detection handles it
 const ISO_TO_LANG: Record<string, string> = {
   eng: 'en',
   deu: 'de',
   gsw: 'gsw',
   fra: 'fr',
   ita: 'it',
+  roh: 'rm',
 }
 
 // Our supported language codes for detection

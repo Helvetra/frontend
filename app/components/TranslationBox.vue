@@ -383,7 +383,7 @@ const SWISS_DIALECTS = [
 const MIN_CHARS_FOR_DETECTION = 15
 
 // Maximum LLM detection calls per session (cost control)
-const MAX_LLM_DETECTIONS_PER_SESSION = 3
+const MAX_LLM_DETECTIONS_PER_SESSION = 10
 
 const sourceLanguage = ref('de')
 const targetLanguage = ref('en')
@@ -396,7 +396,6 @@ const sourceTextarea = ref<HTMLTextAreaElement | null>(null)
 const outputContainer = ref<HTMLDivElement | null>(null)
 
 // Language detection state
-const isAutoDetectMode = ref(true)
 const userOverrodeSource = ref(false)
 const detectedLanguage = ref<string | null>(null)
 
@@ -516,6 +515,7 @@ const availableLanguages = [
   { code: 'gsw' },
   { code: 'fr' },
   { code: 'it' },
+  { code: 'rm' },
 ]
 
 const { t } = useI18n()
@@ -639,9 +639,10 @@ function tryDetectLanguage() {
       targetLanguage.value = detected === 'en' ? 'de' : 'en'
     }
 
-    // When franc detects German, trigger LLM verification for Swiss German disambiguation
+    // When franc detects German, Italian, or French, trigger LLM verification for disambiguation
+    // German could be Swiss German, Italian/French could be Romansh
     // Only if we haven't exceeded the session quota
-    if (detected === 'de' && llmDetectionCount.value < MAX_LLM_DETECTIONS_PER_SESSION) {
+    if ((detected === 'de' || detected === 'it' || detected === 'fr') && llmDetectionCount.value < MAX_LLM_DETECTIONS_PER_SESSION) {
       pendingLlmDetection.value = true
     }
   }
