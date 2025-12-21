@@ -236,8 +236,25 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
 const { user, isAuthenticated, getAuthHeader } = useAuth()
+const { getProductSchema, useJsonLd } = useSchemaOrg()
 
 const billingPeriod = ref<'monthly' | 'yearly'>('yearly')
+
+// Add Product schema for pricing information
+useJsonLd(getProductSchema([
+  {
+    name: 'Helvetra Basic',
+    price: 0,
+    priceCurrency: 'CHF',
+    description: 'Free tier with 20,000 characters per month',
+  },
+  {
+    name: 'Helvetra+',
+    price: 4.99,
+    priceCurrency: 'CHF',
+    description: 'Pro tier with 500,000 characters per month',
+  },
+]))
 const isCreatingGateway = ref(false)
 const gatewayError = ref<string | null>(null)
 

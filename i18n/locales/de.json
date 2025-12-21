@@ -60,11 +60,11 @@
         },
         "free": {
           "q": "Ist Helvetra kostenlos?",
-          "a": "Diese erste Version ist kostenlos. Eine Vollversion könnte später erscheinen, falls genügend Interesse besteht."
+          "a": "Ja! Erstellen Sie ein kostenloses Konto und erhalten Sie 20'000 Zeichen pro Monat. Mehr benötigt? Helvetra+ bietet 500'000 Zeichen pro Monat ab CHF 4.99."
         },
         "different": {
           "q": "Was unterscheidet Helvetra von Google Translate oder DeepL?",
-          "a": "Kein Tracking, und Ihre Daten bleiben in der Schweiz, nicht in den USA (Google) oder der EU (DeepL). Dazu ein einziger Fokus auf Übersetzung, keine Ablenkungen."
+          "a": "Kein Tracking, und Ihre Daten bleiben in der Schweiz, nicht in den USA (Google) oder der EU (DeepL). Dazu ein einziger Fokus auf Übersetzung, keine Ablenkungen. Siehe unsere detaillierten Vergleiche: <a href=\"/de/compare/google-translate\" class=\"text-swiss-red hover:underline\">Google Translate</a>, <a href=\"/de/compare/deepl\" class=\"text-swiss-red hover:underline\">DeepL</a>."
         },
         "swissGerman": {
           "q": "Versteht Helvetra wirklich Schweizerdeutsch?",
@@ -89,6 +89,26 @@
         "contribute": {
           "q": "Kann ich mithelfen?",
           "a": "Klar! <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Melden Sie sich</a>. Wir freuen uns auf Ihre Nachricht."
+        },
+        "accuracy": {
+          "q": "Wie genau ist die Schweizerdeutsch-Übersetzung?",
+          "a": "Schweizerdeutsch hat keine standardisierte Schriftform, daher variiert die Genauigkeit je nach Dialekt und Kontext. Helvetra nutzt Apertus, das auf Schweizerdeutsch-Daten trainiert wurde, und verbessert sich kontinuierlich. Bei wichtigen Dokumenten sollte immer ein Muttersprachler gegenlesen."
+        },
+        "dialects": {
+          "q": "Kann Helvetra zwischen Schweizerdeutschen Dialekten übersetzen?",
+          "a": "Ja. Sie können von Zürichdeutsch nach Berndeutsch übersetzen oder jede andere Kombination unterstützter Dialekte wie Basel, Aargau und mehr. Das ist einzigartig bei Helvetra."
+        },
+        "vsGoogle": {
+          "q": "Ist Helvetra besser als Google Translate für Schweizerdeutsch?",
+          "a": "Für Schweizerdeutsch, ja. Google Translate unterstützt Schweizerdeutsch überhaupt nicht. Helvetra ist derzeit das einzige Übersetzungstool, das Schweizerdeutsche Dialekte beherrscht."
+        },
+        "formality": {
+          "q": "Kann ich formell oder informell auf Schweizerdeutsch übersetzen?",
+          "a": "Ja. Helvetra unterstützt sowohl formelle (Sie) als auch informelle (du) Modi für alle Sprachen, einschliesslich Schweizerdeutsch. Wählen Sie Ihre Präferenz vor dem Übersetzen."
+        },
+        "mobile": {
+          "q": "Funktioniert Helvetra auf dem Handy?",
+          "a": "Ja. Helvetra ist eine Web-App, die auf jedem Gerät mit Browser funktioniert. Kein App-Download nötig. Besuchen Sie einfach helvetra.ch auf Ihrem Handy oder Tablet."
         }
       }
     },
@@ -253,7 +273,7 @@
       "name": "Basic",
       "description": "Für gelegentliche Übersetzungen",
       "price": "Kostenlos",
-      "featureLimit": "10'000 Zeichen pro Monat",
+      "featureLimit": "20'000 Zeichen pro Monat",
       "feature1": "Bis zu 1'000 Zeichen pro Übersetzung",
       "feature2": "Alle Schweizer Sprachen unterstützt",
       "featureFormality": "Du/Sie-Umschalter",
@@ -326,6 +346,19 @@
       "text2": "Fragen oder Feedback? Wir freuen uns von Ihnen zu hören: <a href=\"mailto:gruezi{'@'}helvetra.ch\" class=\"text-swiss-red hover:underline\">gruezi{'@'}helvetra.ch</a>"
     }
   },
+  "faqPage": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über Helvetra wissen müssen",
+    "categories": {
+      "all": "Alle",
+      "general": "Allgemein",
+      "privacy": "Datenschutz & Sicherheit",
+      "languages": "Sprachen & Dialekte",
+      "pricing": "Preise",
+      "technical": "Technisch"
+    },
+    "showAll": "Alle Fragen anzeigen"
+  },
   "confirm": {
     "title": "Fast geschafft!",
     "instruction": "Bitte prüfen Sie Ihren Posteingang und klicken Sie auf den Bestätigungslink, um Ihre Anmeldung abzuschliessen.",
@@ -366,7 +399,7 @@
       },
       "free": {
         "name": "Basic (Kostenlos)",
-        "desc": "Bis zu 10'000 Zeichen pro Monat. Registrierung erforderlich."
+        "desc": "Bis zu 20'000 Zeichen pro Monat. Registrierung erforderlich."
       },
       "plus": {
         "name": "Helvetra+",
@@ -490,13 +523,13 @@
         "description": "Ein ehrlicher Vergleich von Helvetra und Google Translate. Wir analysieren Datenschutz, Funktionen, Preise und Schweizer Sprachunterstützung, um Ihnen bei der Wahl des richtigen Übersetzungstools zu helfen."
       },
       "title": "Helvetra vs Google Translate",
-      "subtitle": "Zwei kostenlose Übersetzungstools mit grundlegend unterschiedlichen Philosophien. Hier ist ein ehrlicher Blick darauf, wo jedes glänzt — und wo es Schwächen hat.",
+      "subtitle": "Zwei kostenlose Übersetzungstools mit grundlegend unterschiedlichen Philosophien. Hier ist ein ehrlicher Blick darauf, wo jedes glänzt, und wo es Schwächen hat.",
       "table": {
         "price": "Preis",
         "helvetraPrice": "Gratis / CHF 4.99/Mt.",
         "googlePrice": "Gratis (unbegrenzt)",
         "languages": "Sprachen",
-        "helvetraLangs": "5 (Schweizer Fokus)",
+        "helvetraLangs": "6 (Schweizer Fokus)",
         "googleLangs": "133",
         "swissGerman": "Schweizerdeutsch",
         "yes": "Ja",
@@ -509,19 +542,19 @@
         "googleBestFor": "Globale Reichweite, seltene Sprachen"
       },
       "intro": {
-        "p1": "Wenn Sie jemals etwas übersetzen mussten, haben Sie wahrscheinlich Google Translate verwendet. Es ist überall — eingebaut in Chrome, Android und unzählige Apps. Es ist kostenlos, schnell und unterstützt über 130 Sprachen. Für die meisten Menschen ist es die Standardwahl.",
-        "p2": "Helvetra verfolgt einen anderen Ansatz. Anstatt alles für jeden zu übersetzen, konzentrieren wir uns darauf, eine Sache gut zu machen: private, hochwertige Übersetzung für Schweizer Sprachen. Keines der beiden Tools ist objektiv \"besser\" — es hängt ganz davon ab, was Sie brauchen. Lassen Sie uns das ehrlich aufschlüsseln."
+        "p1": "Wenn Sie jemals etwas übersetzen mussten, haben Sie wahrscheinlich Google Translate verwendet. Es ist überall, eingebaut in Chrome, Android und unzählige Apps. Es ist kostenlos, schnell und unterstützt über 130 Sprachen. Für die meisten Menschen ist es die Standardwahl.",
+        "p2": "Helvetra verfolgt einen anderen Ansatz. Anstatt alles für jeden zu übersetzen, konzentrieren wir uns darauf, eine Sache gut zu machen: private, hochwertige Übersetzung für Schweizer Sprachen. Keines der beiden Tools ist objektiv \"besser\", es hängt ganz davon ab, was Sie brauchen. Lassen Sie uns das ehrlich aufschlüsseln."
       },
       "googleWins": {
         "title": "Wo Google Translate gewinnt",
         "coverage": {
           "title": "Unerreichte Sprachabdeckung",
-          "p1": "Google Translate unterstützt 133 Sprachen — von Afrikaans bis Zulu, einschliesslich vieler regionaler und bedrohter Sprachen. Wenn Sie Thai, Swahili oder Walisisch übersetzen müssen, ist Google im Grunde Ihre einzige kostenlose Option. Helvetra unterstützt fünf Sprachen (Deutsch, Französisch, Italienisch, Englisch und Schweizerdeutsch), was die Schweiz gut abdeckt, Ihnen aber auf einer Reise nach Tokio nicht hilft.",
+          "p1": "Google Translate unterstützt 133 Sprachen, von Afrikaans bis Zulu, einschliesslich vieler regionaler und bedrohter Sprachen. Wenn Sie Thai, Swahili oder Walisisch übersetzen müssen, ist Google im Grunde Ihre einzige kostenlose Option. Helvetra unterstützt sechs Sprachen (Deutsch, Französisch, Italienisch, Englisch, Schweizerdeutsch und Rätoromanisch), was die Schweiz gut abdeckt, Ihnen aber auf einer Reise nach Tokio nicht hilft.",
           "p2": "Das ist keine Schwäche, die wir beheben wollen. Helvetra konzentriert sich bewusst auf Schweizer Sprachen, weil wir dort echten Mehrwert bieten können. Wenn Sie regelmässig mit Sprachen ausserhalb dieses Bereichs arbeiten, ist Google Translate die praktische Wahl."
         },
         "free": {
           "title": "Wirklich unbegrenzt und kostenlos",
-          "p1": "Google Translate hat keine Zeichenbegrenzungen, keine täglichen Limits und kein Premium-Abo, zu dem Sie gedrängt werden. Sie können ganze Dokumente, Websites, sogar Echtzeitgespräche übersetzen — alles ohne einen Cent zu zahlen oder ein Konto zu erstellen. Das ist möglich, weil Googles Geschäftsmodell nicht auf Übersetzungsgebühren basiert, sondern auf den Daten, die Sie bei der Nutzung des Dienstes liefern."
+          "p1": "Google Translate hat keine Zeichenbegrenzungen, keine täglichen Limits und kein Premium-Abo, zu dem Sie gedrängt werden. Sie können ganze Dokumente, Websites, sogar Echtzeitgespräche übersetzen, alles ohne einen Cent zu zahlen oder ein Konto zu erstellen. Das ist möglich, weil Googles Geschäftsmodell nicht auf Übersetzungsgebühren basiert, sondern auf den Daten, die Sie bei der Nutzung des Dienstes liefern."
         },
         "ecosystem": {
           "title": "Tiefe Ökosystem-Integration",
@@ -533,27 +566,27 @@
         "title": "Wo Helvetra gewinnt",
         "privacy": {
           "title": "Datenschutz als Grundlage, nicht als Feature",
-          "p1": "Das ist der fundamentale Unterschied zwischen uns. Google Translate ist ein kostenloser Dienst, weil Sie mit Ihren Daten bezahlen. Ihre Übersetzungen können gespeichert, analysiert und zum Training von Googles KI-Modellen verwendet werden. Für die gelegentliche Nutzung — ein Wort nachschlagen, eine Speisekarte übersetzen — ist das für die meisten Menschen ein fairer Tausch.",
-          "p2": "Aber was ist mit der Übersetzung einer vertraulichen Geschäfts-E-Mail? Eines Rechtsdokuments? Persönlicher medizinischer Informationen? Eines Liebesbriefs? Hier ist Helvetras Ansatz wichtig. Wir speichern Ihre Übersetzungen nicht. Wir verwenden sie nicht für Training. Sie werden auf Schweizer Servern von Schweizer KI verarbeitet und sofort gelöscht. Schweizer Datenschutzrecht — das strenger als die DSGVO ist — gilt für alles, was wir tun."
+          "p1": "Das ist der fundamentale Unterschied zwischen uns. Google Translate ist ein kostenloser Dienst, weil Sie mit Ihren Daten bezahlen. Ihre Übersetzungen können gespeichert, analysiert und zum Training von Googles KI-Modellen verwendet werden. Für die gelegentliche Nutzung, ein Wort nachschlagen, eine Speisekarte übersetzen, ist das für die meisten Menschen ein fairer Tausch.",
+          "p2": "Aber was ist mit der Übersetzung einer vertraulichen Geschäfts-E-Mail? Eines Rechtsdokuments? Persönlicher medizinischer Informationen? Eines Liebesbriefs? Hier ist Helvetras Ansatz wichtig. Wir speichern Ihre Übersetzungen nicht. Wir verwenden sie nicht für Training. Sie werden auf Schweizer Servern von Schweizer KI verarbeitet und sofort gelöscht. Schweizer Datenschutzrecht, das strenger als die DSGVO ist, gilt für alles, was wir tun."
         },
         "swissAi": {
           "title": "Aufgebaut auf Schweizer KI-Technologie",
-          "p1": "Helvetra wird von Apertus angetrieben, dem Schweizer Large Language Model, entwickelt von ETH Zürich, EPFL und dem Schweizer Nationalen Supercomputing Centre. Das ist nicht nur ein Abzeichen — es ist ein fundamental anderer Ansatz für KI. Apertus ist Open-Source, forschungsgetrieben und auf Transparenz statt Profitmaximierung ausgerichtet.",
+          "p1": "Helvetra wird von Apertus angetrieben, dem Schweizer Large Language Model, entwickelt von ETH Zürich, EPFL und dem Schweizer Nationalen Supercomputing Centre. Das ist nicht nur ein Abzeichen, es ist ein fundamental anderer Ansatz für KI. Apertus ist Open-Source, forschungsgetrieben und auf Transparenz statt Profitmaximierung ausgerichtet.",
           "p2": "Wenn Sie Helvetra nutzen, unterstützen Sie das Schweizer Technologie-Ökosystem, anstatt mehr Daten an Big Tech zu liefern. Ihre Übersetzungen finanzieren Schweizer Forschung und Infrastruktur, nicht Werbealgorithmen in Kalifornien."
         },
         "swissGerman": {
           "title": "Der einzige Schweizerdeutsch-Übersetzer",
-          "p1": "Google Translate unterstützt kein Schweizerdeutsch. DeepL, Microsoft Translator und kein anderer grosser Übersetzungsdienst auch nicht. Helvetra ist derzeit das einzige Tool, das von und nach Schweizerdeutsch übersetzen kann, mit Unterstützung für regionale Dialekte wie Zürich, Bern, Basel und mehr. Die Qualität verbessert sich noch — Schweizerdeutsch ist wirklich schwer — aber wir sind die Einzigen, die daran arbeiten."
+          "p1": "Google Translate unterstützt kein Schweizerdeutsch. DeepL, Microsoft Translator und kein anderer grosser Übersetzungsdienst auch nicht. Helvetra ist derzeit das einzige Tool, das von und nach Schweizerdeutsch übersetzen kann, mit Unterstützung für regionale Dialekte wie Zürich, Bern, Basel und mehr. Die Qualität verbessert sich noch, Schweizerdeutsch ist wirklich schwer, aber wir sind die Einzigen, die daran arbeiten."
         },
         "simplicity": {
           "title": "Einfachheit als Design-Prinzip",
-          "p1": "Helvetra macht eine Sache: Text übersetzen. Für die Grundnutzung ist kein Konto erforderlich, keine Werbung, keine Dark Patterns, die Sie zum Upgrade drängen, keine Funktionen, die Sie nie nutzen werden und die Oberfläche überladen. Google Translate ist über die Jahre zunehmend komplex geworden — Konversationsmodus, Kameraübersetzung, gespeicherte Übersetzungen, markierte Phrasen, Integration mit Dutzenden anderen Diensten. Wenn Sie einfach nur Text einfügen und eine Übersetzung bekommen wollen, steht Ihnen Helvetra nicht im Weg."
+          "p1": "Helvetra macht eine Sache: Text übersetzen. Für die Grundnutzung ist kein Konto erforderlich, keine Werbung, keine Dark Patterns, die Sie zum Upgrade drängen, keine Funktionen, die Sie nie nutzen werden und die Oberfläche überladen. Google Translate ist über die Jahre zunehmend komplex geworden, Konversationsmodus, Kameraübersetzung, gespeicherte Übersetzungen, markierte Phrasen, Integration mit Dutzenden anderen Diensten. Wenn Sie einfach nur Text einfügen und eine Übersetzung bekommen wollen, steht Ihnen Helvetra nicht im Weg."
         },
         "verdict": "Fazit: Wenn Sie hauptsächlich mit Schweizer Sprachen arbeiten, sich darum kümmern, wohin Ihre Daten gehen, oder einfach ein sauberes Übersetzungstool ohne die Komplexität wollen, wurde Helvetra für Sie gebaut."
       },
       "privacyTradeoff": {
         "title": "Der Datenschutz-Kompromiss (ehrlich)",
-        "intro": "Lassen Sie uns direkt sein, was \"kostenlos\" für jeden Dienst bedeutet. Google Translate ist kostenlos, weil Ihre Nutzungsdaten für Google wertvoll sind — um ihre KI zu verbessern, Sprachmuster zu verstehen, bessere Produkte zu bauen. Helvetras kostenlose Stufe existiert, damit Sie den Dienst ausprobieren können, mit einer bezahlten Stufe für Vielnutzer. Hier ist genau, was jeder Dienst sammelt:",
+        "intro": "Lassen Sie uns direkt sein, was \"kostenlos\" für jeden Dienst bedeutet. Google Translate ist kostenlos, weil Ihre Nutzungsdaten für Google wertvoll sind, um ihre KI zu verbessern, Sprachmuster zu verstehen, bessere Produkte zu bauen. Helvetras kostenlose Stufe existiert, damit Sie den Dienst ausprobieren können, mit einer bezahlten Stufe für Vielnutzer. Hier ist genau, was jeder Dienst sammelt:",
         "googleCollects": {
           "title": "Was Google sammelt",
           "point1": "Ihren Übersetzungsverlauf (in Ihrem Google-Konto gespeichert, es sei denn, Sie schalten dies aus)",
@@ -565,7 +598,7 @@
           "point1": "Nichts. Übersetzungen werden verarbeitet und sofort von unseren Servern gelöscht.",
           "point2": "Die einzige Ausnahme: Wenn Sie freiwillig Feedback geben, speichern wir diese spezifische Übersetzung zur Qualitätsverbesserung."
         },
-        "honestTruth": "Hier ist die ehrliche Wahrheit: Wenn Ihnen Datenschutz egal ist, wird Googles Datensammlung für Sie völlig unsichtbar sein. Der Dienst funktioniert grossartig. Aber wenn Sie etwas Sensibles übersetzen — Geschäftsdokumente, Rechtstexte, persönliche Korrespondenz — sollten Sie wissen, wohin diese Daten gehen und wer darauf zugreifen kann."
+        "honestTruth": "Hier ist die ehrliche Wahrheit: Wenn Ihnen Datenschutz egal ist, wird Googles Datensammlung für Sie völlig unsichtbar sein. Der Dienst funktioniert grossartig. Aber wenn Sie etwas Sensibles übersetzen, Geschäftsdokumente, Rechtstexte, persönliche Korrespondenz, sollten Sie wissen, wohin diese Daten gehen und wer darauf zugreifen kann."
       },
       "useCases": {
         "title": "Was sollten Sie wählen?",
@@ -579,7 +612,7 @@
         "chooseHelvetra": {
           "title": "Wählen Sie Helvetra, wenn:",
           "point1": "Sie hauptsächlich mit Schweizer Sprachen arbeiten und optimierte Qualität wollen",
-          "point2": "Datenschutz wichtig ist — aus geschäftlichen, rechtlichen oder persönlichen Gründen",
+          "point2": "Datenschutz wichtig ist, aus geschäftlichen, rechtlichen oder persönlichen Gründen",
           "point3": "Sie Schweizerdeutsch-Übersetzung brauchen (wir sind die einzige Option)",
           "point4": "Sie ein einfaches, fokussiertes Tool einer funktionsreichen Plattform vorziehen",
           "point5": "Sie Schweizer Technologie statt Big Tech unterstützen wollen"
@@ -609,7 +642,7 @@
         "helvetraFree": "20K Zeichen/Monat",
         "deeplFree": "50K Zeichen/Monat",
         "languages": "Sprachen",
-        "helvetraLangs": "5 (Schweiz-Fokus)",
+        "helvetraLangs": "6 (Schweiz-Fokus)",
         "deeplLangs": "31+",
         "swissGerman": "Schweizerdeutsch",
         "yes": "Ja",
@@ -623,7 +656,7 @@
       },
       "intro": {
         "p1": "DeepL hat sich einen wohlverdienten Ruf als eines der besten verfügbaren Übersetzungstools aufgebaut. Seine Übersetzungen lesen sich oft natürlicher als die der Konkurrenz, besonders bei europäischen Sprachen. Als DeepL lancierte, hob es die Messlatte für maschinelle Übersetzungsqualität wirklich an.",
-        "p2": "Warum sollte also jemand Helvetra statt DeepL wählen? Nicht weil wir behaupten, in allem besser zu sein — das sind wir nicht. Sondern weil wir unterschiedliche Probleme lösen. Wenn Sie hauptsächlich mit Schweizer Sprachen arbeiten, Datensouveränität wichtig nehmen oder Schweizerdeutsch brauchen, bietet Helvetra etwas, das DeepL schlicht nicht kann. Lassen Sie uns die ehrlichen Unterschiede aufschlüsseln."
+        "p2": "Warum sollte also jemand Helvetra statt DeepL wählen? Nicht weil wir behaupten, in allem besser zu sein, das sind wir nicht. Sondern weil wir unterschiedliche Probleme lösen. Wenn Sie hauptsächlich mit Schweizer Sprachen arbeiten, Datensouveränität wichtig nehmen oder Schweizerdeutsch brauchen, bietet Helvetra etwas, das DeepL schlicht nicht kann. Lassen Sie uns die ehrlichen Unterschiede aufschlüsseln."
       },
       "deeplWins": {
         "title": "Wo DeepL gewinnt",
@@ -634,7 +667,7 @@
         },
         "documents": {
           "title": "Dokumentenübersetzung",
-          "p1": "DeepL verarbeitet ganze Dokumente — Word-Dateien, PowerPoints, PDFs — und behält dabei die Formatierung bei. Laden Sie einen 50-seitigen Bericht hoch und erhalten Sie ihn übersetzt mit intaktem Layout zurück. Helvetra konzentriert sich derzeit nur auf Textübersetzung. Wenn Sie regelmässig formatierte Dokumente übersetzen müssen, ist DeepLs Dokumentenverarbeitung ein wesentlicher Vorteil."
+          "p1": "DeepL verarbeitet ganze Dokumente, Word-Dateien, PowerPoints, PDFs, und behält dabei die Formatierung bei. Laden Sie einen 50-seitigen Bericht hoch und erhalten Sie ihn übersetzt mit intaktem Layout zurück. Helvetra konzentriert sich derzeit nur auf Textübersetzung. Wenn Sie regelmässig formatierte Dokumente übersetzen müssen, ist DeepLs Dokumentenverarbeitung ein wesentlicher Vorteil."
         },
         "api": {
           "title": "Entwickler-API",
@@ -642,7 +675,7 @@
         },
         "languages": {
           "title": "Breitere Sprachabdeckung",
-          "p1": "DeepL unterstützt 31+ Sprachen im Vergleich zu Helvetras 5. Brauchen Sie Japanisch, Portugiesisch oder Polnisch? DeepL hat Sie abgedeckt. Helvetra konzentriert sich ausschliesslich auf Schweizer Sprachen: Deutsch, Französisch, Italienisch, Englisch und Schweizerdeutsch. Das ist beabsichtigt — wir machen lieber fünf Sprachen ausgezeichnet als dreissig mittelmässig."
+          "p1": "DeepL unterstützt 31+ Sprachen im Vergleich zu Helvetras 6. Brauchen Sie Japanisch, Portugiesisch oder Polnisch? DeepL hat Sie abgedeckt. Helvetra konzentriert sich ausschliesslich auf Schweizer Sprachen: Deutsch, Französisch, Italienisch, Englisch, Schweizerdeutsch und Rätoromanisch. Das ist beabsichtigt, wir machen lieber sechs Sprachen ausgezeichnet als dreissig mittelmässig."
         },
         "verdict": "Fazit: DeepL ist ein Premium-Übersetzungstool, das seinen Ruf verdient. Für europäische Sprachqualität, Dokumentenübersetzung und API-Zugang ist es eine ausgezeichnete Wahl."
       },
@@ -651,17 +684,17 @@
         "swissGerman": {
           "title": "Schweizerdeutsch-Übersetzung",
           "p1": "DeepL unterstützt kein Schweizerdeutsch. Google Translate, Microsoft Translator und andere grosse Übersetzungsdienste auch nicht. Helvetra ist das einzige Tool, das von und nach Schweizerdeutsch übersetzen kann, mit Unterstützung für regionale Dialekte wie Zürich, Bern, Basel, Aargau und mehr.",
-          "p2": "Wenn Sie eine Mundart-Nachricht von einem Kollegen übersetzen, mit schweizerdeutsch-sprechenden Familienmitgliedern kommunizieren oder Inhalte für Schweizer Zielgruppen lokalisieren müssen, sind wir Ihre einzige Option. Schweizerdeutsch ist wirklich herausfordernd — es variiert erheblich nach Region und hat keine standardisierte Schriftform — aber wir verbessern aktiv unsere Dialektunterstützung."
+          "p2": "Wenn Sie eine Mundart-Nachricht von einem Kollegen übersetzen, mit schweizerdeutsch-sprechenden Familienmitgliedern kommunizieren oder Inhalte für Schweizer Zielgruppen lokalisieren müssen, sind wir Ihre einzige Option. Schweizerdeutsch ist wirklich herausfordernd, es variiert erheblich nach Region und hat keine standardisierte Schriftform, aber wir verbessern aktiv unsere Dialektunterstützung."
         },
         "privacy": {
           "title": "Schweizer Datensouveränität",
           "p1": "DeepL ist ein deutsches Unternehmen, was bedeutet, dass Ihre Daten EU-Vorschriften unterliegen und in EU-Rechenzentren gespeichert werden. Das ist besser als US-basierte Dienste, aber es ist nicht Schweiz. Für Schweizer Unternehmen, Fachleute und datenschutzbewusste Personen macht der Unterschied etwas aus.",
-          "p2": "Helvetra verarbeitet alle Übersetzungen in der Schweiz mit Schweizer KI (Apertus) auf Schweizer Infrastruktur (Infomaniak). Ihr Text verlässt nie die Schweiz. Schweizer Datenschutzrecht gilt. Für sensible Geschäftskommunikation, juristische Dokumente oder persönliche Korrespondenz ist das mehr als eine Formalität — es ist Sicherheit."
+          "p2": "Helvetra verarbeitet alle Übersetzungen in der Schweiz mit Schweizer KI (Apertus) auf Schweizer Infrastruktur (Infomaniak). Ihr Text verlässt nie die Schweiz. Schweizer Datenschutzrecht gilt. Für sensible Geschäftskommunikation, juristische Dokumente oder persönliche Korrespondenz ist das mehr als eine Formalität, es ist Sicherheit."
         },
         "pricing": {
           "title": "Einfachere, günstigere Preise",
           "p1": "DeepLs Preise beginnen bei €8.99/Monat für den Starter-Plan, der Ihnen 200K Zeichen gibt. Wollen Sie mehr? Der Advanced-Plan kostet €29.99/Monat. Brauchen Sie unbegrenzt? Das sind €59.99/Monat. Die Gratis-Version ist grosszügig (50K Zeichen/Monat), aber der Sprung zu bezahlt ist steil.",
-          "p2": "Helvetra+ kostet CHF 4.99/Monat und gibt Ihnen 500'000 Zeichen — das ist mehr als DeepLs €29.99 Advanced-Plan zu etwa einem Sechstel des Preises. Keine komplexe Stufenstruktur, keine Funktionsbeschränkungen. Nur ein einfacher Plan für Leute, die regelmässig übersetzen."
+          "p2": "Helvetra+ kostet CHF 4.99/Monat und gibt Ihnen 500'000 Zeichen, das ist mehr als DeepLs €29.99 Advanced-Plan zu etwa einem Sechstel des Preises. Keine komplexe Stufenstruktur, keine Funktionsbeschränkungen. Nur ein einfacher Plan für Leute, die regelmässig übersetzen."
         },
         "simplicity": {
           "title": "Fokussierte Einfachheit",
@@ -671,7 +704,7 @@
       },
       "qualityQuestion": {
         "title": "Die Qualitätsfrage",
-        "intro": "Lassen Sie uns das direkt ansprechen: Ist Helvetras Übersetzungsqualität so gut wie DeepLs? Für Standard-Europäische Sprachpaare hat DeepL einen Vorsprung — Jahre der Entwicklung und massive Trainingsdaten. Aber Qualität hängt davon ab, was Sie übersetzen und für wen.",
+        "intro": "Lassen Sie uns das direkt ansprechen: Ist Helvetras Übersetzungsqualität so gut wie DeepLs? Für Standard-Europäische Sprachpaare hat DeepL einen Vorsprung, Jahre der Entwicklung und massive Trainingsdaten. Aber Qualität hängt davon ab, was Sie übersetzen und für wen.",
         "deeplQuality": {
           "title": "DeepLs Stärken",
           "point1": "Polierter Output für grosse europäische Sprachpaare",
@@ -684,7 +717,7 @@
           "point2": "Optimiert für Schweizer Kontext und Terminologie",
           "point3": "Verbessert sich schnell mit Nutzer-Feedback"
         },
-        "honestTruth": "Die ehrliche Wahrheit: Für eine Deutsch-Französische Geschäfts-E-Mail produzieren beide Tools gute Ergebnisse. DeepL könnte bei literarischer Prosa vorne liegen. Aber für alles, was Schweizerdeutsch oder Schweiz-spezifischen Kontext beinhaltet, ist Helvetra Ihre einzige echte Option — und wir arbeiten hart daran, jede Qualitätslücke in anderen Bereichen zu schliessen."
+        "honestTruth": "Die ehrliche Wahrheit: Für eine Deutsch-Französische Geschäfts-E-Mail produzieren beide Tools gute Ergebnisse. DeepL könnte bei literarischer Prosa vorne liegen. Aber für alles, was Schweizerdeutsch oder Schweiz-spezifischen Kontext beinhaltet, ist Helvetra Ihre einzige echte Option, und wir arbeiten hart daran, jede Qualitätslücke in anderen Bereichen zu schliessen."
       },
       "pricingSection": {
         "title": "Preisaufschlüsselung",
@@ -702,7 +735,7 @@
           "point2": "Helvetra+: CHF 4.99/Mt. (500K Zeichen)",
           "point3": "Keine komplexen Stufen oder Funktionsbeschränkungen"
         },
-        "conclusion": "DeepLs Gratis-Version ist grosszügiger (50K vs 20K Zeichen). Aber wenn Sie regelmässig übersetzen und einen bezahlten Plan brauchen, bietet Helvetra+ dasselbe Zeichenlimit wie DeepL Advanced zu einem Sechstel des Preises. Die Frage ist, ob DeepLs zusätzliche Funktionen — Dokumentenübersetzung, API-Zugang, Glossare — den Aufpreis für Ihren Anwendungsfall wert sind."
+        "conclusion": "DeepLs Gratis-Version ist grosszügiger (50K vs 20K Zeichen). Aber wenn Sie regelmässig übersetzen und einen bezahlten Plan brauchen, bietet Helvetra+ dasselbe Zeichenlimit wie DeepL Advanced zu einem Sechstel des Preises. Die Frage ist, ob DeepLs zusätzliche Funktionen, Dokumentenübersetzung, API-Zugang, Glossare, den Aufpreis für Ihren Anwendungsfall wert sind."
       },
       "useCases": {
         "title": "Was sollten Sie wählen?",
@@ -716,7 +749,7 @@
         "chooseHelvetra": {
           "title": "Wählen Sie Helvetra, wenn:",
           "point1": "Sie Schweizerdeutsch-Übersetzung brauchen (wir sind die einzige Option)",
-          "point2": "Datensouveränität wichtig ist — Schweizer Server, Schweizer Recht",
+          "point2": "Datensouveränität wichtig ist, Schweizer Server, Schweizer Recht",
           "point3": "Sie günstige Preise für Vielnutzung wollen",
           "point4": "Sie Einfachheit gegenüber Funktionen bevorzugen, die Sie nicht nutzen werden",
           "point5": "Sie Schweizer Technologie statt Big Tech unterstützen wollen"
@@ -725,7 +758,7 @@
       "conclusion": {
         "title": "Das Fazit",
         "p1": "DeepL ist ein ausgezeichnetes Übersetzungstool. Seine Qualität für grosse europäische Sprachen ist branchenführend, und Funktionen wie Dokumentenübersetzung und API-Zugang sind für professionelle Nutzer wertvoll. Wenn Sie diese Funktionen brauchen, ist es den Aufpreis wert.",
-        "p2": "Helvetra existiert für einen anderen Zweck: Schweizer Nutzern zu dienen, die Schweizerdeutsch-Unterstützung brauchen, wollen, dass ihre Daten in der Schweiz bleiben, oder einfach ein günstiges, fokussiertes Übersetzungstool ohne Komplexität wollen. Wir versuchen nicht, DeepL für alle zu ersetzen — wir bauen die beste Option für Nutzer, deren Bedürfnisse mit unseren Stärken übereinstimmen.",
+        "p2": "Helvetra existiert für einen anderen Zweck: Schweizer Nutzern zu dienen, die Schweizerdeutsch-Unterstützung brauchen, wollen, dass ihre Daten in der Schweiz bleiben, oder einfach ein günstiges, fokussiertes Übersetzungstool ohne Komplexität wollen. Wir versuchen nicht, DeepL für alle zu ersetzen, wir bauen die beste Option für Nutzer, deren Bedürfnisse mit unseren Stärken übereinstimmen.",
         "p3": "Die richtige Wahl hängt von Ihren Prioritäten ab. Jetzt haben Sie die Informationen, um zu entscheiden.",
         "cta": "Bereit, Übersetzung zu testen, die für die Schweiz gebaut wurde?",
         "tryHelvetra": "Helvetra kostenlos testen"
@@ -746,7 +779,7 @@
         "helvetraPrice": "Gratis / CHF 4.99/Mt.",
         "supertextPrice": "CHF 9.90/Mt.",
         "languages": "Sprachen",
-        "helvetraLangs": "5 (Schweiz-Fokus)",
+        "helvetraLangs": "6 (Schweiz-Fokus)",
         "supertextLangs": "28",
         "swissGerman": "Schweizerdeutsch",
         "yes": "Ja",
@@ -773,7 +806,7 @@
         },
         "languages": {
           "title": "Breitere Sprachabdeckung",
-          "p1": "Supertext unterstützt 28 Sprachen im Vergleich zu Helvetras 5. Wenn Sie regelmässig Übersetzungen mit Portugiesisch, Japanisch, Arabisch oder anderen Sprachen ausserhalb der Schweizer Landessprachen brauchen, hat Supertext eine breitere Abdeckung."
+          "p1": "Supertext unterstützt 28 Sprachen im Vergleich zu Helvetras 6. Wenn Sie regelmässig Übersetzungen mit Portugiesisch, Japanisch, Arabisch oder anderen Sprachen ausserhalb der Schweizer Landessprachen brauchen, hat Supertext eine breitere Abdeckung."
         },
         "formats": {
           "title": "Dokumentformat-Unterstützung",

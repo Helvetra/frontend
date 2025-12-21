@@ -47,6 +47,9 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+const { getFAQSchema, useJsonLd } = useSchemaOrg()
+
 const openIndex = ref<number | null>(null)
 
 const faqItems = [
@@ -55,12 +58,27 @@ const faqItems = [
   { key: 'free' },
   { key: 'different' },
   { key: 'swissGerman' },
+  { key: 'accuracy' },
+  { key: 'dialects' },
+  { key: 'vsGoogle' },
+  { key: 'formality' },
+  { key: 'mobile' },
   { key: 'dataTraining' },
   { key: 'apertus' },
   { key: 'infomaniak' },
   { key: 'api' },
   { key: 'contribute' },
 ]
+
+// Generate FAQ schema from translated content
+const faqSchemaItems = computed(() =>
+  faqItems.map(item => ({
+    question: t(`marketing.faq.items.${item.key}.q`),
+    answer: t(`marketing.faq.items.${item.key}.a`).replace(/<[^>]*>/g, ''), // Strip HTML
+  }))
+)
+
+useJsonLd(getFAQSchema(faqSchemaItems.value))
 
 function toggleItem(index: number) {
   openIndex.value = openIndex.value === index ? null : index

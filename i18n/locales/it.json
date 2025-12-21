@@ -60,11 +60,11 @@
         },
         "free": {
           "q": "Helvetra è gratuita?",
-          "a": "Questa prima versione è gratuita. Una versione completa potrebbe arrivare più tardi se c'è sufficiente interesse."
+          "a": "Sì! Crea un account gratuito e ottieni 20'000 caratteri al mese. Hai bisogno di più? Helvetra+ offre 500'000 caratteri al mese a partire da CHF 4.99."
         },
         "different": {
           "q": "Cosa distingue Helvetra da Google Translate o DeepL?",
-          "a": "Nessun tracciamento, e i tuoi dati restano in Svizzera, non negli USA (Google) o nell'UE (DeepL). Inoltre, un focus unico sulla traduzione, senza distrazioni."
+          "a": "Nessun tracciamento, e i tuoi dati restano in Svizzera, non negli USA (Google) o nell'UE (DeepL). Inoltre, un focus unico sulla traduzione, senza distrazioni. Vedi i nostri confronti dettagliati: <a href=\"/it/compare/google-translate\" class=\"text-swiss-red hover:underline\">Google Translate</a>, <a href=\"/it/compare/deepl\" class=\"text-swiss-red hover:underline\">DeepL</a>."
         },
         "swissGerman": {
           "q": "Helvetra capisce davvero lo svizzero tedesco?",
@@ -89,6 +89,26 @@
         "contribute": {
           "q": "Posso contribuire?",
           "a": "Certo! <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Scrivici</a>. Ci farebbe piacere sentirti."
+        },
+        "accuracy": {
+          "q": "Quanto è accurata la traduzione in svizzero tedesco?",
+          "a": "Lo svizzero tedesco non ha una forma scritta standardizzata, quindi l'accuratezza varia per dialetto e contesto. Helvetra usa Apertus, addestrato su dati svizzero tedeschi, e migliora continuamente. Per documenti importanti, fai sempre revisionare da un madrelingua."
+        },
+        "dialects": {
+          "q": "Helvetra può tradurre tra dialetti svizzero tedeschi?",
+          "a": "Sì. Puoi tradurre dallo zurighese al bernese, o qualsiasi combinazione di dialetti supportati come Basilea, Argovia e altri. Questo è unico di Helvetra."
+        },
+        "vsGoogle": {
+          "q": "Helvetra è migliore di Google Translate per lo svizzero tedesco?",
+          "a": "Per lo svizzero tedesco, sì. Google Translate non supporta affatto lo svizzero tedesco. Helvetra è attualmente l'unico strumento di traduzione che gestisce i dialetti svizzero tedeschi."
+        },
+        "formality": {
+          "q": "Posso tradurre in svizzero tedesco formale o informale?",
+          "a": "Sì. Helvetra supporta sia la modalità formale (Lei) che informale (tu) per tutte le lingue, incluso lo svizzero tedesco. Seleziona la tua preferenza prima di tradurre."
+        },
+        "mobile": {
+          "q": "Helvetra funziona su mobile?",
+          "a": "Sì. Helvetra è un'app web che funziona su qualsiasi dispositivo con un browser. Non serve scaricare un'app. Basta visitare helvetra.ch sul tuo telefono o tablet."
         }
       }
     },
@@ -253,7 +273,7 @@
       "name": "Basic",
       "description": "Per traduzioni occasionali",
       "price": "Gratuito",
-      "featureLimit": "10'000 caratteri al mese",
+      "featureLimit": "20'000 caratteri al mese",
       "feature1": "Fino a 1'000 caratteri per traduzione",
       "feature2": "Tutte le lingue svizzere supportate",
       "featureFormality": "Interruttore tu/Lei",
@@ -326,6 +346,19 @@
       "text2": "Domande o feedback? Ci farebbe piacere sentirti: <a href=\"mailto:gruezi{'@'}helvetra.ch\" class=\"text-swiss-red hover:underline\">gruezi{'@'}helvetra.ch</a>"
     }
   },
+  "faqPage": {
+    "title": "Domande frequenti",
+    "subtitle": "Tutto quello che devi sapere su Helvetra",
+    "categories": {
+      "all": "Tutte",
+      "general": "Generale",
+      "privacy": "Privacy & Sicurezza",
+      "languages": "Lingue & Dialetti",
+      "pricing": "Prezzi",
+      "technical": "Tecnico"
+    },
+    "showAll": "Mostra tutte le domande"
+  },
   "confirm": {
     "title": "Ci siamo quasi!",
     "instruction": "Per favore controlla la tua casella di posta e clicca sul link di conferma per completare l'iscrizione.",
@@ -366,7 +399,7 @@
       },
       "free": {
         "name": "Basic (Gratuito)",
-        "desc": "Fino a 10.000 caratteri al mese. Registrazione richiesta."
+        "desc": "Fino a 20.000 caratteri al mese. Registrazione richiesta."
       },
       "plus": {
         "name": "Helvetra+",
@@ -490,13 +523,13 @@
         "description": "Un confronto onesto tra Helvetra e Google Translate. Analizziamo privacy, funzionalità, prezzi e supporto delle lingue svizzere per aiutarti a scegliere lo strumento di traduzione giusto."
       },
       "title": "Helvetra vs Google Translate",
-      "subtitle": "Due strumenti di traduzione gratuiti costruiti su filosofie fondamentalmente diverse. Ecco uno sguardo onesto su dove ognuno eccelle — e dove ha punti deboli.",
+      "subtitle": "Due strumenti di traduzione gratuiti costruiti su filosofie fondamentalmente diverse. Ecco uno sguardo onesto su dove ognuno eccelle, e dove ha punti deboli.",
       "table": {
         "price": "Prezzo",
         "helvetraPrice": "Gratis / CHF 4.99/mese",
         "googlePrice": "Gratis (illimitato)",
         "languages": "Lingue",
-        "helvetraLangs": "5 (focus svizzero)",
+        "helvetraLangs": "6 (focus svizzero)",
         "googleLangs": "133",
         "swissGerman": "Svizzero tedesco",
         "yes": "Sì",
@@ -509,19 +542,19 @@
         "googleBestFor": "Portata globale, lingue rare"
       },
       "intro": {
-        "p1": "Se hai mai avuto bisogno di tradurre qualcosa, probabilmente hai usato Google Translate. È ovunque — integrato in Chrome, Android e innumerevoli app. È gratuito, veloce e supporta oltre 130 lingue. Per la maggior parte delle persone, è la scelta predefinita.",
-        "p2": "Helvetra adotta un approccio diverso. Invece di cercare di tradurre tutto per tutti, ci concentriamo nel fare una cosa bene: traduzione privata e di alta qualità per le lingue svizzere. Nessuno dei due strumenti è oggettivamente \"migliore\" — dipende interamente da ciò di cui hai bisogno. Analizziamo onestamente."
+        "p1": "Se hai mai avuto bisogno di tradurre qualcosa, probabilmente hai usato Google Translate. È ovunque, integrato in Chrome, Android e innumerevoli app. È gratuito, veloce e supporta oltre 130 lingue. Per la maggior parte delle persone, è la scelta predefinita.",
+        "p2": "Helvetra adotta un approccio diverso. Invece di cercare di tradurre tutto per tutti, ci concentriamo nel fare una cosa bene: traduzione privata e di alta qualità per le lingue svizzere. Nessuno dei due strumenti è oggettivamente \"migliore\", dipende interamente da ciò di cui hai bisogno. Analizziamo onestamente."
       },
       "googleWins": {
         "title": "Dove Google Translate vince",
         "coverage": {
           "title": "Copertura linguistica senza pari",
-          "p1": "Google Translate supporta 133 lingue — dall'afrikaans allo zulu, incluse molte lingue regionali e in pericolo. Se hai bisogno di tradurre thai, swahili o gallese, Google è essenzialmente la tua unica opzione gratuita. Helvetra supporta cinque lingue (tedesco, francese, italiano, inglese e svizzero tedesco), che copre bene la Svizzera ma non ti aiuterà in un viaggio a Tokyo.",
+          "p1": "Google Translate supporta 133 lingue, dall'afrikaans allo zulu, incluse molte lingue regionali e in pericolo. Se hai bisogno di tradurre thai, swahili o gallese, Google è essenzialmente la tua unica opzione gratuita. Helvetra supporta sei lingue (tedesco, francese, italiano, inglese, svizzero tedesco e romancio), che copre bene la Svizzera ma non ti aiuterà in un viaggio a Tokyo.",
           "p2": "Questa non è una debolezza che stiamo cercando di correggere. Helvetra è intenzionalmente focalizzato sulle lingue svizzere perché è lì che possiamo aggiungere vero valore. Se lavori regolarmente con lingue al di fuori di questo ambito, Google Translate è la scelta pratica."
         },
         "free": {
           "title": "Veramente illimitato e gratuito",
-          "p1": "Google Translate non ha limiti di caratteri, nessun tetto giornaliero e nessun livello premium verso cui vieni spinto. Puoi tradurre interi documenti, siti web, persino conversazioni in tempo reale — tutto senza pagare un centesimo o creare un account. Questo è possibile perché il modello di business di Google non si basa sulla tariffazione della traduzione; si basa sui dati che fornisci mentre usi il servizio."
+          "p1": "Google Translate non ha limiti di caratteri, nessun tetto giornaliero e nessun livello premium verso cui vieni spinto. Puoi tradurre interi documenti, siti web, persino conversazioni in tempo reale, tutto senza pagare un centesimo o creare un account. Questo è possibile perché il modello di business di Google non si basa sulla tariffazione della traduzione; si basa sui dati che fornisci mentre usi il servizio."
         },
         "ecosystem": {
           "title": "Profonda integrazione nell'ecosistema",
@@ -533,27 +566,27 @@
         "title": "Dove Helvetra vince",
         "privacy": {
           "title": "La privacy come fondamento, non come funzionalità",
-          "p1": "Questa è la differenza fondamentale tra noi. Google Translate è un servizio gratuito perché paghi con i tuoi dati. Le tue traduzioni possono essere archiviate, analizzate e utilizzate per addestrare i modelli di IA di Google. Per un uso occasionale — cercare una parola, tradurre un menu — questo è uno scambio equo per la maggior parte delle persone.",
-          "p2": "Ma che dire della traduzione di un'email aziendale riservata? Un documento legale? Informazioni mediche personali? Una lettera d'amore? È qui che l'approccio di Helvetra conta. Non memorizziamo le tue traduzioni. Non le usiamo per l'addestramento. Vengono elaborate su server svizzeri da IA svizzera e immediatamente cancellate. La legge svizzera sulla protezione dei dati — che è più severa del GDPR — si applica a tutto ciò che facciamo."
+          "p1": "Questa è la differenza fondamentale tra noi. Google Translate è un servizio gratuito perché paghi con i tuoi dati. Le tue traduzioni possono essere archiviate, analizzate e utilizzate per addestrare i modelli di IA di Google. Per un uso occasionale, cercare una parola, tradurre un menu, questo è uno scambio equo per la maggior parte delle persone.",
+          "p2": "Ma che dire della traduzione di un'email aziendale riservata? Un documento legale? Informazioni mediche personali? Una lettera d'amore? È qui che l'approccio di Helvetra conta. Non memorizziamo le tue traduzioni. Non le usiamo per l'addestramento. Vengono elaborate su server svizzeri da IA svizzera e immediatamente cancellate. La legge svizzera sulla protezione dei dati, che è più severa del GDPR, si applica a tutto ciò che facciamo."
         },
         "swissAi": {
           "title": "Costruito sulla tecnologia IA svizzera",
-          "p1": "Helvetra è alimentato da Apertus, il grande modello linguistico svizzero sviluppato da ETH Zürich, EPFL e il Centro Nazionale Svizzero di Supercalcolo. Questo non è solo un badge — è un approccio fondamentalmente diverso all'IA. Apertus è open-source, guidato dalla ricerca e costruito per la trasparenza piuttosto che per l'estrazione di profitto.",
+          "p1": "Helvetra è alimentato da Apertus, il grande modello linguistico svizzero sviluppato da ETH Zürich, EPFL e il Centro Nazionale Svizzero di Supercalcolo. Questo non è solo un badge, è un approccio fondamentalmente diverso all'IA. Apertus è open-source, guidato dalla ricerca e costruito per la trasparenza piuttosto che per l'estrazione di profitto.",
           "p2": "Quando usi Helvetra, stai sostenendo l'ecosistema tecnologico svizzero invece di alimentare le Big Tech con più dati. Le tue traduzioni finanziano la ricerca e l'infrastruttura svizzera, non algoritmi pubblicitari in California."
         },
         "swissGerman": {
           "title": "L'unico traduttore di svizzero tedesco",
-          "p1": "Google Translate non supporta lo svizzero tedesco. Nemmeno DeepL, Microsoft Translator o qualsiasi altro grande servizio di traduzione. Helvetra è attualmente l'unico strumento che può tradurre da e verso lo svizzero tedesco, con supporto per i dialetti regionali come Zurigo, Berna, Basilea e altri. La qualità sta ancora migliorando — lo svizzero tedesco è davvero difficile — ma siamo gli unici a lavorarci."
+          "p1": "Google Translate non supporta lo svizzero tedesco. Nemmeno DeepL, Microsoft Translator o qualsiasi altro grande servizio di traduzione. Helvetra è attualmente l'unico strumento che può tradurre da e verso lo svizzero tedesco, con supporto per i dialetti regionali come Zurigo, Berna, Basilea e altri. La qualità sta ancora migliorando, lo svizzero tedesco è davvero difficile, ma siamo gli unici a lavorarci."
         },
         "simplicity": {
           "title": "Semplicità per design",
-          "p1": "Helvetra fa una cosa: tradurre testo. Non è richiesto un account per l'uso base, niente pubblicità, nessun dark pattern che ti spinge all'upgrade, nessuna funzionalità che non userai mai che ingombra l'interfaccia. Google Translate è diventato sempre più complesso negli anni — modalità conversazione, traduzione con fotocamera, traduzioni salvate, frasi preferite, integrazione con dozzine di altri servizi. Se vuoi solo incollare del testo e ottenere una traduzione, Helvetra non ti ostacola."
+          "p1": "Helvetra fa una cosa: tradurre testo. Non è richiesto un account per l'uso base, niente pubblicità, nessun dark pattern che ti spinge all'upgrade, nessuna funzionalità che non userai mai che ingombra l'interfaccia. Google Translate è diventato sempre più complesso negli anni, modalità conversazione, traduzione con fotocamera, traduzioni salvate, frasi preferite, integrazione con dozzine di altri servizi. Se vuoi solo incollare del testo e ottenere una traduzione, Helvetra non ti ostacola."
         },
         "verdict": "In sintesi: se lavori principalmente con le lingue svizzere, ti importa dove vanno i tuoi dati, o semplicemente vuoi uno strumento di traduzione pulito senza la complessità, Helvetra è stato costruito per te."
       },
       "privacyTradeoff": {
         "title": "Il compromesso sulla privacy (onestamente)",
-        "intro": "Siamo diretti su cosa significa \"gratuito\" per ogni servizio. Google Translate è gratuito perché i tuoi dati di utilizzo hanno valore per Google — per migliorare la loro IA, capire i pattern linguistici, costruire prodotti migliori. Il livello gratuito di Helvetra esiste per farti provare il servizio, con un livello a pagamento per gli utenti intensivi. Ecco esattamente cosa raccoglie ogni servizio:",
+        "intro": "Siamo diretti su cosa significa \"gratuito\" per ogni servizio. Google Translate è gratuito perché i tuoi dati di utilizzo hanno valore per Google, per migliorare la loro IA, capire i pattern linguistici, costruire prodotti migliori. Il livello gratuito di Helvetra esiste per farti provare il servizio, con un livello a pagamento per gli utenti intensivi. Ecco esattamente cosa raccoglie ogni servizio:",
         "googleCollects": {
           "title": "Cosa raccoglie Google",
           "point1": "La tua cronologia delle traduzioni (memorizzata nel tuo account Google a meno che tu non disattivi questa opzione)",
@@ -565,7 +598,7 @@
           "point1": "Niente. Le traduzioni vengono elaborate e immediatamente cancellate dai nostri server.",
           "point2": "L'unica eccezione: se invii volontariamente un feedback, memorizziamo quella specifica traduzione per migliorare la qualità."
         },
-        "honestTruth": "Ecco la verità onesta: se non ti importa della privacy, la raccolta dati di Google sarà completamente invisibile per te. Il servizio funziona benissimo. Ma se stai traducendo qualcosa di sensibile — documenti aziendali, testi legali, corrispondenza personale — dovresti sapere dove vanno quei dati e chi può accedervi."
+        "honestTruth": "Ecco la verità onesta: se non ti importa della privacy, la raccolta dati di Google sarà completamente invisibile per te. Il servizio funziona benissimo. Ma se stai traducendo qualcosa di sensibile, documenti aziendali, testi legali, corrispondenza personale, dovresti sapere dove vanno quei dati e chi può accedervi."
       },
       "useCases": {
         "title": "Cosa dovresti scegliere?",
@@ -579,7 +612,7 @@
         "chooseHelvetra": {
           "title": "Scegli Helvetra se:",
           "point1": "Lavori principalmente con le lingue svizzere e vuoi qualità ottimizzata",
-          "point2": "La privacy conta — per motivi aziendali, legali o personali",
+          "point2": "La privacy conta, per motivi aziendali, legali o personali",
           "point3": "Hai bisogno di traduzione in svizzero tedesco (siamo l'unica opzione)",
           "point4": "Preferisci uno strumento semplice e focalizzato a una piattaforma ricca di funzionalità",
           "point5": "Vuoi sostenere la tecnologia svizzera invece delle Big Tech"
@@ -609,7 +642,7 @@
         "helvetraFree": "20K car./mese",
         "deeplFree": "50K car./mese",
         "languages": "Lingue",
-        "helvetraLangs": "5 (focus svizzero)",
+        "helvetraLangs": "6 (focus svizzero)",
         "deeplLangs": "31+",
         "swissGerman": "Svizzero tedesco",
         "yes": "Sì",
@@ -623,7 +656,7 @@
       },
       "intro": {
         "p1": "DeepL si è costruito una reputazione ben meritata come uno dei migliori strumenti di traduzione disponibili. Le sue traduzioni spesso si leggono più naturalmente rispetto ai concorrenti, specialmente per le lingue europee. Quando DeepL è stato lanciato, ha davvero alzato l'asticella della qualità della traduzione automatica.",
-        "p2": "Quindi perché qualcuno dovrebbe scegliere Helvetra invece di DeepL? Non perché affermiamo di essere migliori in tutto — non lo siamo. Ma perché risolviamo problemi diversi. Se lavori principalmente con lingue svizzere, se la sovranità dei dati ti sta a cuore, o se hai bisogno dello svizzero tedesco, Helvetra offre qualcosa che DeepL semplicemente non può. Analizziamo onestamente le differenze."
+        "p2": "Quindi perché qualcuno dovrebbe scegliere Helvetra invece di DeepL? Non perché affermiamo di essere migliori in tutto, non lo siamo. Ma perché risolviamo problemi diversi. Se lavori principalmente con lingue svizzere, se la sovranità dei dati ti sta a cuore, o se hai bisogno dello svizzero tedesco, Helvetra offre qualcosa che DeepL semplicemente non può. Analizziamo onestamente le differenze."
       },
       "deeplWins": {
         "title": "Dove vince DeepL",
@@ -634,7 +667,7 @@
         },
         "documents": {
           "title": "Traduzione di documenti",
-          "p1": "DeepL gestisce interi documenti — file Word, PowerPoint, PDF — preservando la formattazione. Carica un rapporto di 50 pagine e ricevilo tradotto con il layout intatto. Helvetra attualmente si concentra solo sulla traduzione di testo. Se devi regolarmente tradurre documenti formattati, la gestione documentale di DeepL è un vantaggio significativo."
+          "p1": "DeepL gestisce interi documenti, file Word, PowerPoint, PDF, preservando la formattazione. Carica un rapporto di 50 pagine e ricevilo tradotto con il layout intatto. Helvetra attualmente si concentra solo sulla traduzione di testo. Se devi regolarmente tradurre documenti formattati, la gestione documentale di DeepL è un vantaggio significativo."
         },
         "api": {
           "title": "API per sviluppatori",
@@ -642,7 +675,7 @@
         },
         "languages": {
           "title": "Copertura linguistica più ampia",
-          "p1": "DeepL supporta 31+ lingue rispetto alle 5 di Helvetra. Hai bisogno di giapponese, portoghese o polacco? DeepL ti copre. Helvetra si concentra esclusivamente sulle lingue svizzere: tedesco, francese, italiano, inglese e svizzero tedesco. È intenzionale — preferiamo fare cinque lingue eccellentemente che trenta mediocremente."
+          "p1": "DeepL supporta 31+ lingue rispetto alle 6 di Helvetra. Hai bisogno di giapponese, portoghese o polacco? DeepL ti copre. Helvetra si concentra esclusivamente sulle lingue svizzere: tedesco, francese, italiano, inglese, svizzero tedesco e romancio. È intenzionale, preferiamo fare sei lingue eccellentemente che trenta mediocremente."
         },
         "verdict": "In sintesi: DeepL è uno strumento di traduzione premium che merita la sua reputazione. Per la qualità delle lingue europee, la traduzione di documenti e l'accesso API, è un'eccellente scelta."
       },
@@ -651,17 +684,17 @@
         "swissGerman": {
           "title": "Traduzione svizzero tedesco",
           "p1": "DeepL non supporta lo svizzero tedesco. Nemmeno Google Translate, Microsoft Translator o qualsiasi altro grande servizio di traduzione. Helvetra è l'unico strumento che può tradurre da e verso lo svizzero tedesco, con supporto per dialetti regionali inclusi Zurigo, Berna, Basilea, Argovia e altri.",
-          "p2": "Se devi tradurre un messaggio in Mundart da un collega, comunicare con familiari che parlano svizzero tedesco, o localizzare contenuti per il pubblico svizzero, siamo la tua unica opzione. Lo svizzero tedesco è davvero impegnativo — varia significativamente per regione e non ha forma scritta standardizzata — ma stiamo attivamente migliorando il nostro supporto dialettale."
+          "p2": "Se devi tradurre un messaggio in Mundart da un collega, comunicare con familiari che parlano svizzero tedesco, o localizzare contenuti per il pubblico svizzero, siamo la tua unica opzione. Lo svizzero tedesco è davvero impegnativo, varia significativamente per regione e non ha forma scritta standardizzata, ma stiamo attivamente migliorando il nostro supporto dialettale."
         },
         "privacy": {
           "title": "Sovranità dei dati svizzera",
           "p1": "DeepL è un'azienda tedesca, il che significa che i tuoi dati sono soggetti alle normative UE e archiviati in data center UE. È meglio dei servizi basati negli USA, ma non è Svizzera. Per aziende svizzere, professionisti e persone attente alla privacy, la differenza conta.",
-          "p2": "Helvetra elabora tutte le traduzioni in Svizzera usando IA svizzera (Apertus) su infrastruttura svizzera (Infomaniak). Il tuo testo non lascia mai la Svizzera. Si applica la legge svizzera sulla protezione dei dati. Per comunicazioni aziendali sensibili, documenti legali o corrispondenza personale, questo è più di una formalità — è tranquillità."
+          "p2": "Helvetra elabora tutte le traduzioni in Svizzera usando IA svizzera (Apertus) su infrastruttura svizzera (Infomaniak). Il tuo testo non lascia mai la Svizzera. Si applica la legge svizzera sulla protezione dei dati. Per comunicazioni aziendali sensibili, documenti legali o corrispondenza personale, questo è più di una formalità, è tranquillità."
         },
         "pricing": {
           "title": "Prezzi più semplici e accessibili",
           "p1": "I prezzi di DeepL partono da €8.99/mese per il piano Starter, che ti dà 200K caratteri. Ne vuoi di più? Il piano Advanced costa €29.99/mese. Hai bisogno di illimitato? Sono €59.99/mese. La versione gratuita è generosa (50K caratteri/mese) ma il salto al pagamento è ripido.",
-          "p2": "Helvetra+ costa CHF 4.99/mese e ti dà 500'000 caratteri — è più del piano Advanced di DeepL a €29.99 per circa un sesto del prezzo. Nessuna struttura a livelli complessa, nessuna funzionalità bloccata. Solo un piano semplice per chi traduce regolarmente."
+          "p2": "Helvetra+ costa CHF 4.99/mese e ti dà 500'000 caratteri, è più del piano Advanced di DeepL a €29.99 per circa un sesto del prezzo. Nessuna struttura a livelli complessa, nessuna funzionalità bloccata. Solo un piano semplice per chi traduce regolarmente."
         },
         "simplicity": {
           "title": "Semplicità mirata",
@@ -671,7 +704,7 @@
       },
       "qualityQuestion": {
         "title": "La questione della qualità",
-        "intro": "Affrontiamo questo direttamente: la qualità di traduzione di Helvetra è buona quanto quella di DeepL? Per le coppie di lingue europee standard, DeepL ha un vantaggio — anni di sviluppo e dati di addestramento massivi. Ma la qualità dipende da cosa stai traducendo e per chi.",
+        "intro": "Affrontiamo questo direttamente: la qualità di traduzione di Helvetra è buona quanto quella di DeepL? Per le coppie di lingue europee standard, DeepL ha un vantaggio, anni di sviluppo e dati di addestramento massivi. Ma la qualità dipende da cosa stai traducendo e per chi.",
         "deeplQuality": {
           "title": "Punti di forza di DeepL",
           "point1": "Output raffinato per le grandi coppie di lingue europee",
@@ -684,7 +717,7 @@
           "point2": "Ottimizzato per contesto e terminologia svizzera",
           "point3": "Migliora rapidamente con il feedback degli utenti"
         },
-        "honestTruth": "La verità onesta: per un'email aziendale tedesco-francese, entrambi gli strumenti producono buoni risultati. DeepL potrebbe avere un vantaggio per la prosa letteraria. Ma per qualsiasi cosa che coinvolga lo svizzero tedesco o un contesto specificamente svizzero, Helvetra è la tua unica vera opzione — e stiamo lavorando duramente per colmare qualsiasi gap di qualità in altre aree."
+        "honestTruth": "La verità onesta: per un'email aziendale tedesco-francese, entrambi gli strumenti producono buoni risultati. DeepL potrebbe avere un vantaggio per la prosa letteraria. Ma per qualsiasi cosa che coinvolga lo svizzero tedesco o un contesto specificamente svizzero, Helvetra è la tua unica vera opzione, e stiamo lavorando duramente per colmare qualsiasi gap di qualità in altre aree."
       },
       "pricingSection": {
         "title": "Dettaglio dei prezzi",
@@ -702,7 +735,7 @@
           "point2": "Helvetra+: CHF 4.99/mese (500K car.)",
           "point3": "Nessun livello complesso o funzionalità bloccate"
         },
-        "conclusion": "La versione gratuita di DeepL è più generosa (50K vs 20K caratteri). Ma se traduci regolarmente e hai bisogno di un piano a pagamento, Helvetra+ offre lo stesso limite di caratteri di DeepL Advanced per un sesto del prezzo. La domanda è se le funzionalità aggiuntive di DeepL — traduzione documenti, accesso API, glossari — valgono il sovrapprezzo per il tuo caso d'uso."
+        "conclusion": "La versione gratuita di DeepL è più generosa (50K vs 20K caratteri). Ma se traduci regolarmente e hai bisogno di un piano a pagamento, Helvetra+ offre lo stesso limite di caratteri di DeepL Advanced per un sesto del prezzo. La domanda è se le funzionalità aggiuntive di DeepL, traduzione documenti, accesso API, glossari, valgono il sovrapprezzo per il tuo caso d'uso."
       },
       "useCases": {
         "title": "Cosa dovresti scegliere?",
@@ -716,7 +749,7 @@
         "chooseHelvetra": {
           "title": "Scegli Helvetra se:",
           "point1": "Hai bisogno di traduzione svizzero tedesco (siamo l'unica opzione)",
-          "point2": "La sovranità dei dati conta — server svizzeri, legge svizzera",
+          "point2": "La sovranità dei dati conta, server svizzeri, legge svizzera",
           "point3": "Vuoi prezzi accessibili per uso intensivo",
           "point4": "Preferisci la semplicità alle funzionalità che non userai",
           "point5": "Vuoi supportare la tecnologia svizzera invece di Big Tech"
@@ -725,7 +758,7 @@
       "conclusion": {
         "title": "Il verdetto",
         "p1": "DeepL è un eccellente strumento di traduzione. La sua qualità per le grandi lingue europee è la migliore del settore, e funzionalità come traduzione documenti e accesso API sono preziose per gli utenti professionali. Se hai bisogno di queste capacità, vale il sovrapprezzo.",
-        "p2": "Helvetra esiste per uno scopo diverso: servire gli utenti svizzeri che hanno bisogno del supporto svizzero tedesco, vogliono che i loro dati restino in Svizzera, o vogliono semplicemente uno strumento di traduzione accessibile e mirato senza la complessità. Non stiamo cercando di sostituire DeepL per tutti — stiamo costruendo la migliore opzione per gli utenti le cui esigenze si allineano con i nostri punti di forza.",
+        "p2": "Helvetra esiste per uno scopo diverso: servire gli utenti svizzeri che hanno bisogno del supporto svizzero tedesco, vogliono che i loro dati restino in Svizzera, o vogliono semplicemente uno strumento di traduzione accessibile e mirato senza la complessità. Non stiamo cercando di sostituire DeepL per tutti, stiamo costruendo la migliore opzione per gli utenti le cui esigenze si allineano con i nostri punti di forza.",
         "p3": "La scelta giusta dipende dalle tue priorità. Ora hai le informazioni per decidere.",
         "cta": "Pronto a provare la traduzione fatta per la Svizzera?",
         "tryHelvetra": "Prova Helvetra gratis"
@@ -746,7 +779,7 @@
         "helvetraPrice": "CHF 4.99/mese",
         "supertextPrice": "Da ~€0.14/parola",
         "languages": "Lingue",
-        "helvetraLangs": "5 (focus svizzero)",
+        "helvetraLangs": "6 (focus svizzero)",
         "supertextLangs": "100+",
         "swissGerman": "Svizzero tedesco",
         "yes": "Sì",
@@ -774,7 +807,7 @@
         },
         "languages": {
           "title": "Copertura linguistica più ampia",
-          "p1": "Supertext supporta oltre 100 lingue attraverso la sua rete di traduttori. Hai bisogno di traduzioni in coreano, arabo o thai? Ti coprono. Helvetra si concentra esclusivamente su cinque lingue svizzere: tedesco, francese, italiano, inglese e svizzero tedesco."
+          "p1": "Supertext supporta oltre 100 lingue attraverso la sua rete di traduttori. Hai bisogno di traduzioni in coreano, arabo o thai? Ti coprono. Helvetra si concentra esclusivamente su sei lingue svizzere: tedesco, francese, italiano, inglese, svizzero tedesco e romancio."
         },
         "formats": {
           "title": "Diversi tipi di contenuto",

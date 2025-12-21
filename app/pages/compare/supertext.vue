@@ -150,6 +150,15 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
+const { getArticleSchema, useJsonLd } = useSchemaOrg()
+
+// Add Article schema for comparison content
+useJsonLd(getArticleSchema({
+  headline: 'Helvetra vs Supertext: Swiss Translation Comparison',
+  description: 'Compare Helvetra and Supertext. Consumer-focused AI translation vs enterprise human translation services.',
+  datePublished: '2024-12-18',
+  dateModified: '2024-12-19',
+}))
 
 // Comparison table rows
 const comparisonRows = computed(() => [
