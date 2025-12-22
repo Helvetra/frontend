@@ -67,9 +67,21 @@ export default defineNuxtConfig({
         { name: 'description', content: 'The very Swiss translation app' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'theme-color', content: '#e10a19' },
+        // Open Graph
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Helvetra' },
+        { property: 'og:image', content: 'https://helvetra.ch/og-image.png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        // Twitter Card
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: 'https://helvetra.ch/og-image.png' },
       ],
       link: [
+        // Favicon for search engines and browsers (ICO is most compatible)
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         // DNS prefetch and preconnect for API
         { rel: 'dns-prefetch', href: 'https://api.helvetra.ch' },
         { rel: 'preconnect', href: 'https://api.helvetra.ch', crossorigin: '' },
