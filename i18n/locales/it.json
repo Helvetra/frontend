@@ -904,5 +904,131 @@
         "tryHelvetra": "Prova Helvetra gratis"
       }
     }
+  },
+  "articles": {
+    "swissGermanTools": {
+      "meta": {
+        "title": "Top 5 strumenti di traduzione svizzero tedesco (2025)",
+        "description": "Confronta i migliori strumenti di traduzione per lo svizzero tedesco. Da DeepL ai servizi svizzeri specializzati."
+      },
+      "title": "Top 5 strumenti di traduzione svizzero tedesco",
+      "subtitle": "Un confronto pratico per chiunque traduca svizzero tedesco nel 2025",
+      "intro": {
+        "p1": "Lo svizzero tedesco è notoriamente difficile da tradurre. Oltre il 55% degli svizzeri lo parla a casa, ma praticamente non esiste uno standard scritto. La maggior parte degli strumenti di traduzione lo ignora semplicemente. Abbiamo testato le principali opzioni.",
+        "p2": "Questo confronto si concentra sull'uso pratico quotidiano: precisione, velocità, privacy e naturalmente supporto dello svizzero tedesco."
+      },
+      "listTitle": "Gli strumenti",
+      "readComparison": "Leggi il confronto completo",
+      "tools": {
+        "deepl": {
+          "name": "DeepL",
+          "description": "Il leader del settore nella traduzione IA. DeepL produce costantemente le traduzioni più naturali per le lingue europee. Tuttavia, supporta solo il tedesco standard, non i dialetti svizzeri.",
+          "pro1": "Qualità eccellente",
+          "pro2": "Formulazione naturale",
+          "con1": "Niente svizzero tedesco"
+        },
+        "google": {
+          "name": "Google Translate",
+          "description": "Lo strumento di traduzione più usato, disponibile ovunque e completamente gratuito. Supporta 130+ lingue ma tratta il tedesco come una singola lingua senza opzioni di dialetto.",
+          "pro1": "Gratuito",
+          "pro2": "130+ lingue",
+          "con1": "Niente svizzero tedesco"
+        },
+        "helvetra": {
+          "name": "Helvetra",
+          "description": "L'unico strumento di traduzione con supporto nativo dello svizzero tedesco. Costruito in Svizzera con IA svizzera, i tuoi dati non lasciano mai i server svizzeri. Traduce tra svizzero tedesco, tedesco, francese, italiano, romancio e inglese.",
+          "badge": "Svizzero tedesco",
+          "pro1": "Svizzero tedesco",
+          "pro2": "Privacy svizzera",
+          "pro3": "Romancio",
+          "con1": "Meno lingue"
+        },
+        "supertext": {
+          "name": "Supertext",
+          "description": "Un servizio di traduzione professionale svizzero che combina IA con traduttori umani. Eccellente per documenti aziendali che richiedono qualità di pubblicazione, ma più costoso e lento degli strumenti IA istantanei.",
+          "pro1": "Revisione umana",
+          "pro2": "Azienda svizzera",
+          "con1": "Costo elevato"
+        },
+        "itranslate": {
+          "name": "iTranslate",
+          "description": "Un'app di traduzione mobile-first con riconoscimento vocale che può rilevare alcuni dialetti tedeschi, incluso lo svizzero tedesco. Ideale per traduzione parlata e viaggi.",
+          "pro1": "Rilevamento dialetti",
+          "pro2": "Traduzione vocale",
+          "con1": "Solo mobile"
+        }
+      },
+      "conclusion": {
+        "title": "Quale dovresti scegliere?",
+        "p1": "Per la traduzione in tedesco standard, DeepL rimane il leader di qualità. Per lo svizzero tedesco specificamente, Helvetra è attualmente l'unica opzione dedicata con supporto nativo e privacy dei dati svizzera.",
+        "p2": "Se hai bisogno di una finitura professionale per documenti aziendali, Supertext offre revisione umana. Per uso occasionale e viaggi, Google Translate e iTranslate funzionano bene per il tedesco standard."
+      },
+      "cta": {
+        "text": "Hai bisogno di tradurre lo svizzero tedesco? Prova l'unico strumento costruito specificamente per questo.",
+        "button": "Prova Helvetra gratis"
+      }
+    },
+    "bestApps": {
+      "meta": {
+        "title": "Migliori app di traduzione per la Svizzera (2025)",
+        "description": "Confronta le migliori app di traduzione per gli utenti svizzeri. Privacy, svizzero tedesco e esigenze multilingue."
+      },
+      "title": "Migliori app di traduzione per la Svizzera",
+      "subtitle": "Le migliori scelte per gli utenti svizzeri che hanno bisogno di traduzione affidabile nel 2025",
+      "intro": {
+        "p1": "Le quattro lingue nazionali della Svizzera rendono la traduzione essenziale nella vita quotidiana. Che tu abbia bisogno di tedesco, francese, italiano o romancio, avere l'app di traduzione giusta conta.",
+        "p2": "Abbiamo valutato le principali app di traduzione in base a ciò che conta di più per gli utenti svizzeri: qualità linguistica, privacy, supporto dello svizzero tedesco e disponibilità offline."
+      },
+      "listTitle": "Le app",
+      "readComparison": "Leggi il confronto completo",
+      "apps": {
+        "helvetra": {
+          "name": "Helvetra",
+          "description": "L'unica app di traduzione costruita specificamente per la Svizzera. Supporta tutte le lingue nazionali svizzere, incluso lo svizzero tedesco e il romancio. I dati restano su server svizzeri, protetti dalla legge svizzera sulla privacy.",
+          "badge": "Made in Switzerland",
+          "pro1": "Svizzero tedesco",
+          "pro2": "Privacy svizzera",
+          "pro3": "Tutte le lingue nazionali",
+          "con1": "Solo web"
+        },
+        "deepl": {
+          "name": "DeepL",
+          "description": "Conosciuto per produrre le traduzioni più naturali, specialmente per le lingue europee. La qualità è eccellente per tedesco, francese e italiano, anche se manca il supporto dello svizzero tedesco.",
+          "pro1": "Migliore qualità",
+          "pro2": "Formulazione naturale",
+          "con1": "Niente svizzero tedesco"
+        },
+        "google": {
+          "name": "Google Translate",
+          "description": "Lo strumento di traduzione più diffuso con supporto per oltre 130 lingue. Gratuito con traduzione da fotocamera e download offline. La qualità è migliorata ma resta dietro DeepL per le lingue europee.",
+          "pro1": "Gratuito",
+          "pro2": "130+ lingue",
+          "con1": "Dati negli USA"
+        },
+        "apple": {
+          "name": "Apple Translate",
+          "description": "Integrato in ogni iPhone e Mac con integrazione di sistema trasparente. Supporta traduzione offline con lingue scaricate. Progettato per la privacy con elaborazione sul dispositivo.",
+          "pro1": "Modalità offline",
+          "pro2": "Focus sulla privacy",
+          "con1": "Solo dispositivi Apple"
+        },
+        "microsoft": {
+          "name": "Microsoft Translator",
+          "description": "Si integra con Microsoft Office e Teams per utenti aziendali. Offre traduzione di conversazioni in tempo reale e supporta deployment enterprise con Azure.",
+          "pro1": "Integrazione Office",
+          "pro2": "Funzionalità enterprise",
+          "con1": "Meno rifinito"
+        }
+      },
+      "conclusion": {
+        "title": "La nostra raccomandazione",
+        "p1": "Per gli utenti svizzeri, la scelta migliore dipende dalle tue esigenze. Se hai bisogno dello svizzero tedesco o tieni a che i dati restino in Svizzera, Helvetra è l'unica opzione. Per pura qualità di traduzione in lingue standard, DeepL guida.",
+        "p2": "Per uso occasionale su iPhone, Apple Translate funziona bene offline. Google Translate resta il più versatile per lingue meno comuni. Microsoft Translator si adatta meglio agli ambienti Office aziendali."
+      },
+      "cta": {
+        "text": "Vuoi privacy svizzera e supporto dello svizzero tedesco? Prova l'app costruita per la Svizzera.",
+        "button": "Prova Helvetra gratis"
+      }
+    }
   }
 }

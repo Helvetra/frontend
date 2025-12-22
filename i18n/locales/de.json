@@ -904,5 +904,131 @@
         "tryHelvetra": "Helvetra kostenlos testen"
       }
     }
+  },
+  "articles": {
+    "swissGermanTools": {
+      "meta": {
+        "title": "Top 5 Schweizerdeutsch-Übersetzungstools (2025)",
+        "description": "Vergleichen Sie die besten Übersetzungstools für Schweizerdeutsch. Von DeepL bis zu spezialisierten Schweizer Diensten."
+      },
+      "title": "Top 5 Schweizerdeutsch-Übersetzungstools",
+      "subtitle": "Ein praktischer Vergleich für alle, die 2025 Schweizerdeutsch übersetzen",
+      "intro": {
+        "p1": "Schweizerdeutsch ist bekannt schwer zu übersetzen. Über 55% der Schweizer sprechen es zu Hause, doch es gibt praktisch keinen geschriebenen Standard. Die meisten Übersetzungstools ignorieren es schlicht. Wir haben die wichtigsten Optionen getestet.",
+        "p2": "Dieser Vergleich konzentriert sich auf den praktischen Alltag: Genauigkeit, Geschwindigkeit, Datenschutz und natürlich Schweizerdeutsch-Unterstützung."
+      },
+      "listTitle": "Die Tools",
+      "readComparison": "Vollständigen Vergleich lesen",
+      "tools": {
+        "deepl": {
+          "name": "DeepL",
+          "description": "Der Branchenführer bei KI-Übersetzungen. DeepL liefert durchweg die natürlichsten Übersetzungen für europäische Sprachen. Allerdings unterstützt es nur Hochdeutsch, keine Schweizer Dialekte.",
+          "pro1": "Exzellente Qualität",
+          "pro2": "Natürliche Formulierung",
+          "con1": "Kein Schweizerdeutsch"
+        },
+        "google": {
+          "name": "Google Translate",
+          "description": "Das meistgenutzte Übersetzungstool, überall verfügbar und komplett kostenlos. Unterstützt 130+ Sprachen, behandelt Deutsch aber als einheitliche Sprache ohne Dialektoptionen.",
+          "pro1": "Kostenlos",
+          "pro2": "130+ Sprachen",
+          "con1": "Kein Schweizerdeutsch"
+        },
+        "helvetra": {
+          "name": "Helvetra",
+          "description": "Das einzige Übersetzungstool mit nativer Schweizerdeutsch-Unterstützung. In der Schweiz entwickelt mit Schweizer KI, Ihre Daten verlassen nie Schweizer Server. Übersetzt zwischen Schweizerdeutsch, Deutsch, Französisch, Italienisch, Rätoromanisch und Englisch.",
+          "badge": "Schweizerdeutsch",
+          "pro1": "Schweizerdeutsch",
+          "pro2": "Schweizer Datenschutz",
+          "pro3": "Rätoromanisch",
+          "con1": "Weniger Sprachen"
+        },
+        "supertext": {
+          "name": "Supertext",
+          "description": "Ein Schweizer professioneller Übersetzungsdienst, der KI mit menschlichen Übersetzern kombiniert. Ausgezeichnet für Geschäftsdokumente, die Publikationsqualität benötigen, aber teurer und langsamer als Instant-KI-Tools.",
+          "pro1": "Menschliche Prüfung",
+          "pro2": "Schweizer Firma",
+          "con1": "Höhere Kosten"
+        },
+        "itranslate": {
+          "name": "iTranslate",
+          "description": "Eine Mobile-first-Übersetzungs-App mit Spracherkennung, die einige deutsche Dialekte einschliesslich Schweizerdeutsch erkennen kann. Am besten für gesprochene Übersetzungen und Reisen.",
+          "pro1": "Dialekterkennung",
+          "pro2": "Sprachübersetzung",
+          "con1": "Nur mobil"
+        }
+      },
+      "conclusion": {
+        "title": "Welches sollten Sie wählen?",
+        "p1": "Für Standard-Deutsch-Übersetzungen bleibt DeepL der Qualitätsführer. Für Schweizerdeutsch speziell ist Helvetra derzeit die einzige dedizierte Option mit nativer Unterstützung und Schweizer Datenschutz.",
+        "p2": "Wenn Sie professionellen Schliff für Geschäftsdokumente brauchen, bietet Supertext menschliche Prüfung. Für gelegentliche Nutzung und Reisen funktionieren Google Translate und iTranslate gut für Hochdeutsch."
+      },
+      "cta": {
+        "text": "Müssen Sie Schweizerdeutsch übersetzen? Probieren Sie das einzige Tool, das speziell dafür entwickelt wurde.",
+        "button": "Helvetra kostenlos testen"
+      }
+    },
+    "bestApps": {
+      "meta": {
+        "title": "Beste Übersetzungs-Apps für die Schweiz (2025)",
+        "description": "Vergleichen Sie die besten Übersetzungs-Apps für Schweizer Nutzer. Datenschutz, Schweizerdeutsch und mehrsprachige Bedürfnisse."
+      },
+      "title": "Beste Übersetzungs-Apps für die Schweiz",
+      "subtitle": "Die Top-Auswahl für Schweizer Nutzer, die 2025 zuverlässige Übersetzung brauchen",
+      "intro": {
+        "p1": "Die vier Landessprachen der Schweiz machen Übersetzung im Alltag unverzichtbar. Ob Sie Deutsch, Französisch, Italienisch oder Rätoromanisch brauchen, die richtige Übersetzungs-App ist wichtig.",
+        "p2": "Wir haben die führenden Übersetzungs-Apps nach dem bewertet, was Schweizer Nutzern am wichtigsten ist: Sprachqualität, Datenschutz, Schweizerdeutsch-Unterstützung und Offline-Verfügbarkeit."
+      },
+      "listTitle": "Die Apps",
+      "readComparison": "Vollständigen Vergleich lesen",
+      "apps": {
+        "helvetra": {
+          "name": "Helvetra",
+          "description": "Die einzige Übersetzungs-App, die speziell für die Schweiz entwickelt wurde. Unterstützt alle Schweizer Landessprachen inklusive Schweizerdeutsch und Rätoromanisch. Daten bleiben auf Schweizer Servern, geschützt durch Schweizer Datenschutzrecht.",
+          "badge": "Made in Switzerland",
+          "pro1": "Schweizerdeutsch",
+          "pro2": "Schweizer Datenschutz",
+          "pro3": "Alle Landessprachen",
+          "con1": "Nur webbasiert"
+        },
+        "deepl": {
+          "name": "DeepL",
+          "description": "Bekannt für die natürlichsten Übersetzungen, besonders für europäische Sprachen. Die Qualität ist exzellent für Deutsch, Französisch und Italienisch, obwohl Schweizerdeutsch fehlt.",
+          "pro1": "Beste Qualität",
+          "pro2": "Natürliche Formulierung",
+          "con1": "Kein Schweizerdeutsch"
+        },
+        "google": {
+          "name": "Google Translate",
+          "description": "Das am weitesten verbreitete Übersetzungstool mit Unterstützung für über 130 Sprachen. Kostenlos nutzbar mit Kamera-Übersetzung und Offline-Downloads. Qualität hat sich verbessert, liegt aber hinter DeepL für europäische Sprachen.",
+          "pro1": "Kostenlos",
+          "pro2": "130+ Sprachen",
+          "con1": "Daten in die USA"
+        },
+        "apple": {
+          "name": "Apple Translate",
+          "description": "In jedes iPhone und Mac integriert mit nahtloser Systemintegration. Unterstützt Offline-Übersetzung mit heruntergeladenen Sprachen. Datenschutzorientiert mit Verarbeitung auf dem Gerät.",
+          "pro1": "Offline-Modus",
+          "pro2": "Datenschutzorientiert",
+          "con1": "Nur Apple-Geräte"
+        },
+        "microsoft": {
+          "name": "Microsoft Translator",
+          "description": "Integriert sich mit Microsoft Office und Teams für Geschäftsnutzer. Bietet Echtzeit-Konversationsübersetzung und unterstützt Enterprise-Deployments mit Azure.",
+          "pro1": "Office-Integration",
+          "pro2": "Enterprise-Funktionen",
+          "con1": "Weniger ausgereift"
+        }
+      },
+      "conclusion": {
+        "title": "Unsere Empfehlung",
+        "p1": "Für Schweizer Nutzer hängt die beste Wahl von Ihren Bedürfnissen ab. Wenn Sie Schweizerdeutsch brauchen oder Wert darauf legen, dass Daten in der Schweiz bleiben, ist Helvetra die einzige Option. Für reine Übersetzungsqualität in Standardsprachen führt DeepL.",
+        "p2": "Für gelegentliche Nutzung auf dem iPhone funktioniert Apple Translate gut offline. Google Translate bleibt am vielseitigsten für weniger verbreitete Sprachen. Microsoft Translator passt am besten in Enterprise-Office-Umgebungen."
+      },
+      "cta": {
+        "text": "Schweizer Datenschutz und Schweizerdeutsch gewünscht? Probieren Sie die App, die für die Schweiz entwickelt wurde.",
+        "button": "Helvetra kostenlos testen"
+      }
+    }
   }
 }

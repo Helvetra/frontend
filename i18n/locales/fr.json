@@ -904,5 +904,131 @@
         "tryHelvetra": "Essayer Helvetra gratuitement"
       }
     }
+  },
+  "articles": {
+    "swissGermanTools": {
+      "meta": {
+        "title": "Top 5 des outils de traduction suisse allemand (2025)",
+        "description": "Comparez les meilleurs outils de traduction pour le suisse allemand. De DeepL aux services suisses spécialisés."
+      },
+      "title": "Top 5 des outils de traduction suisse allemand",
+      "subtitle": "Une comparaison pratique pour tous ceux qui traduisent le suisse allemand en 2025",
+      "intro": {
+        "p1": "Le suisse allemand est notoirement difficile à traduire. Plus de 55% des Suisses le parlent à la maison, mais il n'existe pratiquement pas de norme écrite. La plupart des outils de traduction l'ignorent tout simplement. Nous avons testé les principales options.",
+        "p2": "Cette comparaison se concentre sur l'utilisation pratique au quotidien : précision, rapidité, confidentialité et bien sûr, support du suisse allemand."
+      },
+      "listTitle": "Les outils",
+      "readComparison": "Lire la comparaison complète",
+      "tools": {
+        "deepl": {
+          "name": "DeepL",
+          "description": "Le leader de l'industrie en traduction IA. DeepL produit constamment les traductions les plus naturelles pour les langues européennes. Cependant, il ne supporte que l'allemand standard, pas les dialectes suisses.",
+          "pro1": "Excellente qualité",
+          "pro2": "Formulation naturelle",
+          "con1": "Pas de suisse allemand"
+        },
+        "google": {
+          "name": "Google Translate",
+          "description": "L'outil de traduction le plus utilisé, disponible partout et entièrement gratuit. Supporte 130+ langues mais traite l'allemand comme une langue unique sans options de dialecte.",
+          "pro1": "Gratuit",
+          "pro2": "130+ langues",
+          "con1": "Pas de suisse allemand"
+        },
+        "helvetra": {
+          "name": "Helvetra",
+          "description": "Le seul outil de traduction avec support natif du suisse allemand. Construit en Suisse avec une IA suisse, vos données ne quittent jamais les serveurs suisses. Traduit entre suisse allemand, allemand, français, italien, romanche et anglais.",
+          "badge": "Suisse allemand",
+          "pro1": "Suisse allemand",
+          "pro2": "Confidentialité suisse",
+          "pro3": "Romanche",
+          "con1": "Moins de langues"
+        },
+        "supertext": {
+          "name": "Supertext",
+          "description": "Un service de traduction professionnel suisse combinant IA et traducteurs humains. Excellent pour les documents commerciaux nécessitant une qualité de publication, mais plus cher et plus lent que les outils IA instantanés.",
+          "pro1": "Révision humaine",
+          "pro2": "Entreprise suisse",
+          "con1": "Coût élevé"
+        },
+        "itranslate": {
+          "name": "iTranslate",
+          "description": "Une application de traduction mobile-first avec reconnaissance vocale qui peut détecter certains dialectes allemands, y compris le suisse allemand. Idéal pour la traduction parlée et les voyages.",
+          "pro1": "Détection des dialectes",
+          "pro2": "Traduction vocale",
+          "con1": "Mobile uniquement"
+        }
+      },
+      "conclusion": {
+        "title": "Lequel devriez-vous choisir ?",
+        "p1": "Pour la traduction en allemand standard, DeepL reste le leader de qualité. Pour le suisse allemand spécifiquement, Helvetra est actuellement la seule option dédiée avec support natif et confidentialité des données suisse.",
+        "p2": "Si vous avez besoin d'une finition professionnelle pour des documents commerciaux, Supertext offre une révision humaine. Pour un usage occasionnel et les voyages, Google Translate et iTranslate fonctionnent bien pour l'allemand standard."
+      },
+      "cta": {
+        "text": "Besoin de traduire le suisse allemand ? Essayez le seul outil conçu spécifiquement pour cela.",
+        "button": "Essayer Helvetra gratuitement"
+      }
+    },
+    "bestApps": {
+      "meta": {
+        "title": "Meilleures applications de traduction pour la Suisse (2025)",
+        "description": "Comparez les meilleures applications de traduction pour les utilisateurs suisses. Confidentialité, suisse allemand et besoins multilingues."
+      },
+      "title": "Meilleures applications de traduction pour la Suisse",
+      "subtitle": "Les meilleurs choix pour les utilisateurs suisses qui ont besoin d'une traduction fiable en 2025",
+      "intro": {
+        "p1": "Les quatre langues nationales de la Suisse rendent la traduction essentielle au quotidien. Que vous ayez besoin d'allemand, français, italien ou romanche, avoir la bonne application de traduction compte.",
+        "p2": "Nous avons évalué les principales applications de traduction selon ce qui compte le plus pour les utilisateurs suisses : qualité linguistique, confidentialité, support du suisse allemand et disponibilité hors ligne."
+      },
+      "listTitle": "Les applications",
+      "readComparison": "Lire la comparaison complète",
+      "apps": {
+        "helvetra": {
+          "name": "Helvetra",
+          "description": "La seule application de traduction conçue spécifiquement pour la Suisse. Supporte toutes les langues nationales suisses, y compris le suisse allemand et le romanche. Les données restent sur des serveurs suisses, protégées par la loi suisse sur la protection des données.",
+          "badge": "Made in Switzerland",
+          "pro1": "Suisse allemand",
+          "pro2": "Confidentialité suisse",
+          "pro3": "Toutes les langues nationales",
+          "con1": "Web uniquement"
+        },
+        "deepl": {
+          "name": "DeepL",
+          "description": "Connu pour produire les traductions les plus naturelles, surtout pour les langues européennes. La qualité est excellente pour l'allemand, le français et l'italien, bien qu'il manque le support du suisse allemand.",
+          "pro1": "Meilleure qualité",
+          "pro2": "Formulation naturelle",
+          "con1": "Pas de suisse allemand"
+        },
+        "google": {
+          "name": "Google Translate",
+          "description": "L'outil de traduction le plus répandu avec support pour plus de 130 langues. Gratuit avec traduction par caméra et téléchargements hors ligne. La qualité s'est améliorée mais reste derrière DeepL pour les langues européennes.",
+          "pro1": "Gratuit",
+          "pro2": "130+ langues",
+          "con1": "Données aux USA"
+        },
+        "apple": {
+          "name": "Apple Translate",
+          "description": "Intégré à chaque iPhone et Mac avec une intégration système transparente. Supporte la traduction hors ligne avec des langues téléchargées. Conçu pour la confidentialité avec traitement sur l'appareil.",
+          "pro1": "Mode hors ligne",
+          "pro2": "Axé confidentialité",
+          "con1": "Appareils Apple uniquement"
+        },
+        "microsoft": {
+          "name": "Microsoft Translator",
+          "description": "S'intègre avec Microsoft Office et Teams pour les utilisateurs professionnels. Offre la traduction de conversation en temps réel et supporte les déploiements entreprise avec Azure.",
+          "pro1": "Intégration Office",
+          "pro2": "Fonctionnalités entreprise",
+          "con1": "Moins abouti"
+        }
+      },
+      "conclusion": {
+        "title": "Notre recommandation",
+        "p1": "Pour les utilisateurs suisses, le meilleur choix dépend de vos besoins. Si vous avez besoin du suisse allemand ou tenez à ce que vos données restent en Suisse, Helvetra est la seule option. Pour la pure qualité de traduction en langues standard, DeepL mène.",
+        "p2": "Pour une utilisation occasionnelle sur iPhone, Apple Translate fonctionne bien hors ligne. Google Translate reste le plus polyvalent pour les langues moins courantes. Microsoft Translator convient mieux aux environnements Office d'entreprise."
+      },
+      "cta": {
+        "text": "Vous voulez la confidentialité suisse et le support du suisse allemand ? Essayez l'app conçue pour la Suisse.",
+        "button": "Essayer Helvetra gratuitement"
+      }
+    }
   }
 }

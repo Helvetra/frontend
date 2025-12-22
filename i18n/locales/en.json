@@ -904,5 +904,131 @@
         "tryHelvetra": "Try Helvetra Free"
       }
     }
+  },
+  "articles": {
+    "swissGermanTools": {
+      "meta": {
+        "title": "Top 5 Swiss German Translation Tools (2025)",
+        "description": "Compare the best translation tools for Swiss German. From DeepL to specialized Swiss services, find the right tool for your needs."
+      },
+      "title": "Top 5 Swiss German Translation Tools",
+      "subtitle": "A practical comparison for anyone translating Swiss German in 2025",
+      "intro": {
+        "p1": "Swiss German is notoriously difficult to translate. With over 55% of Swiss people speaking it at home, yet virtually no written standard, most translation tools simply ignore it. We tested the major options to find which ones actually work.",
+        "p2": "This comparison focuses on practical everyday use: accuracy, speed, privacy, and of course, Swiss German support."
+      },
+      "listTitle": "The Tools",
+      "readComparison": "Read full comparison",
+      "tools": {
+        "deepl": {
+          "name": "DeepL",
+          "description": "The industry leader in AI translation. DeepL consistently produces the most natural-sounding translations for European languages. However, it only supports standard German, not Swiss German dialects.",
+          "pro1": "Excellent quality",
+          "pro2": "Natural phrasing",
+          "con1": "No Swiss German"
+        },
+        "google": {
+          "name": "Google Translate",
+          "description": "The most widely used translation tool, available everywhere and completely free. Supports 130+ languages but treats German as a single language without dialect options.",
+          "pro1": "Free",
+          "pro2": "130+ languages",
+          "con1": "No Swiss German"
+        },
+        "helvetra": {
+          "name": "Helvetra",
+          "description": "The only translation tool with native Swiss German support. Built in Switzerland with Swiss AI, your data never leaves Swiss servers. Translates between Swiss German, German, French, Italian, Romansh, and English.",
+          "badge": "Swiss German",
+          "pro1": "Swiss German support",
+          "pro2": "Swiss privacy",
+          "pro3": "Romansh support",
+          "con1": "Fewer languages"
+        },
+        "supertext": {
+          "name": "Supertext",
+          "description": "A Swiss professional translation service combining AI with human translators. Excellent for business documents needing publication quality, but more expensive and slower than instant AI tools.",
+          "pro1": "Human review",
+          "pro2": "Swiss company",
+          "con1": "Higher cost"
+        },
+        "itranslate": {
+          "name": "iTranslate",
+          "description": "A mobile-first translation app with voice recognition that can detect some German dialects including Swiss German. Best for spoken translation and travel use cases.",
+          "pro1": "Dialect detection",
+          "pro2": "Voice translation",
+          "con1": "Mobile only"
+        }
+      },
+      "conclusion": {
+        "title": "Which Should You Choose?",
+        "p1": "For standard German translation, DeepL remains the quality leader. For Swiss German specifically, Helvetra is currently the only dedicated option with native support and Swiss data privacy.",
+        "p2": "If you need professional polish for business documents, Supertext offers human review. For casual use and travel, Google Translate and iTranslate work fine for standard German."
+      },
+      "cta": {
+        "text": "Need to translate Swiss German? Try the only tool built specifically for it.",
+        "button": "Try Helvetra Free"
+      }
+    },
+    "bestApps": {
+      "meta": {
+        "title": "Best Translation Apps for Switzerland (2025)",
+        "description": "Compare the top translation apps for Swiss users. Privacy, Swiss German support, and multilingual needs covered."
+      },
+      "title": "Best Translation Apps for Switzerland",
+      "subtitle": "The top choices for Swiss users who need reliable translation in 2025",
+      "intro": {
+        "p1": "Switzerland's four national languages make translation essential for daily life. Whether you're navigating German, French, Italian, or Romansh, having the right translation app matters.",
+        "p2": "We evaluated the leading translation apps based on what matters most to Swiss users: language quality, privacy, Swiss German support, and offline availability."
+      },
+      "listTitle": "The Apps",
+      "readComparison": "Read full comparison",
+      "apps": {
+        "helvetra": {
+          "name": "Helvetra",
+          "description": "The only translation app built specifically for Switzerland. Supports all Swiss national languages including Swiss German and Romansh. Data stays on Swiss servers, protected by Swiss privacy law.",
+          "badge": "Made in Switzerland",
+          "pro1": "Swiss German support",
+          "pro2": "Swiss data privacy",
+          "pro3": "All national languages",
+          "con1": "Web-based only"
+        },
+        "deepl": {
+          "name": "DeepL",
+          "description": "Known for producing the most natural-sounding translations, especially for European languages. The quality is excellent for German, French, and Italian, though it lacks Swiss German support.",
+          "pro1": "Best quality",
+          "pro2": "Natural phrasing",
+          "con1": "No Swiss German"
+        },
+        "google": {
+          "name": "Google Translate",
+          "description": "The most widely available translation tool with support for over 130 languages. Free to use with camera translation and offline downloads. Quality has improved but still trails DeepL for European languages.",
+          "pro1": "Free",
+          "pro2": "130+ languages",
+          "con1": "Data sent to US"
+        },
+        "apple": {
+          "name": "Apple Translate",
+          "description": "Built into every iPhone and Mac with seamless system integration. Supports offline translation with downloaded languages. Private by design with on-device processing.",
+          "pro1": "Offline mode",
+          "pro2": "Privacy-focused",
+          "con1": "Apple devices only"
+        },
+        "microsoft": {
+          "name": "Microsoft Translator",
+          "description": "Integrates with Microsoft Office and Teams for business users. Offers real-time conversation translation and supports enterprise deployments with Azure.",
+          "pro1": "Office integration",
+          "pro2": "Enterprise features",
+          "con1": "Less polished"
+        }
+      },
+      "conclusion": {
+        "title": "Our Recommendation",
+        "p1": "For Swiss users, the best choice depends on your needs. If you need Swiss German or care about data staying in Switzerland, Helvetra is the only option. For pure translation quality in standard languages, DeepL leads.",
+        "p2": "For casual use on iPhone, Apple Translate works well offline. Google Translate remains the most versatile for less common languages. Microsoft Translator fits best in enterprise Office environments."
+      },
+      "cta": {
+        "text": "Want Swiss privacy and Swiss German support? Try the app built for Switzerland.",
+        "button": "Try Helvetra Free"
+      }
+    }
   }
 }

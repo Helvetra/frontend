@@ -24,6 +24,13 @@ interface ArticleData {
   image?: string
 }
 
+interface ListItem {
+  name: string
+  description: string
+  url?: string
+  image?: string
+}
+
 export function useSchemaOrg() {
   /**
    * Generate Organization schema for site-wide identity.
@@ -129,6 +136,28 @@ export function useSchemaOrg() {
   }
 
   /**
+   * Generate ItemList schema for "Top N" articles.
+   * Helps AI engines cite list content.
+   */
+  function getItemListSchema(name: string, description: string, items: ListItem[]) {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'name': name,
+      'description': description,
+      'numberOfItems': items.length,
+      'itemListElement': items.map((item, index) => ({
+        '@type': 'ListItem',
+        'position': index + 1,
+        'name': item.name,
+        'description': item.description,
+        ...(item.url && { url: item.url }),
+        ...(item.image && { image: item.image }),
+      })),
+    }
+  }
+
+  /**
    * Add JSON-LD script to page head.
    */
   function useJsonLd(schema: object | object[]) {
@@ -148,6 +177,7 @@ export function useSchemaOrg() {
     getFAQSchema,
     getProductSchema,
     getArticleSchema,
+    getItemListSchema,
     useJsonLd,
   }
 }
