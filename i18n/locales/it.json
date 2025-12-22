@@ -283,6 +283,7 @@
     "pro": {
       "name": "Helvetra+",
       "description": "Per traduttori frequenti",
+      "tagline": "Meno di un Fünfliber al mese",
       "featureBasic": "Tutte le funzionalità Basic incluse",
       "featureLimit": "500'000 caratteri al mese",
       "feature1": "Fino a 5'000 caratteri per traduzione",
@@ -328,7 +329,12 @@
     "technology": {
       "title": "Tecnologia svizzera",
       "text1": "Helvetra è alimentato da Apertus, il modello linguistico IA svizzero sviluppato da ETH Zurigo ed EPFL, due delle migliori università tecniche al mondo. Questa è l'eccellenza della ricerca svizzera, resa accessibile.",
-      "text2": "La nostra infrastruttura funziona su Infomaniak, il principale provider cloud indipendente svizzero. 100% energia rinnovabile, 100% data center svizzeri, zero conservazione dei dati."
+      "text2": "La nostra infrastruttura funziona su Infomaniak, il principale provider cloud indipendente svizzero. Data center svizzeri, diritto svizzero, zero conservazione dei dati."
+    },
+    "sustainability": {
+      "title": "Sostenibile per design",
+      "text1": "I nostri server funzionano con il 100% di energia rinnovabile. I data center di Infomaniak sono alimentati da energia idroelettrica e raffreddati naturalmente dall'aria esterna. Il calore di scarto viene recuperato per riscaldare gli edifici vicini.",
+      "text2": "Ogni traduzione ha un'impronta di carbonio minima. Nessun trasferimento di dati all'estero, nessuna infrastruttura globale ad alto consumo energetico. Solo energia svizzera pulita, usata in modo efficiente."
     },
     "privacy": {
       "title": "Privacy by Design",

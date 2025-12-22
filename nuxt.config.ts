@@ -12,8 +12,17 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
+    '@nuxtjs/sitemap',
     '@nuxt/eslint',
   ],
+
+  site: {
+    url: 'https://helvetra.ch',
+  },
+
+  sitemap: {
+    exclude: ['/impressum', '/*/impressum'],
+  },
 
   // Inline critical CSS to prevent FOUC
   features: {
@@ -21,6 +30,7 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    baseUrl: 'https://helvetra.ch',
     locales: [
       { code: 'en', language: 'en-GB', name: 'English', file: 'en.json' },
       { code: 'de', language: 'de-CH', name: 'Deutsch', file: 'de.json' },

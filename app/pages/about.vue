@@ -34,6 +34,19 @@
         </p>
       </section>
 
+      <!-- Sustainable by Design -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-neutral-900 mb-3">
+          {{ $t('about.sustainability.title') }}
+        </h2>
+        <p class="text-neutral-600 mb-4">
+          {{ $t('about.sustainability.text1') }}
+        </p>
+        <p class="text-neutral-600">
+          {{ $t('about.sustainability.text2') }}
+        </p>
+      </section>
+
       <!-- Privacy by Design -->
       <section class="mb-8">
         <h2 class="text-xl font-semibold text-neutral-900 mb-3">

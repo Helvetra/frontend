@@ -283,6 +283,7 @@
     "pro": {
       "name": "Helvetra+",
       "description": "Für häufige Übersetzer",
+      "tagline": "Weniger als ein Fünfliber im Monat",
       "featureBasic": "Alle Basic-Funktionen inklusive",
       "featureLimit": "500'000 Zeichen pro Monat",
       "feature1": "Bis zu 5'000 Zeichen pro Übersetzung",
@@ -328,7 +329,12 @@
     "technology": {
       "title": "Schweizer Technologie",
       "text1": "Helvetra wird von Apertus angetrieben, dem Schweizer KI-Sprachmodell, entwickelt von der ETH Zürich und EPFL, zwei der weltweit führenden technischen Universitäten. Das ist Schweizer Forschungsexzellenz, zugänglich gemacht.",
-      "text2": "Unsere Infrastruktur läuft auf Infomaniak, dem führenden unabhängigen Schweizer Cloud-Anbieter. 100% erneuerbare Energie, 100% Schweizer Rechenzentren, keine Datenspeicherung."
+      "text2": "Unsere Infrastruktur läuft auf Infomaniak, dem führenden unabhängigen Schweizer Cloud-Anbieter. Schweizer Rechenzentren, Schweizer Recht, keine Datenspeicherung."
+    },
+    "sustainability": {
+      "title": "Nachhaltig konzipiert",
+      "text1": "Unsere Server laufen mit 100% erneuerbarer Energie. Infomaniaks Rechenzentren werden mit Wasserkraft betrieben und natürlich durch Aussenluft gekühlt. Die Abwärme wird zur Beheizung umliegender Gebäude genutzt.",
+      "text2": "Jede Übersetzung hat einen minimalen CO₂-Fussabdruck. Keine Datenübertragungen ins Ausland, keine energiehungrige globale Infrastruktur. Nur saubere Schweizer Energie, effizient genutzt."
     },
     "privacy": {
       "title": "Privacy by Design",

@@ -119,6 +119,9 @@
         <div class="mb-4">
           <h2 class="text-xl font-semibold text-neutral-900">{{ $t('pricing.pro.name') }}</h2>
           <p class="text-neutral-500 text-sm mt-1">{{ $t('pricing.pro.description') }}</p>
+          <p v-if="billingPeriod === 'yearly'" class="text-swiss-red text-sm font-medium mt-1">
+            {{ $t('pricing.pro.tagline') }}
+          </p>
         </div>
 
         <div class="mb-6">
