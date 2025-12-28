@@ -89,8 +89,9 @@ export default defineNuxtConfig({
       ],
       link: [
         // Favicon for search engines and browsers (ICO is most compatible)
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        // Cache-bust query param forces Safari to fetch fresh favicon
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v=2' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg?v=2' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         // DNS prefetch and preconnect for API
         { rel: 'dns-prefetch', href: 'https://api.helvetra.ch' },
