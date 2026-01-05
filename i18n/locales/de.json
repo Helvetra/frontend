@@ -489,6 +489,44 @@
       "text": "Bei Datenschutzfragen oder Datenanfragen kontaktieren Sie uns unter"
     }
   },
+  "support": {
+    "title": "Support",
+    "subtitle": "Brauchen Sie Hilfe mit Helvetra? Wir sind für Sie da.",
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "text": "Haben Sie eine Frage oder Feedback? Senden Sie uns eine E-Mail und wir melden uns so schnell wie möglich."
+    },
+    "quickHelp": {
+      "title": "Schnelle Hilfe",
+      "items": {
+        "upgrade": {
+          "q": "Wie upgrade ich auf Helvetra+?",
+          "a": "Öffnen Sie die App, gehen Sie zu Einstellungen und tippen Sie auf \"Auf Helvetra+ upgraden\". Sie können zwischen monatlichem oder jährlichem Abo wählen. Das Upgrade wird sofort aktiviert."
+        },
+        "language": {
+          "q": "Wie ändere ich die Übersetzungssprache?",
+          "a": "Tippen Sie auf die Sprachbuttons über den Textfeldern. Wählen Sie Ihre Ausgangssprache (oder nutzen Sie die automatische Erkennung) und Ihre Zielsprache. Die App merkt sich Ihre Einstellungen."
+        },
+        "dialect": {
+          "q": "Wie wähle ich einen Schweizerdeutschen Dialekt?",
+          "a": "Wenn Schweizerdeutsch als Zielsprache ausgewählt ist, tippen Sie erneut darauf, um die Dialekteinstellungen zu öffnen. Wählen Sie zwischen Zürich, Bern, Basel, Luzern, St. Gallen oder Wallis."
+        },
+        "account": {
+          "q": "Brauche ich ein Konto, um Helvetra zu nutzen?",
+          "a": "Nein. Sie können Helvetra ohne Konto nutzen und erhalten 5'000 Zeichen pro Woche. Erstellen Sie ein kostenloses Konto für 20'000 Zeichen pro Monat, oder upgraden Sie auf Helvetra+ für 500'000 Zeichen pro Monat."
+        },
+        "restore": {
+          "q": "Wie stelle ich mein Abo auf einem neuen Gerät wieder her?",
+          "a": "Öffnen Sie die App, gehen Sie zu Einstellungen und tippen Sie auf \"Käufe wiederherstellen\". Stellen Sie sicher, dass Sie mit derselben Apple-ID angemeldet sind, die Sie für den ursprünglichen Kauf verwendet haben."
+        }
+      }
+    },
+    "faq": {
+      "title": "Weitere Fragen?",
+      "text": "Schauen Sie in unsere umfassende FAQ für Antworten auf häufige Fragen zu Helvetra.",
+      "link": "Alle FAQs anzeigen"
+    }
+  },
   "compare": {
     "hub": {
       "meta": {

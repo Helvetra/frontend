@@ -489,6 +489,44 @@
       "text": "Pour toute question sur la confidentialité ou demande de données, contactez-nous à"
     }
   },
+  "support": {
+    "title": "Assistance",
+    "subtitle": "Besoin d'aide avec Helvetra ? Nous sommes là pour vous.",
+    "contact": {
+      "title": "Contactez-nous",
+      "text": "Vous avez une question ou un commentaire ? Envoyez-nous un e-mail et nous vous répondrons dès que possible."
+    },
+    "quickHelp": {
+      "title": "Aide rapide",
+      "items": {
+        "upgrade": {
+          "q": "Comment passer à Helvetra+ ?",
+          "a": "Ouvrez l'application, allez dans Réglages et appuyez sur « Passer à Helvetra+ ». Vous pouvez choisir entre un abonnement mensuel ou annuel. La mise à niveau prend effet immédiatement."
+        },
+        "language": {
+          "q": "Comment changer la langue de traduction ?",
+          "a": "Appuyez sur les boutons de langue au-dessus des champs de texte. Sélectionnez votre langue source (ou utilisez la détection automatique) et votre langue cible. L'application mémorise vos préférences."
+        },
+        "dialect": {
+          "q": "Comment sélectionner un dialecte suisse allemand ?",
+          "a": "Lorsque le suisse allemand est sélectionné comme langue cible, appuyez dessus à nouveau pour ouvrir les paramètres de dialecte. Choisissez parmi Zurich, Berne, Bâle, Lucerne, Saint-Gall ou Valais."
+        },
+        "account": {
+          "q": "Ai-je besoin d'un compte pour utiliser Helvetra ?",
+          "a": "Non. Vous pouvez utiliser Helvetra sans compte et obtenir 5 000 caractères par semaine. Créez un compte gratuit pour 20 000 caractères par mois, ou passez à Helvetra+ pour 500 000 caractères par mois."
+        },
+        "restore": {
+          "q": "Comment restaurer mon abonnement sur un nouvel appareil ?",
+          "a": "Ouvrez l'application, allez dans Réglages et appuyez sur « Restaurer les achats ». Assurez-vous d'être connecté avec le même identifiant Apple que celui utilisé pour l'achat initial."
+        }
+      }
+    },
+    "faq": {
+      "title": "D'autres questions ?",
+      "text": "Consultez notre FAQ complète pour trouver des réponses aux questions fréquentes sur Helvetra.",
+      "link": "Voir toutes les FAQ"
+    }
+  },
   "compare": {
     "hub": {
       "meta": {

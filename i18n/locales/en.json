@@ -489,6 +489,44 @@
       "text": "For privacy questions or data requests, contact us at"
     }
   },
+  "support": {
+    "title": "Support",
+    "subtitle": "Need help with Helvetra? We're here for you.",
+    "contact": {
+      "title": "Contact Us",
+      "text": "Have a question or feedback? Send us an email and we'll get back to you as soon as possible."
+    },
+    "quickHelp": {
+      "title": "Quick Help",
+      "items": {
+        "upgrade": {
+          "q": "How do I upgrade to Helvetra+?",
+          "a": "Open the app, go to Settings, and tap \"Upgrade to Helvetra+\". You can choose between monthly or yearly subscription. The upgrade takes effect immediately."
+        },
+        "language": {
+          "q": "How do I change the translation language?",
+          "a": "Tap on the language buttons above the text fields. Select your source language (or use auto-detect) and your target language. The app remembers your preferences."
+        },
+        "dialect": {
+          "q": "How do I select a Swiss German dialect?",
+          "a": "When Swiss German is selected as your target language, tap on it again to open dialect settings. Choose from Zürich, Bern, Basel, Luzern, St. Gallen, or Wallis dialect."
+        },
+        "account": {
+          "q": "Do I need an account to use Helvetra?",
+          "a": "No. You can use Helvetra without an account and get 5,000 characters per week. Create a free account to get 20,000 characters per month, or upgrade to Helvetra+ for 500,000 characters per month."
+        },
+        "restore": {
+          "q": "How do I restore my subscription on a new device?",
+          "a": "Open the app, go to Settings, and tap \"Restore Purchases\". Make sure you're signed in with the same Apple ID you used for the original purchase."
+        }
+      }
+    },
+    "faq": {
+      "title": "More Questions?",
+      "text": "Check out our comprehensive FAQ for answers to common questions about Helvetra.",
+      "link": "View all FAQs"
+    }
+  },
   "compare": {
     "hub": {
       "meta": {
