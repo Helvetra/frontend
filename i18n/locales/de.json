@@ -400,16 +400,16 @@
       "title": "Servicekategorien",
       "intro": "Helvetra bietet folgende Servicekategorien an:",
       "anonymous": {
-        "name": "Anonym",
-        "desc": "Bis zu 400 Zeichen pro Übersetzung, maximal 2'000 Zeichen pro Woche. Keine Registrierung erforderlich."
+        "name": "Anonym (Web)",
+        "desc": "Bis zu 400 Zeichen pro Übersetzung, maximal 2'000 Zeichen pro Woche. Keine Registrierung erforderlich. iOS-App-Nutzer erhalten automatisch die Basic-Limits."
       },
       "free": {
         "name": "Basic (Kostenlos)",
-        "desc": "Bis zu 20'000 Zeichen pro Monat. Registrierung erforderlich."
+        "desc": "Bis zu 1'000 Zeichen pro Übersetzung, maximal 20'000 Zeichen pro Monat. Registrierung auf Web erforderlich, automatisch auf iOS."
       },
       "plus": {
         "name": "Helvetra+",
-        "desc": "Bis zu 500'000 Zeichen pro Monat. Kostenpflichtiges Abonnement."
+        "desc": "Bis zu 5'000 Zeichen pro Übersetzung, maximal 500'000 Zeichen pro Monat. Kostenpflichtiges Abonnement."
       }
     },
     "pricing": {

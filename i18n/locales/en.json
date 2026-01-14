@@ -400,16 +400,16 @@
       "title": "Service Tiers",
       "intro": "Helvetra offers the following service tiers:",
       "anonymous": {
-        "name": "Anonymous",
-        "desc": "Up to 400 characters per translation, maximum 2,000 characters per week. No registration required."
+        "name": "Anonymous (Web)",
+        "desc": "Up to 400 characters per translation, maximum 2,000 characters per week. No registration required. iOS app users automatically receive Basic tier limits."
       },
       "free": {
         "name": "Basic (Free)",
-        "desc": "Up to 20,000 characters per month. Registration required."
+        "desc": "Up to 1,000 characters per translation, maximum 20,000 characters per month. Registration required on web, automatic on iOS."
       },
       "plus": {
         "name": "Helvetra+",
-        "desc": "Up to 500,000 characters per month. Paid subscription."
+        "desc": "Up to 5,000 characters per translation, maximum 500,000 characters per month. Paid subscription."
       }
     },
     "pricing": {

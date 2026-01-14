@@ -400,16 +400,16 @@
       "title": "Niveaux de service",
       "intro": "Helvetra propose les niveaux de service suivants :",
       "anonymous": {
-        "name": "Anonyme",
-        "desc": "Jusqu'à 400 caractères par traduction, maximum 2 000 caractères par semaine. Aucune inscription requise."
+        "name": "Anonyme (Web)",
+        "desc": "Jusqu'à 400 caractères par traduction, maximum 2 000 caractères par semaine. Aucune inscription requise. Les utilisateurs de l'app iOS reçoivent automatiquement les limites Basic."
       },
       "free": {
         "name": "Basic (Gratuit)",
-        "desc": "Jusqu'à 20 000 caractères par mois. Inscription requise."
+        "desc": "Jusqu'à 1 000 caractères par traduction, maximum 20 000 caractères par mois. Inscription requise sur le web, automatique sur iOS."
       },
       "plus": {
         "name": "Helvetra+",
-        "desc": "Jusqu'à 500 000 caractères par mois. Abonnement payant."
+        "desc": "Jusqu'à 5 000 caractères par traduction, maximum 500 000 caractères par mois. Abonnement payant."
       }
     },
     "pricing": {

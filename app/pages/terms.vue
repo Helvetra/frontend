@@ -11,7 +11,7 @@
     <div class="prose prose-neutral max-w-none">
       <!-- Last updated -->
       <p class="text-sm text-neutral-500 mb-8">
-        {{ $t('terms.lastUpdated') }}: 2025-12-15
+        {{ $t('terms.lastUpdated') }}: 2026-01-14
       </p>
 
       <!-- 1. Scope -->
