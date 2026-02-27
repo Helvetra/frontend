@@ -1,75 +1,48 @@
-# Nuxt Minimal Starter
+# Helvetra Frontend
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Web application and marketing site for [Helvetra](https://helvetra.ch), a privacy-first Swiss translation app.
+
+## Features
+
+- Translation UI with real-time auto-translate (300ms debounce)
+- Swiss German dialect selector
+- Formality toggle (du/Sie, tu/vous, tu/Lei)
+- Language auto-detection
+- User accounts with Sign in with Apple
+- Subscription management with Payrexx payments
+- Marketing pages (landing, about, pricing, FAQ, comparisons)
+- Full i18n support (EN, DE, FR, IT)
+- SEO optimized with Schema.org structured data
+
+## Tech Stack
+
+- **Framework:** Nuxt 3 / Vue 3
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **i18n:** @nuxtjs/i18n
+- **Auth:** JWT with cookie-based sessions
 
 ## Setup
 
-Make sure to install dependencies:
-
 ```bash
-# npm
+# Requires Node 22+
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# Start dev server
 npm run dev
+# → http://localhost:3000
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
+# Build for production
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+## Environment
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+cp .env.example .env
+# Set NUXT_PUBLIC_API_BASE to your backend URL
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## License
+
+MIT
