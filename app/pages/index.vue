@@ -21,6 +21,7 @@
     <MarketingTrustSection />
     <MarketingFeaturesSection />
     <MarketingLanguagesSection />
+    <MarketingAppSection />
     <MarketingFaqSection />
     <MarketingNewsletterSection />
   </div>

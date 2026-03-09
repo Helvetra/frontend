@@ -70,7 +70,7 @@
             </svg>
           </a>
 
-          <span class="text-sm text-neutral-400">© 2025 Helvetra</span>
+          <span class="text-sm text-neutral-400">© 2025–2026 Helvetra</span>
         </div>
       </div>
     </div>

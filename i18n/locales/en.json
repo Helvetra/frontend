@@ -108,9 +108,19 @@
         },
         "mobile": {
           "q": "Does Helvetra work on mobile?",
-          "a": "Yes. Helvetra is a web app that works on any device with a browser. No app download required. Just visit helvetra.ch on your phone or tablet."
+          "a": "Yes. Helvetra is available as a native <a href=\"https://apps.apple.com/ch/app/helvetra-swiss-translator/id6755720087\" class=\"text-swiss-red hover:underline\">iOS app</a> and as a web app that works on any device with a browser."
         }
       }
+    },
+    "appBanner": {
+      "text": "Helvetra is now available on iOS!",
+      "cta": "Download for iOS",
+      "close": "Close"
+    },
+    "app": {
+      "title": "Helvetra for iOS",
+      "text": "Take Helvetra with you. The same private, precise Swiss translation, now as a native iOS app. No account required to get started.",
+      "downloadAlt": "Download on the App Store"
     },
     "newsletter": {
       "confirmed": "You're in! Your subscription is now confirmed.",

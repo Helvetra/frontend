@@ -80,3 +80,17 @@
   opacity: 0;
   transform: translateY(-100%);
 }
+
+/* App Store banner Vue transition */
+.app-banner-enter-active,
+.app-banner-leave-active {
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  max-height: 60px;
+  overflow: hidden;
+}
+
+.app-banner-enter-from,
+.app-banner-leave-to {
+  opacity: 0;
+  max-height: 0;
+}
