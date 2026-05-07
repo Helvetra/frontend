@@ -96,7 +96,9 @@ export function useTranslation() {
         if (detail?.[0]?.type === 'string_too_long') {
           error.value = 'TEXT_TOO_LONG'
         } else {
-          error.value = 'VALIDATION_ERROR'
+          // Silent fail: validation errors not surfaced as TEXT_TOO_LONG indicate
+          // a transient client-server mismatch the user cannot act on. Log and move on.
+          console.warn('Translation validation rejected:', detail)
         }
       } else if (fetchError.statusCode === 429) {
         // Check for specific limit error codes from backend

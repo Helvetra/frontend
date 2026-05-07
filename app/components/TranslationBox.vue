@@ -252,14 +252,6 @@
             </div>
           </div>
 
-          <!-- Regular error message -->
-          <div
-            v-else-if="error && !isLoading"
-            class="h-full flex items-center justify-center"
-          >
-            <p class="text-sm text-red-500 text-center">{{ $t(`errors.${error}`) }}</p>
-          </div>
-
           <template v-else>
             <!-- Existing translation (pulses subtly when loading) -->
             <div
@@ -281,9 +273,20 @@
           </template>
         </div>
 
+        <!-- Subtle connection-error indicator (does not replace translation) -->
+        <div
+          v-if="error === 'CONNECTION_ERROR' && !isLoading"
+          class="absolute bottom-2 left-3 flex items-center gap-1.5 text-xs text-neutral-500"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414" />
+          </svg>
+          <span>{{ $t('errors.CONNECTION_ERROR') }}</span>
+        </div>
+
         <!-- Bottom actions: feedback and copy -->
         <div
-          v-if="targetText && !isLoading && !error"
+          v-if="targetText && !isLoading && !errorReplacesOutput"
           class="absolute bottom-2 right-2 flex items-center gap-1"
         >
           <!-- Feedback buttons -->
@@ -357,6 +360,13 @@ const { isAuthenticated, getAuthHeader } = useAuth()
 const { detectLanguage } = useLanguageDetection()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
+
+// Errors that take over the output panel with a friendly card. Other errors
+// keep the previous translation visible and only show a subtle indicator.
+const ERRORS_REPLACING_OUTPUT = ['TEXT_TOO_LONG', 'WEEKLY_LIMIT_EXCEEDED', 'RATE_LIMITED'] as const
+const errorReplacesOutput = computed(
+  () => !!error.value && (ERRORS_REPLACING_OUTPUT as readonly string[]).includes(error.value)
+)
 
 // Character limit based on tier (default to anonymous limit)
 const charLimit = ref(400)
@@ -604,6 +614,12 @@ function debouncedTranslate() {
   // Don't show loading for empty text
   if (!sourceText.value.trim()) {
     targetText.value = ''
+    return
+  }
+
+  // Don't fire requests we know will fail server-side validation.
+  // The character counter already turns red to signal the limit.
+  if (sourceText.value.length > charLimit.value) {
     return
   }
 
