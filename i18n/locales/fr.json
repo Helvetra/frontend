@@ -332,7 +332,7 @@
       },
       "languages": {
         "title": "Suisse-allemand et romanche",
-        "body": "Prise en charge native du gsw (avec dialectes régionaux) et du rm, en plus de DE, FR, IT, EN."
+        "body": "Prise en charge native du suisse-allemand avec ses dialectes régionaux et du romanche, en plus de l'allemand, du français, de l'italien et de l'anglais."
       },
       "invoicing": {
         "title": "Facturation en CHF, TVA suisse",

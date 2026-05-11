@@ -221,7 +221,7 @@ async function handleSubscribe(tier: Tier): Promise<void> {
   // through registration with a redirect back to the API page so they
   // land back here ready to click again.
   if (!isAuthenticated.value) {
-    await navigateTo(localePath('/register?redirect=/api'))
+    await navigateTo(localePath('/register?redirect=/developers'))
     return
   }
 

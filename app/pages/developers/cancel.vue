@@ -23,7 +23,7 @@
 
     <div class="space-y-3">
       <NuxtLink
-        :to="localePath('/api')"
+        :to="localePath('/developers')"
         class="block w-full py-2.5 px-4 bg-swiss-red text-white font-medium rounded-lg hover:bg-red-700 transition-colors"
       >
         {{ $t('api.cancel.backCta') }}

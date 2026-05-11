@@ -332,7 +332,7 @@
       },
       "languages": {
         "title": "Swiss German and Romansh",
-        "body": "Native support for gsw (with regional dialects) and rm, alongside DE, FR, IT, EN."
+        "body": "Native support for Swiss German with regional dialects and Romansh, alongside German, French, Italian and English."
       },
       "invoicing": {
         "title": "CHF invoicing, Swiss VAT",
