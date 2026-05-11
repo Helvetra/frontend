@@ -136,6 +136,7 @@
     "about": "About",
     "compare": "Compare",
     "pricing": "Pricing",
+    "api": "API",
     "impressum": "Legal Notice",
     "terms": "Terms",
     "privacy": "Privacy",
@@ -317,6 +318,93 @@
       "description": "No worries! Your payment was cancelled. You can try again anytime.",
       "retryCta": "Back to pricing",
       "homeCta": "Back to Helvetra"
+    }
+  },
+  "api": {
+    "title": "Translation API for Swiss businesses",
+    "subtitle": "A REST API that brings Swiss data residency, Swiss German and Romansh to your product. Self-serve from CHF 29 a month.",
+    "perMonth": "/month",
+    "questions": "Questions or volume needs? Write to",
+    "values": {
+      "sovereignty": {
+        "title": "Data stays in Switzerland",
+        "body": "Swiss servers, Swiss law, Swiss company. No US, no EU detour."
+      },
+      "languages": {
+        "title": "Swiss German and Romansh",
+        "body": "Native support for gsw (with regional dialects) and rm, alongside DE, FR, IT, EN."
+      },
+      "invoicing": {
+        "title": "CHF invoicing, Swiss VAT",
+        "body": "Stripe-issued invoices in CHF. Friendly to public-sector procurement."
+      },
+      "noTraining": {
+        "title": "No training on your text",
+        "body": "Translations are never used to train models. Your content stays yours."
+      }
+    },
+    "pricing": {
+      "title": "Pricing",
+      "note": "Per-character usage tracked monthly. 14-day free trial on Starter."
+    },
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "audience": "Small dev teams testing the API",
+        "trial": "Then CHF 10 per million chars of overage.",
+        "feature1": "500,000 characters per month included",
+        "feature2": "Up to 10,000 characters per request",
+        "feature3": "1 API key",
+        "feature4": "All languages and Swiss German dialects",
+        "feature5": "Email support",
+        "cta": "Start free trial"
+      },
+      "business": {
+        "name": "Business",
+        "audience": "Production SMEs",
+        "tagline": "Then CHF 4 per million chars of overage.",
+        "badge": "Most popular",
+        "feature1": "2,000,000 characters per month included",
+        "feature2": "Up to 50,000 characters per request (full documents)",
+        "feature3": "10 API keys (per environment, per team)",
+        "feature4": "Priority email support",
+        "feature5": "Usage-alert webhooks",
+        "feature6": "All languages and Swiss German dialects",
+        "cta": "Subscribe"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "audience": "Federal, cantonal, large organisations",
+        "price": "Contact us",
+        "tagline": "Custom volume, SLA, DPA on request.",
+        "feature1": "Custom monthly volume",
+        "feature2": "SLA negotiated per contract",
+        "feature3": "Data Processing Agreement",
+        "feature4": "Dedicated support",
+        "cta": "Contact us"
+      }
+    },
+    "example": {
+      "title": "Quickstart",
+      "subtitle": "One API key, one POST, one translation."
+    },
+    "errors": {
+      "gateway": "Could not start checkout. Please try again."
+    },
+    "success": {
+      "title": "You're in",
+      "description": "Your subscription is active. The free trial, if applicable, gives you 14 days before the first charge.",
+      "nextStepsTitle": "Next steps",
+      "step1": "Generate your first API key from your account page",
+      "step2": "Make a test translation using the X-API-Key header",
+      "step3": "Check usage anytime via GET /api/public/v1/usage",
+      "accountCta": "Go to your account"
+    },
+    "cancel": {
+      "title": "Checkout cancelled",
+      "description": "No payment was taken. You can come back any time, or write to us with questions about volume or the Enterprise tier.",
+      "backCta": "Back to pricing",
+      "contactCta": "Talk to us"
     }
   },
   "errors": {

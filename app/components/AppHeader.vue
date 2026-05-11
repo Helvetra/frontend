@@ -21,6 +21,12 @@
             >
               {{ $t('nav.pricing') }}
             </NuxtLink>
+            <NuxtLink
+              :to="localePath('/api')"
+              class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+            >
+              {{ $t('nav.api') }}
+            </NuxtLink>
           </nav>
 
           <!-- Language selector -->
@@ -97,6 +103,13 @@
             @click="mobileMenuOpen = false"
           >
             {{ $t('nav.pricing') }}
+          </NuxtLink>
+          <NuxtLink
+            :to="localePath('/api')"
+            class="py-2 text-neutral-700 hover:text-neutral-900 transition-colors"
+            @click="mobileMenuOpen = false"
+          >
+            {{ $t('nav.api') }}
           </NuxtLink>
         </nav>
 

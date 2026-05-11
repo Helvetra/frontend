@@ -136,6 +136,7 @@
     "about": "Chi siamo",
     "compare": "Confronta",
     "pricing": "Prezzi",
+    "api": "API",
     "impressum": "Note legali",
     "terms": "Termini",
     "privacy": "Privacy",
@@ -317,6 +318,93 @@
       "description": "Nessun problema! Il tuo pagamento è stato annullato. Puoi riprovare quando vuoi.",
       "retryCta": "Torna ai prezzi",
       "homeCta": "Torna a Helvetra"
+    }
+  },
+  "api": {
+    "title": "API di traduzione per aziende svizzere",
+    "subtitle": "Un'API REST con sovranità dei dati in Svizzera, svizzero-tedesco e romancio. Self-service da CHF 29 al mese.",
+    "perMonth": "/mese",
+    "questions": "Domande o esigenze di volume? Scrivete a",
+    "values": {
+      "sovereignty": {
+        "title": "I dati restano in Svizzera",
+        "body": "Server svizzeri, diritto svizzero, azienda svizzera. Nessun passaggio dagli USA o dall'UE."
+      },
+      "languages": {
+        "title": "Svizzero-tedesco e romancio",
+        "body": "Supporto nativo per gsw (con dialetti regionali) e rm, oltre a DE, FR, IT, EN."
+      },
+      "invoicing": {
+        "title": "Fatturazione in CHF, IVA svizzera",
+        "body": "Fatture emesse da Stripe in CHF. Adatto agli acquisti del settore pubblico."
+      },
+      "noTraining": {
+        "title": "Nessun training sui vostri testi",
+        "body": "Le traduzioni non vengono mai usate per addestrare modelli. I vostri contenuti restano vostri."
+      }
+    },
+    "pricing": {
+      "title": "Prezzi",
+      "note": "Utilizzo per carattere, fatturato mensilmente. 14 giorni di prova gratuita su Starter."
+    },
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "audience": "Piccoli team dev che testano l'API",
+        "trial": "Poi CHF 10 per milione di caratteri eccedenti.",
+        "feature1": "500.000 caratteri al mese inclusi",
+        "feature2": "Fino a 10.000 caratteri per richiesta",
+        "feature3": "1 chiave API",
+        "feature4": "Tutte le lingue e i dialetti svizzero-tedeschi",
+        "feature5": "Supporto via e-mail",
+        "cta": "Inizia la prova gratuita"
+      },
+      "business": {
+        "name": "Business",
+        "audience": "PMI in produzione",
+        "tagline": "Poi CHF 4 per milione di caratteri eccedenti.",
+        "badge": "Il più scelto",
+        "feature1": "2.000.000 di caratteri al mese inclusi",
+        "feature2": "Fino a 50.000 caratteri per richiesta (documenti completi)",
+        "feature3": "10 chiavi API (per ambiente, per team)",
+        "feature4": "Supporto e-mail prioritario",
+        "feature5": "Webhook di allerta sull'utilizzo",
+        "feature6": "Tutte le lingue e i dialetti svizzero-tedeschi",
+        "cta": "Abbonati"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "audience": "Confederazione, cantoni, grandi organizzazioni",
+        "price": "Su richiesta",
+        "tagline": "Volume su misura, SLA, DPA su richiesta.",
+        "feature1": "Volume mensile su misura",
+        "feature2": "SLA negoziato per contratto",
+        "feature3": "Accordo sul trattamento dei dati",
+        "feature4": "Supporto dedicato",
+        "cta": "Contattaci"
+      }
+    },
+    "example": {
+      "title": "Avvio rapido",
+      "subtitle": "Una chiave API, un POST, una traduzione."
+    },
+    "errors": {
+      "gateway": "Impossibile avviare il pagamento. Riprovate."
+    },
+    "success": {
+      "title": "Tutto pronto",
+      "description": "L'abbonamento è attivo. La prova gratuita di 14 giorni, se applicabile, scorre prima del primo addebito.",
+      "nextStepsTitle": "Prossimi passi",
+      "step1": "Generate la prima chiave API dalla pagina account",
+      "step2": "Fate una traduzione di prova con l'header X-API-Key",
+      "step3": "Verificate l'uso in qualsiasi momento via GET /api/public/v1/usage",
+      "accountCta": "Vai al tuo account"
+    },
+    "cancel": {
+      "title": "Pagamento annullato",
+      "description": "Non è stato addebitato nulla. Potete tornare quando volete o scriverci per domande sul volume o sull'offerta Enterprise.",
+      "backCta": "Torna ai prezzi",
+      "contactCta": "Contattaci"
     }
   },
   "errors": {

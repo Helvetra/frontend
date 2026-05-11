@@ -136,6 +136,7 @@
     "about": "À propos",
     "compare": "Comparer",
     "pricing": "Tarifs",
+    "api": "API",
     "impressum": "Mentions légales",
     "terms": "CGV",
     "privacy": "Confidentialité",
@@ -317,6 +318,93 @@
       "description": "Pas de souci ! Votre paiement a été annulé. Vous pouvez réessayer quand vous voulez.",
       "retryCta": "Retour aux tarifs",
       "homeCta": "Retour à Helvetra"
+    }
+  },
+  "api": {
+    "title": "API de traduction pour entreprises suisses",
+    "subtitle": "Une API REST qui apporte la souveraineté des données suisses, le suisse-allemand et le romanche à votre produit. À partir de CHF 29 par mois, en libre-service.",
+    "perMonth": "/mois",
+    "questions": "Des questions ou un besoin de volume ? Écrivez à",
+    "values": {
+      "sovereignty": {
+        "title": "Vos données restent en Suisse",
+        "body": "Serveurs suisses, droit suisse, entreprise suisse. Pas de détour par les USA ni par l'UE."
+      },
+      "languages": {
+        "title": "Suisse-allemand et romanche",
+        "body": "Prise en charge native du gsw (avec dialectes régionaux) et du rm, en plus de DE, FR, IT, EN."
+      },
+      "invoicing": {
+        "title": "Facturation en CHF, TVA suisse",
+        "body": "Factures émises par Stripe en CHF. Compatible avec les achats du secteur public."
+      },
+      "noTraining": {
+        "title": "Vos textes ne servent pas à l'entraînement",
+        "body": "Les traductions ne sont jamais utilisées pour entraîner des modèles. Votre contenu vous appartient."
+      }
+    },
+    "pricing": {
+      "title": "Tarifs",
+      "note": "Utilisation au caractère, facturée mensuellement. 14 jours d'essai gratuit sur Starter."
+    },
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "audience": "Petites équipes dev qui testent l'API",
+        "trial": "Puis CHF 10 par million de caractères supplémentaires.",
+        "feature1": "500 000 caractères par mois inclus",
+        "feature2": "Jusqu'à 10 000 caractères par requête",
+        "feature3": "1 clé API",
+        "feature4": "Toutes les langues et dialectes suisse-allemands",
+        "feature5": "Support par e-mail",
+        "cta": "Démarrer l'essai gratuit"
+      },
+      "business": {
+        "name": "Business",
+        "audience": "PME en production",
+        "tagline": "Puis CHF 4 par million de caractères supplémentaires.",
+        "badge": "Le plus populaire",
+        "feature1": "2 000 000 caractères par mois inclus",
+        "feature2": "Jusqu'à 50 000 caractères par requête (documents complets)",
+        "feature3": "10 clés API (par environnement, par équipe)",
+        "feature4": "Support e-mail prioritaire",
+        "feature5": "Webhooks d'alerte d'utilisation",
+        "feature6": "Toutes les langues et dialectes suisse-allemands",
+        "cta": "S'abonner"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "audience": "Confédération, cantons, grandes organisations",
+        "price": "Sur demande",
+        "tagline": "Volume sur mesure, SLA, DPA sur demande.",
+        "feature1": "Volume mensuel sur mesure",
+        "feature2": "SLA négocié par contrat",
+        "feature3": "Accord de traitement de données",
+        "feature4": "Support dédié",
+        "cta": "Nous contacter"
+      }
+    },
+    "example": {
+      "title": "Démarrage rapide",
+      "subtitle": "Une clé API, un POST, une traduction."
+    },
+    "errors": {
+      "gateway": "Impossible de démarrer le paiement. Veuillez réessayer."
+    },
+    "success": {
+      "title": "Vous y êtes",
+      "description": "Votre abonnement est actif. L'essai gratuit de 14 jours, le cas échéant, court avant le premier prélèvement.",
+      "nextStepsTitle": "Prochaines étapes",
+      "step1": "Générez votre première clé API depuis la page de votre compte",
+      "step2": "Faites une traduction test avec l'en-tête X-API-Key",
+      "step3": "Vérifiez l'utilisation à tout moment via GET /api/public/v1/usage",
+      "accountCta": "Aller à mon compte"
+    },
+    "cancel": {
+      "title": "Paiement annulé",
+      "description": "Aucun paiement n'a été prélevé. Vous pouvez revenir à tout moment, ou nous écrire pour toutes celles et ceux qui ont des questions sur le volume ou l'offre Enterprise.",
+      "backCta": "Retour aux tarifs",
+      "contactCta": "Nous contacter"
     }
   },
   "errors": {
