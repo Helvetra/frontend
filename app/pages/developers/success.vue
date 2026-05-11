@@ -34,10 +34,16 @@
 
     <div class="space-y-3">
       <NuxtLink
-        :to="localePath('/account')"
+        :to="localePath('/developers/dashboard')"
         class="block w-full py-2.5 px-4 bg-swiss-red text-white font-medium rounded-lg hover:bg-red-700 transition-colors"
       >
-        {{ $t('api.success.accountCta') }}
+        {{ $t('api.success.dashboardCta') }}
+      </NuxtLink>
+      <NuxtLink
+        :to="localePath('/developers/docs')"
+        class="block w-full py-2.5 px-4 border border-neutral-300 text-neutral-700 font-medium rounded-lg hover:bg-neutral-50 transition-colors"
+      >
+        {{ $t('api.success.docsCta') }}
       </NuxtLink>
     </div>
   </div>

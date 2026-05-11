@@ -214,6 +214,10 @@
       "usage": "Utilizzo in questo periodo",
       "upgrade": "Passa a Helvetra+",
       "manageInfo": "Per gestire il tuo abbonamento, contattaci a"
+    },
+    "developer": {
+      "title": "Dashboard sviluppatori",
+      "subtitle": "Gestisci chiavi API B2B, consumo e fatturazione."
     }
   },
   "translate": {
@@ -395,10 +399,11 @@
       "title": "Tutto pronto",
       "description": "L'abbonamento è attivo. La prova gratuita di 14 giorni, se applicabile, scorre prima del primo addebito.",
       "nextStepsTitle": "Prossimi passi",
-      "step1": "Generate la prima chiave API dalla pagina account",
+      "step1": "Apri la dashboard sviluppatori e genera la prima chiave API",
       "step2": "Fate una traduzione di prova con l'header X-API-Key",
       "step3": "Verificate l'uso in qualsiasi momento via GET /api/public/v1/usage",
-      "accountCta": "Vai al tuo account"
+      "dashboardCta": "Vai al dashboard",
+      "docsCta": "Leggi l'avvio rapido"
     },
     "cancel": {
       "title": "Pagamento annullato",
@@ -463,6 +468,52 @@
     "usage": {
       "title": "Verifica del consumo",
       "body": "Interrogate /usage per mostrare il consumo nella vostra dashboard, inviare avvisi prima dell'eccedenza o regolare i carichi non essenziali."
+    }
+  },
+  "apiDashboard": {
+    "title": "Dashboard sviluppatori",
+    "subtitle": "Gestisci le chiavi API, monitora il consumo e la fatturazione.",
+    "trialing": "Prova",
+    "active": "Attivo",
+    "trialEndsOn": "La prova termina il {date}.",
+    "renewsOn": "Rinnovo il {date}.",
+    "manageBilling": "Gestisci la fatturazione",
+    "usageLabel": "Caratteri di questo periodo",
+    "usageRemaining": "{count} caratteri inclusi rimanenti.",
+    "usageOver": "Quota inclusa superata. Business fattura l'eccedenza; Starter blocca fino al periodo successivo.",
+    "noSubscription": "Non hai un abbonamento B2B attivo. Scegli un piano per iniziare.",
+    "viewPlans": "Vedi piani",
+    "keys": {
+      "title": "Chiavi API",
+      "subtitle": "{used} chiavi su {max} in uso.",
+      "create": "Genera una chiave",
+      "newKeyTitle": "La tua nuova chiave API",
+      "newKeyWarning": "Copia ora. Il valore completo è mostrato una sola volta; rotazione e revoca possibili in qualsiasi momento.",
+      "dismiss": "Ho salvato",
+      "nameLabel": "Nome",
+      "namePlaceholder": "produzione, staging, mio-laptop…",
+      "confirmCreate": "Crea",
+      "cancel": "Annulla",
+      "empty": "Nessuna chiave API.",
+      "lastUsed": "Ultimo utilizzo il {date}",
+      "neverUsed": "Mai utilizzata",
+      "rotate": "Ruota",
+      "revoke": "Revoca",
+      "confirmRotate": "Ruotare questa chiave? Il valore attuale smetterà di funzionare immediatamente e verrà generata una nuova chiave.",
+      "confirmRevoke": "Revocare questa chiave? Smetterà di funzionare immediatamente.",
+      "errorCreate": "Impossibile creare la chiave. Riprova.",
+      "errorRevoke": "Impossibile revocare la chiave. Riprova.",
+      "errorRotate": "Impossibile ruotare la chiave. Riprova."
+    },
+    "errors": {
+      "portal": "Impossibile aprire il portale di fatturazione. Riprova."
+    },
+    "resources": {
+      "title": "Risorse",
+      "quickstart": "Avvio rapido",
+      "quickstartHint": "Auth, prima traduzione, codici di errore.",
+      "reference": "Reference API",
+      "referenceHint": "Schema interattivo con prova diretta."
     }
   },
   "errors": {

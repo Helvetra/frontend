@@ -214,6 +214,10 @@
       "usage": "Nutzung in dieser Periode",
       "upgrade": "Auf Helvetra+ upgraden",
       "manageInfo": "Um Ihr Abonnement zu verwalten, kontaktieren Sie uns unter"
+    },
+    "developer": {
+      "title": "Entwickler-Dashboard",
+      "subtitle": "B2B-API-Schlüssel, Verbrauch und Abrechnung verwalten."
     }
   },
   "translate": {
@@ -395,10 +399,11 @@
       "title": "Sie sind drin",
       "description": "Ihr Abo ist aktiv. Der 14-tägige Gratis-Test gilt, sofern zutreffend, vor der ersten Belastung.",
       "nextStepsTitle": "Nächste Schritte",
-      "step1": "Erstellen Sie Ihren ersten API-Schlüssel auf der Konto-Seite",
+      "step1": "Öffnen Sie Ihr Entwickler-Dashboard und erstellen Sie den ersten API-Schlüssel",
       "step2": "Machen Sie eine Test-Übersetzung mit dem X-API-Key-Header",
       "step3": "Verbrauch jederzeit prüfen via GET /api/public/v1/usage",
-      "accountCta": "Zum Konto"
+      "dashboardCta": "Zum Dashboard",
+      "docsCta": "Zum Schnellstart"
     },
     "cancel": {
       "title": "Checkout abgebrochen",
@@ -463,6 +468,52 @@
     "usage": {
       "title": "Nutzung abfragen",
       "body": "Rufen Sie /usage ab, um den Verbrauch im eigenen Dashboard anzuzeigen, eigene Alarme vor Overage zu senden oder Hintergrund-Workloads zu drosseln."
+    }
+  },
+  "apiDashboard": {
+    "title": "Entwickler-Dashboard",
+    "subtitle": "API-Schlüssel verwalten, Verbrauch überwachen und Abrechnung steuern.",
+    "trialing": "Test",
+    "active": "Aktiv",
+    "trialEndsOn": "Testphase endet am {date}.",
+    "renewsOn": "Verlängert sich am {date}.",
+    "manageBilling": "Abrechnung verwalten",
+    "usageLabel": "Zeichen in dieser Periode",
+    "usageRemaining": "Noch {count} inklusive Zeichen verfügbar.",
+    "usageOver": "Inklusiv-Kontingent überschritten. Business mit Overage, Starter blockiert bis zur nächsten Periode.",
+    "noSubscription": "Sie haben kein aktives B2B-Abonnement. Wählen Sie einen Tarif, um zu starten.",
+    "viewPlans": "Tarife ansehen",
+    "keys": {
+      "title": "API-Schlüssel",
+      "subtitle": "{used} von {max} Schlüsseln in Verwendung.",
+      "create": "Schlüssel erstellen",
+      "newKeyTitle": "Ihr neuer API-Schlüssel",
+      "newKeyWarning": "Jetzt kopieren. Der vollständige Wert wird nur einmal angezeigt; rotieren oder widerrufen jederzeit möglich.",
+      "dismiss": "Habe ich gespeichert",
+      "nameLabel": "Name",
+      "namePlaceholder": "produktion, staging, mein-laptop…",
+      "confirmCreate": "Erstellen",
+      "cancel": "Abbrechen",
+      "empty": "Noch keine API-Schlüssel.",
+      "lastUsed": "Zuletzt genutzt am {date}",
+      "neverUsed": "Noch nie genutzt",
+      "rotate": "Rotieren",
+      "revoke": "Widerrufen",
+      "confirmRotate": "Diesen Schlüssel rotieren? Der aktuelle Wert funktioniert sofort nicht mehr, und ein neuer Schlüssel wird erstellt.",
+      "confirmRevoke": "Diesen Schlüssel widerrufen? Er funktioniert sofort nicht mehr.",
+      "errorCreate": "Schlüssel konnte nicht erstellt werden. Bitte erneut versuchen.",
+      "errorRevoke": "Schlüssel konnte nicht widerrufen werden. Bitte erneut versuchen.",
+      "errorRotate": "Schlüssel konnte nicht rotiert werden. Bitte erneut versuchen."
+    },
+    "errors": {
+      "portal": "Abrechnungs-Portal konnte nicht geöffnet werden. Bitte erneut versuchen."
+    },
+    "resources": {
+      "title": "Ressourcen",
+      "quickstart": "Schnellstart",
+      "quickstartHint": "Auth, erste Übersetzung, Fehlercodes.",
+      "reference": "API-Referenz",
+      "referenceHint": "Interaktives Schema mit Try-it-out."
     }
   },
   "errors": {

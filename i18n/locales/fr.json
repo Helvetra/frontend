@@ -214,6 +214,10 @@
       "usage": "Utilisation cette période",
       "upgrade": "Passer à Helvetra+",
       "manageInfo": "Pour gérer votre abonnement, contactez-nous à"
+    },
+    "developer": {
+      "title": "Tableau de bord développeur",
+      "subtitle": "Gérez les clés API B2B, la consommation et la facturation."
     }
   },
   "translate": {
@@ -395,10 +399,11 @@
       "title": "Vous y êtes",
       "description": "Votre abonnement est actif. L'essai gratuit de 14 jours, le cas échéant, court avant le premier prélèvement.",
       "nextStepsTitle": "Prochaines étapes",
-      "step1": "Générez votre première clé API depuis la page de votre compte",
+      "step1": "Ouvrez votre tableau de bord développeur et générez votre première clé API",
       "step2": "Faites une traduction test avec l'en-tête X-API-Key",
       "step3": "Vérifiez l'utilisation à tout moment via GET /api/public/v1/usage",
-      "accountCta": "Aller à mon compte"
+      "dashboardCta": "Ouvrir le tableau de bord",
+      "docsCta": "Lire le démarrage rapide"
     },
     "cancel": {
       "title": "Paiement annulé",
@@ -463,6 +468,52 @@
     "usage": {
       "title": "Vérifier votre consommation",
       "body": "Interrogez /usage pour afficher la consommation dans votre propre tableau de bord, envoyer des alertes avant dépassement, ou limiter les charges non essentielles."
+    }
+  },
+  "apiDashboard": {
+    "title": "Tableau de bord développeur",
+    "subtitle": "Gérez vos clés API, suivez la consommation et la facturation.",
+    "trialing": "Essai",
+    "active": "Actif",
+    "trialEndsOn": "L'essai se termine le {date}.",
+    "renewsOn": "Renouvellement le {date}.",
+    "manageBilling": "Gérer la facturation",
+    "usageLabel": "Caractères de la période",
+    "usageRemaining": "{count} caractères inclus restants.",
+    "usageOver": "Quota inclus dépassé. Business facture l'excédent ; Starter bloque jusqu'à la prochaine période.",
+    "noSubscription": "Vous n'avez pas d'abonnement B2B actif. Choisissez une offre pour commencer.",
+    "viewPlans": "Voir les offres",
+    "keys": {
+      "title": "Clés API",
+      "subtitle": "{used} clés sur {max} utilisées.",
+      "create": "Générer une clé",
+      "newKeyTitle": "Votre nouvelle clé API",
+      "newKeyWarning": "Copiez-la maintenant. La valeur complète n'est affichée qu'une fois ; rotation et révocation possibles à tout moment.",
+      "dismiss": "J'ai sauvegardé",
+      "nameLabel": "Nom",
+      "namePlaceholder": "production, staging, mon-portable…",
+      "confirmCreate": "Créer",
+      "cancel": "Annuler",
+      "empty": "Aucune clé API pour l'instant.",
+      "lastUsed": "Dernière utilisation le {date}",
+      "neverUsed": "Jamais utilisée",
+      "rotate": "Renouveler",
+      "revoke": "Révoquer",
+      "confirmRotate": "Renouveler cette clé ? La valeur actuelle cessera de fonctionner immédiatement et une nouvelle clé sera générée.",
+      "confirmRevoke": "Révoquer cette clé ? Elle cessera de fonctionner immédiatement.",
+      "errorCreate": "Impossible de créer la clé. Veuillez réessayer.",
+      "errorRevoke": "Impossible de révoquer la clé. Veuillez réessayer.",
+      "errorRotate": "Impossible de renouveler la clé. Veuillez réessayer."
+    },
+    "errors": {
+      "portal": "Impossible d'ouvrir le portail de facturation. Veuillez réessayer."
+    },
+    "resources": {
+      "title": "Ressources",
+      "quickstart": "Démarrage rapide",
+      "quickstartHint": "Auth, première traduction, codes d'erreur.",
+      "reference": "Référence API",
+      "referenceHint": "Schéma interactif avec essai en direct."
     }
   },
   "errors": {

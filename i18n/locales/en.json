@@ -214,6 +214,10 @@
       "usage": "Usage this period",
       "upgrade": "Upgrade to Helvetra+",
       "manageInfo": "To manage your subscription, contact us at"
+    },
+    "developer": {
+      "title": "Developer dashboard",
+      "subtitle": "Manage B2B API keys, usage, and billing."
     }
   },
   "translate": {
@@ -395,10 +399,11 @@
       "title": "You're in",
       "description": "Your subscription is active. The free trial, if applicable, gives you 14 days before the first charge.",
       "nextStepsTitle": "Next steps",
-      "step1": "Generate your first API key from your account page",
+      "step1": "Open your developer dashboard and generate your first API key",
       "step2": "Make a test translation using the X-API-Key header",
       "step3": "Check usage anytime via GET /api/public/v1/usage",
-      "accountCta": "Go to your account"
+      "dashboardCta": "Go to your dashboard",
+      "docsCta": "Read the quickstart"
     },
     "cancel": {
       "title": "Checkout cancelled",
@@ -463,6 +468,52 @@
     "usage": {
       "title": "Check your usage",
       "body": "Poll /usage to surface consumption in your own dashboard, send proactive alerts before overage, or throttle non-essential workloads."
+    }
+  },
+  "apiDashboard": {
+    "title": "Developer dashboard",
+    "subtitle": "Manage your API keys, watch usage, and handle billing.",
+    "trialing": "Trial",
+    "active": "Active",
+    "trialEndsOn": "Trial ends {date}.",
+    "renewsOn": "Renews {date}.",
+    "manageBilling": "Manage billing",
+    "usageLabel": "Characters this period",
+    "usageRemaining": "{count} included characters remaining.",
+    "usageOver": "Over the included quota. Overage applies on Business; Starter blocks until the next period.",
+    "noSubscription": "You do not have an active B2B subscription. Pick a plan to get started.",
+    "viewPlans": "See plans",
+    "keys": {
+      "title": "API keys",
+      "subtitle": "{used} of {max} keys in use.",
+      "create": "Generate a key",
+      "newKeyTitle": "Your new API key",
+      "newKeyWarning": "Copy it now. The full value is shown only this once; you can rotate or revoke at any time.",
+      "dismiss": "I've saved it",
+      "nameLabel": "Name",
+      "namePlaceholder": "production, staging, my-laptop…",
+      "confirmCreate": "Create",
+      "cancel": "Cancel",
+      "empty": "No API keys yet.",
+      "lastUsed": "Last used {date}",
+      "neverUsed": "Never used",
+      "rotate": "Rotate",
+      "revoke": "Revoke",
+      "confirmRotate": "Rotate this key? The current value will stop working immediately and a new key will be generated.",
+      "confirmRevoke": "Revoke this key? It will stop working immediately.",
+      "errorCreate": "Could not create the key. Please try again.",
+      "errorRevoke": "Could not revoke the key. Please try again.",
+      "errorRotate": "Could not rotate the key. Please try again."
+    },
+    "errors": {
+      "portal": "Could not open the billing portal. Please try again."
+    },
+    "resources": {
+      "title": "Resources",
+      "quickstart": "Quickstart",
+      "quickstartHint": "Auth, first translation, error codes.",
+      "reference": "API reference",
+      "referenceHint": "Interactive schema with try-it-out."
     }
   },
   "errors": {

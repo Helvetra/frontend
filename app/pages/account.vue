@@ -123,6 +123,26 @@
         </div>
       </section>
 
+      <!-- B2B / developer shortcut: always visible to authenticated users.
+           The dashboard itself handles users without a B2B subscription
+           by routing them to /developers. -->
+      <NuxtLink
+        :to="localePath('/developers/dashboard')"
+        class="block bg-white border border-neutral-200 rounded-lg p-6 mb-6 hover:bg-neutral-50 transition-colors"
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="text-lg font-semibold text-neutral-900">
+              {{ $t('account.developer.title') }}
+            </h2>
+            <p class="text-sm text-neutral-500 mt-1">
+              {{ $t('account.developer.subtitle') }}
+            </p>
+          </div>
+          <span class="text-swiss-red" aria-hidden="true">&rarr;</span>
+        </div>
+      </NuxtLink>
+
       <!-- Logout button -->
       <button
         class="w-full py-2.5 px-4 border border-neutral-300 text-neutral-700 font-medium rounded-lg hover:bg-neutral-50 transition-colors"
