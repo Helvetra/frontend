@@ -405,6 +405,64 @@
       "description": "Aucun paiement n'a été prélevé. Vous pouvez revenir à tout moment, ou nous écrire pour toutes celles et ceux qui ont des questions sur le volume ou l'offre Enterprise.",
       "backCta": "Retour aux tarifs",
       "contactCta": "Nous contacter"
+    },
+    "docsCta": "Lire le démarrage rapide",
+    "referenceCta": "Ouvrir la référence API"
+  },
+  "apiDocs": {
+    "eyebrow": "Documentation développeurs",
+    "title": "Démarrage rapide",
+    "subtitle": "Authentifier, envoyer une traduction, gérer les erreurs. Complétez ce guide avec la référence interactive de l'API pour tous les détails du schéma.",
+    "referenceCta": "Ouvrir la référence API",
+    "pricingCta": "Retour aux tarifs",
+    "contact": "Des questions ? Écrivez à",
+    "copy": "Copier",
+    "copied": "Copié",
+    "copyAria": "Copier le code dans le presse-papiers",
+    "steps": {
+      "subscribe": {
+        "title": "1. Souscrire et créer une clé API",
+        "body": "Les traductions sont facturées au caractère via un abonnement B2B actif. Commencez par 14 jours d'essai gratuit sur Starter, puis générez des clés depuis la page de votre compte.",
+        "bullet1": "Souscrivez sur la page des tarifs (carte requise, aucun débit pendant l'essai).",
+        "bullet2": "Ouvrez la page de votre compte et générez une clé API. La clé complète n'est affichée qu'une fois — traitez-la comme un mot de passe.",
+        "bullet3": "Starter autorise 1 clé active, Business 10. Révocation et rotation à tout moment."
+      },
+      "auth": {
+        "title": "2. Authentifier chaque requête",
+        "body": "Envoyez votre clé dans l'en-tête X-API-Key. Pas d'OAuth, pas d'expiration — les clés sont valides jusqu'à révocation."
+      },
+      "translate": {
+        "title": "3. Faire votre première traduction",
+        "body": "POST sur /api/public/v1/translate avec le texte, la langue source et la langue cible. La réponse contient la traduction et le nombre de caractères facturés."
+      }
+    },
+    "languages": {
+      "title": "Langues et options",
+      "body": "Toute combinaison source/cible parmi les langues prises en charge est valide, y compris le suisse-allemand et le romanche. Mettez source_lang à auto pour laisser le moteur détecter la source.",
+      "formalityTitle": "Formalité",
+      "formalityBody": "Passez formality=informal ou formality=formal pour les traductions vers l'allemand, le français ou l'italien afin de contrôler la forme d'adresse (du/Sie, tu/vous, tu/Lei). Par défaut auto.",
+      "dialectTitle": "Dialectes suisse-allemands",
+      "dialectBody": "Quand target_lang vaut gsw, choisissez un dialecte pour la couleur régionale. Sans précision, un Bärndütsch neutre est utilisé."
+    },
+    "limits": {
+      "title": "Limites et codes d'erreur",
+      "body": "Les erreurs renvoient un objet detail structuré avec un champ code stable et un message humain. Les codes 4xx sont des signaux fiables pour brancher votre logique.",
+      "colCode": "Code",
+      "colStatus": "HTTP",
+      "colMeaning": "Signification"
+    },
+    "errors": {
+      "UNSUPPORTED_LANGUAGE": "Code de langue source ou cible non pris en charge.",
+      "UNSUPPORTED_DIALECT": "Dialecte non reconnu. Voyez la liste des codes valides ci-dessus.",
+      "TEXT_TOO_LONG": "Le texte dépasse la limite de caractères par requête de votre offre (10k sur Starter, 50k sur Business).",
+      "INVALID_API_KEY": "En-tête X-API-Key manquant ou révoqué.",
+      "SUSPICIOUS_OUTPUT": "Le modèle a produit une sortie qui ne ressemble pas à une traduction. Réessayez ou simplifiez l'entrée.",
+      "USAGE_LIMIT_EXCEEDED": "Quota mensuel inclus épuisé. L'abonnement continue — Business facture l'excédent, Starter bloque jusqu'à la prochaine période.",
+      "INTERNAL_ERROR": "Erreur serveur inattendue. Réessayez avec backoff ; contactez le support si elle persiste."
+    },
+    "usage": {
+      "title": "Vérifier votre consommation",
+      "body": "Interrogez /usage pour afficher la consommation dans votre propre tableau de bord, envoyer des alertes avant dépassement, ou limiter les charges non essentielles."
     }
   },
   "errors": {

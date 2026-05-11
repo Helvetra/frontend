@@ -11,9 +11,24 @@
       <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-3">
         {{ $t('api.title') }}
       </h1>
-      <p class="text-neutral-600 max-w-2xl mx-auto">
+      <p class="text-neutral-600 max-w-2xl mx-auto mb-5">
         {{ $t('api.subtitle') }}
       </p>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <NuxtLink
+          :to="localePath('/developers/docs')"
+          class="inline-flex items-center gap-2 px-4 py-2 border border-neutral-300 text-neutral-700 text-sm font-medium rounded-lg hover:bg-neutral-50 transition-colors"
+        >
+          {{ $t('api.docsCta') }}
+          <span aria-hidden="true">&rarr;</span>
+        </NuxtLink>
+        <a
+          href="/api/public/v1/docs"
+          class="inline-flex items-center gap-2 px-4 py-2 border border-neutral-300 text-neutral-700 text-sm font-medium rounded-lg hover:bg-neutral-50 transition-colors"
+        >
+          {{ $t('api.referenceCta') }}
+        </a>
+      </div>
     </div>
 
     <!-- Value proposition -->

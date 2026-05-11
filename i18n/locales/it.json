@@ -405,6 +405,64 @@
       "description": "Non è stato addebitato nulla. Potete tornare quando volete o scriverci per domande sul volume o sull'offerta Enterprise.",
       "backCta": "Torna ai prezzi",
       "contactCta": "Contattaci"
+    },
+    "docsCta": "Leggi l'avvio rapido",
+    "referenceCta": "Apri reference API"
+  },
+  "apiDocs": {
+    "eyebrow": "Documentazione per sviluppatori",
+    "title": "Avvio rapido",
+    "subtitle": "Autenticarsi, inviare una traduzione, gestire gli errori. Affianca questa guida con la reference interattiva dell'API per tutti i dettagli dello schema.",
+    "referenceCta": "Apri reference API",
+    "pricingCta": "Torna ai prezzi",
+    "contact": "Domande? Scrivete a",
+    "copy": "Copia",
+    "copied": "Copiato",
+    "copyAria": "Copia il codice negli appunti",
+    "steps": {
+      "subscribe": {
+        "title": "1. Abbonarsi e creare una chiave API",
+        "body": "Le traduzioni sono fatturate per carattere su un abbonamento B2B attivo. Inizia con 14 giorni di prova gratuita su Starter, poi genera le chiavi dalla pagina account.",
+        "bullet1": "Abbonatevi dalla pagina dei prezzi (carta richiesta, nessun addebito durante la prova).",
+        "bullet2": "Aprite la pagina account e generate una chiave API. La chiave completa è mostrata una volta sola — trattatela come una password.",
+        "bullet3": "Starter consente 1 chiave attiva, Business 10. Revoca e rotazione in qualsiasi momento."
+      },
+      "auth": {
+        "title": "2. Autenticare ogni richiesta",
+        "body": "Inviate la chiave nell'header X-API-Key. Niente OAuth, niente scadenza — le chiavi sono valide finché non vengono revocate."
+      },
+      "translate": {
+        "title": "3. Prima traduzione",
+        "body": "POST a /api/public/v1/translate con testo, lingua sorgente e lingua di destinazione. La risposta contiene la traduzione e i caratteri fatturati."
+      }
+    },
+    "languages": {
+      "title": "Lingue e opzioni",
+      "body": "Qualsiasi combinazione sorgente/destinazione tra le lingue supportate è valida, inclusi svizzero-tedesco e romancio. Impostate source_lang su auto per far rilevare la sorgente al motore.",
+      "formalityTitle": "Formalità",
+      "formalityBody": "Passate formality=informal o formality=formal quando traducete in tedesco, francese o italiano per controllare la forma di cortesia (du/Sie, tu/vous, tu/Lei). Default auto.",
+      "dialectTitle": "Dialetti svizzero-tedeschi",
+      "dialectBody": "Quando target_lang è gsw, scegliete un dialetto per la sfumatura regionale. Senza specifica, viene usato un Bärndütsch neutro."
+    },
+    "limits": {
+      "title": "Limiti e codici di errore",
+      "body": "Gli errori restituiscono un oggetto detail strutturato con un campo code stabile e un messaggio leggibile. I codici 4xx sono segnali affidabili su cui basare la logica.",
+      "colCode": "Codice",
+      "colStatus": "HTTP",
+      "colMeaning": "Significato"
+    },
+    "errors": {
+      "UNSUPPORTED_LANGUAGE": "Codice lingua sorgente o destinazione non supportato.",
+      "UNSUPPORTED_DIALECT": "Dialetto non riconosciuto. Vedi i codici validi sopra.",
+      "TEXT_TOO_LONG": "Il testo supera il limite di caratteri per richiesta del tuo piano (10k su Starter, 50k su Business).",
+      "INVALID_API_KEY": "Header X-API-Key mancante o revocato.",
+      "SUSPICIOUS_OUTPUT": "Il modello ha prodotto un output non simile a una traduzione. Ritentate o semplificate l'input.",
+      "USAGE_LIMIT_EXCEEDED": "Quota mensile inclusa esaurita. L'abbonamento continua — Business fattura l'eccedenza, Starter blocca fino al periodo successivo.",
+      "INTERNAL_ERROR": "Errore server imprevisto. Riprovate con backoff; contattate il supporto se persiste."
+    },
+    "usage": {
+      "title": "Verifica del consumo",
+      "body": "Interrogate /usage per mostrare il consumo nella vostra dashboard, inviare avvisi prima dell'eccedenza o regolare i carichi non essenziali."
     }
   },
   "errors": {

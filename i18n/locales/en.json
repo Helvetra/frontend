@@ -405,6 +405,64 @@
       "description": "No payment was taken. You can come back any time, or write to us with questions about volume or the Enterprise tier.",
       "backCta": "Back to pricing",
       "contactCta": "Talk to us"
+    },
+    "docsCta": "Read the quickstart",
+    "referenceCta": "Open API reference"
+  },
+  "apiDocs": {
+    "eyebrow": "Developer documentation",
+    "title": "Quickstart",
+    "subtitle": "Authenticate, send a translation, handle errors. Pair this guide with the interactive API reference for full schema details.",
+    "referenceCta": "Open API reference",
+    "pricingCta": "Back to pricing",
+    "contact": "Questions? Write to",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyAria": "Copy code to clipboard",
+    "steps": {
+      "subscribe": {
+        "title": "1. Subscribe and create an API key",
+        "body": "Translation calls are billed per character against an active B2B subscription. Start a free 14-day trial on Starter, then generate keys from your account page.",
+        "bullet1": "Subscribe on the pricing page (card required, no charge during trial).",
+        "bullet2": "Open your account page and generate an API key. The full key is shown once — store it like a password.",
+        "bullet3": "Starter allows 1 active key, Business allows 10. Revoke and rotate at any time."
+      },
+      "auth": {
+        "title": "2. Authenticate every request",
+        "body": "Send your key in the X-API-Key header. There is no OAuth dance, no expiry — keys are valid until you revoke them."
+      },
+      "translate": {
+        "title": "3. Make your first translation",
+        "body": "POST to /api/public/v1/translate with the text, source language, and target language. The response includes the translation and the character count that was billed."
+      }
+    },
+    "languages": {
+      "title": "Languages and options",
+      "body": "Any source/target combination among the supported languages is valid, including Swiss German and Romansh. Set source_lang to auto to let the engine detect the source.",
+      "formalityTitle": "Formality",
+      "formalityBody": "Pass formality=informal or formality=formal when translating to German, French or Italian to control the address form (du/Sie, tu/vous, tu/Lei). Defaults to auto.",
+      "dialectTitle": "Swiss German dialects",
+      "dialectBody": "When target_lang is gsw, pick a dialect for the regional flavour. Defaults to a neutral Bernese German if omitted."
+    },
+    "limits": {
+      "title": "Limits and error codes",
+      "body": "Errors return a structured detail object with a stable code field plus a human message. The 4xx codes are reliable signals you can branch on.",
+      "colCode": "Code",
+      "colStatus": "HTTP",
+      "colMeaning": "Meaning"
+    },
+    "errors": {
+      "UNSUPPORTED_LANGUAGE": "Source or target language code is not supported.",
+      "UNSUPPORTED_DIALECT": "Dialect not recognised. See the list of valid dialect codes above.",
+      "TEXT_TOO_LONG": "Text exceeds the per-request character limit for your tier (10k on Starter, 50k on Business).",
+      "INVALID_API_KEY": "Missing or revoked X-API-Key header.",
+      "SUSPICIOUS_OUTPUT": "Model produced output that did not look like a translation. Retry, or simplify the input.",
+      "USAGE_LIMIT_EXCEEDED": "Monthly included quota exhausted. Subscription continues — overage applies on Business; Starter blocks until the next period.",
+      "INTERNAL_ERROR": "Unexpected server error. Retry with backoff; contact support if it persists."
+    },
+    "usage": {
+      "title": "Check your usage",
+      "body": "Poll /usage to surface consumption in your own dashboard, send proactive alerts before overage, or throttle non-essential workloads."
     }
   },
   "errors": {

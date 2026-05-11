@@ -405,6 +405,64 @@
       "description": "Es wurde nichts belastet. Sie können jederzeit zurückkommen oder uns mit Fragen zum Volumen oder zum Enterprise-Tarif schreiben.",
       "backCta": "Zurück zu den Preisen",
       "contactCta": "Kontakt aufnehmen"
+    },
+    "docsCta": "Zum Schnellstart",
+    "referenceCta": "API-Referenz öffnen"
+  },
+  "apiDocs": {
+    "eyebrow": "Entwicklerdokumentation",
+    "title": "Schnellstart",
+    "subtitle": "Authentifizieren, Übersetzung senden, Fehler behandeln. Ergänzen Sie diese Anleitung mit der interaktiven API-Referenz für alle Schema-Details.",
+    "referenceCta": "API-Referenz öffnen",
+    "pricingCta": "Zurück zu den Preisen",
+    "contact": "Fragen? Schreiben Sie an",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "copyAria": "Code in die Zwischenablage kopieren",
+    "steps": {
+      "subscribe": {
+        "title": "1. Abonnement abschliessen und API-Schlüssel erstellen",
+        "body": "Übersetzungen werden pro Zeichen über ein aktives B2B-Abonnement abgerechnet. Starten Sie mit 14 Tagen Gratis-Test auf Starter und erstellen Sie dann Schlüssel auf der Konto-Seite.",
+        "bullet1": "Abonnement auf der Preisseite starten (Kreditkarte erforderlich, keine Belastung während des Tests).",
+        "bullet2": "Konto-Seite öffnen und einen API-Schlüssel erstellen. Der vollständige Schlüssel wird einmal angezeigt — wie ein Passwort behandeln.",
+        "bullet3": "Starter erlaubt 1 aktiven Schlüssel, Business 10. Jederzeit widerrufen und rotieren."
+      },
+      "auth": {
+        "title": "2. Jede Anfrage authentifizieren",
+        "body": "Senden Sie Ihren Schlüssel im X-API-Key-Header. Kein OAuth, kein Ablauf — Schlüssel gelten, bis Sie sie widerrufen."
+      },
+      "translate": {
+        "title": "3. Erste Übersetzung erstellen",
+        "body": "POST an /api/public/v1/translate mit Text, Quellsprache und Zielsprache. Die Antwort enthält die Übersetzung und die abgerechneten Zeichen."
+      }
+    },
+    "languages": {
+      "title": "Sprachen und Optionen",
+      "body": "Jede Kombination unter den unterstützten Sprachen ist gültig, einschliesslich Schweizerdeutsch und Rumantsch. Setzen Sie source_lang auf auto, damit die Engine die Quelle erkennt.",
+      "formalityTitle": "Anrede",
+      "formalityBody": "Geben Sie formality=informal oder formality=formal an, wenn Sie ins Deutsche, Französische oder Italienische übersetzen, um Du/Sie, tu/vous, tu/Lei zu steuern. Standard ist auto.",
+      "dialectTitle": "Schweizerdeutsch-Dialekte",
+      "dialectBody": "Wenn target_lang gsw ist, wählen Sie einen Dialekt für die regionale Färbung. Ohne Angabe wird ein neutrales Bärndütsch verwendet."
+    },
+    "limits": {
+      "title": "Limits und Fehlercodes",
+      "body": "Fehler liefern ein strukturiertes Detail-Objekt mit einem stabilen code-Feld und einer Nachricht für Menschen. Die 4xx-Codes sind zuverlässige Signale für Verzweigungen.",
+      "colCode": "Code",
+      "colStatus": "HTTP",
+      "colMeaning": "Bedeutung"
+    },
+    "errors": {
+      "UNSUPPORTED_LANGUAGE": "Quell- oder Zielsprachcode wird nicht unterstützt.",
+      "UNSUPPORTED_DIALECT": "Dialekt nicht erkannt. Liste gültiger Codes oben.",
+      "TEXT_TOO_LONG": "Text überschreitet das Zeichenlimit pro Anfrage Ihres Tarifs (10k auf Starter, 50k auf Business).",
+      "INVALID_API_KEY": "X-API-Key-Header fehlt oder wurde widerrufen.",
+      "SUSPICIOUS_OUTPUT": "Modell lieferte eine Ausgabe, die nicht wie eine Übersetzung aussah. Erneut versuchen oder Eingabe vereinfachen.",
+      "USAGE_LIMIT_EXCEEDED": "Monatliches Inklusivkontingent erschöpft. Abo läuft weiter — Business mit Overage, Starter blockiert bis zur nächsten Periode.",
+      "INTERNAL_ERROR": "Unerwarteter Serverfehler. Mit Backoff erneut versuchen; bei Anhalten Support kontaktieren."
+    },
+    "usage": {
+      "title": "Nutzung abfragen",
+      "body": "Rufen Sie /usage ab, um den Verbrauch im eigenen Dashboard anzuzeigen, eigene Alarme vor Overage zu senden oder Hintergrund-Workloads zu drosseln."
     }
   },
   "errors": {
