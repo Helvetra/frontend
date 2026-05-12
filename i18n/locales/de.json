@@ -548,6 +548,12 @@
       "quickstartHint": "Auth, erste Übersetzung, Fehlercodes.",
       "reference": "API-Referenz",
       "referenceHint": "Interaktives Schema mit Try-it-out."
+    },
+    "history": {
+      "title": "Nutzungsverlauf",
+      "empty": "Der Nutzungsverlauf erscheint hier nach Ihrer ersten Abrechnungsperiode.",
+      "scale": "max. {max}",
+      "ariaLabel": "Balkendiagramm der monatlichen Zeichennutzung"
     }
   },
   "errors": {

@@ -548,6 +548,12 @@
       "quickstartHint": "Auth, first translation, error codes.",
       "reference": "API reference",
       "referenceHint": "Interactive schema with try-it-out."
+    },
+    "history": {
+      "title": "Usage history",
+      "empty": "Usage history will appear here after your first billing period.",
+      "scale": "max {max}",
+      "ariaLabel": "Bar chart of monthly character usage"
     }
   },
   "errors": {

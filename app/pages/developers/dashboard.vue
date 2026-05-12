@@ -87,6 +87,11 @@
               : $t('apiDashboard.usageRemaining', { count: subscription.characters_remaining.toLocaleString() }) }}
           </p>
         </div>
+
+        <!-- Historical usage chart -->
+        <div class="mt-6 pt-6 border-t border-neutral-100">
+          <UsageHistoryChart :periods="history" />
+        </div>
       </section>
 
       <!-- API keys card -->
@@ -260,6 +265,13 @@ interface ApiKey {
   created_at: string
 }
 
+interface UsageHistoryPoint {
+  period_start: string
+  period_end: string
+  characters_used: number
+  characters_limit: number
+}
+
 interface ApiKeyCreated extends ApiKey {
   key: string
 }
@@ -273,6 +285,7 @@ interface PortalResponse {
 const loading = ref(true)
 const subscription = ref<B2BSubscription | null>(null)
 const keys = ref<ApiKey[]>([])
+const history = ref<UsageHistoryPoint[]>([])
 const newKey = ref<string | null>(null)
 const newKeyName = ref('')
 const showCreateForm = ref(false)
@@ -313,12 +326,16 @@ async function loadAll(): Promise<void> {
   }
   loading.value = true
   try {
-    const [sub, keyList] = await Promise.all([
+    const [sub, keyList, hist] = await Promise.all([
       $fetch<B2BSubscription>(apiUrl('/subscription/b2b'), { headers: getAuthHeader() }),
       $fetch<ApiKey[]>(apiUrl('/api-keys'), { headers: getAuthHeader() }).catch(() => []),
+      $fetch<{ periods: UsageHistoryPoint[] }>(apiUrl('/subscription/b2b/usage-history'), {
+        headers: getAuthHeader(),
+      }).catch(() => ({ periods: [] })),
     ])
     subscription.value = sub
     keys.value = keyList
+    history.value = hist.periods
   } catch (e) {
     console.error('dashboard load failed', e)
   } finally {

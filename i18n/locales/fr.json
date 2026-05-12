@@ -548,6 +548,12 @@
       "quickstartHint": "Auth, première traduction, codes d'erreur.",
       "reference": "Référence API",
       "referenceHint": "Schéma interactif avec essai en direct."
+    },
+    "history": {
+      "title": "Historique d'utilisation",
+      "empty": "L'historique d'utilisation apparaîtra ici après votre première période de facturation.",
+      "scale": "max {max}",
+      "ariaLabel": "Graphique en barres de l'utilisation mensuelle des caractères"
     }
   },
   "errors": {

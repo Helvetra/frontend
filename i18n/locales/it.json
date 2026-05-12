@@ -548,6 +548,12 @@
       "quickstartHint": "Auth, prima traduzione, codici di errore.",
       "reference": "Reference API",
       "referenceHint": "Schema interattivo con prova diretta."
+    },
+    "history": {
+      "title": "Cronologia utilizzo",
+      "empty": "La cronologia di utilizzo apparirà qui dopo il primo periodo di fatturazione.",
+      "scale": "max {max}",
+      "ariaLabel": "Grafico a barre dell'utilizzo mensile dei caratteri"
     }
   },
   "errors": {
