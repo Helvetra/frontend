@@ -84,7 +84,7 @@
         },
         "api": {
           "q": "Gibt es eine API für Unternehmen?",
-          "a": "Noch nicht, aber es steht auf der Roadmap. <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Kontaktieren Sie uns</a>, wenn Sie interessiert sind."
+          "a": "Ja. Die Helvetra Public API ist unter <a href=\"/developers\" class=\"text-swiss-red hover:underline\">/developers</a> live. Self-Service ab CHF 29/Monat auf Starter (14 Tage Gratis-Test) oder CHF 99/Monat auf Business, mit Verbrauchsabrechnung pro Zeichen."
         },
         "contribute": {
           "q": "Kann ich mithelfen?",
@@ -109,6 +109,30 @@
         "mobile": {
           "q": "Funktioniert Helvetra auf dem Handy?",
           "a": "Ja. Helvetra ist als native <a href=\"https://apps.apple.com/ch/app/helvetra-swiss-translator/id6755720087\" class=\"text-swiss-red hover:underline\">iOS-App</a> verfügbar und als Web-App, die auf jedem Gerät mit Browser funktioniert."
+        },
+        "apiLanguages": {
+          "q": "Welche Sprachen unterstützt die API?",
+          "a": "Deutsch, Französisch, Italienisch, Englisch, Schweizerdeutsch mit regionalen Dialekten und Rumantsch. Jede Kombination aus Quell- und Zielsprache ist möglich, inklusive automatischer Quellsprach-Erkennung."
+        },
+        "apiPricing": {
+          "q": "Wie wird die API verrechnet?",
+          "a": "Zwei Self-Service-Tarife: <strong>Starter</strong> für CHF 29/Monat mit 500'000 inklusive Zeichen (danach CHF 10 pro Million) und <strong>Business</strong> für CHF 99/Monat mit 2'000'000 inklusive Zeichen (danach CHF 4 pro Million). Grössere Volumen werden als Enterprise verhandelt. Siehe <a href=\"/developers\" class=\"text-swiss-red hover:underline\">/developers</a>."
+        },
+        "apiDataResidency": {
+          "q": "Wo werden die API-Daten verarbeitet?",
+          "a": "Ausschliesslich in der Schweiz. Server, Hosting und das zugrundeliegende Übersetzungsmodell laufen auf Schweizer Infrastruktur nach Schweizer Recht. Kundentexte verlassen das Land nie und werden nie zum Training von Modellen verwendet."
+        },
+        "apiSla": {
+          "q": "Gibt es ein SLA?",
+          "a": "Auf den Self-Service-Tarifen Starter und Business zum Start nicht. SLAs sind in Enterprise-Verträgen pro Kunde verhandelbar. <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Kontaktieren Sie uns</a>, wenn Sie eines benötigen."
+        },
+        "apiInvoicing": {
+          "q": "Erhalte ich eine Rechnung in CHF mit Schweizer MwSt.?",
+          "a": "Ja. Die gesamte B2B-Abrechnung erfolgt in CHF mit Schweizer MwSt. über Stripe. Rechnungen sind im Entwickler-Dashboard über das Stripe-Kundenportal verfügbar."
+        },
+        "apiCancel": {
+          "q": "Wie kündige ich mein API-Abonnement?",
+          "a": "Klicken Sie im <a href=\"/developers/dashboard\" class=\"text-swiss-red hover:underline\">Entwickler-Dashboard</a> auf \"Abrechnung verwalten\", um das Stripe-Kundenportal zu öffnen, und kündigen Sie dort. Der Zugriff bleibt bis zum Ende der laufenden Periode bestehen."
         }
       }
     },
@@ -322,7 +346,9 @@
       "description": "Kein Problem! Ihre Zahlung wurde abgebrochen. Sie können es jederzeit erneut versuchen.",
       "retryCta": "Zurück zu den Preisen",
       "homeCta": "Zurück zu Helvetra"
-    }
+    },
+    "apiHint": "Sie bauen Software? Schauen Sie sich unsere",
+    "apiHintLink": "Entwickler-API an."
   },
   "api": {
     "title": "Übersetzungs-API für Schweizer Unternehmen",
@@ -412,7 +438,13 @@
       "contactCta": "Kontakt aufnehmen"
     },
     "docsCta": "Zum Schnellstart",
-    "referenceCta": "API-Referenz öffnen"
+    "referenceCta": "API-Referenz öffnen",
+    "factSummary": "Helvetra ist eine Schweizer Übersetzungs-API eines Schweizer Unternehmens auf Schweizer Servern nach Schweizer Recht. Sie unterstützt Deutsch, Französisch, Italienisch, Englisch, Schweizerdeutsch (mit regionalen Dialekten) und Rumantsch. Preise: CHF 29/Monat (Starter, 14 Tage gratis, 500'000 Zeichen inklusive) oder CHF 99/Monat (Business, 2'000'000 Zeichen inklusive), mit Verbrauchsabrechnung pro Zeichen. Kundentexte werden nie zum Modelltraining verwendet. Kontakt: gruezi{'@'}helvetra.ch.",
+    "seo": {
+      "title": "Schweizer Übersetzungs-API — Helvetra für Entwickler",
+      "description": "Übersetzungs-API mit Schweizer Datenhaltung, nativem Schweizerdeutsch und Rumantsch, CHF-Fakturierung. Self-Service ab CHF 29/Monat mit 14 Tagen Gratis-Test.",
+      "keywords": "Schweizer Übersetzungs-API, Übersetzungs-API Schweiz, Schweizerdeutsch API, Rumantsch API, DeepL Alternative, DSG, FADP, Swiss translation API"
+    }
   },
   "apiDocs": {
     "eyebrow": "Entwicklerdokumentation",
@@ -468,7 +500,9 @@
     "usage": {
       "title": "Nutzung abfragen",
       "body": "Rufen Sie /usage ab, um den Verbrauch im eigenen Dashboard anzuzeigen, eigene Alarme vor Overage zu senden oder Hintergrund-Workloads zu drosseln."
-    }
+    },
+    "seoTitle": "API-Schnellstart — Helvetra für Entwickler",
+    "seoDescription": "Authentifizieren, übersetzen, Fehler behandeln. Schritt-für-Schritt-Anleitung mit Beispielen in curl, Python und JavaScript für die Helvetra-Übersetzungs-API."
   },
   "apiDashboard": {
     "title": "Entwickler-Dashboard",
@@ -557,6 +591,11 @@
       "title": "Für die Schweiz gebaut",
       "text1": "Helvetra ist ein Liebesbrief an die Schweizer Technologie. Wir glauben, dass die Schweiz erstklassige digitale Werkzeuge bauen kann, die unsere nationalen Werte widerspiegeln.",
       "text2": "Fragen oder Feedback? Wir freuen uns von Ihnen zu hören: <a href=\"mailto:gruezi{'@'}helvetra.ch\" class=\"text-swiss-red hover:underline\">gruezi{'@'}helvetra.ch</a>"
+    },
+    "forDevelopers": {
+      "title": "Für Entwickler",
+      "body": "Helvetra bietet auch eine Self-Service-Übersetzungs-API mit derselben Schweizer Datenhaltung, Schweizerdeutsch- und Rumantsch-Unterstützung. Preise ab CHF 29 pro Monat mit 14 Tagen Gratis-Test.",
+      "cta": "Entwickler-API entdecken"
     }
   },
   "faqPage": {
@@ -568,7 +607,8 @@
       "privacy": "Datenschutz & Sicherheit",
       "languages": "Sprachen & Dialekte",
       "pricing": "Preise",
-      "technical": "Technisch"
+      "technical": "Technisch",
+      "api": "API für Entwickler"
     },
     "showAll": "Alle Fragen anzeigen"
   },

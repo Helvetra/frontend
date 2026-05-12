@@ -31,6 +31,22 @@ interface ListItem {
   image?: string
 }
 
+interface BreadcrumbItem {
+  name: string
+  url: string
+}
+
+interface ApiOffer {
+  /** Marketing name of the tier. */
+  name: string
+  /** Monthly base price in CHF. */
+  price: number
+  /** Plain-language description of what the tier includes. */
+  description: string
+  /** Optional landing URL for this offer. */
+  url?: string
+}
+
 export function useSchemaOrg() {
   /**
    * Generate Organization schema for site-wide identity.
@@ -158,6 +174,69 @@ export function useSchemaOrg() {
   }
 
   /**
+   * Generate BreadcrumbList schema for nested pages.
+   * Helps search engines render rich navigation breadcrumbs in results.
+   */
+  function getBreadcrumbSchema(items: BreadcrumbItem[]) {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': items.map((item, index) => ({
+        '@type': 'ListItem',
+        'position': index + 1,
+        'name': item.name,
+        'item': item.url,
+      })),
+    }
+  }
+
+  /**
+   * Generate Service + Offer schemas for the B2B translation API.
+   * Distinct from getProductSchema (which targets the consumer app):
+   * this advertises a developer-facing service with structured tier
+   * pricing so price comparison engines and LLMs can quote the offer.
+   */
+  function getApiServiceSchema(
+    name: string,
+    description: string,
+    offers: ApiOffer[],
+    url: string,
+  ) {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      'name': name,
+      'description': description,
+      'url': url,
+      'serviceType': 'Translation API',
+      'provider': {
+        '@type': 'Organization',
+        'name': 'Helvetra',
+        'url': 'https://helvetra.ch',
+      },
+      'areaServed': {
+        '@type': 'Country',
+        'name': 'Switzerland',
+      },
+      'offers': offers.map(offer => ({
+        '@type': 'Offer',
+        'name': offer.name,
+        'price': offer.price,
+        'priceCurrency': 'CHF',
+        'description': offer.description,
+        'priceSpecification': {
+          '@type': 'UnitPriceSpecification',
+          'price': offer.price,
+          'priceCurrency': 'CHF',
+          'billingDuration': 'P1M',
+          'unitText': 'MONTH',
+        },
+        ...(offer.url && { url: offer.url }),
+      })),
+    }
+  }
+
+  /**
    * Add JSON-LD script to page head.
    */
   function useJsonLd(schema: object | object[]) {
@@ -178,6 +257,8 @@ export function useSchemaOrg() {
     getProductSchema,
     getArticleSchema,
     getItemListSchema,
+    getBreadcrumbSchema,
+    getApiServiceSchema,
     useJsonLd,
   }
 }

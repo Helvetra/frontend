@@ -89,6 +89,7 @@ const categories = [
   { id: 'languages', label: 'Languages & Dialects' },
   { id: 'pricing', label: 'Pricing' },
   { id: 'technical', label: 'Technical' },
+  { id: 'api', label: 'API for developers' },
 ]
 
 const allFaqs = [
@@ -112,7 +113,14 @@ const allFaqs = [
   // Technical
   { key: 'apertus', category: 'technical' },
   { key: 'infomaniak', category: 'technical' },
-  { key: 'api', category: 'technical' },
+  // API for developers (B2B). The `api` key now lives here too.
+  { key: 'api', category: 'api' },
+  { key: 'apiLanguages', category: 'api' },
+  { key: 'apiPricing', category: 'api' },
+  { key: 'apiDataResidency', category: 'api' },
+  { key: 'apiSla', category: 'api' },
+  { key: 'apiInvoicing', category: 'api' },
+  { key: 'apiCancel', category: 'api' },
 ]
 
 const filteredFaqs = computed(() => {

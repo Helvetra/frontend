@@ -83,12 +83,30 @@
         </p>
         <p class="text-neutral-600" v-html="$t('about.vision.text2')" />
       </section>
+
+      <!-- For developers — discovery link to the B2B API -->
+      <section class="mb-8 bg-neutral-50 border border-neutral-200 rounded-xl p-5">
+        <h2 class="text-xl font-semibold text-neutral-900 mb-3">
+          {{ $t('about.forDevelopers.title') }}
+        </h2>
+        <p class="text-neutral-700 mb-3">
+          {{ $t('about.forDevelopers.body') }}
+        </p>
+        <NuxtLink
+          :to="localePath('/developers')"
+          class="inline-flex items-center gap-2 text-swiss-red hover:underline font-medium"
+        >
+          {{ $t('about.forDevelopers.cta') }}
+          <span aria-hidden="true">&rarr;</span>
+        </NuxtLink>
+      </section>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 useHead({
   title: () => `${t('about.title')} - Helvetra`,

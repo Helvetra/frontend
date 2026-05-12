@@ -198,6 +198,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
+const { getBreadcrumbSchema, useJsonLd } = useSchemaOrg()
 
 const codeLanguages = [
   { id: 'bash', label: 'curl' },
@@ -278,8 +279,25 @@ const errorCodes = [
   { code: 'INTERNAL_ERROR', status: '500' },
 ]
 
+useJsonLd(getBreadcrumbSchema([
+  { name: 'Helvetra', url: 'https://helvetra.ch/' },
+  { name: t('nav.api'), url: 'https://helvetra.ch/developers' },
+  { name: t('apiDocs.title'), url: 'https://helvetra.ch/developers/docs' },
+]))
+
 useHead({
-  title: () => `${t('apiDocs.title')} - Helvetra`,
-  meta: [{ name: 'description', content: () => t('apiDocs.subtitle') }],
+  title: () => `${t('apiDocs.seoTitle')} | Helvetra`,
+  meta: [
+    { name: 'description', content: () => t('apiDocs.seoDescription') },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:title', content: () => t('apiDocs.seoTitle') },
+    { property: 'og:description', content: () => t('apiDocs.seoDescription') },
+    { property: 'og:url', content: 'https://helvetra.ch/developers/docs' },
+    { property: 'og:image', content: 'https://helvetra.ch/og-image.png' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: () => t('apiDocs.seoTitle') },
+    { name: 'twitter:description', content: () => t('apiDocs.seoDescription') },
+    { name: 'twitter:image', content: 'https://helvetra.ch/og-image.png' },
+  ],
 })
 </script>

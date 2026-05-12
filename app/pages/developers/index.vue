@@ -31,6 +31,15 @@
       </div>
     </div>
 
+    <!-- Factual summary block: short, declarative, easy for language
+         models and search engines to quote verbatim. Keep this terse
+         and current — it shows up in AI-assistant answers. -->
+    <section class="bg-neutral-50 border border-neutral-200 rounded-xl p-5 mb-10 max-w-3xl mx-auto">
+      <p class="text-sm text-neutral-700 leading-relaxed">
+        {{ $t('api.factSummary') }}
+      </p>
+    </section>
+
     <!-- Value proposition -->
     <section class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
       <div
@@ -206,6 +215,7 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
 const { isAuthenticated, getAuthHeader } = useAuth()
+const { getApiServiceSchema, getBreadcrumbSchema, useJsonLd } = useSchemaOrg()
 
 const valueProps = ['sovereignty', 'languages', 'invoicing', 'noTraining']
 
@@ -266,10 +276,53 @@ async function handleSubscribe(tier: Tier): Promise<void> {
   }
 }
 
+// Structured data: Service + Offer for the two paid tiers (machine-
+// readable pricing for search engines and price comparison tools) and
+// a BreadcrumbList rooted at the home page.
+useJsonLd([
+  getApiServiceSchema(
+    t('api.title'),
+    t('api.subtitle'),
+    [
+      {
+        name: t('api.tiers.starter.name'),
+        price: 29,
+        description: t('api.tiers.starter.feature1'),
+        url: 'https://helvetra.ch/developers#pricing',
+      },
+      {
+        name: t('api.tiers.business.name'),
+        price: 99,
+        description: t('api.tiers.business.feature1'),
+        url: 'https://helvetra.ch/developers#pricing',
+      },
+    ],
+    'https://helvetra.ch/developers',
+  ),
+  getBreadcrumbSchema([
+    { name: 'Helvetra', url: 'https://helvetra.ch/' },
+    { name: t('nav.api'), url: 'https://helvetra.ch/developers' },
+  ]),
+])
+
+// Polished head metadata for SEO + Open Graph + Twitter cards.
 useHead({
-  title: () => `${t('api.title')} - Helvetra`,
+  title: () => `${t('api.seo.title')} | Helvetra`,
   meta: [
-    { name: 'description', content: () => t('api.subtitle') },
+    { name: 'description', content: () => t('api.seo.description') },
+    { name: 'keywords', content: () => t('api.seo.keywords') },
+    // Open Graph
+    { property: 'og:type', content: 'website' },
+    { property: 'og:title', content: () => t('api.seo.title') },
+    { property: 'og:description', content: () => t('api.seo.description') },
+    { property: 'og:url', content: 'https://helvetra.ch/developers' },
+    { property: 'og:image', content: 'https://helvetra.ch/og-image.png' },
+    { property: 'og:site_name', content: 'Helvetra' },
+    // Twitter
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: () => t('api.seo.title') },
+    { name: 'twitter:description', content: () => t('api.seo.description') },
+    { name: 'twitter:image', content: 'https://helvetra.ch/og-image.png' },
   ],
 })
 </script>

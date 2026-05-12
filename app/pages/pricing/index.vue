@@ -222,8 +222,18 @@
       </div>
     </div>
 
+    <!-- Developer API link for technical visitors who land here first -->
+    <div class="mt-10 pt-6 border-t border-neutral-200 text-center">
+      <p class="text-sm text-neutral-500">
+        {{ $t('pricing.apiHint') }}
+        <NuxtLink :to="localePath('/developers')" class="text-swiss-red hover:underline">
+          {{ $t('pricing.apiHintLink') }}
+        </NuxtLink>
+      </p>
+    </div>
+
     <!-- FAQ link -->
-    <div class="mt-8 text-center">
+    <div class="mt-6 text-center">
       <p class="text-sm text-neutral-500">
         {{ $t('pricing.questions') }}
         <a href="mailto:gruezi@helvetra.ch" class="text-swiss-red hover:underline">

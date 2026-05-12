@@ -83,8 +83,8 @@
           "a": "Infomaniak è un'azienda svizzera che offre infrastruttura IA open source alimentata al 100% da energie rinnovabili. I tuoi dati restano in Svizzera, nessuna query viene memorizzata, e l'energia utilizzata viene recuperata per il riscaldamento. Helvetra non è affiliata con Infomaniak. Li abbiamo scelti perché condividono i nostri valori. <a href=\"https://www.infomaniak.com/it/hosting/ai-services\" target=\"_blank\" rel=\"noopener\" class=\"text-swiss-red hover:underline\">Scopri di più</a>."
         },
         "api": {
-          "q": "C'è un'API per le aziende?",
-          "a": "Non ancora, ma è nella roadmap. <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Contattaci</a> se sei interessato."
+          "q": "Esiste un'API per le aziende?",
+          "a": "Sì. L'API pubblica Helvetra è online su <a href=\"/developers\" class=\"text-swiss-red hover:underline\">/developers</a>. Self-service da CHF 29/mese su Starter (prova gratuita di 14 giorni) o CHF 99/mese su Business, con fatturazione per carattere oltre la soglia."
         },
         "contribute": {
           "q": "Posso contribuire?",
@@ -109,6 +109,30 @@
         "mobile": {
           "q": "Helvetra funziona su mobile?",
           "a": "Sì. Helvetra è disponibile come <a href=\"https://apps.apple.com/ch/app/helvetra-swiss-translator/id6755720087\" class=\"text-swiss-red hover:underline\">app iOS nativa</a> e come app web che funziona su qualsiasi dispositivo con un browser."
+        },
+        "apiLanguages": {
+          "q": "Quali lingue supporta l'API?",
+          "a": "Tedesco, francese, italiano, inglese, svizzero-tedesco con dialetti regionali e romancio. Qualsiasi combinazione sorgente/destinazione funziona, compreso il rilevamento automatico della lingua di origine."
+        },
+        "apiPricing": {
+          "q": "Come è prezzata l'API?",
+          "a": "Due piani self-service: <strong>Starter</strong> a CHF 29/mese con 500.000 caratteri inclusi (poi CHF 10 per milione) e <strong>Business</strong> a CHF 99/mese con 2.000.000 caratteri inclusi (poi CHF 4 per milione). Volumi superiori sono negoziati come Enterprise. Vedi <a href=\"/developers\" class=\"text-swiss-red hover:underline\">/developers</a>."
+        },
+        "apiDataResidency": {
+          "q": "Dove vengono elaborati i dati dell'API?",
+          "a": "Esclusivamente in Svizzera. Server, hosting e il modello di traduzione sottostante funzionano su infrastruttura svizzera soggetta al diritto svizzero. I testi dei clienti non lasciano mai il Paese e non vengono mai usati per addestrare modelli."
+        },
+        "apiSla": {
+          "q": "C'è uno SLA?",
+          "a": "Non sui piani self-service Starter o Business al lancio. Gli SLA sono disponibili per contratti Enterprise, negoziati per cliente. <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Contattateci</a> se ne avete bisogno."
+        },
+        "apiInvoicing": {
+          "q": "Posso ricevere una fattura in CHF con IVA svizzera?",
+          "a": "Sì. Tutta la fatturazione B2B è in CHF con IVA svizzera, emessa da Stripe. Le fatture sono disponibili dalla dashboard sviluppatori tramite il portale clienti Stripe."
+        },
+        "apiCancel": {
+          "q": "Come cancello il mio abbonamento API?",
+          "a": "Dalla vostra <a href=\"/developers/dashboard\" class=\"text-swiss-red hover:underline\">dashboard sviluppatori</a>, cliccate \"Gestisci fatturazione\" per aprire il portale clienti Stripe e annullare. L'accesso resta attivo fino alla fine del periodo corrente."
         }
       }
     },
@@ -322,7 +346,9 @@
       "description": "Nessun problema! Il tuo pagamento è stato annullato. Puoi riprovare quando vuoi.",
       "retryCta": "Torna ai prezzi",
       "homeCta": "Torna a Helvetra"
-    }
+    },
+    "apiHint": "Sviluppate software? Date un'occhiata alla nostra",
+    "apiHintLink": "API per sviluppatori."
   },
   "api": {
     "title": "API di traduzione per aziende svizzere",
@@ -412,7 +438,13 @@
       "contactCta": "Contattaci"
     },
     "docsCta": "Leggi l'avvio rapido",
-    "referenceCta": "Apri reference API"
+    "referenceCta": "Apri reference API",
+    "factSummary": "Helvetra è un'API di traduzione svizzera gestita da un'azienda svizzera su server svizzeri secondo il diritto svizzero. Supporta tedesco, francese, italiano, inglese, svizzero-tedesco (con dialetti regionali) e romancio. Prezzi: CHF 29/mese (Starter, 14 giorni gratuiti, 500.000 caratteri inclusi) o CHF 99/mese (Business, 2.000.000 caratteri inclusi), con fatturazione per carattere oltre la soglia. I testi dei clienti non vengono mai usati per addestrare modelli. Contatto: gruezi{'@'}helvetra.ch.",
+    "seo": {
+      "title": "API di traduzione svizzera — Helvetra per sviluppatori",
+      "description": "API di traduzione con sovranità dei dati in Svizzera, supporto nativo per svizzero-tedesco e romancio, fatturazione in CHF. Self-service da CHF 29/mese con 14 giorni di prova gratuita.",
+      "keywords": "API di traduzione svizzera, API traduzione Svizzera, API svizzero-tedesco, API romancio, alternativa DeepL, LPD, FADP, Swiss translation API"
+    }
   },
   "apiDocs": {
     "eyebrow": "Documentazione per sviluppatori",
@@ -468,7 +500,9 @@
     "usage": {
       "title": "Verifica del consumo",
       "body": "Interrogate /usage per mostrare il consumo nella vostra dashboard, inviare avvisi prima dell'eccedenza o regolare i carichi non essenziali."
-    }
+    },
+    "seoTitle": "Avvio rapido API — Helvetra per sviluppatori",
+    "seoDescription": "Autenticarsi, tradurre, gestire gli errori. Guida passo passo con esempi in curl, Python e JavaScript per l'API di traduzione Helvetra."
   },
   "apiDashboard": {
     "title": "Dashboard sviluppatori",
@@ -557,6 +591,11 @@
       "title": "Costruito per la Svizzera",
       "text1": "Helvetra è una lettera d'amore alla tecnologia svizzera. Crediamo che la Svizzera possa costruire strumenti digitali di livello mondiale che riflettano i nostri valori nazionali.",
       "text2": "Domande o feedback? Ci farebbe piacere sentirti: <a href=\"mailto:gruezi{'@'}helvetra.ch\" class=\"text-swiss-red hover:underline\">gruezi{'@'}helvetra.ch</a>"
+    },
+    "forDevelopers": {
+      "title": "Per sviluppatori",
+      "body": "Helvetra offre anche un'API di traduzione self-service con la stessa sovranità dei dati svizzera, supporto per svizzero-tedesco e romancio. Prezzi a partire da CHF 29 al mese con 14 giorni di prova gratuita.",
+      "cta": "Esplora l'API per sviluppatori"
     }
   },
   "faqPage": {
@@ -568,7 +607,8 @@
       "privacy": "Privacy & Sicurezza",
       "languages": "Lingue & Dialetti",
       "pricing": "Prezzi",
-      "technical": "Tecnico"
+      "technical": "Tecnico",
+      "api": "API per sviluppatori"
     },
     "showAll": "Mostra tutte le domande"
   },
