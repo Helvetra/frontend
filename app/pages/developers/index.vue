@@ -31,15 +31,6 @@
       </div>
     </div>
 
-    <!-- Factual summary block: short, declarative, easy for language
-         models and search engines to quote verbatim. Keep this terse
-         and current — it shows up in AI-assistant answers. -->
-    <section class="bg-neutral-50 border border-neutral-200 rounded-xl p-5 mb-10 max-w-3xl mx-auto">
-      <p class="text-sm text-neutral-700 leading-relaxed">
-        {{ $t('api.factSummary') }}
-      </p>
-    </section>
-
     <!-- Value proposition -->
     <section class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
       <div
@@ -196,6 +187,16 @@
       <div class="bg-neutral-900 text-neutral-100 rounded-xl p-5 overflow-x-auto">
         <pre class="text-xs md:text-sm leading-relaxed"><code>{{ codeExample }}</code></pre>
       </div>
+    </section>
+
+    <!-- Factual summary: lightweight, declarative paragraph placed at
+         the end of the page. Visually de-emphasised — it intentionally
+         repeats the value cards and pricing in plain text so language
+         models and search engines have a clean block to quote. -->
+    <section class="max-w-3xl mx-auto mb-10">
+      <p class="text-xs text-neutral-500 leading-relaxed text-center">
+        {{ $t('api.factSummary') }}
+      </p>
     </section>
 
     <!-- Contact -->
