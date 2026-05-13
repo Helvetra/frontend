@@ -48,6 +48,11 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:8000/api',
+      // Matomo analytics — self-hosted, cookieless. Leave empty to disable
+      // tracking entirely (e.g. local dev). Overridable via env at deploy
+      // time so we never hard-code the tracker URL into the bundle.
+      matomoUrl: process.env.NUXT_PUBLIC_MATOMO_URL || '',
+      matomoSiteId: process.env.NUXT_PUBLIC_MATOMO_SITE_ID || '',
     },
   },
 

@@ -11,7 +11,7 @@
     <div class="prose prose-neutral max-w-none">
       <!-- Last updated -->
       <p class="text-sm text-neutral-500 mb-8">
-        {{ $t('privacy.lastUpdated') }}: 2025-11-30
+        {{ $t('privacy.lastUpdated') }}: 2026-05-13
       </p>
 
       <!-- Introduction -->
@@ -52,6 +52,22 @@
           <li>{{ $t('privacy.notCollected.item2') }}</li>
           <li>{{ $t('privacy.notCollected.item3') }}</li>
           <li>{{ $t('privacy.notCollected.item4') }}</li>
+        </ul>
+      </section>
+
+      <!-- Anonymous analytics -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-neutral-900 mb-3">
+          {{ $t('privacy.analytics.title') }}
+        </h2>
+        <p class="text-neutral-600 mb-4">
+          {{ $t('privacy.analytics.text') }}
+        </p>
+        <ul class="list-disc list-inside text-neutral-600 space-y-2">
+          <li>{{ $t('privacy.analytics.item1') }}</li>
+          <li>{{ $t('privacy.analytics.item2') }}</li>
+          <li>{{ $t('privacy.analytics.item3') }}</li>
+          <li>{{ $t('privacy.analytics.item4') }}</li>
         </ul>
       </section>
 

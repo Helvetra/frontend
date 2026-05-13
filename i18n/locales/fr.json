@@ -41,7 +41,7 @@
       },
       "privacy": {
         "title": "Confidentialité",
-        "text": "Vos traductions vous appartiennent. Pas d'entraînement sur vos données. Pas de tracking. Sans compromis."
+        "text": "Vos traductions vous appartiennent. Pas d'entraînement sur vos données. Pas de suivi cross-site. Pas de cookies. Des comptages de pages anonymes pour nous améliorer, rien de plus."
       }
     },
     "languages": {
@@ -64,7 +64,7 @@
         },
         "different": {
           "q": "Qu'est-ce qui différencie Helvetra de Google Translate ou DeepL ?",
-          "a": "Pas de tracking, et vos données restent en Suisse, pas aux États-Unis (Google) ni dans l'UE (DeepL). En plus, un focus unique sur la traduction, sans distractions. Voir nos comparaisons détaillées : <a href=\"/fr/compare/google-translate\" class=\"text-swiss-red hover:underline\">Google Translate</a>, <a href=\"/fr/compare/deepl\" class=\"text-swiss-red hover:underline\">DeepL</a>."
+          "a": "Pas de suivi cross-site ni publicitaire, pas de cookies, et vos données restent en Suisse, ni aux USA (Google) ni dans l'UE (DeepL). Et un focus sur la traduction, sans distractions. Comparaisons détaillées : <a href=\"/compare/google-translate\" class=\"text-swiss-red hover:underline\">Google Translate</a>, <a href=\"/compare/deepl\" class=\"text-swiss-red hover:underline\">DeepL</a>."
         },
         "swissGerman": {
           "q": "Helvetra comprend-elle vraiment le suisse allemand ?",
@@ -316,7 +316,7 @@
       "feature1": "Jusqu'à 1'000 caractères par traduction",
       "feature2": "Toutes les langues suisses supportées",
       "featureFormality": "Bascule tutoiement/vouvoiement",
-      "feature3": "Pas de tracking, confidentialité totale",
+      "feature3": "Pas de cookies, confidentialité totale",
       "cta": "Commencer gratuitement"
     },
     "pro": {
@@ -718,8 +718,8 @@
       "title": "Ce que nous ne collectons PAS",
       "text": "Nous respectons votre vie privée et ne collectons pas :",
       "item1": "Vos traductions (sauf si vous donnez un avis avec consentement)",
-      "item2": "Adresses IP ou informations sur l'appareil",
-      "item3": "Cookies de suivi ou publicitaires",
+      "item2": "Adresses IP non masquées ou empreintes d'appareil",
+      "item3": "Cookies pour le suivi, la publicité ou le profilage cross-site",
       "item4": "Données d'identification personnelle"
     },
     "storage": {
@@ -740,6 +740,14 @@
     "contact": {
       "title": "Nous contacter",
       "text": "Pour toute question sur la confidentialité ou demande de données, contactez-nous à"
+    },
+    "analytics": {
+      "title": "Analyses anonymes",
+      "text": "Nous comptons les visites de pages anonymes avec Matomo, un outil d'analyse respectueux de la vie privée que nous hébergeons nous-mêmes sur une infrastructure suisse. Aucune partie tierce ne reçoit vos données.",
+      "item1": "Les adresses IP sont anonymisées (les 2 derniers octets sont masqués) avant stockage",
+      "item2": "Aucun cookie n'est déposé sur votre navigateur",
+      "item3": "Aucun suivi cross-site, aucun suivi publicitaire, aucun fingerprinting",
+      "item4": "Les signaux Do-Not-Track et Global Privacy Control sont respectés"
     }
   },
   "support": {
@@ -832,7 +840,7 @@
         "yes": "Oui",
         "no": "Non",
         "dataPrivacy": "Confidentialité",
-        "helvetraPrivacy": "Aucun tracking, serveurs suisses",
+        "helvetraPrivacy": "Pas de cookies, serveurs suisses",
         "googlePrivacy": "Données collectées, serveurs US",
         "bestFor": "Idéal pour",
         "helvetraBestFor": "Utilisateurs suisses soucieux de leur vie privée",
