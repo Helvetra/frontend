@@ -645,7 +645,7 @@ function tryDetectLanguage() {
   // Need enough text for reliable detection
   if (sourceText.value.length < MIN_CHARS_FOR_DETECTION) return
 
-  const detected = detectLanguage(sourceText.value)
+  const detected = detectLanguage(sourceText.value, targetLanguage.value)
   if (detected && detected !== detectedLanguage.value) {
     detectedLanguage.value = detected
     // Update source language to detected language
