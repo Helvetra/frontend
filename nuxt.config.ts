@@ -21,7 +21,19 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    exclude: ['/impressum', '/*/impressum'],
+    exclude: [
+      '/impressum', '/*/impressum',
+      '/login', '/*/login',
+      '/register', '/*/register',
+      '/confirm', '/*/confirm',
+      '/verify-email', '/*/verify-email',
+      '/account', '/*/account',
+      '/developers/dashboard', '/*/developers/dashboard',
+      '/developers/success', '/*/developers/success',
+      '/developers/cancel', '/*/developers/cancel',
+      '/pricing/success', '/*/pricing/success',
+      '/pricing/cancel', '/*/pricing/cancel',
+    ],
   },
 
   // Inline critical CSS to prevent FOUC
