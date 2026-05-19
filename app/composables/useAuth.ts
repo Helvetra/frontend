@@ -88,6 +88,15 @@ export function useAuth() {
     return accessToken.value ? { Authorization: `Bearer ${accessToken.value}` } : {}
   }
 
+  // Read the non-HttpOnly csrf_token cookie set by the backend. Used to
+  // populate the X-CSRF-Token header on cookie-authenticated state-
+  // changing requests (double-submit pattern, helvetra/backend#110).
+  function getCsrfHeader(): Record<string, string> {
+    if (!import.meta.client) return {}
+    const match = document.cookie.match(/(?:^|; )csrf_token=([^;]+)/)
+    return match ? { 'X-CSRF-Token': decodeURIComponent(match[1]!) } : {}
+  }
+
   function setSession(userData: {
     id: string
     email: string
@@ -208,7 +217,11 @@ export function useAuth() {
     try {
       await $fetch<MessageResponse>(
         `${config.public.apiBase}/v1/auth/logout`,
-        { method: 'POST', ...fetchOpts }
+        {
+          method: 'POST',
+          headers: { ...getCsrfHeader() },
+          ...fetchOpts,
+        }
       )
     } catch {
       // Ignore — clear local state regardless.
@@ -225,7 +238,11 @@ export function useAuth() {
     try {
       const response = await $fetch<AuthResponse>(
         `${config.public.apiBase}/v1/auth/refresh`,
-        { method: 'POST', ...fetchOpts }
+        {
+          method: 'POST',
+          headers: { ...getCsrfHeader() },
+          ...fetchOpts,
+        }
       )
 
       if (response.success && response.data?.tokens) {
@@ -379,6 +396,7 @@ export function useAuth() {
     fetchUser,
     initialize,
     getAuthHeader,
+    getCsrfHeader,
     verifyEmail,
     resendVerification,
   }
