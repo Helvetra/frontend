@@ -16,9 +16,13 @@ FROM deps AS build
 COPY . .
 RUN npm run build
 
-# Production image
+# Production image. The `node` image already ships a non-root `node` user;
+# we just opt into it so a Nuxt SSR/Nitro code-exec bug doesn't land as
+# root (helvetra/infra#10).
 FROM base AS production
-COPY --from=build /app/.output /app/.output
+COPY --from=build --chown=node:node /app/.output /app/.output
+
+USER node
 
 EXPOSE 3000
 
