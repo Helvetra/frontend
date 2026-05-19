@@ -1,6 +1,15 @@
 /**
  * Composable for authentication and user state management.
- * Handles login, registration, token refresh, and user profile.
+ *
+ * Refresh tokens live in an HttpOnly+Secure+SameSite=Strict cookie scoped to
+ * /api/v1/auth (set by the backend when we send `use_cookie: true`). The
+ * short-lived access token lives in memory only via useState — never in
+ * localStorage — so an XSS payload cannot exfiltrate either token. On page
+ * load we silently call /refresh: a valid cookie restores the session, no
+ * cookie or expired cookie leaves the user logged out.
+ *
+ * See helvetra/frontend#96 + helvetra/backend#110 for the migration off the
+ * old localStorage-based flow.
  */
 
 interface User {
@@ -8,12 +17,6 @@ interface User {
   email: string
   emailVerified: boolean
   tier: string
-}
-
-interface Tokens {
-  accessToken: string
-  refreshToken: string
-  expiresIn: number
 }
 
 interface AuthResponse {
@@ -63,62 +66,48 @@ interface MessageResponse {
   }
 }
 
-const TOKEN_STORAGE_KEY = 'helvetra_tokens'
-
-/**
- * Get stored tokens from localStorage.
- */
-function getStoredTokens(): Tokens | null {
-  if (!import.meta.client) return null
-  const stored = localStorage.getItem(TOKEN_STORAGE_KEY)
-  if (!stored) return null
-  try {
-    return JSON.parse(stored)
-  } catch {
-    return null
-  }
-}
-
-/**
- * Store tokens in localStorage.
- */
-function storeTokens(tokens: Tokens): void {
-  if (import.meta.client) {
-    localStorage.setItem(TOKEN_STORAGE_KEY, JSON.stringify(tokens))
-  }
-}
-
-/**
- * Clear stored tokens.
- */
-function clearTokens(): void {
-  if (import.meta.client) {
-    localStorage.removeItem(TOKEN_STORAGE_KEY)
-  }
-}
-
 export function useAuth() {
   const config = useRuntimeConfig()
 
-  // Global state using useState for cross-component reactivity
+  // Global state. accessToken lives in memory only (no persistence) — page
+  // reload clears it and we recover via the refresh cookie.
   const user = useState<User | null>('auth-user', () => null)
+  const accessToken = useState<string | null>('auth-access-token', () => null)
   const isLoading = ref(false)
   const error = ref<string | null>(null)
 
   const isAuthenticated = computed(() => !!user.value)
 
-  /**
-   * Get authorization header for API requests.
-   */
+  // Every authed request to /api needs credentials: 'include' so the
+  // refresh cookie travels along on /refresh + /logout, and so the
+  // browser stores the Set-Cookie on the response. Same-origin
+  // (helvetra.ch → /api → backend) so no CORS gymnastics needed.
+  const fetchOpts = { credentials: 'include' as const }
+
   function getAuthHeader(): Record<string, string> {
-    const tokens = getStoredTokens()
-    if (!tokens?.accessToken) return {}
-    return { Authorization: `Bearer ${tokens.accessToken}` }
+    return accessToken.value ? { Authorization: `Bearer ${accessToken.value}` } : {}
   }
 
-  /**
-   * Register a new user account.
-   */
+  function setSession(userData: {
+    id: string
+    email: string
+    email_verified: boolean
+    tier: string
+  }, token: string): void {
+    user.value = {
+      id: userData.id,
+      email: userData.email,
+      emailVerified: userData.email_verified,
+      tier: userData.tier,
+    }
+    accessToken.value = token
+  }
+
+  function clearSession(): void {
+    user.value = null
+    accessToken.value = null
+  }
+
   async function register(
     email: string,
     password: string,
@@ -132,26 +121,13 @@ export function useAuth() {
         `${config.public.apiBase}/v1/auth/register`,
         {
           method: 'POST',
-          body: { email, password, locale },
+          body: { email, password, locale, use_cookie: true },
+          ...fetchOpts,
         }
       )
 
       if (response.success && response.data) {
-        const { user: userData, tokens } = response.data
-
-        storeTokens({
-          accessToken: tokens.access_token,
-          refreshToken: tokens.refresh_token,
-          expiresIn: tokens.expires_in,
-        })
-
-        user.value = {
-          id: userData.id,
-          email: userData.email,
-          emailVerified: userData.email_verified,
-          tier: userData.tier,
-        }
-
+        setSession(response.data.user, response.data.tokens.access_token)
         return true
       }
 
@@ -183,9 +159,6 @@ export function useAuth() {
     }
   }
 
-  /**
-   * Login with email and password.
-   */
   async function login(email: string, password: string): Promise<boolean> {
     isLoading.value = true
     error.value = null
@@ -195,26 +168,13 @@ export function useAuth() {
         `${config.public.apiBase}/v1/auth/login`,
         {
           method: 'POST',
-          body: { email, password },
+          body: { email, password, use_cookie: true },
+          ...fetchOpts,
         }
       )
 
       if (response.success && response.data) {
-        const { user: userData, tokens } = response.data
-
-        storeTokens({
-          accessToken: tokens.access_token,
-          refreshToken: tokens.refresh_token,
-          expiresIn: tokens.expires_in,
-        })
-
-        user.value = {
-          id: userData.id,
-          email: userData.email,
-          emailVerified: userData.email_verified,
-          tier: userData.tier,
-        }
-
+        setSession(response.data.user, response.data.tokens.access_token)
         return true
       }
 
@@ -244,72 +204,45 @@ export function useAuth() {
     }
   }
 
-  /**
-   * Logout and clear session.
-   */
   async function logout(): Promise<void> {
-    const tokens = getStoredTokens()
-
-    if (tokens?.refreshToken) {
-      try {
-        await $fetch<MessageResponse>(
-          `${config.public.apiBase}/v1/auth/logout`,
-          {
-            method: 'POST',
-            body: { refresh_token: tokens.refreshToken },
-          }
-        )
-      } catch {
-        // Ignore logout errors - clear local state anyway
-      }
+    try {
+      await $fetch<MessageResponse>(
+        `${config.public.apiBase}/v1/auth/logout`,
+        { method: 'POST', ...fetchOpts }
+      )
+    } catch {
+      // Ignore — clear local state regardless.
     }
 
-    clearTokens()
-    user.value = null
+    clearSession()
   }
 
   /**
-   * Refresh access token using refresh token.
+   * Exchange the refresh-token cookie for a new access token (rotates the
+   * cookie too). No request body — server reads the cookie via credentials.
    */
   async function refreshToken(): Promise<boolean> {
-    const tokens = getStoredTokens()
-    if (!tokens?.refreshToken) return false
-
     try {
       const response = await $fetch<AuthResponse>(
         `${config.public.apiBase}/v1/auth/refresh`,
-        {
-          method: 'POST',
-          body: { refresh_token: tokens.refreshToken },
-        }
+        { method: 'POST', ...fetchOpts }
       )
 
       if (response.success && response.data?.tokens) {
-        storeTokens({
-          accessToken: response.data.tokens.access_token,
-          refreshToken: response.data.tokens.refresh_token,
-          expiresIn: response.data.tokens.expires_in,
-        })
+        accessToken.value = response.data.tokens.access_token
         return true
       }
 
-      // Refresh failed - clear session
-      clearTokens()
-      user.value = null
+      clearSession()
       return false
     } catch {
-      clearTokens()
-      user.value = null
+      clearSession()
       return false
     }
   }
 
-  /**
-   * Fetch current user profile.
-   */
   async function fetchUser(): Promise<boolean> {
-    const tokens = getStoredTokens()
-    if (!tokens?.accessToken) return false
+    if (!accessToken.value) return false
 
     try {
       const response = await $fetch<UserResponse>(
@@ -317,6 +250,7 @@ export function useAuth() {
         {
           method: 'GET',
           headers: getAuthHeader(),
+          ...fetchOpts,
         }
       )
 
@@ -336,7 +270,6 @@ export function useAuth() {
       const fetchError = e as { statusCode?: number }
 
       if (fetchError.statusCode === 401) {
-        // Token expired - try refresh
         const refreshed = await refreshToken()
         if (refreshed) {
           return fetchUser()
@@ -348,20 +281,18 @@ export function useAuth() {
   }
 
   /**
-   * Initialize auth state from stored tokens.
+   * On client mount, attempt to restore the session via the refresh-token
+   * cookie. If it exists and is valid the user stays logged in across reloads.
    */
   async function initialize(): Promise<void> {
     if (!import.meta.client) return
 
-    const tokens = getStoredTokens()
-    if (tokens?.accessToken) {
+    const refreshed = await refreshToken()
+    if (refreshed) {
       await fetchUser()
     }
   }
 
-  /**
-   * Verify email with token from verification link.
-   */
   async function verifyEmail(token: string): Promise<boolean> {
     isLoading.value = true
     error.value = null
@@ -376,7 +307,6 @@ export function useAuth() {
       )
 
       if (response.success) {
-        // Update local user state
         if (user.value) {
           user.value.emailVerified = true
         }
@@ -400,9 +330,6 @@ export function useAuth() {
     }
   }
 
-  /**
-   * Resend verification email.
-   */
   async function resendVerification(
     email: string,
     locale?: string
@@ -421,7 +348,11 @@ export function useAuth() {
 
       return { success: response.success }
     } catch (e) {
-      const fetchError = e as { statusCode?: number; data?: { detail?: string }; response?: { headers?: Headers } }
+      const fetchError = e as {
+        statusCode?: number
+        data?: { detail?: string }
+        response?: { headers?: Headers }
+      }
 
       if (fetchError.statusCode === 429) {
         const retryAfter = parseInt(fetchError.data?.detail?.match(/(\d+)/)?.[1] || '60')
