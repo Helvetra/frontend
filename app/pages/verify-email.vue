@@ -80,6 +80,13 @@ onMounted(async () => {
     return
   }
 
+  // Scrub the token from the URL bar before any third-party resource
+  // on this page can leak it via Referer or appear in browser history.
+  // The exchange below uses the original token captured into a local var.
+  if (typeof window !== 'undefined') {
+    window.history.replaceState({}, '', window.location.pathname)
+  }
+
   const success = await verifyEmail(token)
   verificationSuccess.value = success
   isVerifying.value = false
