@@ -51,4 +51,34 @@
 .article-content :deep(.prose p:last-child) {
   @apply mb-0;
 }
+
+/* Make inline links visibly clickable — Tailwind's preflight reset
+   strips link styling by default, and the codebase doesn't ship the
+   Typography plugin, so .prose alone doesn't style anchors. */
+.article-content :deep(.prose a) {
+  @apply text-swiss-red underline underline-offset-2 decoration-2;
+}
+
+.article-content :deep(.prose a:hover) {
+  @apply text-swiss-red-dark underline-offset-4;
+}
+
+/* List items inside prose blocks should also wrap and space sensibly. */
+.article-content :deep(.prose ul) {
+  @apply list-disc pl-6 space-y-2 mb-4;
+}
+
+.article-content :deep(.prose blockquote) {
+  @apply my-6;
+}
+
+.article-content :deep(.prose figcaption a),
+.article-content :deep(figcaption a) {
+  @apply text-swiss-red underline underline-offset-2 decoration-2;
+}
+
+.article-content :deep(.prose figcaption a:hover),
+.article-content :deep(figcaption a:hover) {
+  @apply text-swiss-red-dark underline-offset-4;
+}
 </style>
