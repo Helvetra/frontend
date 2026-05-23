@@ -23,6 +23,7 @@
     <MarketingLanguagesSection />
     <MarketingAppSection />
     <MarketingFaqSection />
+    <MarketingNewsSection />
     <MarketingNewsletterSection />
   </div>
 </template>

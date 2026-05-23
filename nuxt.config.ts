@@ -33,6 +33,12 @@ export default defineNuxtConfig({
       '/developers/cancel', '/*/developers/cancel',
       '/pricing/success', '/*/pricing/success',
       '/pricing/cancel', '/*/pricing/cancel',
+      // News articles are EN-only until translated. Excluding the
+      // localised paths from the sitemap stops Google from indexing
+      // four duplicate copies under different language URLs. The
+      // article pages themselves emit canonical+noindex for non-EN
+      // visitors to make sure already-discovered URLs get deduped.
+      '/de/news/**', '/fr/news/**', '/it/news/**',
     ],
   },
 

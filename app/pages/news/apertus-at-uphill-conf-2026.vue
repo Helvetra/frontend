@@ -166,7 +166,17 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath()
+const { locale } = useI18n()
 const { getArticleSchema, useJsonLd } = useSchemaOrg()
+
+// EN is the only language this article actually exists in. The localised
+// URLs (/de, /fr, /it) serve the same EN content under a localised wrapper
+// today, which is a duplicate-content footgun for SEO. We declare the EN
+// URL as canonical from every variant, and noindex the non-EN variants so
+// Google doesn't index 4 copies of the same text under 4 different URLs.
+// When real translations land, remove the noindex and the canonical will
+// take care of itself.
+const CANONICAL_URL = 'https://helvetra.ch/news/apertus-at-uphill-conf-2026'
 
 useJsonLd(getArticleSchema({
   headline: 'Apertus at Uphill Conf 2026: what it means for Helvetra',
@@ -175,21 +185,36 @@ useJsonLd(getArticleSchema({
   dateModified: '2026-05-22',
 }))
 
-useHead({
-  title: 'Apertus at Uphill Conf 2026: what it means for Helvetra',
-  meta: [
-    {
-      name: 'description',
-      content: 'Imanol Schlag (ETH AI Center, Apertus co-lead) presented Apertus at Uphill Conf 2026. Why fully-open beats open-weight, the EU AI Act compliance gap, and how a PhD student took Apertus to ~40% Swiss German in a single day of post-training, directly relevant to Helvetra users.',
-    },
-    { property: 'og:type', content: 'article' },
-    { property: 'og:title', content: 'Apertus at Uphill Conf 2026: what it means for Helvetra' },
-    {
-      property: 'og:description',
-      content: 'Notes from Imanol Schlag\'s keynote on the fully-open Swiss AI model behind Helvetra. The Swiss German moment that signals every future Apertus release will upgrade Helvetra automatically.',
-    },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Apertus at Uphill Conf 2026: what it means for Helvetra' },
-  ],
+useHead(() => {
+  const isNonEnglish = locale.value !== 'en'
+  return {
+    title: 'Apertus at Uphill Conf 2026: what it means for Helvetra',
+    link: [
+      { rel: 'canonical', href: CANONICAL_URL },
+    ],
+    meta: [
+      {
+        name: 'description',
+        content: 'Imanol Schlag (ETH AI Center, Apertus co-lead) presented Apertus at Uphill Conf 2026. Why fully-open beats open-weight, the EU AI Act compliance gap, and how a PhD student took Apertus to ~40% Swiss German in a single day of post-training, directly relevant to Helvetra users.',
+      },
+      { property: 'og:type', content: 'article' },
+      { property: 'og:title', content: 'Apertus at Uphill Conf 2026: what it means for Helvetra' },
+      { property: 'og:url', content: CANONICAL_URL },
+      { property: 'article:published_time', content: '2026-05-22' },
+      { property: 'article:section', content: 'News' },
+      { property: 'article:tag', content: 'Apertus' },
+      { property: 'article:tag', content: 'Swiss AI' },
+      { property: 'article:tag', content: 'Swiss German' },
+      {
+        property: 'og:description',
+        content: 'Notes from Imanol Schlag\'s keynote on the fully-open Swiss AI model behind Helvetra. The Swiss German moment that signals every future Apertus release will upgrade Helvetra automatically.',
+      },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'Apertus at Uphill Conf 2026: what it means for Helvetra' },
+      ...(isNonEnglish
+        ? [{ name: 'robots', content: 'noindex,follow' }]
+        : []),
+    ],
+  }
 })
 </script>

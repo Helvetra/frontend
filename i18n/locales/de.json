@@ -166,7 +166,8 @@
     "privacy": "Datenschutz",
     "login": "Anmelden",
     "register": "Registrieren",
-    "account": "Konto"
+    "account": "Konto",
+    "news": "Aktuelles"
   },
   "auth": {
     "email": "E-Mail",
