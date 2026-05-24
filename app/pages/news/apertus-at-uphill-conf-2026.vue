@@ -432,6 +432,13 @@ useJsonLd(getArticleSchema({
   dateModified: '2026-05-22',
 }))
 
+// Per-article 1200×630 Open Graph image. Manually composed from one of
+// the Uphill slide photos in public/img/news/uphill-2026/og.jpg.
+// Long-term solution (auto-generated per-page OG images via the
+// nuxt-og-image module) is tracked separately — the module's current
+// versions don't build cleanly against Nuxt 4.2 + Tailwind 3.
+const ogImageUrl = 'https://helvetra.ch/img/news/uphill-2026/og.jpg'
+
 useHead(() => ({
   title: t.value.title,
   link: [{ rel: 'canonical', href: canonical.value }],
@@ -440,6 +447,10 @@ useHead(() => ({
     { property: 'og:type', content: 'article' },
     { property: 'og:title', content: t.value.title },
     { property: 'og:url', content: canonical.value },
+    { property: 'og:image', content: ogImageUrl },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:image:alt', content: t.value.title },
     { property: 'article:published_time', content: '2026-05-22' },
     { property: 'article:section', content: 'News' },
     { property: 'article:tag', content: 'Apertus' },
@@ -448,6 +459,7 @@ useHead(() => ({
     { property: 'og:description', content: t.value.meta.ogDescription },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: t.value.title },
+    { name: 'twitter:image', content: ogImageUrl },
   ],
 }))
 </script>
