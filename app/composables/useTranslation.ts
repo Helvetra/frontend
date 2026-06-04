@@ -91,13 +91,20 @@ export function useTranslation() {
       if (fetchError.data && 'error' in fetchError.data && fetchError.data.error) {
         error.value = fetchError.data.error.message
       } else if (fetchError.statusCode === 422) {
-        // Pydantic validation error
-        const detail = (fetchError.data as { detail?: Array<{ type: string; msg: string }> })?.detail
-        if (detail?.[0]?.type === 'string_too_long') {
+        const detail = (fetchError.data as {
+          detail?: { code?: string; message?: string } | Array<{ type: string; msg: string }>
+        })?.detail
+        if (Array.isArray(detail) && detail[0]?.type === 'string_too_long') {
+          // Pydantic input validation
           error.value = 'TEXT_TOO_LONG'
+        } else if (detail && !Array.isArray(detail) && detail.code) {
+          // Structured backend rejection: post-translation validator
+          // (NAME_SUBSTITUTION, PLACEHOLDER_LEAK, SUSPICIOUS_OUTPUT, ...).
+          // Surface a real message rather than the previous misleading
+          // "Connection error". See helvetra/backend#115, #116.
+          error.value = 'TRANSLATION_REJECTED'
+          console.warn('Translation rejected by backend:', detail.code, detail.message)
         } else {
-          // Silent fail: validation errors not surfaced as TEXT_TOO_LONG indicate
-          // a transient client-server mismatch the user cannot act on. Log and move on.
           console.warn('Translation validation rejected:', detail)
         }
       } else if (fetchError.statusCode === 429) {
