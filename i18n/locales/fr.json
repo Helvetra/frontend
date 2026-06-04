@@ -562,7 +562,8 @@
     "TEXT_TOO_LONG": "Texte trop long. Cette première version supporte jusqu'à 1'000 caractères. Besoin de plus ? Écrivez-nous à gruezi{'@'}helvetra.ch",
     "VALIDATION_ERROR": "Requête invalide. Veuillez réessayer.",
     "RATE_LIMITED": "Vous traduisez vite ! Cette première version a des limites d'utilisation. Accès illimité souhaité ? Écrivez-nous à gruezi{'@'}helvetra.ch",
-    "CONNECTION_ERROR": "Erreur de connexion. Veuillez réessayer."
+    "CONNECTION_ERROR": "Erreur de connexion. Veuillez réessayer.",
+    "TRANSLATION_REJECTED": "Nous n'avons pas pu produire une traduction propre. Veuillez reformuler ou réessayer."
   },
   "footer": {
     "madeIn": "Fabriqué en Suisse",

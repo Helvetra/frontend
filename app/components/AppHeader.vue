@@ -44,33 +44,42 @@
             </NuxtLink>
           </nav>
 
-          <!-- Auth controls -->
+          <!-- Auth controls. Wrapped in <ClientOnly> because the auth state
+               is restored client-side from the refresh cookie — SSR has no
+               way to know whether the visitor is logged in, so rendering
+               this server-side would cause a hydration mismatch when the
+               client swaps Login/Register for the Account link. -->
           <div class="flex items-center gap-2 pl-4 border-l border-neutral-200">
-            <template v-if="isAuthenticated && user">
-              <NuxtLink
-                :to="localePath('/account')"
-                class="flex items-center gap-2 px-3 py-1.5 text-sm text-neutral-700 hover:text-neutral-900 rounded-lg hover:bg-neutral-50 transition-colors"
-              >
-                <span class="w-6 h-6 bg-swiss-red text-white rounded-full flex items-center justify-center text-xs font-medium">
-                  {{ userInitial }}
-                </span>
-                <span>{{ $t('nav.account') }}</span>
-              </NuxtLink>
-            </template>
-            <template v-else>
-              <NuxtLink
-                :to="localePath('/login')"
-                class="px-3 py-1.5 text-sm text-neutral-700 hover:text-neutral-900 transition-colors"
-              >
-                {{ $t('nav.login') }}
-              </NuxtLink>
-              <NuxtLink
-                :to="localePath('/register')"
-                class="px-3 py-1.5 text-sm bg-swiss-red text-white rounded-lg hover:bg-red-700 transition-colors"
-              >
-                {{ $t('nav.register') }}
-              </NuxtLink>
-            </template>
+            <ClientOnly>
+              <template v-if="isAuthenticated && user">
+                <NuxtLink
+                  :to="localePath('/account')"
+                  class="flex items-center gap-2 px-3 py-1.5 text-sm text-neutral-700 hover:text-neutral-900 rounded-lg hover:bg-neutral-50 transition-colors"
+                >
+                  <span class="w-6 h-6 bg-swiss-red text-white rounded-full flex items-center justify-center text-xs font-medium">
+                    {{ userInitial }}
+                  </span>
+                  <span>{{ $t('nav.account') }}</span>
+                </NuxtLink>
+              </template>
+              <template v-else>
+                <NuxtLink
+                  :to="localePath('/login')"
+                  class="px-3 py-1.5 text-sm text-neutral-700 hover:text-neutral-900 transition-colors"
+                >
+                  {{ $t('nav.login') }}
+                </NuxtLink>
+                <NuxtLink
+                  :to="localePath('/register')"
+                  class="px-3 py-1.5 text-sm bg-swiss-red text-white rounded-lg hover:bg-red-700 transition-colors"
+                >
+                  {{ $t('nav.register') }}
+                </NuxtLink>
+              </template>
+              <template #fallback>
+                <div class="w-[140px] h-8" aria-hidden="true" />
+              </template>
+            </ClientOnly>
           </div>
         </div>
 
@@ -129,36 +138,38 @@
           </NuxtLink>
         </div>
 
-        <!-- Auth controls -->
+        <!-- Auth controls (same ClientOnly reasoning as the desktop variant above). -->
         <div class="flex flex-col gap-2 pt-3 border-t border-neutral-100">
-          <template v-if="isAuthenticated && user">
-            <NuxtLink
-              :to="localePath('/account')"
-              class="flex items-center gap-2 py-2 text-neutral-700 hover:text-neutral-900 transition-colors"
-              @click="mobileMenuOpen = false"
-            >
-              <span class="w-6 h-6 bg-swiss-red text-white rounded-full flex items-center justify-center text-xs font-medium">
-                {{ userInitial }}
-              </span>
-              <span>{{ $t('nav.account') }}</span>
-            </NuxtLink>
-          </template>
-          <template v-else>
-            <NuxtLink
-              :to="localePath('/login')"
-              class="py-2 text-neutral-700 hover:text-neutral-900 transition-colors"
-              @click="mobileMenuOpen = false"
-            >
-              {{ $t('nav.login') }}
-            </NuxtLink>
-            <NuxtLink
-              :to="localePath('/register')"
-              class="py-2 px-4 text-center bg-swiss-red text-white rounded-lg hover:bg-red-700 transition-colors"
-              @click="mobileMenuOpen = false"
-            >
-              {{ $t('nav.register') }}
-            </NuxtLink>
-          </template>
+          <ClientOnly>
+            <template v-if="isAuthenticated && user">
+              <NuxtLink
+                :to="localePath('/account')"
+                class="flex items-center gap-2 py-2 text-neutral-700 hover:text-neutral-900 transition-colors"
+                @click="mobileMenuOpen = false"
+              >
+                <span class="w-6 h-6 bg-swiss-red text-white rounded-full flex items-center justify-center text-xs font-medium">
+                  {{ userInitial }}
+                </span>
+                <span>{{ $t('nav.account') }}</span>
+              </NuxtLink>
+            </template>
+            <template v-else>
+              <NuxtLink
+                :to="localePath('/login')"
+                class="py-2 text-neutral-700 hover:text-neutral-900 transition-colors"
+                @click="mobileMenuOpen = false"
+              >
+                {{ $t('nav.login') }}
+              </NuxtLink>
+              <NuxtLink
+                :to="localePath('/register')"
+                class="py-2 px-4 text-center bg-swiss-red text-white rounded-lg hover:bg-red-700 transition-colors"
+                @click="mobileMenuOpen = false"
+              >
+                {{ $t('nav.register') }}
+              </NuxtLink>
+            </template>
+          </ClientOnly>
         </div>
       </div>
     </div>

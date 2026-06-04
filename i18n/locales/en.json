@@ -562,7 +562,8 @@
     "TEXT_TOO_LONG": "Text too long. This first version supports up to 1'000 characters. Need more? Let us know at gruezi{'@'}helvetra.ch",
     "VALIDATION_ERROR": "Invalid request. Please try again.",
     "RATE_LIMITED": "You're translating fast! This first version has usage limits. Want unlimited access? Let us know at gruezi{'@'}helvetra.ch",
-    "CONNECTION_ERROR": "Connection error. Please try again."
+    "CONNECTION_ERROR": "Connection error. Please try again.",
+    "TRANSLATION_REJECTED": "We couldn't produce a clean translation. Please rephrase or try again."
   },
   "footer": {
     "madeIn": "Made in Switzerland",

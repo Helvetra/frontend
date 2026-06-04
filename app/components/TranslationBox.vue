@@ -290,6 +290,20 @@
           <span>{{ $t('errors.CONNECTION_ERROR') }}</span>
         </div>
 
+        <!-- Backend rejected the translation (post-translation validator).
+             Distinct from a network error — the request succeeded, the
+             output was unsafe to ship (e.g. name substitution, placeholder
+             leak). See helvetra/backend#115, #116. -->
+        <div
+          v-if="error === 'TRANSLATION_REJECTED' && !isLoading"
+          class="absolute bottom-2 left-3 flex items-center gap-1.5 text-xs text-neutral-500"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+          </svg>
+          <span>{{ $t('errors.TRANSLATION_REJECTED') }}</span>
+        </div>
+
         <!-- Bottom actions: feedback and copy -->
         <div
           v-if="targetText && !isLoading && !errorReplacesOutput"
@@ -625,15 +639,24 @@ function debouncedTranslate() {
   }
   isPendingTranslation.value = false
 
-  // Don't show loading for empty text
+  // Don't show loading for empty text. Also reset any sticky error so
+  // the user can start a fresh attempt after clearing the box.
   if (!sourceText.value.trim()) {
     targetText.value = ''
+    error.value = null
     return
   }
 
   // Don't fire requests we know will fail server-side validation.
   // The character counter already turns red to signal the limit.
   if (sourceText.value.length > charLimit.value) {
+    return
+  }
+
+  // After a quota refusal the server will keep saying no. Stop hammering
+  // /translate on every keystroke; the limit card stays visible until the
+  // user clears the box or signs in. See helvetra/frontend#104.
+  if (error.value === 'WEEKLY_LIMIT_EXCEEDED' || error.value === 'RATE_LIMITED') {
     return
   }
 
