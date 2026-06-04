@@ -293,7 +293,8 @@
     "wantMorePro": "Längere Texte übersetzen?",
     "upgradeCta": "Zu Helvetra+ wechseln",
     "weeklyLimitReached": "Sie haben das Wochenlimit für anonyme Nutzer erreicht.",
-    "usageLimitReached": "Sie haben Ihr Nutzungslimit für diesen Zeitraum erreicht."
+    "usageLimitReached": "Sie haben Ihr Nutzungslimit für diesen Zeitraum erreicht.",
+    "paidPlanLimitNote": "Ihr Limit wird zu Beginn der nächsten Abrechnungsperiode zurückgesetzt."
   },
   "pricing": {
     "title": "Preise",

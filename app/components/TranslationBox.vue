@@ -212,7 +212,9 @@
             </div>
           </div>
 
-          <!-- Upgrade invite for usage limit (authenticated free users) -->
+          <!-- Usage-limit card for authenticated users. Free users get an
+               upgrade CTA; Helvetra+ and B2B users get an honest explanation
+               (no "Upgrade to Helvetra+" — they're already on a paid plan). -->
           <div
             v-else-if="(error === 'WEEKLY_LIMIT_EXCEEDED' || error === 'RATE_LIMITED') && isAuthenticated && !isLoading"
             class="h-full flex items-center justify-center"
@@ -220,12 +222,16 @@
             <div class="text-center px-4">
               <p class="text-sm text-neutral-700 mb-3">{{ $t('limits.usageLimitReached') }}</p>
               <NuxtLink
+                v-if="!isPaidSubscriber"
                 :to="localePath('/pricing')"
                 class="inline-flex items-center gap-2 px-4 py-2 bg-swiss-red text-white text-sm font-medium rounded-lg hover:bg-red-700 transition-colors"
               >
                 {{ $t('limits.upgradeCta') }}
                 <span aria-hidden="true">&rarr;</span>
               </NuxtLink>
+              <p v-else class="text-xs text-neutral-500">
+                {{ $t('limits.paidPlanLimitNote') }}
+              </p>
             </div>
           </div>
 
@@ -356,7 +362,15 @@
 <script setup lang="ts">
 const { translate, isLoading, error } = useTranslation()
 const { submitFeedback, hasStoredConsent } = useFeedback()
-const { isAuthenticated, getAuthHeader } = useAuth()
+const { isAuthenticated, user, getAuthHeader } = useAuth()
+
+// Helvetra+ subscribers shouldn't see "Upgrade to Helvetra+" on the
+// quota-exceeded card — they're already on the highest consumer plan.
+// Same for B2B subscribers using the consumer translator. Only `free`
+// users get the upgrade CTA.
+const isPaidSubscriber = computed(
+  () => isAuthenticated.value && user.value?.tier && user.value.tier !== 'free',
+)
 const { detectLanguage } = useLanguageDetection()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()

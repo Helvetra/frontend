@@ -293,7 +293,8 @@
     "wantMorePro": "Need to translate longer texts?",
     "upgradeCta": "Upgrade to Helvetra+",
     "weeklyLimitReached": "You've reached the weekly limit for anonymous users.",
-    "usageLimitReached": "You've reached your usage limit for this period."
+    "usageLimitReached": "You've reached your usage limit for this period.",
+    "paidPlanLimitNote": "Your limit resets at the start of your next billing period."
   },
   "pricing": {
     "title": "Pricing",
