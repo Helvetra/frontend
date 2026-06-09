@@ -319,16 +319,19 @@ const canonical = computed(() => {
     : `https://helvetra.ch/${locale.value}${path}`
 })
 
+// Per-article 1200×630 Open Graph image, manually composed by
+// scripts/make-og-image.sh from the hero photo of the panel. Used for
+// both the social-card meta tags and the Article JSON-LD `image` field
+// (so AI/GEO crawlers see the per-article visual, not the site default).
+const ogImageUrl = 'https://helvetra.ch/img/news/swiss-startup-days-2026/og.jpg'
+
 useJsonLd(getArticleSchema({
   headline: t.value.title,
   description: t.value.subtitle,
   datePublished: '2026-06-07',
   dateModified: '2026-06-07',
+  image: ogImageUrl,
 }))
-
-// Per-article 1200×630 Open Graph image, manually composed by
-// scripts/make-og-image.sh from the hero photo of the panel.
-const ogImageUrl = 'https://helvetra.ch/img/news/swiss-startup-days-2026/og.jpg'
 
 useHead(() => ({
   title: t.value.title,

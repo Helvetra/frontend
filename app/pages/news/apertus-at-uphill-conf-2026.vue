@@ -425,19 +425,20 @@ const canonical = computed(() => {
     : `https://helvetra.ch/${locale.value}${path}`
 })
 
+// Per-article 1200×630 Open Graph image. Manually composed from one of
+// the Uphill slide photos in public/img/news/uphill-2026/og.jpg.
+// Long-term solution (auto-generated per-page OG images via the
+// nuxt-og-image module) is tracked separately. The module's current
+// versions don't build cleanly against Nuxt 4.2 + Tailwind 3.
+const ogImageUrl = 'https://helvetra.ch/img/news/uphill-2026/og.jpg'
+
 useJsonLd(getArticleSchema({
   headline: t.value.title,
   description: t.value.subtitle,
   datePublished: '2026-05-22',
   dateModified: '2026-05-22',
+  image: ogImageUrl,
 }))
-
-// Per-article 1200×630 Open Graph image. Manually composed from one of
-// the Uphill slide photos in public/img/news/uphill-2026/og.jpg.
-// Long-term solution (auto-generated per-page OG images via the
-// nuxt-og-image module) is tracked separately — the module's current
-// versions don't build cleanly against Nuxt 4.2 + Tailwind 3.
-const ogImageUrl = 'https://helvetra.ch/img/news/uphill-2026/og.jpg'
 
 useHead(() => ({
   title: t.value.title,
