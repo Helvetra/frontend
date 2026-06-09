@@ -50,44 +50,44 @@ const content = {
     heading: 'From the team',
     allNews: 'All news →',
     latest: {
-      slug: 'apertus-at-uphill-conf-2026',
-      title: 'Apertus at Uphill Conf 2026: what it means for Helvetra',
+      slug: 'swiss-startup-days-2026',
+      title: 'Helvetra at Swiss Startup Days 2026: open source as the only strategy',
       summary:
-        "Notes from Imanol Schlag's keynote on the fully-open Swiss AI model behind Helvetra. Why a single PhD student took Apertus from zero to ~40% Swiss German performance in a day.",
-      date: '2026-05-22',
+        "Notes from the fireside chat on the AI Stage in Bern, where the Apertus team brought Helvetra along. Open source as the only credible strategy for a small Swiss product, and why we keep no record of what you type.",
+      date: '2026-06-09',
     },
   },
   de: {
     heading: 'Aus dem Team',
     allNews: 'Alle News →',
     latest: {
-      slug: 'apertus-at-uphill-conf-2026',
-      title: 'Apertus an der Uphill Conf 2026: was das für Helvetra bedeutet',
+      slug: 'swiss-startup-days-2026',
+      title: 'Helvetra an den Swiss Startup Days 2026: Open Source als einzige Strategie',
       summary:
-        'Notizen aus Imanol Schlags Keynote über das vollständig offene Schweizer KI-Modell hinter Helvetra. Warum ein Doktorand Apertus an einem einzigen Tag von null auf etwa 40 Prozent Schweizerdeutsch gebracht hat.',
-      date: '2026-05-22',
+        'Notizen vom Fireside-Chat auf der AI Stage in Bern, zu dem das Apertus-Team Helvetra eingeladen hat. Open Source als einzige glaubwürdige Strategie für ein kleines Schweizer Produkt, und warum wir nichts speichern, was Sie eintippen.',
+      date: '2026-06-09',
     },
   },
   fr: {
     heading: "De l'équipe",
     allNews: "Toutes les actualités →",
     latest: {
-      slug: 'apertus-at-uphill-conf-2026',
-      title: 'Apertus à la Uphill Conf 2026: ce que cela signifie pour Helvetra',
+      slug: 'swiss-startup-days-2026',
+      title: 'Helvetra aux Swiss Startup Days 2026: l\'open source comme seule stratégie',
       summary:
-        "Notes de la keynote d'Imanol Schlag sur le modèle d'IA suisse entièrement ouvert qui propulse Helvetra. Pourquoi un seul doctorant a fait passer Apertus de zéro à environ 40 % en suisse allemand en une journée.",
-      date: '2026-05-22',
+        "Notes du fireside chat sur l'AI Stage à Berne, où l'équipe Apertus a embarqué Helvetra. L'open source comme seule stratégie crédible pour un petit produit suisse, et pourquoi nous ne gardons rien de ce que vous tapez.",
+      date: '2026-06-09',
     },
   },
   it: {
     heading: 'Dal team',
     allNews: 'Tutte le notizie →',
     latest: {
-      slug: 'apertus-at-uphill-conf-2026',
-      title: 'Apertus alla Uphill Conf 2026: cosa significa per Helvetra',
+      slug: 'swiss-startup-days-2026',
+      title: 'Helvetra agli Swiss Startup Days 2026: l\'open source come unica strategia',
       summary:
-        'Note dal keynote di Imanol Schlag sul modello di IA svizzero interamente aperto che alimenta Helvetra. Perché un singolo dottorando ha portato Apertus da zero a circa il 40% in tedesco svizzero in un giorno.',
-      date: '2026-05-22',
+        "Note dal fireside chat sull'AI Stage a Berna, dove il team Apertus ha portato Helvetra. Open source come unica strategia credibile per un piccolo prodotto svizzero, e perché non conserviamo nulla di ciò che digiti.",
+      date: '2026-06-09',
     },
   },
 } as const

@@ -75,7 +75,7 @@
 
           <!-- GitHub -->
           <a
-            href="https://github.com/alesiom/helvetra-backend"
+            href="https://github.com/Helvetra"
             target="_blank"
             rel="noopener"
             class="text-neutral-400 hover:text-neutral-900 transition-colors"

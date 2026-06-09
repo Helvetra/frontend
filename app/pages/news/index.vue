@@ -71,6 +71,13 @@ const content = {
       "Notes from Swiss AI events, Apertus releases, and what's shaping the model behind every Helvetra translation.",
     items: [
       {
+        slug: 'swiss-startup-days-2026',
+        title: 'Helvetra at Swiss Startup Days 2026: open source as the only strategy',
+        summary:
+          'Notes from the fireside chat on the AI Stage in Bern, where the Apertus team brought Helvetra along. Open source as the only credible strategy for a small Swiss product, why we keep no record of what you type, and the honest state of Swiss German on Apertus today.',
+        date: '2026-06-09',
+      },
+      {
         slug: 'apertus-at-uphill-conf-2026',
         title: 'Apertus at Uphill Conf 2026: what it means for Helvetra',
         summary:
@@ -84,6 +91,13 @@ const content = {
     subtitle:
       'Notizen von Schweizer KI-Anlässen, Apertus-Releases und allem, was das Modell hinter jeder Helvetra-Übersetzung prägt.',
     items: [
+      {
+        slug: 'swiss-startup-days-2026',
+        title: 'Helvetra an den Swiss Startup Days 2026: Open Source als einzige Strategie',
+        summary:
+          'Notizen vom Fireside-Chat auf der AI Stage in Bern, zu dem das Apertus-Team Helvetra eingeladen hat. Open Source als einzige glaubwürdige Strategie für ein kleines Schweizer Produkt, warum wir nichts speichern, was Sie eintippen, und der ehrliche Stand des Schweizerdeutschen auf Apertus heute.',
+        date: '2026-06-09',
+      },
       {
         slug: 'apertus-at-uphill-conf-2026',
         title: 'Apertus an der Uphill Conf 2026: was das für Helvetra bedeutet',
@@ -99,6 +113,13 @@ const content = {
       "Notes d'événements suisses d'IA, des sorties d'Apertus, et de tout ce qui façonne le modèle derrière chaque traduction Helvetra.",
     items: [
       {
+        slug: 'swiss-startup-days-2026',
+        title: 'Helvetra aux Swiss Startup Days 2026: l\'open source comme seule stratégie',
+        summary:
+          "Notes du fireside chat sur l'AI Stage à Berne, où l'équipe Apertus a embarqué Helvetra. L'open source comme seule stratégie crédible pour un petit produit suisse, pourquoi nous ne gardons rien de ce que vous tapez, et l'état honnête du suisse allemand sur Apertus aujourd'hui.",
+        date: '2026-06-09',
+      },
+      {
         slug: 'apertus-at-uphill-conf-2026',
         title: 'Apertus à la Uphill Conf 2026: ce que cela signifie pour Helvetra',
         summary:
@@ -112,6 +133,13 @@ const content = {
     subtitle:
       'Note da eventi svizzeri di IA, release di Apertus e tutto ciò che modella il modello dietro ogni traduzione di Helvetra.',
     items: [
+      {
+        slug: 'swiss-startup-days-2026',
+        title: 'Helvetra agli Swiss Startup Days 2026: l\'open source come unica strategia',
+        summary:
+          "Note dal fireside chat sull'AI Stage a Berna, dove il team Apertus ha portato Helvetra. Open source come unica strategia credibile per un piccolo prodotto svizzero, perché non conserviamo nulla di ciò che digiti, e lo stato onesto del tedesco svizzero su Apertus oggi.",
+        date: '2026-06-09',
+      },
       {
         slug: 'apertus-at-uphill-conf-2026',
         title: 'Apertus alla Uphill Conf 2026: cosa significa per Helvetra',
