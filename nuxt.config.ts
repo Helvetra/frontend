@@ -7,6 +7,18 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
+  // Tell Vue that <altcha-widget> (Infomaniak's spam-protection web
+  // component, loaded via the script tag in MarketingNewsletterSection)
+  // is a real custom element. Without this, Vue tries to resolve it as
+  // a Vue component, the SSR pass strips the unknown tag, and the
+  // client expects it to exist on hydration. See the warning chain in
+  // helvetra/frontend.
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag: string) => tag.startsWith('altcha-'),
+    },
+  },
+
   css: ['~/assets/css/main.css'],
 
   modules: [
@@ -54,6 +66,13 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     compilation: {
       strictMessage: false,
+    },
+    // Disable the v-t directive optimization. It rewrites $t/v-t calls
+    // in a way that produces SSR vs CSR mismatches in some templates
+    // (the module itself warns about this and is deprecating the feature
+    // in v10). See nuxt-modules/i18n#3238.
+    bundle: {
+      optimizeTranslationDirective: false,
     },
   },
 
