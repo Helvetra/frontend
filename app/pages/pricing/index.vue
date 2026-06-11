@@ -248,7 +248,7 @@
 const { t } = useI18n()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
-const { user, isAuthenticated, getAuthHeader } = useAuth()
+const { user, isAuthenticated, authedFetch } = useAuth()
 const { getProductSchema, useJsonLd } = useSchemaOrg()
 
 const billingPeriod = ref<'monthly' | 'yearly'>('yearly')
@@ -284,11 +284,10 @@ async function handleUpgrade(): Promise<void> {
   gatewayError.value = null
 
   try {
-    const response = await $fetch<GatewayResponse>(
+    const response = await authedFetch<GatewayResponse>(
       `${config.public.apiBase}/v1/payments/create-gateway`,
       {
         method: 'POST',
-        headers: getAuthHeader(),
         body: {
           billing_period: billingPeriod.value,
         },

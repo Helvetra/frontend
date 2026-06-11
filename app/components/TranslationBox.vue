@@ -376,7 +376,7 @@
 <script setup lang="ts">
 const { translate, isLoading, error } = useTranslation()
 const { submitFeedback, hasStoredConsent } = useFeedback()
-const { isAuthenticated, user, getAuthHeader } = useAuth()
+const { isAuthenticated, user, authedFetch } = useAuth()
 
 // Helvetra+ subscribers shouldn't see "Upgrade to Helvetra+" on the
 // quota-exceeded card — they're already on the highest consumer plan.
@@ -487,9 +487,8 @@ const feedbackSubmitted = ref(false)
  */
 async function fetchTierLimits() {
   try {
-    const response = await $fetch<{ max_chars_per_request: number }>(
-      `${config.public.apiBase}/v1/subscription/limits`,
-      { headers: getAuthHeader() }
+    const response = await authedFetch<{ max_chars_per_request: number }>(
+      `${config.public.apiBase}/v1/subscription/limits`
     )
     charLimit.value = response.max_chars_per_request
   } catch {

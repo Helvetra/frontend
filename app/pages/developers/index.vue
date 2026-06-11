@@ -215,7 +215,7 @@
 const { t } = useI18n()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
-const { isAuthenticated, getAuthHeader } = useAuth()
+const { isAuthenticated, authedFetch } = useAuth()
 const { getApiServiceSchema, getBreadcrumbSchema, useJsonLd } = useSchemaOrg()
 
 const valueProps = ['sovereignty', 'languages', 'invoicing', 'noTraining']
@@ -255,11 +255,10 @@ async function handleSubscribe(tier: Tier): Promise<void> {
   gatewayError.value = null
 
   try {
-    const response = await $fetch<GatewayResponse>(
+    const response = await authedFetch<GatewayResponse>(
       `${config.public.apiBase}/v1/payments/create-b2b-gateway`,
       {
         method: 'POST',
-        headers: getAuthHeader(),
         body: { tier },
       }
     )

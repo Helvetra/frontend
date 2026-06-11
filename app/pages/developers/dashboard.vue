@@ -240,7 +240,7 @@
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
-const { isAuthenticated, getAuthHeader } = useAuth()
+const { isAuthenticated, authedFetch } = useAuth()
 
 interface B2BSubscription {
   has_subscription: boolean
@@ -327,11 +327,11 @@ async function loadAll(): Promise<void> {
   loading.value = true
   try {
     const [sub, keyList, hist] = await Promise.all([
-      $fetch<B2BSubscription>(apiUrl('/subscription/b2b'), { headers: getAuthHeader() }),
-      $fetch<ApiKey[]>(apiUrl('/api-keys'), { headers: getAuthHeader() }).catch(() => []),
-      $fetch<{ periods: UsageHistoryPoint[] }>(apiUrl('/subscription/b2b/usage-history'), {
-        headers: getAuthHeader(),
-      }).catch(() => ({ periods: [] })),
+      authedFetch<B2BSubscription>(apiUrl('/subscription/b2b')),
+      authedFetch<ApiKey[]>(apiUrl('/api-keys')).catch(() => []),
+      authedFetch<{ periods: UsageHistoryPoint[] }>(
+        apiUrl('/subscription/b2b/usage-history')
+      ).catch(() => ({ periods: [] })),
     ])
     subscription.value = sub
     keys.value = keyList
@@ -348,9 +348,8 @@ async function handleCreateKey(): Promise<void> {
   isCreatingKey.value = true
   actionError.value = null
   try {
-    const created = await $fetch<ApiKeyCreated>(apiUrl('/api-keys'), {
+    const created = await authedFetch<ApiKeyCreated>(apiUrl('/api-keys'), {
       method: 'POST',
-      headers: getAuthHeader(),
       body: { name: newKeyName.value.trim() },
     })
     newKey.value = created.key
@@ -365,8 +364,8 @@ async function handleCreateKey(): Promise<void> {
     showCreateForm.value = false
     newKeyName.value = ''
   } catch (e: unknown) {
-    const err = e as { data?: { detail?: string } }
-    actionError.value = err.data?.detail || t('apiDashboard.keys.errorCreate')
+    const err = e as { data?: { error?: { message?: string } } }
+    actionError.value = err.data?.error?.message || t('apiDashboard.keys.errorCreate')
   } finally {
     isCreatingKey.value = false
   }
@@ -376,9 +375,8 @@ async function handleRevokeKey(keyId: string): Promise<void> {
   if (!confirm(t('apiDashboard.keys.confirmRevoke'))) return
   actionError.value = null
   try {
-    await $fetch(apiUrl(`/api-keys/${keyId}`), {
+    await authedFetch(apiUrl(`/api-keys/${keyId}`), {
       method: 'DELETE',
-      headers: getAuthHeader(),
     })
     keys.value = keys.value.filter(k => k.id !== keyId)
   } catch (e) {
@@ -391,9 +389,8 @@ async function handleRotateKey(keyId: string): Promise<void> {
   if (!confirm(t('apiDashboard.keys.confirmRotate'))) return
   actionError.value = null
   try {
-    const rotated = await $fetch<ApiKeyCreated>(apiUrl(`/api-keys/${keyId}/rotate`), {
+    const rotated = await authedFetch<ApiKeyCreated>(apiUrl(`/api-keys/${keyId}/rotate`), {
       method: 'POST',
-      headers: getAuthHeader(),
     })
     newKey.value = rotated.key
     // Refresh the list — rotated key gets a new id
@@ -417,9 +414,8 @@ async function handleRotateKey(keyId: string): Promise<void> {
 async function openBillingPortal(): Promise<void> {
   isOpeningPortal.value = true
   try {
-    const response = await $fetch<PortalResponse>(apiUrl('/payments/b2b-portal'), {
+    const response = await authedFetch<PortalResponse>(apiUrl('/payments/b2b-portal'), {
       method: 'POST',
-      headers: getAuthHeader(),
     })
     if (response.success && response.portal_url) {
       window.location.href = response.portal_url

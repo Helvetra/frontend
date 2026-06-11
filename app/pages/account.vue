@@ -162,7 +162,7 @@ definePageMeta({
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const router = useRouter()
-const { user, logout, getAuthHeader } = useAuth()
+const { user, logout, authedFetch } = useAuth()
 const config = useRuntimeConfig()
 
 interface SubscriptionData {
@@ -206,12 +206,9 @@ function formatDate(dateStr: string): string {
 
 async function fetchSubscription() {
   try {
-    const response = await $fetch<{ tier: string; status: string; characters_used: number; characters_limit: number; credits_remaining: number; can_translate: boolean; period_start: string | null; period_end: string | null }>(
+    const response = await authedFetch<{ tier: string; status: string; characters_used: number; characters_limit: number; credits_remaining: number; can_translate: boolean; period_start: string | null; period_end: string | null }>(
       `${config.public.apiBase}/v1/subscription`,
-      {
-        method: 'GET',
-        headers: getAuthHeader(),
-      }
+      { method: 'GET' }
     )
 
     subscription.value = {

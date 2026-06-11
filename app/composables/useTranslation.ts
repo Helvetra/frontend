@@ -27,9 +27,20 @@ export interface TranslationResult {
   detected_source_lang?: string
 }
 
+// Backend error codes → the UI's error vocabulary. Anything unknown (network
+// failure, 5xx, unexpected code) falls back to CONNECTION_ERROR.
+const ERROR_CODE_MAP: Record<string, string> = {
+  TEXT_TOO_LONG: 'TEXT_TOO_LONG',
+  WEEKLY_LIMIT_EXCEEDED: 'WEEKLY_LIMIT_EXCEEDED',
+  RATE_LIMIT_EXCEEDED: 'RATE_LIMITED',
+  PLACEHOLDER_LEAK: 'TRANSLATION_REJECTED',
+  NAME_SUBSTITUTION: 'TRANSLATION_REJECTED',
+  SUSPICIOUS_OUTPUT: 'TRANSLATION_REJECTED',
+}
+
 export function useTranslation() {
   const config = useRuntimeConfig()
-  const { getAuthHeader } = useAuth()
+  const { authedFetch } = useAuth()
   const isLoading = ref(false)
   const error = ref<string | null>(null)
 
@@ -59,11 +70,10 @@ export function useTranslation() {
         body.dialect = dialect
       }
 
-      const response = await $fetch<TranslationResponse>(
+      const response = await authedFetch<TranslationResponse>(
         `${config.public.apiBase}/v1/translate`,
         {
           method: 'POST',
-          headers: getAuthHeader(),
           body,
         }
       )
@@ -83,40 +93,22 @@ export function useTranslation() {
       error.value = 'Translation failed'
       return null
     } catch (e) {
+      // Every backend error arrives in one envelope since backend#119:
+      // {success: false, error: {code, message, ...}}.
       const fetchError = e as {
-        data?: TranslationResponse | { detail?: { code?: string; message?: string } | Array<{ type: string; msg: string }> }
+        data?: { error?: { code?: string; message?: string } }
         statusCode?: number
       }
+      const code = fetchError.data?.error?.code
 
-      if (fetchError.data && 'error' in fetchError.data && fetchError.data.error) {
-        error.value = fetchError.data.error.message
-      } else if (fetchError.statusCode === 422) {
-        const detail = (fetchError.data as {
-          detail?: { code?: string; message?: string } | Array<{ type: string; msg: string }>
-        })?.detail
-        if (Array.isArray(detail) && detail[0]?.type === 'string_too_long') {
-          // Pydantic input validation
-          error.value = 'TEXT_TOO_LONG'
-        } else if (detail && !Array.isArray(detail) && detail.code) {
-          // Structured backend rejection: post-translation validator
-          // (NAME_SUBSTITUTION, PLACEHOLDER_LEAK, SUSPICIOUS_OUTPUT, ...).
-          // Surface a real message rather than the previous misleading
-          // "Connection error". See helvetra/backend#115, #116.
-          error.value = 'TRANSLATION_REJECTED'
-          console.warn('Translation rejected by backend:', detail.code, detail.message)
-        } else {
-          console.warn('Translation validation rejected:', detail)
-        }
-      } else if (fetchError.statusCode === 429) {
-        // Check for specific limit error codes from backend
-        const detail = (fetchError.data as { detail?: { code?: string } })?.detail
-        if (detail?.code === 'WEEKLY_LIMIT_EXCEEDED') {
-          error.value = 'WEEKLY_LIMIT_EXCEEDED'
-        } else {
-          error.value = 'RATE_LIMITED'
-        }
-      } else {
-        error.value = 'CONNECTION_ERROR'
+      error.value = (code && ERROR_CODE_MAP[code]) || 'CONNECTION_ERROR'
+
+      if (error.value === 'TRANSLATION_REJECTED') {
+        console.warn(
+          'Translation rejected by backend:',
+          code,
+          fetchError.data?.error?.message
+        )
       }
 
       return null

@@ -66,6 +66,14 @@ interface MessageResponse {
   }
 }
 
+// Refresh slightly before the token actually expires so a request never
+// leaves with a token that dies in flight.
+const TOKEN_REFRESH_MARGIN_MS = 30_000
+
+// Module-scoped so concurrent callers (translate + limits firing together)
+// share a single in-flight refresh request instead of racing the rotation.
+let refreshInFlight: Promise<boolean> | null = null
+
 export function useAuth() {
   const config = useRuntimeConfig()
 
@@ -73,6 +81,8 @@ export function useAuth() {
   // reload clears it and we recover via the refresh cookie.
   const user = useState<User | null>('auth-user', () => null)
   const accessToken = useState<string | null>('auth-access-token', () => null)
+  // Epoch ms when the access token expires, derived from expires_in.
+  const tokenExpiresAt = useState<number | null>('auth-token-expires-at', () => null)
   const isLoading = ref(false)
   const error = ref<string | null>(null)
 
@@ -97,24 +107,30 @@ export function useAuth() {
     return match ? { 'X-CSRF-Token': decodeURIComponent(match[1]!) } : {}
   }
 
+  function setAccessToken(token: string, expiresIn?: number): void {
+    accessToken.value = token
+    tokenExpiresAt.value = expiresIn ? Date.now() + expiresIn * 1000 : null
+  }
+
   function setSession(userData: {
     id: string
     email: string
     email_verified: boolean
     tier: string
-  }, token: string): void {
+  }, tokens: { access_token: string, expires_in?: number }): void {
     user.value = {
       id: userData.id,
       email: userData.email,
       emailVerified: userData.email_verified,
       tier: userData.tier,
     }
-    accessToken.value = token
+    setAccessToken(tokens.access_token, tokens.expires_in)
   }
 
   function clearSession(): void {
     user.value = null
     accessToken.value = null
+    tokenExpiresAt.value = null
   }
 
   async function register(
@@ -136,7 +152,7 @@ export function useAuth() {
       )
 
       if (response.success && response.data) {
-        setSession(response.data.user, response.data.tokens.access_token)
+        setSession(response.data.user, response.data.tokens)
         return true
       }
 
@@ -183,7 +199,7 @@ export function useAuth() {
       )
 
       if (response.success && response.data) {
-        setSession(response.data.user, response.data.tokens.access_token)
+        setSession(response.data.user, response.data.tokens)
         return true
       }
 
@@ -233,28 +249,101 @@ export function useAuth() {
   /**
    * Exchange the refresh-token cookie for a new access token (rotates the
    * cookie too). No request body — server reads the cookie via credentials.
+   * Concurrent callers share one in-flight request. Only a definitive
+   * rejection (4xx) ends the session; a transient network failure keeps it,
+   * so a flaky connection doesn't log the user out.
    */
-  async function refreshToken(): Promise<boolean> {
-    try {
-      const response = await $fetch<AuthResponse>(
-        `${config.public.apiBase}/v1/auth/refresh`,
-        {
-          method: 'POST',
-          headers: { ...getCsrfHeader() },
-          ...fetchOpts,
-        }
-      )
+  function refreshToken(): Promise<boolean> {
+    if (refreshInFlight) return refreshInFlight
 
-      if (response.success && response.data?.tokens) {
-        accessToken.value = response.data.tokens.access_token
-        return true
+    const doRefresh = async (): Promise<boolean> => {
+      try {
+        const response = await $fetch<AuthResponse>(
+          `${config.public.apiBase}/v1/auth/refresh`,
+          {
+            method: 'POST',
+            headers: { ...getCsrfHeader() },
+            ...fetchOpts,
+          }
+        )
+
+        if (response.success && response.data?.tokens) {
+          const tokens = response.data.tokens
+          setAccessToken(tokens.access_token, tokens.expires_in)
+          return true
+        }
+
+        clearSession()
+        return false
+      } catch (e) {
+        const fetchError = e as { statusCode?: number }
+        if (fetchError.statusCode && fetchError.statusCode < 500) {
+          clearSession()
+        }
+        return false
+      }
+    }
+
+    refreshInFlight = doRefresh().finally(() => {
+      refreshInFlight = null
+    })
+    return refreshInFlight
+  }
+
+  /**
+   * Return an access token that is safe to send, refreshing it first when
+   * it is missing-but-recoverable or about to expire. Returns null for
+   * anonymous users without triggering a refresh request.
+   */
+  async function getValidAccessToken(): Promise<string | null> {
+    if (!accessToken.value) return null
+
+    const expiresAt = tokenExpiresAt.value
+    if (!expiresAt || Date.now() < expiresAt - TOKEN_REFRESH_MARGIN_MS) {
+      return accessToken.value
+    }
+
+    const refreshed = await refreshToken()
+    return refreshed ? accessToken.value : null
+  }
+
+  /**
+   * Authenticated fetch: attaches a fresh access token and, if the server
+   * still rejects it with TOKEN_EXPIRED (clock skew, rotation race),
+   * refreshes once and replays the request before giving up.
+   */
+  async function authedFetch<T>(
+    url: string,
+    opts: Record<string, unknown> = {}
+  ): Promise<T> {
+    const doFetch = async (): Promise<T> => {
+      const token = await getValidAccessToken()
+      const headers = {
+        ...(opts.headers as Record<string, string> | undefined),
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      }
+      return $fetch<T>(url, { ...opts, headers, ...fetchOpts })
+    }
+
+    try {
+      return await doFetch()
+    } catch (e) {
+      const fetchError = e as {
+        statusCode?: number
+        data?: { error?: { code?: string } }
+      }
+      const isExpiredToken =
+        fetchError.statusCode === 401
+        && fetchError.data?.error?.code === 'TOKEN_EXPIRED'
+
+      if (isExpiredToken && import.meta.client) {
+        const refreshed = await refreshToken()
+        if (refreshed) {
+          return doFetch()
+        }
       }
 
-      clearSession()
-      return false
-    } catch {
-      clearSession()
-      return false
+      throw e
     }
   }
 
@@ -262,13 +351,9 @@ export function useAuth() {
     if (!accessToken.value) return false
 
     try {
-      const response = await $fetch<UserResponse>(
+      const response = await authedFetch<UserResponse>(
         `${config.public.apiBase}/v1/auth/me`,
-        {
-          method: 'GET',
-          headers: getAuthHeader(),
-          ...fetchOpts,
-        }
+        { method: 'GET' }
       )
 
       if (response.success && response.data?.user) {
@@ -283,16 +368,7 @@ export function useAuth() {
       }
 
       return false
-    } catch (e) {
-      const fetchError = e as { statusCode?: number }
-
-      if (fetchError.statusCode === 401) {
-        const refreshed = await refreshToken()
-        if (refreshed) {
-          return fetchUser()
-        }
-      }
-
+    } catch {
       return false
     }
   }
@@ -367,12 +443,14 @@ export function useAuth() {
     } catch (e) {
       const fetchError = e as {
         statusCode?: number
-        data?: { detail?: string }
+        data?: { error?: { message?: string } }
         response?: { headers?: Headers }
       }
 
       if (fetchError.statusCode === 429) {
-        const retryAfter = parseInt(fetchError.data?.detail?.match(/(\d+)/)?.[1] || '60')
+        const retryAfter = parseInt(
+          fetchError.data?.error?.message?.match(/(\d+)/)?.[1] || '60'
+        )
         error.value = 'RESEND_RATE_LIMITED'
         return { success: false, retryAfter }
       }
@@ -396,6 +474,8 @@ export function useAuth() {
     fetchUser,
     initialize,
     getAuthHeader,
+    getValidAccessToken,
+    authedFetch,
     getCsrfHeader,
     verifyEmail,
     resendVerification,
