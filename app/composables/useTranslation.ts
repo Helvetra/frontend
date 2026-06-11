@@ -44,6 +44,14 @@ export function useTranslation() {
   const isLoading = ref(false)
   const error = ref<string | null>(null)
 
+  // Exactly one translate request in flight: a new request aborts the
+  // previous one, and only the latest request may touch shared state.
+  let abortController: AbortController | null = null
+  let requestSeq = 0
+
+  // Honor Retry-After from 429 responses: no new requests until this time.
+  let rateLimitedUntil = 0
+
   async function translate(
     text: string,
     sourceLang: string,
@@ -54,6 +62,15 @@ export function useTranslation() {
     if (!text.trim()) {
       return null
     }
+
+    if (Date.now() < rateLimitedUntil) {
+      error.value = 'RATE_LIMITED'
+      return null
+    }
+
+    const seq = ++requestSeq
+    abortController?.abort()
+    abortController = new AbortController()
 
     isLoading.value = true
     error.value = null
@@ -75,6 +92,7 @@ export function useTranslation() {
         {
           method: 'POST',
           body,
+          signal: abortController.signal,
         }
       )
 
@@ -93,15 +111,31 @@ export function useTranslation() {
       error.value = 'Translation failed'
       return null
     } catch (e) {
+      // A superseded request was aborted on purpose: stay silent and let
+      // the newer request own the loading/error state. ofetch wraps the
+      // DOMException, so check the cause as well.
+      const errAny = e as { name?: string; cause?: { name?: string } }
+      const aborted = errAny.name === 'AbortError' || errAny.cause?.name === 'AbortError'
+      if (aborted || seq !== requestSeq) {
+        return null
+      }
+
       // Every backend error arrives in one envelope since backend#119:
       // {success: false, error: {code, message, ...}}.
       const fetchError = e as {
-        data?: { error?: { code?: string; message?: string } }
+        data?: { error?: { code?: string; message?: string; retry_after?: number } }
         statusCode?: number
       }
       const code = fetchError.data?.error?.code
 
       error.value = (code && ERROR_CODE_MAP[code]) || 'CONNECTION_ERROR'
+
+      // 4xx responses are never retried; for rate limits, additionally
+      // block new attempts until the server's Retry-After has passed.
+      if (fetchError.statusCode === 429) {
+        const retryAfterSeconds = fetchError.data?.error?.retry_after ?? 30
+        rateLimitedUntil = Date.now() + retryAfterSeconds * 1000
+      }
 
       if (error.value === 'TRANSLATION_REJECTED') {
         console.warn(
@@ -113,7 +147,9 @@ export function useTranslation() {
 
       return null
     } finally {
-      isLoading.value = false
+      if (seq === requestSeq) {
+        isLoading.value = false
+      }
     }
   }
 

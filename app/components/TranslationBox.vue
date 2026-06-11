@@ -522,18 +522,19 @@ function saveLanguagePreferences() {
   }
 }
 
-// Set formality and trigger re-translation
+// Set formality and trigger re-translation through the debounced path so
+// rapid toggling can't stack concurrent requests.
 function setFormality(value: 'informal' | 'formal') {
   formality.value = value
   saveLanguagePreferences()
-  performTranslation()
+  debouncedTranslate()
 }
 
-// Set dialect and trigger re-translation
+// Set dialect and trigger re-translation (debounced, same reason).
 function setDialect(value: string) {
   dialect.value = value
   saveLanguagePreferences()
-  performTranslation()
+  debouncedTranslate()
 }
 
 const availableLanguages = [
@@ -718,7 +719,9 @@ watch(sourceLanguage, (newLang, oldLang) => {
   }
 
   saveLanguagePreferences()
-  performTranslation()
+  // Through the debounced path: a language change while typing (or while a
+  // request is in flight) must not race a second request alongside it.
+  debouncedTranslate()
 })
 watch(targetLanguage, (newLang, oldLang) => {
   // If user selects same language as source, swap them
@@ -726,7 +729,7 @@ watch(targetLanguage, (newLang, oldLang) => {
     sourceLanguage.value = oldLang
   }
   saveLanguagePreferences()
-  performTranslation()
+  debouncedTranslate()
 })
 
 function swapLanguages() {
