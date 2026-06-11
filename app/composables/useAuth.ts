@@ -83,6 +83,10 @@ export function useAuth() {
   const accessToken = useState<string | null>('auth-access-token', () => null)
   // Epoch ms when the access token expires, derived from expires_in.
   const tokenExpiresAt = useState<number | null>('auth-token-expires-at', () => null)
+  // True once the on-mount session restore has settled (logged in or not).
+  // Consumers that need the correct auth context (e.g. tier limits) wait
+  // for this instead of firing against an unresolved session.
+  const authReady = useState<boolean>('auth-ready', () => false)
   const isLoading = ref(false)
   const error = ref<string | null>(null)
 
@@ -380,9 +384,13 @@ export function useAuth() {
   async function initialize(): Promise<void> {
     if (!import.meta.client) return
 
-    const refreshed = await refreshToken()
-    if (refreshed) {
-      await fetchUser()
+    try {
+      const refreshed = await refreshToken()
+      if (refreshed) {
+        await fetchUser()
+      }
+    } finally {
+      authReady.value = true
     }
   }
 
@@ -465,6 +473,7 @@ export function useAuth() {
   return {
     user,
     isAuthenticated,
+    authReady,
     isLoading,
     error,
     register,

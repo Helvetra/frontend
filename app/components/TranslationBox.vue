@@ -136,11 +136,13 @@
             <span class="text-sm font-medium">{{ $t('translate.clear') }}</span>
           </button>
           <div v-else />
+          <!-- Limit unknown (still loading or fetch failed): show only the
+               count rather than pretending the user is on the 400-char plan. -->
           <div
             class="text-xs"
-            :class="sourceText.length > charLimit ? 'text-red-500 font-medium' : 'text-neutral-400'"
+            :class="charLimit !== null && sourceText.length > charLimit ? 'text-red-500 font-medium' : 'text-neutral-400'"
           >
-            {{ sourceText.length.toLocaleString() }} / {{ charLimit.toLocaleString() }}
+            {{ sourceText.length.toLocaleString() }}<template v-if="charLimit !== null"> / {{ charLimit.toLocaleString() }}</template>
           </div>
         </div>
       </div>
@@ -376,18 +378,26 @@
 <script setup lang="ts">
 const { translate, isLoading, error } = useTranslation()
 const { submitFeedback, hasStoredConsent } = useFeedback()
-const { isAuthenticated, user, authedFetch } = useAuth()
+const { isAuthenticated, user } = useAuth()
+
+// Tier and per-request limit come from one shared source so the counter,
+// the upgrade wall, and length validation can never disagree. charLimit is
+// null while unknown (loading or fetch failed) — the UI degrades honestly
+// instead of pretending the user is on the anonymous 400-char plan.
+const { charLimit, isPaidTier, ensureLoaded } = useTierLimits()
+ensureLoaded()
 
 // Helvetra+ subscribers shouldn't see "Upgrade to Helvetra+" on the
 // quota-exceeded card — they're already on the highest consumer plan.
 // Same for B2B subscribers using the consumer translator. Only `free`
-// users get the upgrade CTA.
+// users get the upgrade CTA. Falls back to the session's tier while the
+// limits fetch is still pending.
 const isPaidSubscriber = computed(
-  () => isAuthenticated.value && user.value?.tier && user.value.tier !== 'free',
+  () => isPaidTier.value
+    || (isAuthenticated.value && !!user.value?.tier && user.value.tier !== 'free'),
 )
 const { detectLanguage } = useLanguageDetection()
 const localePath = useLocalePath()
-const config = useRuntimeConfig()
 
 // Errors that take over the output panel with a friendly card. Other errors
 // keep the previous translation visible and only show a subtle indicator.
@@ -395,9 +405,6 @@ const ERRORS_REPLACING_OUTPUT = ['TEXT_TOO_LONG', 'WEEKLY_LIMIT_EXCEEDED', 'RATE
 const errorReplacesOutput = computed(
   () => !!error.value && (ERRORS_REPLACING_OUTPUT as readonly string[]).includes(error.value)
 )
-
-// Character limit based on tier (default to anonymous limit)
-const charLimit = ref(400)
 
 const STORAGE_KEY_SOURCE = 'helvetra_source_lang'
 const STORAGE_KEY_TARGET = 'helvetra_target_lang'
@@ -482,20 +489,6 @@ const showFeedbackModal = ref(false)
 const pendingVote = ref<'like' | 'dislike'>('like')
 const feedbackSubmitted = ref(false)
 
-/**
- * Fetch tier limits from the API to show correct character limit.
- */
-async function fetchTierLimits() {
-  try {
-    const response = await authedFetch<{ max_chars_per_request: number }>(
-      `${config.public.apiBase}/v1/subscription/limits`
-    )
-    charLimit.value = response.max_chars_per_request
-  } catch {
-    // Keep default limit on error
-  }
-}
-
 // Load saved preferences from localStorage
 onMounted(() => {
   if (import.meta.client) {
@@ -516,9 +509,6 @@ onMounted(() => {
     if (savedDialect && SWISS_DIALECTS.some(d => d.code === savedDialect)) {
       dialect.value = savedDialect
     }
-
-    // Fetch tier limits
-    fetchTierLimits()
   }
 })
 
@@ -648,7 +638,8 @@ function debouncedTranslate() {
 
   // Don't fire requests we know will fail server-side validation.
   // The character counter already turns red to signal the limit.
-  if (sourceText.value.length > charLimit.value) {
+  // When the limit is unknown, send anyway and let the backend decide.
+  if (charLimit.value !== null && sourceText.value.length > charLimit.value) {
     return
   }
 
@@ -736,11 +727,6 @@ watch(targetLanguage, (newLang, oldLang) => {
   }
   saveLanguagePreferences()
   performTranslation()
-})
-
-// Re-fetch tier limits when auth state changes (login/logout)
-watch(isAuthenticated, () => {
-  fetchTierLimits()
 })
 
 function swapLanguages() {
