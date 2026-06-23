@@ -50,44 +50,44 @@ const content = {
     heading: 'From the team',
     allNews: 'All news →',
     latest: {
-      slug: 'swiss-startup-days-2026',
-      title: 'Helvetra at Swiss Startup Days 2026: open source as the only strategy',
+      slug: 'why-helvetra-runs-on-infomaniak',
+      title: 'Infomaniak becomes a foundation: what it means for Helvetra',
       summary:
-        "Notes from the fireside chat on the AI Stage in Bern, where the Apertus team brought Helvetra along. Open source as the only credible strategy for a small Swiss product, and why we keep no record of what you type.",
-      date: '2026-06-09',
+        'Every layer of Helvetra runs on Infomaniak: the website, the backend, and the Apertus model. Why we host where we host, and what changed when the company locked its independence into a Swiss public-interest foundation.',
+      date: '2026-06-23',
     },
   },
   de: {
     heading: 'Aus dem Team',
     allNews: 'Alle News →',
     latest: {
-      slug: 'swiss-startup-days-2026',
-      title: 'Helvetra an den Swiss Startup Days 2026: Open Source als einzige Strategie',
+      slug: 'why-helvetra-runs-on-infomaniak',
+      title: 'Infomaniak wird zur Stiftung: was das für Helvetra bedeutet',
       summary:
-        'Notizen vom Fireside-Chat auf der AI Stage in Bern, zu dem das Apertus-Team Helvetra eingeladen hat. Open Source als einzige glaubwürdige Strategie für ein kleines Schweizer Produkt, und warum wir nichts speichern, was Sie eintippen.',
-      date: '2026-06-09',
+        'Jede Schicht von Helvetra läuft auf Infomaniak: die Website, das Backend und das Apertus-Modell. Warum wir dort hosten, wo wir hosten, und was sich änderte, als das Unternehmen seine Unabhängigkeit in einer gemeinnützigen Schweizer Stiftung verankerte.',
+      date: '2026-06-23',
     },
   },
   fr: {
     heading: "De l'équipe",
     allNews: "Toutes les actualités →",
     latest: {
-      slug: 'swiss-startup-days-2026',
-      title: 'Helvetra aux Swiss Startup Days 2026: l\'open source comme seule stratégie',
+      slug: 'why-helvetra-runs-on-infomaniak',
+      title: 'Infomaniak devient une fondation: ce que cela signifie pour Helvetra',
       summary:
-        "Notes du fireside chat sur l'AI Stage à Berne, où l'équipe Apertus a embarqué Helvetra. L'open source comme seule stratégie crédible pour un petit produit suisse, et pourquoi nous ne gardons rien de ce que vous tapez.",
-      date: '2026-06-09',
+        "Chaque couche de Helvetra tourne sur Infomaniak: le site, le backend et le modèle Apertus. Pourquoi nous hébergeons là où nous hébergeons, et ce qui a changé quand l'entreprise a verrouillé son indépendance dans une fondation suisse d'intérêt public.",
+      date: '2026-06-23',
     },
   },
   it: {
     heading: 'Dal team',
     allNews: 'Tutte le notizie →',
     latest: {
-      slug: 'swiss-startup-days-2026',
-      title: 'Helvetra agli Swiss Startup Days 2026: l\'open source come unica strategia',
+      slug: 'why-helvetra-runs-on-infomaniak',
+      title: 'Infomaniak diventa una fondazione: cosa significa per Helvetra',
       summary:
-        "Note dal fireside chat sull'AI Stage a Berna, dove il team Apertus ha portato Helvetra. Open source come unica strategia credibile per un piccolo prodotto svizzero, e perché non conserviamo nulla di ciò che digiti.",
-      date: '2026-06-09',
+        "Ogni livello di Helvetra gira su Infomaniak: il sito, il backend e il modello Apertus. Perché ospitiamo dove ospitiamo, e cosa è cambiato quando l'azienda ha blindato la propria indipendenza in una fondazione svizzera di interesse pubblico.",
+      date: '2026-06-23',
     },
   },
 } as const

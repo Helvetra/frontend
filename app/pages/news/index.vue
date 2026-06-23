@@ -71,6 +71,13 @@ const content = {
       "Notes from Swiss AI events, Apertus releases, and what's shaping the model behind every Helvetra translation.",
     items: [
       {
+        slug: 'why-helvetra-runs-on-infomaniak',
+        title: 'Infomaniak becomes a foundation: what it means for Helvetra',
+        summary:
+          'Why every layer of Helvetra, the website, the backend, and the Apertus translation model, runs on Infomaniak, and what changed when the company handed voting control to a Swiss public-interest foundation in May 2026.',
+        date: '2026-06-23',
+      },
+      {
         slug: 'swiss-startup-days-2026',
         title: 'Helvetra at Swiss Startup Days 2026: open source as the only strategy',
         summary:
@@ -91,6 +98,13 @@ const content = {
     subtitle:
       'Notizen von Schweizer KI-Anlässen, Apertus-Releases und allem, was das Modell hinter jeder Helvetra-Übersetzung prägt.',
     items: [
+      {
+        slug: 'why-helvetra-runs-on-infomaniak',
+        title: 'Infomaniak wird zur Stiftung: was das für Helvetra bedeutet',
+        summary:
+          'Warum jede Schicht von Helvetra, die Website, das Backend und das Apertus-Übersetzungsmodell, auf Infomaniak läuft, und was sich änderte, als das Unternehmen im Mai 2026 die Stimmkontrolle an eine gemeinnützige Schweizer Stiftung übergab.',
+        date: '2026-06-23',
+      },
       {
         slug: 'swiss-startup-days-2026',
         title: 'Helvetra an den Swiss Startup Days 2026: Open Source als einzige Strategie',
@@ -113,6 +127,13 @@ const content = {
       "Notes d'événements suisses d'IA, des sorties d'Apertus, et de tout ce qui façonne le modèle derrière chaque traduction Helvetra.",
     items: [
       {
+        slug: 'why-helvetra-runs-on-infomaniak',
+        title: 'Infomaniak devient une fondation: ce que cela signifie pour Helvetra',
+        summary:
+          "Pourquoi chaque couche de Helvetra, le site, le backend et le modèle de traduction Apertus, tourne sur Infomaniak, et ce qui a changé quand l'entreprise a confié le contrôle des votes à une fondation suisse d'intérêt public en mai 2026.",
+        date: '2026-06-23',
+      },
+      {
         slug: 'swiss-startup-days-2026',
         title: 'Helvetra aux Swiss Startup Days 2026: l\'open source comme seule stratégie',
         summary:
@@ -133,6 +154,13 @@ const content = {
     subtitle:
       'Note da eventi svizzeri di IA, release di Apertus e tutto ciò che modella il modello dietro ogni traduzione di Helvetra.',
     items: [
+      {
+        slug: 'why-helvetra-runs-on-infomaniak',
+        title: 'Infomaniak diventa una fondazione: cosa significa per Helvetra',
+        summary:
+          "Perché ogni livello di Helvetra, il sito, il backend e il modello di traduzione Apertus, gira su Infomaniak, e cosa è cambiato quando l'azienda ha affidato il controllo dei voti a una fondazione svizzera di interesse pubblico a maggio 2026.",
+        date: '2026-06-23',
+      },
       {
         slug: 'swiss-startup-days-2026',
         title: 'Helvetra agli Swiss Startup Days 2026: l\'open source come unica strategia',
