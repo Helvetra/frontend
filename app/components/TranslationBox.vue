@@ -376,6 +376,24 @@
 </template>
 
 <script setup lang="ts">
+// Optional presets let landing pages render the translator pre-configured for
+// a specific language pair / dialect (e.g. /english-to-swiss-german). Each is
+// applied at setup so it holds during SSR too (deterministic, no hydration
+// mismatch). A preset field is authoritative: it overrides saved preferences
+// so the box always matches the page it's on. Omitted props = current
+// homepage behaviour (defaults + localStorage).
+const props = withDefaults(defineProps<{
+  initialSource?: string
+  initialTarget?: string
+  initialDialect?: string
+  initialFormality?: 'informal' | 'formal'
+}>(), {
+  initialSource: undefined,
+  initialTarget: undefined,
+  initialDialect: undefined,
+  initialFormality: undefined,
+})
+
 const { translate, isLoading, error } = useTranslation()
 const { submitFeedback, hasStoredConsent } = useFeedback()
 const { isAuthenticated, user } = useAuth()
@@ -430,13 +448,13 @@ const MIN_CHARS_FOR_DETECTION = 15
 // Maximum LLM detection calls per session (cost control)
 const MAX_LLM_DETECTIONS_PER_SESSION = 10
 
-const sourceLanguage = ref('de')
-const targetLanguage = ref('en')
+const sourceLanguage = ref(props.initialSource ?? 'de')
+const targetLanguage = ref(props.initialTarget ?? 'en')
 const sourceText = ref('')
 const targetText = ref('')
 const copied = ref(false)
-const formality = ref<'informal' | 'formal'>('informal')
-const dialect = ref('bern')  // Default to Bärndütsch
+const formality = ref<'informal' | 'formal'>(props.initialFormality ?? 'informal')
+const dialect = ref(props.initialDialect ?? 'bern')  // Default to Bärndütsch
 const sourceTextarea = ref<HTMLTextAreaElement | null>(null)
 const outputContainer = ref<HTMLDivElement | null>(null)
 
@@ -448,9 +466,11 @@ const detectedLanguage = ref<string | null>(null)
 const llmDetectionCount = ref(0)
 const pendingLlmDetection = ref(false)
 
-// Show source language dropdown only after detection or manual override
+// Show source language dropdown after detection or manual override — and
+// immediately when a landing page presets the source, so the pair is visible
+// up front (e.g. "English -> Swiss German") rather than hidden until typing.
 const showSourceDropdown = computed(() =>
-  userOverrodeSource.value || detectedLanguage.value !== null
+  props.initialSource != null || userOverrodeSource.value || detectedLanguage.value !== null
 )
 
 /**
@@ -489,25 +509,34 @@ const showFeedbackModal = ref(false)
 const pendingVote = ref<'like' | 'dislike'>('like')
 const feedbackSubmitted = ref(false)
 
-// Load saved preferences from localStorage
+// Load saved preferences from localStorage. A field the page explicitly
+// preset is left untouched so the box keeps matching the landing page; only
+// non-preset fields fall back to the user's saved preference.
 onMounted(() => {
   if (import.meta.client) {
-    const savedSource = localStorage.getItem(STORAGE_KEY_SOURCE)
-    const savedTarget = localStorage.getItem(STORAGE_KEY_TARGET)
-    const savedFormality = localStorage.getItem(STORAGE_KEY_FORMALITY)
-    const savedDialect = localStorage.getItem(STORAGE_KEY_DIALECT)
-
-    if (savedSource && availableLanguages.some(l => l.code === savedSource)) {
-      sourceLanguage.value = savedSource
+    if (props.initialSource == null) {
+      const savedSource = localStorage.getItem(STORAGE_KEY_SOURCE)
+      if (savedSource && availableLanguages.some(l => l.code === savedSource)) {
+        sourceLanguage.value = savedSource
+      }
     }
-    if (savedTarget && availableLanguages.some(l => l.code === savedTarget)) {
-      targetLanguage.value = savedTarget
+    if (props.initialTarget == null) {
+      const savedTarget = localStorage.getItem(STORAGE_KEY_TARGET)
+      if (savedTarget && availableLanguages.some(l => l.code === savedTarget)) {
+        targetLanguage.value = savedTarget
+      }
     }
-    if (savedFormality === 'informal' || savedFormality === 'formal') {
-      formality.value = savedFormality
+    if (props.initialFormality == null) {
+      const savedFormality = localStorage.getItem(STORAGE_KEY_FORMALITY)
+      if (savedFormality === 'informal' || savedFormality === 'formal') {
+        formality.value = savedFormality
+      }
     }
-    if (savedDialect && SWISS_DIALECTS.some(d => d.code === savedDialect)) {
-      dialect.value = savedDialect
+    if (props.initialDialect == null) {
+      const savedDialect = localStorage.getItem(STORAGE_KEY_DIALECT)
+      if (savedDialect && SWISS_DIALECTS.some(d => d.code === savedDialect)) {
+        dialect.value = savedDialect
+      }
     }
   }
 })
