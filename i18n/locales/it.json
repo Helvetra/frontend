@@ -1359,7 +1359,8 @@
       "related": {
         "title": "Vedi anche",
         "reverse": "Traduttore dallo svizzero tedesco all'inglese",
-        "compare": "Confronta Helvetra con DeepL e Google Traduttore"
+        "compare": "Confronta Helvetra con DeepL e Google Traduttore",
+        "hub": "Traduttore svizzero tedesco"
       }
     },
     "gswToEn": {
@@ -1387,6 +1388,36 @@
       "related": {
         "title": "Vedi anche",
         "reverse": "Traduttore dall'inglese allo svizzero tedesco",
+        "compare": "Confronta Helvetra con DeepL e Google Traduttore",
+        "hub": "Traduttore svizzero tedesco"
+      }
+    },
+    "hub": {
+      "meta": {
+        "title": "Traduttore svizzero tedesco - Helvetra",
+        "description": "Un traduttore svizzero tedesco creato in Svizzera. Traduci tra svizzero tedesco, tedesco, inglese e altro, scegli il dialetto e mantieni privati i tuoi testi."
+      },
+      "h1": "Traduttore svizzero tedesco",
+      "lead": "Traduci da e verso lo svizzero tedesco con la scelta del dialetto, creato in Svizzera e privato per progettazione.",
+      "about": {
+        "title": "Che cos'è un traduttore svizzero tedesco?",
+        "p1": "Lo svizzero tedesco (Schweizerdeutsch) è la lingua parlata ogni giorno nella Svizzera tedesca. È una famiglia di dialetti più che una lingua unica e standardizzata, raramente scritta in forma fissa, perciò i traduttori comuni che puntano al tedesco standard spesso sbagliano. Helvetra è creato appositamente per lo svizzero tedesco.",
+        "p2": "Usa il traduttore qui sopra per passare tra lo svizzero tedesco e altre lingue. Per impostazione predefinita dal tedesco allo svizzero tedesco; puoi cambiare direzione o lingua in qualsiasi momento e scegliere il dialetto della tua regione, dal Bärndütsch allo Züritüütsch.",
+        "p3": "La traduzione funziona con Apertus, un modello di IA svizzero aperto, su infrastruttura svizzera. Il tuo testo viene elaborato e poi eliminato: non viene mai conservato né usato per addestrare modelli. Lo svizzero tedesco resta complesso, quindi per i messaggi importanti una revisione umana è ancora utile."
+      },
+      "faq": {
+        "title": "Domande frequenti",
+        "q1": "Cosa fa il traduttore svizzero tedesco?",
+        "a1": "Traduce tra lo svizzero tedesco e lingue come il tedesco e l'inglese, in entrambe le direzioni, e ti permette di scegliere un dialetto. Poiché lo svizzero tedesco è soprattutto parlato, considera il risultato una buona bozza quotidiana, non una traduzione certificata.",
+        "q2": "Quali dialetti posso scegliere?",
+        "a2": "Bärndütsch (Berna), Züritüütsch (Zurigo), Baseldytsch (Basilea), Sanggallerdütsch (San Gallo), Walliserdütsch (Vallese) e Luzärndütsch (Lucerna).",
+        "q3": "È privato e gratuito?",
+        "a3": "Il tuo testo viene elaborato su infrastruttura svizzera e poi eliminato, mai conservato né usato per addestrare modelli. Puoi tradurre senza account; volumi maggiori sono disponibili nei piani a pagamento."
+      },
+      "related": {
+        "title": "Tradurre in una direzione specifica",
+        "toEnGsw": "Traduttore dall'inglese allo svizzero tedesco",
+        "toGswEn": "Traduttore dallo svizzero tedesco all'inglese",
         "compare": "Confronta Helvetra con DeepL e Google Traduttore"
       }
     }

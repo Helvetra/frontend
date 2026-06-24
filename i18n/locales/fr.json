@@ -1359,7 +1359,8 @@
       "related": {
         "title": "À voir aussi",
         "reverse": "Traducteur suisse allemand vers anglais",
-        "compare": "Comparer Helvetra à DeepL et Google Traduction"
+        "compare": "Comparer Helvetra à DeepL et Google Traduction",
+        "hub": "Traducteur suisse allemand"
       }
     },
     "gswToEn": {
@@ -1387,6 +1388,36 @@
       "related": {
         "title": "À voir aussi",
         "reverse": "Traducteur anglais vers suisse allemand",
+        "compare": "Comparer Helvetra à DeepL et Google Traduction",
+        "hub": "Traducteur suisse allemand"
+      }
+    },
+    "hub": {
+      "meta": {
+        "title": "Traducteur suisse allemand - Helvetra",
+        "description": "Un traducteur suisse allemand conçu en Suisse. Traduisez entre le suisse allemand, l'allemand, l'anglais et plus, choisissez le dialecte et gardez vos textes privés."
+      },
+      "h1": "Traducteur suisse allemand",
+      "lead": "Traduisez de et vers le suisse allemand avec le choix du dialecte, conçu en Suisse et privé par conception.",
+      "about": {
+        "title": "Qu'est-ce qu'un traducteur suisse allemand?",
+        "p1": "Le suisse allemand (Schweizerdeutsch) est la langue parlée au quotidien en Suisse alémanique. C'est une famille de dialectes plutôt qu'une langue unique et standardisée, rarement écrite sous une forme fixe, si bien que les traducteurs ordinaires visant l'allemand standard se trompent souvent. Helvetra est conçu spécifiquement pour le suisse allemand.",
+        "p2": "Utilisez le traducteur ci-dessus pour passer entre le suisse allemand et d'autres langues. Par défaut, de l'allemand vers le suisse allemand; vous pouvez changer de sens ou de langue à tout moment et choisir le dialecte de votre région, du Bärndütsch au Züritüütsch.",
+        "p3": "La traduction fonctionne avec Apertus, un modèle d'IA suisse ouvert, sur une infrastructure suisse. Votre texte est traité puis supprimé: il n'est jamais conservé ni utilisé pour entraîner des modèles. Le suisse allemand reste difficile, donc pour les messages importants une relecture humaine reste utile."
+      },
+      "faq": {
+        "title": "Questions fréquentes",
+        "q1": "Que fait le traducteur suisse allemand?",
+        "a1": "Il traduit entre le suisse allemand et des langues comme l'allemand et l'anglais, dans les deux sens, et vous laisse choisir un dialecte. Comme le suisse allemand est surtout parlé, considérez le résultat comme un bon brouillon du quotidien, pas une traduction certifiée.",
+        "q2": "Quels dialectes puis-je choisir?",
+        "a2": "Le Bärndütsch (Berne), le Züritüütsch (Zurich), le Baseldytsch (Bâle), le Sanggallerdütsch (Saint-Gall), le Walliserdütsch (Valais) et le Luzärndütsch (Lucerne).",
+        "q3": "Est-ce privé et gratuit?",
+        "a3": "Votre texte est traité sur une infrastructure suisse puis supprimé, jamais conservé ni utilisé pour entraîner des modèles. Vous pouvez traduire sans compte; de plus grands volumes sont disponibles avec les offres payantes."
+      },
+      "related": {
+        "title": "Traduire dans un sens précis",
+        "toEnGsw": "Traducteur anglais vers suisse allemand",
+        "toGswEn": "Traducteur suisse allemand vers anglais",
         "compare": "Comparer Helvetra à DeepL et Google Traduction"
       }
     }

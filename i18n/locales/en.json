@@ -1359,7 +1359,8 @@
       "related": {
         "title": "Related",
         "reverse": "Swiss German to English translator",
-        "compare": "Compare Helvetra with DeepL and Google Translate"
+        "compare": "Compare Helvetra with DeepL and Google Translate",
+        "hub": "Swiss German translator"
       }
     },
     "gswToEn": {
@@ -1387,6 +1388,36 @@
       "related": {
         "title": "Related",
         "reverse": "English to Swiss German translator",
+        "compare": "Compare Helvetra with DeepL and Google Translate",
+        "hub": "Swiss German translator"
+      }
+    },
+    "hub": {
+      "meta": {
+        "title": "Swiss German Translator - Helvetra",
+        "description": "A Swiss German translator built in Switzerland. Translate between Swiss German, German, English and more, choose your dialect, and keep your text private."
+      },
+      "h1": "Swiss German Translator",
+      "lead": "Translate to and from Swiss German with a choice of dialects, built in Switzerland and private by design.",
+      "about": {
+        "title": "What is a Swiss German translator?",
+        "p1": "Swiss German (Schweizerdeutsch) is the spoken everyday language of German-speaking Switzerland. It is a family of dialects rather than a single standardised language, and it is rarely written down in a fixed way, so ordinary translators that target standard German often miss the mark. Helvetra is built specifically for Swiss German.",
+        "p2": "Use the translator above to go between Swiss German and other languages. The default is German to Swiss German, and you can switch direction or pick a different language at any time, choosing the dialect that fits your region from Bärndütsch to Züritüütsch.",
+        "p3": "Translation runs on Apertus, an open Swiss AI model, on Swiss infrastructure. Your text is processed and then discarded: it is never stored or used to train models. Swiss German remains a hard problem, so for important messages a human check is still wise."
+      },
+      "faq": {
+        "title": "Frequently asked questions",
+        "q1": "What does the Swiss German translator do?",
+        "a1": "It translates between Swiss German and languages like German and English, in either direction, and lets you choose a regional dialect. Because Swiss German is mainly spoken, treat the result as a strong everyday draft rather than a certified translation.",
+        "q2": "Which dialects can I choose?",
+        "a2": "Bärndütsch (Bern), Züritüütsch (Zurich), Baseldytsch (Basel), Sanggallerdütsch (St. Gallen), Walliserdütsch (Valais) and Luzärndütsch (Lucerne).",
+        "q3": "Is it private and free?",
+        "a3": "Your text is processed on Swiss infrastructure and then discarded, never stored or used to train models. You can translate without an account; larger volumes are available on paid plans."
+      },
+      "related": {
+        "title": "Translate in a specific direction",
+        "toEnGsw": "English to Swiss German translator",
+        "toGswEn": "Swiss German to English translator",
         "compare": "Compare Helvetra with DeepL and Google Translate"
       }
     }

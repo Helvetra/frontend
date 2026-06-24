@@ -1359,7 +1359,8 @@
       "related": {
         "title": "Mehr",
         "reverse": "Schweizerdeutsch zu Englisch Übersetzer",
-        "compare": "Helvetra mit DeepL und Google Übersetzer vergleichen"
+        "compare": "Helvetra mit DeepL und Google Übersetzer vergleichen",
+        "hub": "Schweizerdeutsch Übersetzer"
       }
     },
     "gswToEn": {
@@ -1387,6 +1388,36 @@
       "related": {
         "title": "Mehr",
         "reverse": "Englisch zu Schweizerdeutsch Übersetzer",
+        "compare": "Helvetra mit DeepL und Google Übersetzer vergleichen",
+        "hub": "Schweizerdeutsch Übersetzer"
+      }
+    },
+    "hub": {
+      "meta": {
+        "title": "Schweizerdeutsch Übersetzer - Helvetra",
+        "description": "Ein Schweizerdeutsch Übersetzer aus der Schweiz. Übersetze zwischen Schweizerdeutsch, Deutsch, Englisch und mehr, wähle den Dialekt und halte deinen Text privat."
+      },
+      "h1": "Schweizerdeutsch Übersetzer",
+      "lead": "Übersetze von und nach Schweizerdeutsch mit Wahl des Dialekts, in der Schweiz gebaut und von Grund auf privat.",
+      "about": {
+        "title": "Was ist ein Schweizerdeutsch Übersetzer?",
+        "p1": "Schweizerdeutsch ist die gesprochene Alltagssprache der Deutschschweiz. Es ist eine Familie von Dialekten und keine einheitliche, standardisierte Sprache, und es wird selten in fester Form geschrieben. Übliche Übersetzer, die auf Hochdeutsch zielen, treffen es darum oft nicht. Helvetra ist speziell für Schweizerdeutsch gebaut.",
+        "p2": "Nutze den Übersetzer oben, um zwischen Schweizerdeutsch und anderen Sprachen zu wechseln. Standard ist Deutsch zu Schweizerdeutsch, du kannst die Richtung oder die Sprache jederzeit ändern und den Dialekt deiner Region wählen, von Bärndütsch bis Züritüütsch.",
+        "p3": "Die Übersetzung läuft auf Apertus, einem offenen Schweizer KI-Modell, auf Schweizer Infrastruktur. Dein Text wird verarbeitet und danach verworfen: Er wird nie gespeichert oder zum Training von Modellen verwendet. Schweizerdeutsch bleibt anspruchsvoll, darum lohnt sich bei wichtigen Texten ein menschlicher Blick."
+      },
+      "faq": {
+        "title": "Häufige Fragen",
+        "q1": "Was macht der Schweizerdeutsch Übersetzer?",
+        "a1": "Er übersetzt zwischen Schweizerdeutsch und Sprachen wie Deutsch und Englisch, in beide Richtungen, und lässt dich einen Dialekt wählen. Da Schweizerdeutsch vor allem gesprochen wird, ist das Ergebnis ein guter Alltagsentwurf, keine beglaubigte Übersetzung.",
+        "q2": "Welche Dialekte kann ich wählen?",
+        "a2": "Bärndütsch (Bern), Züritüütsch (Zürich), Baseldytsch (Basel), Sanggallerdütsch (St. Gallen), Walliserdütsch (Wallis) und Luzärndütsch (Luzern).",
+        "q3": "Ist es privat und kostenlos?",
+        "a3": "Dein Text wird auf Schweizer Infrastruktur verarbeitet und danach verworfen, nie gespeichert oder zum Training verwendet. Du kannst ohne Konto übersetzen; grössere Mengen gibt es in den kostenpflichtigen Plänen."
+      },
+      "related": {
+        "title": "In eine bestimmte Richtung übersetzen",
+        "toEnGsw": "Englisch zu Schweizerdeutsch Übersetzer",
+        "toGswEn": "Schweizerdeutsch zu Englisch Übersetzer",
         "compare": "Helvetra mit DeepL und Google Übersetzer vergleichen"
       }
     }

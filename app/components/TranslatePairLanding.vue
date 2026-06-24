@@ -86,8 +86,6 @@ const props = defineProps<{
   dialect?: string
   /** i18n key prefix holding this page's content (e.g. 'translatePages.enToGsw'). */
   tkey: string
-  /** Route slug, used to build the canonical URL (e.g. 'english-to-swiss-german'). */
-  slug: string
   /** Cross-links rendered at the foot of the page. */
   relatedLinks?: RelatedLink[]
 }>()
@@ -95,10 +93,12 @@ const props = defineProps<{
 const relatedLinks = computed(() => props.relatedLinks ?? [])
 
 const { t } = useI18n()
-const localePath = useLocalePath()
+const route = useRoute()
 const { getFAQSchema, useJsonLd } = useSchemaOrg()
 
-const canonical = computed(() => `https://helvetra.ch${localePath(`/${props.slug}`)}`)
+// Canonical is the resolved path of the current page, so it already carries
+// the locale prefix and any localized slug (e.g. /de/schweizerdeutsch-uebersetzer).
+const canonical = computed(() => `https://helvetra.ch${route.path}`)
 
 // FAQ content doubles as FAQPage structured data — directly citable by search
 // engines and LLMs.
