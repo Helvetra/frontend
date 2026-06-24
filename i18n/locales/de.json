@@ -1332,5 +1332,63 @@
         "button": "Helvetra kostenlos testen"
       }
     }
+  },
+  "translatePages": {
+    "enToGsw": {
+      "meta": {
+        "title": "Englisch zu Schweizerdeutsch Übersetzer - Helvetra",
+        "description": "Englisch ins Schweizerdeutsch übersetzen. Dialekt wählen, Text bleibt privat. In der Schweiz gebaut, mit dem offenen Schweizer KI-Modell Apertus."
+      },
+      "h1": "Englisch zu Schweizerdeutsch Übersetzer",
+      "lead": "Übersetze Englisch in natürliches Schweizerdeutsch in Sekunden, mit Wahl des Dialekts und voller Privatsphäre.",
+      "about": {
+        "title": "Englisch ins Schweizerdeutsch übersetzen",
+        "p1": "Schweizerdeutsch ist die gesprochene Alltagssprache der Deutschschweiz. Es ist keine einheitliche, standardisierte Sprache, sondern eine Familie von Dialekten, und es wird selten in fester Form geschrieben. Das macht die Übersetzung wirklich schwierig. Helvetra ist genau für diese Aufgabe gebaut und behandelt Schweizerdeutsch nicht als Nebensache.",
+        "p2": "Gib deinen englischen Text links ein, die schweizerdeutsche Übersetzung erscheint rechts. Du kannst den passenden Dialekt wählen, von Bärndütsch bis Züritüütsch, damit das Ergebnis lokal klingt und nicht generisch.",
+        "p3": "Die Übersetzung läuft auf Apertus, einem offenen Schweizer KI-Modell, auf Schweizer Infrastruktur. Dein Text wird verarbeitet und danach verworfen: Er wird nie gespeichert oder zum Training von Modellen verwendet. Schweizerdeutsch bleibt anspruchsvoll und die Qualität verbessert sich laufend, darum lohnt sich bei wichtigen Texten ein kurzer menschlicher Blick."
+      },
+      "faq": {
+        "title": "Häufige Fragen",
+        "q1": "Kann man Englisch wirklich ins Schweizerdeutsch übersetzen?",
+        "a1": "Ja. Helvetra übersetzt Englisch ins Schweizerdeutsch und lässt dich einen Dialekt wählen. Da Schweizerdeutsch vor allem gesprochen wird und keine einheitliche Schriftform hat, ist das Ergebnis ein guter Entwurf für den Alltag, keine beglaubigte Übersetzung.",
+        "q2": "Welche Schweizer Dialekte werden unterstützt?",
+        "a2": "Du kannst Bärndütsch (Bern), Züritüütsch (Zürich), Baseldytsch (Basel), Sanggallerdütsch (St. Gallen), Walliserdütsch (Wallis) und Luzärndütsch (Luzern) wählen.",
+        "q3": "Bleibt mein Text privat?",
+        "a3": "Ja. Der Text wird auf Schweizer Infrastruktur verarbeitet und danach verworfen. Helvetra speichert deine Übersetzungen nicht und nutzt sie nicht zum Training von KI-Modellen."
+      },
+      "related": {
+        "title": "Mehr",
+        "reverse": "Schweizerdeutsch zu Englisch Übersetzer",
+        "compare": "Helvetra mit DeepL und Google Übersetzer vergleichen"
+      }
+    },
+    "gswToEn": {
+      "meta": {
+        "title": "Schweizerdeutsch zu Englisch Übersetzer - Helvetra",
+        "description": "Schweizerdeutsch ins Englische übersetzen. Versteht jeden Dialekt, Text bleibt privat. In der Schweiz gebaut, mit dem offenen Schweizer KI-Modell Apertus."
+      },
+      "h1": "Schweizerdeutsch zu Englisch Übersetzer",
+      "lead": "Verstehe Schweizerdeutsch, indem du es in klares Englisch übersetzt, in Sekunden und mit voller Privatsphäre.",
+      "about": {
+        "title": "Schweizerdeutsch ins Englische übersetzen",
+        "p1": "Schweizerdeutsch ist das, was in der Deutschschweiz tatsächlich gesprochen wird, und es unterscheidet sich deutlich vom Hochdeutschen. Wer eine Nachricht, ein Transkript oder einen Beitrag im Dialekt erhält, stösst mit normalen Übersetzern oft an Grenzen. Helvetra ist gebaut, um Schweizerdeutsch direkt zu verarbeiten.",
+        "p2": "Füge den schweizerdeutschen Text links ein, die englische Übersetzung erscheint rechts. Es funktioniert über verschiedene Dialekte hinweg, sodass du Berndeutsch, Zürichdeutsch, Baseldeutsch und weitere Varianten verstehst.",
+        "p3": "Die Übersetzung läuft auf Apertus, einem offenen Schweizer KI-Modell, auf Schweizer Infrastruktur. Dein Text wird verarbeitet und danach verworfen: Er wird nie gespeichert oder zum Training von Modellen verwendet. Schweizerdeutsch ist anspruchsvoll, darum lohnt sich bei Wichtigem ein menschlicher Blick."
+      },
+      "faq": {
+        "title": "Häufige Fragen",
+        "q1": "Kann Helvetra Schweizerdeutsch ins Englische übersetzen?",
+        "a1": "Ja. Füge schweizerdeutschen Text in einem gängigen Dialekt ein, und Helvetra liefert eine englische Übersetzung. Es ist speziell für Schweizerdeutsch gemacht, nicht als generischer Deutsch-Übersetzer.",
+        "q2": "Versteht es verschiedene Dialekte?",
+        "a2": "Ja. Helvetra ist darauf ausgelegt, die wichtigsten Schweizer Dialekte zu verarbeiten, darunter Berndeutsch, Zürichdeutsch und Baseldeutsch, nicht nur Hochdeutsch.",
+        "q3": "Bleibt mein Text privat?",
+        "a3": "Ja. Der Text wird auf Schweizer Infrastruktur verarbeitet und danach verworfen. Helvetra speichert deine Übersetzungen nicht und nutzt sie nicht zum Training von KI-Modellen."
+      },
+      "related": {
+        "title": "Mehr",
+        "reverse": "Englisch zu Schweizerdeutsch Übersetzer",
+        "compare": "Helvetra mit DeepL und Google Übersetzer vergleichen"
+      }
+    }
   }
 }

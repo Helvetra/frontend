@@ -1332,5 +1332,63 @@
         "button": "Essayer Helvetra gratuitement"
       }
     }
+  },
+  "translatePages": {
+    "enToGsw": {
+      "meta": {
+        "title": "Traducteur anglais vers suisse allemand - Helvetra",
+        "description": "Traduisez l'anglais en suisse allemand (Schweizerdeutsch). Choisissez le dialecte, vos textes restent privés. Conçu en Suisse avec le modèle d'IA suisse ouvert Apertus."
+      },
+      "h1": "Traducteur anglais vers suisse allemand",
+      "lead": "Traduisez l'anglais en suisse allemand naturel en quelques secondes, avec le choix du dialecte et une confidentialité totale.",
+      "about": {
+        "title": "Traduire l'anglais en suisse allemand",
+        "p1": "Le suisse allemand (Schweizerdeutsch) est la langue parlée au quotidien en Suisse alémanique. Ce n'est pas une langue unique et standardisée mais une famille de dialectes, rarement écrite sous une forme fixe, ce qui rend la traduction réellement difficile. Helvetra est conçu spécifiquement pour cette tâche.",
+        "p2": "Saisissez votre texte anglais à gauche, la traduction en suisse allemand apparaît à droite. Vous pouvez choisir le dialecte adapté à votre public, du Bärndütsch au Züritüütsch, pour un résultat local plutôt que générique.",
+        "p3": "La traduction fonctionne avec Apertus, un modèle d'IA suisse ouvert, sur une infrastructure suisse. Votre texte est traité puis supprimé: il n'est jamais conservé ni utilisé pour entraîner des modèles. Le suisse allemand reste difficile et la qualité s'améliore sans cesse, donc pour les messages importants une relecture humaine reste utile."
+      },
+      "faq": {
+        "title": "Questions fréquentes",
+        "q1": "Peut-on vraiment traduire l'anglais en suisse allemand?",
+        "a1": "Oui. Helvetra traduit l'anglais en suisse allemand et vous laisse choisir un dialecte. Comme le suisse allemand est surtout parlé et n'a pas de forme écrite unique, considérez le résultat comme un bon brouillon pour un usage courant, pas comme une traduction certifiée.",
+        "q2": "Quels dialectes suisses allemands sont pris en charge?",
+        "a2": "Vous pouvez choisir le Bärndütsch (Berne), le Züritüütsch (Zurich), le Baseldytsch (Bâle), le Sanggallerdütsch (Saint-Gall), le Walliserdütsch (Valais) et le Luzärndütsch (Lucerne).",
+        "q3": "Mon texte reste-t-il privé?",
+        "a3": "Oui. Le texte est traité sur une infrastructure suisse puis supprimé. Helvetra ne conserve pas vos traductions et ne les utilise pas pour entraîner des modèles d'IA."
+      },
+      "related": {
+        "title": "À voir aussi",
+        "reverse": "Traducteur suisse allemand vers anglais",
+        "compare": "Comparer Helvetra à DeepL et Google Traduction"
+      }
+    },
+    "gswToEn": {
+      "meta": {
+        "title": "Traducteur suisse allemand vers anglais - Helvetra",
+        "description": "Traduisez le suisse allemand (Schweizerdeutsch) en anglais. Comprend chaque dialecte, vos textes restent privés. Conçu en Suisse avec le modèle d'IA suisse ouvert Apertus."
+      },
+      "h1": "Traducteur suisse allemand vers anglais",
+      "lead": "Comprenez le suisse allemand en le traduisant en anglais clair en quelques secondes, en toute confidentialité.",
+      "about": {
+        "title": "Traduire le suisse allemand en anglais",
+        "p1": "Le suisse allemand (Schweizerdeutsch) est ce que l'on parle réellement en Suisse alémanique, et il diffère nettement de l'allemand standard. Si vous recevez un message, une transcription ou un post en dialecte, un traducteur classique peine souvent. Helvetra est conçu pour traiter directement le suisse allemand.",
+        "p2": "Collez le texte en suisse allemand à gauche, la traduction anglaise apparaît à droite. Cela fonctionne pour les différents dialectes, afin de comprendre le bernois, le zurichois, le bâlois et d'autres variantes.",
+        "p3": "La traduction fonctionne avec Apertus, un modèle d'IA suisse ouvert, sur une infrastructure suisse. Votre texte est traité puis supprimé: il n'est jamais conservé ni utilisé pour entraîner des modèles. Le suisse allemand est difficile, donc pour l'essentiel une relecture humaine reste utile."
+      },
+      "faq": {
+        "title": "Questions fréquentes",
+        "q1": "Helvetra peut-il traduire le suisse allemand en anglais?",
+        "a1": "Oui. Collez du texte en suisse allemand dans un dialecte courant et Helvetra renvoie une traduction anglaise. Il est conçu spécifiquement pour le suisse allemand, pas comme un traducteur allemand générique.",
+        "q2": "Comprend-il différents dialectes?",
+        "a2": "Oui. Helvetra est conçu pour traiter les principaux dialectes suisses allemands, dont le bernois, le zurichois et le bâlois, et pas seulement l'allemand standard.",
+        "q3": "Mon texte reste-t-il privé?",
+        "a3": "Oui. Le texte est traité sur une infrastructure suisse puis supprimé. Helvetra ne conserve pas vos traductions et ne les utilise pas pour entraîner des modèles d'IA."
+      },
+      "related": {
+        "title": "À voir aussi",
+        "reverse": "Traducteur anglais vers suisse allemand",
+        "compare": "Comparer Helvetra à DeepL et Google Traduction"
+      }
+    }
   }
 }
