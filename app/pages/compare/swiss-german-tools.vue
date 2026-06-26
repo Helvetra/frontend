@@ -6,7 +6,7 @@
   <div>
     <ContentArticleLayout>
       <template #title>{{ $t('articles.swissGermanTools.title') }}</template>
-      <template #subtitle>{{ $t('articles.swissGermanTools.subtitle') }}</template>
+      <template #subtitle>{{ $t('articles.swissGermanTools.subtitle', { year }) }}</template>
 
       <!-- Introduction -->
       <ContentProseSection id="introduction">
@@ -164,6 +164,9 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+
+// Keep "(2025)"-style years in titles current without manual edits each year.
+const year = new Date().getFullYear()
 const localePath = useLocalePath()
 const { getArticleSchema, getItemListSchema, useJsonLd } = useSchemaOrg()
 
@@ -188,14 +191,14 @@ useJsonLd([
 ])
 
 useHead({
-  title: () => t('articles.swissGermanTools.meta.title'),
+  title: () => t('articles.swissGermanTools.meta.title', { year }),
   meta: [
     { name: 'description', content: () => t('articles.swissGermanTools.meta.description') },
   ],
 })
 
 useSeoMeta({
-  ogTitle: () => t('articles.swissGermanTools.meta.title'),
+  ogTitle: () => t('articles.swissGermanTools.meta.title', { year }),
   ogDescription: () => t('articles.swissGermanTools.meta.description'),
   ogType: 'article',
 })

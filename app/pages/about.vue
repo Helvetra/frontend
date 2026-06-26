@@ -110,5 +110,14 @@ const localePath = useLocalePath()
 
 useHead({
   title: () => `${t('about.title')} - Helvetra`,
+  meta: [
+    { name: 'description', content: () => t('about.metaDescription') },
+  ],
+})
+
+useSeoMeta({
+  ogTitle: () => `${t('about.title')} - Helvetra`,
+  ogDescription: () => t('about.metaDescription'),
+  ogType: 'website',
 })
 </script>

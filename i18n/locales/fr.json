@@ -605,7 +605,8 @@
       "title": "Pour les développeurs",
       "body": "Helvetra propose aussi une API de traduction en libre-service avec la même souveraineté des données suisses, le suisse-allemand et le romanche. Tarifs à partir de CHF 29 par mois avec 14 jours d'essai gratuit.",
       "cta": "Découvrir l'API pour développeurs"
-    }
+    },
+    "metaDescription": "Helvetra est une application de traduction privée, conçue en Suisse, pour le suisse allemand, l'allemand, le français, l'italien, le romanche et l'anglais. Découvrez notre mission, l'IA suisse ouverte qui la propulse et notre approche axée sur la confidentialité."
   },
   "faqPage": {
     "title": "Questions fréquentes",
@@ -1210,11 +1211,11 @@
   "articles": {
     "swissGermanTools": {
       "meta": {
-        "title": "Top 5 des outils de traduction suisse allemand (2025)",
+        "title": "Top 5 des outils de traduction suisse allemand ({year})",
         "description": "Comparez les meilleurs outils de traduction pour le suisse allemand. De DeepL aux services suisses spécialisés."
       },
       "title": "Top 5 des outils de traduction suisse allemand",
-      "subtitle": "Une comparaison pratique pour tous ceux qui traduisent le suisse allemand en 2025",
+      "subtitle": "Une comparaison pratique pour tous ceux qui traduisent le suisse allemand en {year}",
       "intro": {
         "p1": "Le suisse allemand est notoirement difficile à traduire. Plus de 55% des Suisses le parlent à la maison, mais il n'existe pratiquement pas de norme écrite. La plupart des outils de traduction l'ignorent tout simplement. Nous avons testé les principales options.",
         "p2": "Cette comparaison se concentre sur l'utilisation pratique au quotidien : précision, rapidité, confidentialité et bien sûr, support du suisse allemand."
@@ -1272,11 +1273,11 @@
     },
     "bestApps": {
       "meta": {
-        "title": "Meilleures applications de traduction pour la Suisse (2025)",
+        "title": "Meilleures applications de traduction pour la Suisse ({year})",
         "description": "Comparez les meilleures applications de traduction pour les utilisateurs suisses. Confidentialité, suisse allemand et besoins multilingues."
       },
       "title": "Meilleures applications de traduction pour la Suisse",
-      "subtitle": "Les meilleurs choix pour les utilisateurs suisses qui ont besoin d'une traduction fiable en 2025",
+      "subtitle": "Les meilleurs choix pour les utilisateurs suisses qui ont besoin d'une traduction fiable en {year}",
       "intro": {
         "p1": "Les quatre langues nationales de la Suisse rendent la traduction essentielle au quotidien. Que vous ayez besoin d'allemand, français, italien ou romanche, avoir la bonne application de traduction compte.",
         "p2": "Nous avons évalué les principales applications de traduction selon ce qui compte le plus pour les utilisateurs suisses : qualité linguistique, confidentialité, support du suisse allemand et disponibilité hors ligne."

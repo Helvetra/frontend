@@ -605,7 +605,8 @@
       "title": "Per sviluppatori",
       "body": "Helvetra offre anche un'API di traduzione self-service con la stessa sovranità dei dati svizzera, supporto per svizzero-tedesco e romancio. Prezzi a partire da CHF 29 al mese con 14 giorni di prova gratuita.",
       "cta": "Esplora l'API per sviluppatori"
-    }
+    },
+    "metaDescription": "Helvetra è un'app di traduzione privata, creata in Svizzera, per svizzero tedesco, tedesco, francese, italiano, romancio e inglese. Scopri la nostra missione, l'IA svizzera aperta che la alimenta e il nostro approccio incentrato sulla privacy."
   },
   "faqPage": {
     "title": "Domande frequenti",
@@ -1210,11 +1211,11 @@
   "articles": {
     "swissGermanTools": {
       "meta": {
-        "title": "Top 5 strumenti di traduzione svizzero tedesco (2025)",
+        "title": "Top 5 strumenti di traduzione svizzero tedesco ({year})",
         "description": "Confronta i migliori strumenti di traduzione per lo svizzero tedesco. Da DeepL ai servizi svizzeri specializzati."
       },
       "title": "Top 5 strumenti di traduzione svizzero tedesco",
-      "subtitle": "Un confronto pratico per chiunque traduca svizzero tedesco nel 2025",
+      "subtitle": "Un confronto pratico per chiunque traduca svizzero tedesco nel {year}",
       "intro": {
         "p1": "Lo svizzero tedesco è notoriamente difficile da tradurre. Oltre il 55% degli svizzeri lo parla a casa, ma praticamente non esiste uno standard scritto. La maggior parte degli strumenti di traduzione lo ignora semplicemente. Abbiamo testato le principali opzioni.",
         "p2": "Questo confronto si concentra sull'uso pratico quotidiano: precisione, velocità, privacy e naturalmente supporto dello svizzero tedesco."
@@ -1272,11 +1273,11 @@
     },
     "bestApps": {
       "meta": {
-        "title": "Migliori app di traduzione per la Svizzera (2025)",
+        "title": "Migliori app di traduzione per la Svizzera ({year})",
         "description": "Confronta le migliori app di traduzione per gli utenti svizzeri. Privacy, svizzero tedesco e esigenze multilingue."
       },
       "title": "Migliori app di traduzione per la Svizzera",
-      "subtitle": "Le migliori scelte per gli utenti svizzeri che hanno bisogno di traduzione affidabile nel 2025",
+      "subtitle": "Le migliori scelte per gli utenti svizzeri che hanno bisogno di traduzione affidabile nel {year}",
       "intro": {
         "p1": "Le quattro lingue nazionali della Svizzera rendono la traduzione essenziale nella vita quotidiana. Che tu abbia bisogno di tedesco, francese, italiano o romancio, avere l'app di traduzione giusta conta.",
         "p2": "Abbiamo valutato le principali app di traduzione in base a ciò che conta di più per gli utenti svizzeri: qualità linguistica, privacy, supporto dello svizzero tedesco e disponibilità offline."

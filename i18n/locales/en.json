@@ -605,7 +605,8 @@
       "title": "For developers",
       "body": "Helvetra also offers a self-serve translation API with the same Swiss data residency, Swiss German, and Romansh support. Pricing from CHF 29 per month with a 14-day free trial.",
       "cta": "Explore the developer API"
-    }
+    },
+    "metaDescription": "Helvetra is a private, Swiss-built translation app for Swiss German, German, French, Italian, Romansh and English. Learn about our mission, the open Swiss AI behind it, and our privacy-first approach."
   },
   "faqPage": {
     "title": "Frequently Asked Questions",
@@ -1210,11 +1211,11 @@
   "articles": {
     "swissGermanTools": {
       "meta": {
-        "title": "Top 5 Swiss German Translation Tools (2025)",
+        "title": "Top 5 Swiss German Translation Tools ({year})",
         "description": "Compare the best translation tools for Swiss German. From DeepL to specialized Swiss services, find the right tool for your needs."
       },
       "title": "Top 5 Swiss German Translation Tools",
-      "subtitle": "A practical comparison for anyone translating Swiss German in 2025",
+      "subtitle": "A practical comparison for anyone translating Swiss German in {year}",
       "intro": {
         "p1": "Swiss German is notoriously difficult to translate. With over 55% of Swiss people speaking it at home, yet virtually no written standard, most translation tools simply ignore it. We tested the major options to find which ones actually work.",
         "p2": "This comparison focuses on practical everyday use: accuracy, speed, privacy, and of course, Swiss German support."
@@ -1272,11 +1273,11 @@
     },
     "bestApps": {
       "meta": {
-        "title": "Best Translation Apps for Switzerland (2025)",
+        "title": "Best Translation Apps for Switzerland ({year})",
         "description": "Compare the top translation apps for Swiss users. Privacy, Swiss German support, and multilingual needs covered."
       },
       "title": "Best Translation Apps for Switzerland",
-      "subtitle": "The top choices for Swiss users who need reliable translation in 2025",
+      "subtitle": "The top choices for Swiss users who need reliable translation in {year}",
       "intro": {
         "p1": "Switzerland's four national languages make translation essential for daily life. Whether you're navigating German, French, Italian, or Romansh, having the right translation app matters.",
         "p2": "We evaluated the leading translation apps based on what matters most to Swiss users: language quality, privacy, Swiss German support, and offline availability."

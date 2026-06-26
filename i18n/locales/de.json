@@ -605,7 +605,8 @@
       "title": "Für Entwickler",
       "body": "Helvetra bietet auch eine Self-Service-Übersetzungs-API mit derselben Schweizer Datenhaltung, Schweizerdeutsch- und Rumantsch-Unterstützung. Preise ab CHF 29 pro Monat mit 14 Tagen Gratis-Test.",
       "cta": "Entwickler-API entdecken"
-    }
+    },
+    "metaDescription": "Helvetra ist eine private, in der Schweiz gebaute Übersetzungs-App für Schweizerdeutsch, Deutsch, Französisch, Italienisch, Rätoromanisch und Englisch. Erfahre mehr über unsere Mission, die offene Schweizer KI dahinter und unseren Ansatz mit Datenschutz an erster Stelle."
   },
   "faqPage": {
     "title": "Häufig gestellte Fragen",
@@ -1210,11 +1211,11 @@
   "articles": {
     "swissGermanTools": {
       "meta": {
-        "title": "Top 5 Schweizerdeutsch-Übersetzungstools (2025)",
+        "title": "Top 5 Schweizerdeutsch-Übersetzungstools ({year})",
         "description": "Vergleichen Sie die besten Übersetzungstools für Schweizerdeutsch. Von DeepL bis zu spezialisierten Schweizer Diensten."
       },
       "title": "Top 5 Schweizerdeutsch-Übersetzungstools",
-      "subtitle": "Ein praktischer Vergleich für alle, die 2025 Schweizerdeutsch übersetzen",
+      "subtitle": "Ein praktischer Vergleich für alle, die {year} Schweizerdeutsch übersetzen",
       "intro": {
         "p1": "Schweizerdeutsch ist bekannt schwer zu übersetzen. Über 55% der Schweizer sprechen es zu Hause, doch es gibt praktisch keinen geschriebenen Standard. Die meisten Übersetzungstools ignorieren es schlicht. Wir haben die wichtigsten Optionen getestet.",
         "p2": "Dieser Vergleich konzentriert sich auf den praktischen Alltag: Genauigkeit, Geschwindigkeit, Datenschutz und natürlich Schweizerdeutsch-Unterstützung."
@@ -1272,11 +1273,11 @@
     },
     "bestApps": {
       "meta": {
-        "title": "Beste Übersetzungs-Apps für die Schweiz (2025)",
+        "title": "Beste Übersetzungs-Apps für die Schweiz ({year})",
         "description": "Vergleichen Sie die besten Übersetzungs-Apps für Schweizer Nutzer. Datenschutz, Schweizerdeutsch und mehrsprachige Bedürfnisse."
       },
       "title": "Beste Übersetzungs-Apps für die Schweiz",
-      "subtitle": "Die Top-Auswahl für Schweizer Nutzer, die 2025 zuverlässige Übersetzung brauchen",
+      "subtitle": "Die Top-Auswahl für Schweizer Nutzer, die {year} zuverlässige Übersetzung brauchen",
       "intro": {
         "p1": "Die vier Landessprachen der Schweiz machen Übersetzung im Alltag unverzichtbar. Ob Sie Deutsch, Französisch, Italienisch oder Rätoromanisch brauchen, die richtige Übersetzungs-App ist wichtig.",
         "p2": "Wir haben die führenden Übersetzungs-Apps nach dem bewertet, was Schweizer Nutzern am wichtigsten ist: Sprachqualität, Datenschutz, Schweizerdeutsch-Unterstützung und Offline-Verfügbarkeit."
