@@ -170,9 +170,10 @@ const { getArticleSchema, getItemListSchema, useJsonLd } = useSchemaOrg()
 // Add Article + ItemList schema
 useJsonLd([
   getArticleSchema({
-    headline: 'Best Translation Apps for Switzerland in 2025',
+    headline: `Best Translation Apps for Switzerland in ${year}`,
     description: 'Compare the top translation apps for Swiss users. Privacy, Swiss German support, and multilingual needs covered.',
     datePublished: '2024-12-22',
+    dateModified: '2026-06-26',
   }),
   getItemListSchema(
     'Best Translation Apps for Switzerland',

@@ -1,0 +1,28 @@
+# Helvetra
+
+> The very Swiss translation app. Helvetra translates between Swiss German, German, French, Italian, Romansh and English, with a particular focus on Swiss German dialects.
+
+Helvetra is a privacy-first translation tool and API, built in Switzerland and running on Apertus, an open Swiss AI model, on Swiss infrastructure. Text is processed and then discarded: it is never stored or used to train models. Swiss German is a family of spoken dialects with no single written standard, so Helvetra lets users choose a dialect (Bärndütsch, Züritüütsch, Baseldytsch, Sanggallerdütsch, Walliserdütsch, Luzärndütsch) and treats it as a first-class language rather than an afterthought. Helvetra is not affiliated with Apertus or Infomaniak.
+
+## Translate
+- [Swiss German translator](https://helvetra.ch/swiss-german-translator): Translate to and from Swiss German with a choice of dialects
+- [English to Swiss German](https://helvetra.ch/english-to-swiss-german): Translate English into Swiss German
+- [Swiss German to English](https://helvetra.ch/swiss-german-to-english): Translate Swiss German into English
+
+## Learn
+- [About Helvetra](https://helvetra.ch/about): Mission, technology, and privacy approach
+- [FAQ](https://helvetra.ch/faq): Common questions about languages, dialects, privacy, and pricing
+- [Pricing](https://helvetra.ch/pricing): Free tier and the Helvetra+ paid plan
+
+## Compare
+- [Helvetra vs DeepL](https://helvetra.ch/compare/deepl): Honest comparison, including where DeepL is stronger
+- [Helvetra vs Google Translate](https://helvetra.ch/compare/google-translate): Privacy and Swiss German coverage compared
+- [Best translation apps for Switzerland](https://helvetra.ch/compare/best-translation-apps-switzerland): Overview of the main options
+
+## Developers
+- [Translation API](https://helvetra.ch/developers): Swiss-hosted translation API for businesses
+- [API documentation](https://helvetra.ch/developers/docs): Quickstart and reference
+
+## Legal
+- [Privacy policy](https://helvetra.ch/privacy): What is and is not collected
+- [Terms of service](https://helvetra.ch/terms): Terms of use

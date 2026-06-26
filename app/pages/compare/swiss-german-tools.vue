@@ -176,6 +176,7 @@ useJsonLd([
     headline: 'Top 5 Swiss German Translation Tools Compared',
     description: 'Compare the best translation tools for Swiss German, from DeepL to specialized Swiss services.',
     datePublished: '2024-12-22',
+    dateModified: '2026-06-26',
   }),
   getItemListSchema(
     'Top 5 Swiss German Translation Tools',
