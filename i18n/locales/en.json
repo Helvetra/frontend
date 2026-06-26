@@ -1421,6 +1421,64 @@
         "toGswEn": "Swiss German to English translator",
         "compare": "Compare Helvetra with DeepL and Google Translate"
       }
+    },
+    "berndeutsch": {
+      "meta": {
+        "title": "Bernese German Translator (Berndeutsch) - Helvetra",
+        "description": "Translate text into Bernese German (Berndeutsch), the dialect of Bern. Private, built in Switzerland on the open Swiss AI model Apertus."
+      },
+      "h1": "Bernese German Translator",
+      "lead": "Translate text into Bärndütsch, the Swiss German dialect of Bern, with privacy built in.",
+      "about": {
+        "title": "Translating into Bernese German",
+        "p1": "Bernese German (Berndeutsch, or Bärndütsch) is the Swiss German dialect spoken in and around the canton of Bern. Like all Swiss German, it is mainly spoken rather than written, with its own vocabulary, spelling habits and a characteristically slower, softer sound. Generic translators that target standard German do not produce it.",
+        "p2": "Type your text and Helvetra translates it into Bernese German. The translator is set to the Bern dialect here; you can switch to another dialect or language at any time.",
+        "p3": "Translation runs on Apertus, an open Swiss AI model, on Swiss infrastructure. Your text is processed and then discarded: it is never stored or used to train models. Dialect translation is hard, so for important messages a human check is still wise."
+      },
+      "faq": {
+        "title": "Frequently asked questions",
+        "q1": "Can Helvetra write in Bernese German?",
+        "a1": "Yes. Helvetra translates text into Bärndütsch, the dialect of Bern. Because Swiss German has no fixed written standard, treat the result as a natural-sounding draft rather than an official spelling.",
+        "q2": "What is the difference from standard German?",
+        "a2": "Bernese German has its own words, sounds and rhythm and is a spoken dialect, not standard written German. Helvetra targets the dialect directly instead of producing High German.",
+        "q3": "Is my text private?",
+        "a3": "Yes. Text is processed on Swiss infrastructure and then discarded, never stored or used to train AI models."
+      },
+      "related": {
+        "title": "Related",
+        "hub": "Swiss German translator",
+        "other": "Zurich German translator",
+        "compare": "Compare Helvetra with DeepL and Google Translate"
+      }
+    },
+    "zuerichdeutsch": {
+      "meta": {
+        "title": "Zurich German Translator (Züritüütsch) - Helvetra",
+        "description": "Translate text into Zurich German (Zürichdeutsch / Züritüütsch), the dialect of Zurich. Private, built in Switzerland on the open Swiss AI model Apertus."
+      },
+      "h1": "Zurich German Translator",
+      "lead": "Translate text into Züritüütsch, the Swiss German dialect of Zurich, with privacy built in.",
+      "about": {
+        "title": "Translating into Zurich German",
+        "p1": "Zurich German (Zürichdeutsch, or Züritüütsch) is the Swiss German dialect spoken in and around the canton of Zurich, and one of the most widely heard varieties of Swiss German. Like all Swiss German it is mainly spoken, with its own vocabulary and sound, and generic translators that target standard German do not produce it.",
+        "p2": "Type your text and Helvetra translates it into Zurich German. The translator is set to the Zurich dialect here; you can switch to another dialect or language at any time.",
+        "p3": "Translation runs on Apertus, an open Swiss AI model, on Swiss infrastructure. Your text is processed and then discarded: it is never stored or used to train models. Dialect translation is hard, so for important messages a human check is still wise."
+      },
+      "faq": {
+        "title": "Frequently asked questions",
+        "q1": "Can Helvetra write in Zurich German?",
+        "a1": "Yes. Helvetra translates text into Züritüütsch, the dialect of Zurich. Because Swiss German has no fixed written standard, treat the result as a natural-sounding draft rather than an official spelling.",
+        "q2": "What is the difference from standard German?",
+        "a2": "Zurich German has its own words, sounds and rhythm and is a spoken dialect, not standard written German. Helvetra targets the dialect directly instead of producing High German.",
+        "q3": "Is my text private?",
+        "a3": "Yes. Text is processed on Swiss infrastructure and then discarded, never stored or used to train AI models."
+      },
+      "related": {
+        "title": "Related",
+        "hub": "Swiss German translator",
+        "other": "Bernese German translator",
+        "compare": "Compare Helvetra with DeepL and Google Translate"
+      }
     }
   }
 }

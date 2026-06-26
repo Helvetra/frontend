@@ -1421,6 +1421,64 @@
         "toGswEn": "Traducteur suisse allemand vers anglais",
         "compare": "Comparer Helvetra à DeepL et Google Traduction"
       }
+    },
+    "berndeutsch": {
+      "meta": {
+        "title": "Traducteur bernois (Berndeutsch) - Helvetra",
+        "description": "Traduisez du texte en bernois (Berndeutsch), le dialecte de Berne. Privé, conçu en Suisse avec le modèle d'IA suisse ouvert Apertus."
+      },
+      "h1": "Traducteur bernois",
+      "lead": "Traduisez du texte en Bärndütsch, le dialecte suisse allemand de Berne, avec une confidentialité intégrée.",
+      "about": {
+        "title": "Traduire en bernois",
+        "p1": "Le bernois (Berndeutsch, ou Bärndütsch) est le dialecte suisse allemand parlé dans le canton de Berne et ses environs. Comme tout le suisse allemand, il est surtout parlé et rarement écrit, avec son propre vocabulaire, ses habitudes d'orthographe et une sonorité plus lente et plus douce. Les traducteurs ordinaires visant l'allemand standard ne le produisent pas.",
+        "p2": "Saisissez votre texte et Helvetra le traduit en bernois. Le traducteur est réglé ici sur le dialecte de Berne; vous pouvez changer de dialecte ou de langue à tout moment.",
+        "p3": "La traduction fonctionne avec Apertus, un modèle d'IA suisse ouvert, sur une infrastructure suisse. Votre texte est traité puis supprimé: il n'est jamais conservé ni utilisé pour entraîner des modèles. La traduction de dialecte est difficile, donc pour les messages importants une relecture humaine reste utile."
+      },
+      "faq": {
+        "title": "Questions fréquentes",
+        "q1": "Helvetra peut-il écrire en bernois?",
+        "a1": "Oui. Helvetra traduit du texte en Bärndütsch, le dialecte de Berne. Comme le suisse allemand n'a pas d'orthographe fixe, considérez le résultat comme un brouillon au son naturel, pas une orthographe officielle.",
+        "q2": "Quelle est la différence avec l'allemand standard?",
+        "a2": "Le bernois a ses propres mots, sons et rythme et c'est un dialecte parlé, pas de l'allemand écrit standard. Helvetra vise directement le dialecte plutôt que le haut-allemand.",
+        "q3": "Mon texte reste-t-il privé?",
+        "a3": "Oui. Le texte est traité sur une infrastructure suisse puis supprimé, jamais conservé ni utilisé pour entraîner des modèles d'IA."
+      },
+      "related": {
+        "title": "À voir aussi",
+        "hub": "Traducteur suisse allemand",
+        "other": "Traducteur zurichois",
+        "compare": "Comparer Helvetra à DeepL et Google Traduction"
+      }
+    },
+    "zuerichdeutsch": {
+      "meta": {
+        "title": "Traducteur zurichois (Zürichdeutsch) - Helvetra",
+        "description": "Traduisez du texte en zurichois (Zürichdeutsch), le dialecte de Zurich. Privé, conçu en Suisse avec le modèle d'IA suisse ouvert Apertus."
+      },
+      "h1": "Traducteur zurichois",
+      "lead": "Traduisez du texte en Züritüütsch, le dialecte suisse allemand de Zurich, avec une confidentialité intégrée.",
+      "about": {
+        "title": "Traduire en zurichois",
+        "p1": "Le zurichois (Zürichdeutsch, ou Züritüütsch) est le dialecte suisse allemand parlé dans le canton de Zurich et ses environs, et l'une des variétés de suisse allemand les plus entendues. Comme tout le suisse allemand, il est surtout parlé, avec son propre vocabulaire et sa sonorité, et les traducteurs ordinaires visant l'allemand standard ne le produisent pas.",
+        "p2": "Saisissez votre texte et Helvetra le traduit en zurichois. Le traducteur est réglé ici sur le dialecte de Zurich; vous pouvez changer de dialecte ou de langue à tout moment.",
+        "p3": "La traduction fonctionne avec Apertus, un modèle d'IA suisse ouvert, sur une infrastructure suisse. Votre texte est traité puis supprimé: il n'est jamais conservé ni utilisé pour entraîner des modèles. La traduction de dialecte est difficile, donc pour les messages importants une relecture humaine reste utile."
+      },
+      "faq": {
+        "title": "Questions fréquentes",
+        "q1": "Helvetra peut-il écrire en zurichois?",
+        "a1": "Oui. Helvetra traduit du texte en Züritüütsch, le dialecte de Zurich. Comme le suisse allemand n'a pas d'orthographe fixe, considérez le résultat comme un brouillon au son naturel, pas une orthographe officielle.",
+        "q2": "Quelle est la différence avec l'allemand standard?",
+        "a2": "Le zurichois a ses propres mots, sons et rythme et c'est un dialecte parlé, pas de l'allemand écrit standard. Helvetra vise directement le dialecte plutôt que le haut-allemand.",
+        "q3": "Mon texte reste-t-il privé?",
+        "a3": "Oui. Le texte est traité sur une infrastructure suisse puis supprimé, jamais conservé ni utilisé pour entraîner des modèles d'IA."
+      },
+      "related": {
+        "title": "À voir aussi",
+        "hub": "Traducteur suisse allemand",
+        "other": "Traducteur bernois",
+        "compare": "Comparer Helvetra à DeepL et Google Traduction"
+      }
     }
   }
 }

@@ -1421,6 +1421,64 @@
         "toGswEn": "Traduttore dallo svizzero tedesco all'inglese",
         "compare": "Confronta Helvetra con DeepL e Google Traduttore"
       }
+    },
+    "berndeutsch": {
+      "meta": {
+        "title": "Traduttore bernese (Berndeutsch) - Helvetra",
+        "description": "Traduci testo in bernese (Berndeutsch), il dialetto di Berna. Privato, creato in Svizzera con il modello di IA svizzero aperto Apertus."
+      },
+      "h1": "Traduttore bernese",
+      "lead": "Traduci testo in Bärndütsch, il dialetto svizzero tedesco di Berna, con privacy integrata.",
+      "about": {
+        "title": "Tradurre in bernese",
+        "p1": "Il bernese (Berndeutsch, o Bärndütsch) è il dialetto svizzero tedesco parlato nel canton Berna e dintorni. Come tutto lo svizzero tedesco, è soprattutto parlato e raramente scritto, con un proprio vocabolario, abitudini ortografiche e un suono caratteristicamente più lento e morbido. I traduttori comuni che puntano al tedesco standard non lo producono.",
+        "p2": "Inserisci il testo e Helvetra lo traduce in bernese. Il traduttore qui è impostato sul dialetto di Berna; puoi cambiare dialetto o lingua in qualsiasi momento.",
+        "p3": "La traduzione funziona con Apertus, un modello di IA svizzero aperto, su infrastruttura svizzera. Il tuo testo viene elaborato e poi eliminato: non viene mai conservato né usato per addestrare modelli. La traduzione dei dialetti è complessa, quindi per i messaggi importanti una revisione umana è ancora utile."
+      },
+      "faq": {
+        "title": "Domande frequenti",
+        "q1": "Helvetra può scrivere in bernese?",
+        "a1": "Sì. Helvetra traduce testo in Bärndütsch, il dialetto di Berna. Poiché lo svizzero tedesco non ha un'ortografia fissa, considera il risultato una bozza dal suono naturale, non un'ortografia ufficiale.",
+        "q2": "Qual è la differenza con il tedesco standard?",
+        "a2": "Il bernese ha parole, suoni e ritmo propri ed è un dialetto parlato, non tedesco scritto standard. Helvetra punta direttamente al dialetto invece che al tedesco alto.",
+        "q3": "Il mio testo resta privato?",
+        "a3": "Sì. Il testo viene elaborato su infrastruttura svizzera e poi eliminato, mai conservato né usato per addestrare modelli di IA."
+      },
+      "related": {
+        "title": "Vedi anche",
+        "hub": "Traduttore svizzero tedesco",
+        "other": "Traduttore zurighese",
+        "compare": "Confronta Helvetra con DeepL e Google Traduttore"
+      }
+    },
+    "zuerichdeutsch": {
+      "meta": {
+        "title": "Traduttore zurighese (Zürichdeutsch) - Helvetra",
+        "description": "Traduci testo in zurighese (Zürichdeutsch), il dialetto di Zurigo. Privato, creato in Svizzera con il modello di IA svizzero aperto Apertus."
+      },
+      "h1": "Traduttore zurighese",
+      "lead": "Traduci testo in Züritüütsch, il dialetto svizzero tedesco di Zurigo, con privacy integrata.",
+      "about": {
+        "title": "Tradurre in zurighese",
+        "p1": "Lo zurighese (Zürichdeutsch, o Züritüütsch) è il dialetto svizzero tedesco parlato nel canton Zurigo e dintorni, e una delle varietà di svizzero tedesco più diffuse. Come tutto lo svizzero tedesco è soprattutto parlato, con un proprio vocabolario e suono, e i traduttori comuni che puntano al tedesco standard non lo producono.",
+        "p2": "Inserisci il testo e Helvetra lo traduce in zurighese. Il traduttore qui è impostato sul dialetto di Zurigo; puoi cambiare dialetto o lingua in qualsiasi momento.",
+        "p3": "La traduzione funziona con Apertus, un modello di IA svizzero aperto, su infrastruttura svizzera. Il tuo testo viene elaborato e poi eliminato: non viene mai conservato né usato per addestrare modelli. La traduzione dei dialetti è complessa, quindi per i messaggi importanti una revisione umana è ancora utile."
+      },
+      "faq": {
+        "title": "Domande frequenti",
+        "q1": "Helvetra può scrivere in zurighese?",
+        "a1": "Sì. Helvetra traduce testo in Züritüütsch, il dialetto di Zurigo. Poiché lo svizzero tedesco non ha un'ortografia fissa, considera il risultato una bozza dal suono naturale, non un'ortografia ufficiale.",
+        "q2": "Qual è la differenza con il tedesco standard?",
+        "a2": "Il zurighese ha parole, suoni e ritmo propri ed è un dialetto parlato, non tedesco scritto standard. Helvetra punta direttamente al dialetto invece che al tedesco alto.",
+        "q3": "Il mio testo resta privato?",
+        "a3": "Sì. Il testo viene elaborato su infrastruttura svizzera e poi eliminato, mai conservato né usato per addestrare modelli di IA."
+      },
+      "related": {
+        "title": "Vedi anche",
+        "hub": "Traduttore svizzero tedesco",
+        "other": "Traduttore bernese",
+        "compare": "Confronta Helvetra con DeepL e Google Traduttore"
+      }
     }
   }
 }

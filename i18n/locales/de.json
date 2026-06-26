@@ -1421,6 +1421,64 @@
         "toGswEn": "Schweizerdeutsch zu Englisch Übersetzer",
         "compare": "Helvetra mit DeepL und Google Übersetzer vergleichen"
       }
+    },
+    "berndeutsch": {
+      "meta": {
+        "title": "Berndeutsch Übersetzer (Bärndütsch) - Helvetra",
+        "description": "Text auf Berndeutsch übersetzen, den Dialekt von Bern. Privat, in der Schweiz gebaut mit dem offenen Schweizer KI-Modell Apertus."
+      },
+      "h1": "Berndeutsch Übersetzer",
+      "lead": "Übersetze Text auf Bärndütsch, den Schweizer Dialekt von Bern, mit eingebautem Datenschutz.",
+      "about": {
+        "title": "Auf Berndeutsch übersetzen",
+        "p1": "Berndeutsch (Bärndütsch) ist der schweizerdeutsche Dialekt, der in und um den Kanton Bern gesprochen wird. Wie alles Schweizerdeutsch wird es vor allem gesprochen und kaum geschrieben, mit eigenem Wortschatz, eigenen Schreibgewohnheiten und einem charakteristisch langsameren, weicheren Klang. Übliche Übersetzer, die auf Hochdeutsch zielen, erzeugen es nicht.",
+        "p2": "Gib deinen Text ein, und Helvetra übersetzt ihn auf Berndeutsch. Der Übersetzer ist hier auf den Berner Dialekt eingestellt; du kannst jederzeit auf einen anderen Dialekt oder eine andere Sprache wechseln.",
+        "p3": "Die Übersetzung läuft auf Apertus, einem offenen Schweizer KI-Modell, auf Schweizer Infrastruktur. Dein Text wird verarbeitet und danach verworfen: Er wird nie gespeichert oder zum Training von Modellen verwendet. Dialektübersetzung ist anspruchsvoll, darum lohnt sich bei wichtigen Texten ein menschlicher Blick."
+      },
+      "faq": {
+        "title": "Häufige Fragen",
+        "q1": "Kann Helvetra auf Berndeutsch schreiben?",
+        "a1": "Ja. Helvetra übersetzt Text auf Bärndütsch, den Dialekt von Bern. Da Schweizerdeutsch keine feste Schriftform hat, ist das Ergebnis ein natürlich klingender Entwurf, keine offizielle Schreibweise.",
+        "q2": "Was ist der Unterschied zum Hochdeutschen?",
+        "a2": "Berndeutsch hat eigene Wörter, Laute und einen eigenen Rhythmus und ist ein gesprochener Dialekt, kein hochdeutscher Schrifttext. Helvetra zielt direkt auf den Dialekt statt auf Hochdeutsch.",
+        "q3": "Bleibt mein Text privat?",
+        "a3": "Ja. Der Text wird auf Schweizer Infrastruktur verarbeitet und danach verworfen, nie gespeichert oder zum Training von KI-Modellen verwendet."
+      },
+      "related": {
+        "title": "Mehr",
+        "hub": "Schweizerdeutsch Übersetzer",
+        "other": "Zürichdeutsch Übersetzer",
+        "compare": "Helvetra mit DeepL und Google Übersetzer vergleichen"
+      }
+    },
+    "zuerichdeutsch": {
+      "meta": {
+        "title": "Zürichdeutsch Übersetzer (Züritüütsch) - Helvetra",
+        "description": "Text auf Zürichdeutsch übersetzen, den Dialekt von Zürich. Privat, in der Schweiz gebaut mit dem offenen Schweizer KI-Modell Apertus."
+      },
+      "h1": "Zürichdeutsch Übersetzer",
+      "lead": "Übersetze Text auf Züritüütsch, den Schweizer Dialekt von Zürich, mit eingebautem Datenschutz.",
+      "about": {
+        "title": "Auf Zürichdeutsch übersetzen",
+        "p1": "Zürichdeutsch (Züritüütsch) ist der schweizerdeutsche Dialekt, der in und um den Kanton Zürich gesprochen wird, und eine der meistgehörten Varianten des Schweizerdeutschen. Wie alles Schweizerdeutsch wird es vor allem gesprochen, mit eigenem Wortschatz und Klang, und übliche Übersetzer, die auf Hochdeutsch zielen, erzeugen es nicht.",
+        "p2": "Gib deinen Text ein, und Helvetra übersetzt ihn auf Zürichdeutsch. Der Übersetzer ist hier auf den Zürcher Dialekt eingestellt; du kannst jederzeit auf einen anderen Dialekt oder eine andere Sprache wechseln.",
+        "p3": "Die Übersetzung läuft auf Apertus, einem offenen Schweizer KI-Modell, auf Schweizer Infrastruktur. Dein Text wird verarbeitet und danach verworfen: Er wird nie gespeichert oder zum Training von Modellen verwendet. Dialektübersetzung ist anspruchsvoll, darum lohnt sich bei wichtigen Texten ein menschlicher Blick."
+      },
+      "faq": {
+        "title": "Häufige Fragen",
+        "q1": "Kann Helvetra auf Zürichdeutsch schreiben?",
+        "a1": "Ja. Helvetra übersetzt Text auf Züritüütsch, den Dialekt von Zürich. Da Schweizerdeutsch keine feste Schriftform hat, ist das Ergebnis ein natürlich klingender Entwurf, keine offizielle Schreibweise.",
+        "q2": "Was ist der Unterschied zum Hochdeutschen?",
+        "a2": "Zürichdeutsch hat eigene Wörter, Laute und einen eigenen Rhythmus und ist ein gesprochener Dialekt, kein hochdeutscher Schrifttext. Helvetra zielt direkt auf den Dialekt statt auf Hochdeutsch.",
+        "q3": "Bleibt mein Text privat?",
+        "a3": "Ja. Der Text wird auf Schweizer Infrastruktur verarbeitet und danach verworfen, nie gespeichert oder zum Training von KI-Modellen verwendet."
+      },
+      "related": {
+        "title": "Mehr",
+        "hub": "Schweizerdeutsch Übersetzer",
+        "other": "Berndeutsch Übersetzer",
+        "compare": "Helvetra mit DeepL und Google Übersetzer vergleichen"
+      }
     }
   }
 }
