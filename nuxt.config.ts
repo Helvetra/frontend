@@ -56,7 +56,7 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl: 'https://helvetra.ch',
     locales: [
-      { code: 'en', language: 'en-GB', name: 'English', file: 'en.json' },
+      { code: 'en', language: 'en', name: 'English', file: 'en.json' },
       { code: 'de', language: 'de-CH', name: 'Deutsch', file: 'de.json' },
       { code: 'fr', language: 'fr-CH', name: 'Français', file: 'fr.json' },
       { code: 'it', language: 'it-CH', name: 'Italiano', file: 'it.json' },
