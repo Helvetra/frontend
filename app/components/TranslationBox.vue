@@ -686,15 +686,27 @@ function debouncedTranslate() {
     return
   }
 
-  // Phase 1: Show loading indicator after 500ms of inactivity
+  // Scale the API debounce by length: short phrases want quick feedback,
+  // longer text benefits from a longer pause since typing takes longer.
+  // See helvetra/frontend#21.
+  const apiDelay = apiDebounceDelay(sourceText.value.length)
+
+  // Phase 1: Show loading indicator shortly before the API call fires.
   loadingIndicatorTimer = setTimeout(() => {
     isPendingTranslation.value = true
-  }, 500)
+  }, Math.max(apiDelay - 500, 0))
 
-  // Phase 2: Trigger API call after 1000ms of inactivity
+  // Phase 2: Trigger API call after the debounce window of inactivity.
   apiCallTimer = setTimeout(() => {
     performTranslation()
-  }, 1000)
+  }, apiDelay)
+}
+
+// Length-based debounce: <50 chars 500ms, 50-200 1000ms, >200 1500ms.
+function apiDebounceDelay(length: number): number {
+  if (length < 50) return 500
+  if (length <= 200) return 1000
+  return 1500
 }
 
 /**
