@@ -394,7 +394,7 @@ const props = withDefaults(defineProps<{
   initialFormality: undefined,
 })
 
-const { translate, isLoading, error } = useTranslation()
+const { translate, translateIncremental, isLoading, error } = useTranslation()
 const { submitFeedback, hasStoredConsent } = useFeedback()
 const { isAuthenticated, user } = useAuth()
 
@@ -602,27 +602,33 @@ async function performTranslation() {
     ? formality.value
     : 'auto'
 
-  // Determine source language to send
-  // When franc detected German and we haven't exceeded LLM quota, use 'auto' for LLM disambiguation
-  let sourceLangToSend = sourceLanguage.value
+  // When franc detected German and we haven't exceeded the LLM quota, use the
+  // whole-text auto-detect path to disambiguate (e.g. German vs Swiss German).
   const shouldUseLlmDetection =
     pendingLlmDetection.value &&
     llmDetectionCount.value < MAX_LLM_DETECTIONS_PER_SESSION
 
-  if (shouldUseLlmDetection) {
-    sourceLangToSend = 'auto'
-  }
-
   // Only pass dialect when translating to Swiss German
   const effectiveDialect = targetLanguage.value === 'gsw' ? dialect.value : null
 
-  const result = await translate(
-    sourceText.value,
-    sourceLangToSend,
-    targetLanguage.value,
-    effectiveFormality,
-    effectiveDialect
-  )
+  // Auto-detect needs the whole-text endpoint (it returns the detected source
+  // and the partial endpoint requires an explicit source). Otherwise translate
+  // incrementally, so editing one sentence only retranslates that sentence.
+  const result = shouldUseLlmDetection
+    ? await translate(
+        sourceText.value,
+        'auto',
+        targetLanguage.value,
+        effectiveFormality,
+        effectiveDialect
+      )
+    : await translateIncremental(
+        sourceText.value,
+        sourceLanguage.value,
+        targetLanguage.value,
+        effectiveFormality,
+        effectiveDialect
+      )
 
   if (result !== null) {
     targetText.value = result.translation
