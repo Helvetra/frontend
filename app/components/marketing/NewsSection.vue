@@ -50,44 +50,44 @@ const content = {
     heading: 'From the team',
     allNews: 'All news →',
     latest: {
-      slug: 'why-helvetra-runs-on-infomaniak',
-      title: 'Infomaniak becomes a foundation: what it means for Helvetra',
+      slug: 'apertus-1-5-what-it-means-for-helvetra',
+      title: "Helvetra moves to Apertus 1.5: what changes, and what we're watching",
       summary:
-        'Every layer of Helvetra runs on Infomaniak: the website, the backend, and the Apertus model. Why we host where we host, and what changed when the company locked its independence into a Swiss public-interest foundation.',
-      date: '2026-06-23',
+        'The Swiss model behind Helvetra just had a major update, and Infomaniak now serves it. What improves for your translations, what we leave switched off, and an honest first look at Swiss German.',
+      date: '2026-08-04',
     },
   },
   de: {
     heading: 'Aus dem Team',
     allNews: 'Alle News →',
     latest: {
-      slug: 'why-helvetra-runs-on-infomaniak',
-      title: 'Infomaniak wird zur Stiftung: was das für Helvetra bedeutet',
+      slug: 'apertus-1-5-what-it-means-for-helvetra',
+      title: 'Helvetra wechselt zu Apertus 1.5: was sich ändert und worauf wir achten',
       summary:
-        'Jede Schicht von Helvetra läuft auf Infomaniak: die Website, das Backend und das Apertus-Modell. Warum wir dort hosten, wo wir hosten, und was sich änderte, als das Unternehmen seine Unabhängigkeit in einer gemeinnützigen Schweizer Stiftung verankerte.',
-      date: '2026-06-23',
+        'Das Schweizer Modell hinter Helvetra hat ein grosses Update erhalten, und Infomaniak stellt es jetzt bereit. Was sich für Ihre Übersetzungen verbessert, was wir ausgeschaltet lassen, und ein ehrlicher erster Blick auf Schweizerdeutsch.',
+      date: '2026-08-04',
     },
   },
   fr: {
     heading: "De l'équipe",
     allNews: "Toutes les actualités →",
     latest: {
-      slug: 'why-helvetra-runs-on-infomaniak',
-      title: 'Infomaniak devient une fondation: ce que cela signifie pour Helvetra',
+      slug: 'apertus-1-5-what-it-means-for-helvetra',
+      title: 'Helvetra passe à Apertus 1.5 : ce qui change, et ce que nous surveillons',
       summary:
-        "Chaque couche de Helvetra tourne sur Infomaniak: le site, le backend et le modèle Apertus. Pourquoi nous hébergeons là où nous hébergeons, et ce qui a changé quand l'entreprise a verrouillé son indépendance dans une fondation suisse d'intérêt public.",
-      date: '2026-06-23',
+        "Le modèle suisse derrière Helvetra vient de recevoir une mise à jour majeure, et Infomaniak le propose désormais. Ce qui s'améliore pour vos traductions, ce que nous laissons désactivé, et un premier aperçu honnête du suisse allemand.",
+      date: '2026-08-04',
     },
   },
   it: {
     heading: 'Dal team',
     allNews: 'Tutte le notizie →',
     latest: {
-      slug: 'why-helvetra-runs-on-infomaniak',
-      title: 'Infomaniak diventa una fondazione: cosa significa per Helvetra',
+      slug: 'apertus-1-5-what-it-means-for-helvetra',
+      title: 'Helvetra passa ad Apertus 1.5: cosa cambia e cosa stiamo osservando',
       summary:
-        "Ogni livello di Helvetra gira su Infomaniak: il sito, il backend e il modello Apertus. Perché ospitiamo dove ospitiamo, e cosa è cambiato quando l'azienda ha blindato la propria indipendenza in una fondazione svizzera di interesse pubblico.",
-      date: '2026-06-23',
+        "Il modello svizzero dietro Helvetra ha appena ricevuto un aggiornamento importante, e Infomaniak ora lo offre. Cosa migliora per le tue traduzioni, cosa lasciamo disattivato, e uno sguardo onesto al tedesco svizzero.",
+      date: '2026-08-04',
     },
   },
 } as const
