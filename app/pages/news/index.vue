@@ -71,6 +71,13 @@ const content = {
       "Notes from Swiss AI events, Apertus releases, and what's shaping the model behind every Helvetra translation.",
     items: [
       {
+        slug: 'apertus-1-5-what-it-means-for-helvetra',
+        title: "Helvetra moves to Apertus 1.5: what changes, and what we're watching",
+        summary:
+          'Apertus 1.5 is live on Infomaniak and Helvetra now runs it. What improves for your translations, what we leave switched off, and an honest first look at Swiss German, dialect output that works, auto-detection that still does not.',
+        date: '2026-08-04',
+      },
+      {
         slug: 'why-helvetra-runs-on-infomaniak',
         title: 'Infomaniak becomes a foundation: what it means for Helvetra',
         summary:
@@ -98,6 +105,13 @@ const content = {
     subtitle:
       'Notizen von Schweizer KI-Anlässen, Apertus-Releases und allem, was das Modell hinter jeder Helvetra-Übersetzung prägt.',
     items: [
+      {
+        slug: 'apertus-1-5-what-it-means-for-helvetra',
+        title: 'Helvetra wechselt zu Apertus 1.5: was sich ändert und worauf wir achten',
+        summary:
+          'Apertus 1.5 ist bei Infomaniak live, und Helvetra nutzt es jetzt. Was sich für Ihre Übersetzungen verbessert, was wir ausgeschaltet lassen, und ein ehrlicher erster Blick auf Schweizerdeutsch: Dialektausgabe, die funktioniert, automatische Erkennung, die es noch nicht tut.',
+        date: '2026-08-04',
+      },
       {
         slug: 'why-helvetra-runs-on-infomaniak',
         title: 'Infomaniak wird zur Stiftung: was das für Helvetra bedeutet',
@@ -127,6 +141,13 @@ const content = {
       "Notes d'événements suisses d'IA, des sorties d'Apertus, et de tout ce qui façonne le modèle derrière chaque traduction Helvetra.",
     items: [
       {
+        slug: 'apertus-1-5-what-it-means-for-helvetra',
+        title: 'Helvetra passe à Apertus 1.5 : ce qui change, et ce que nous surveillons',
+        summary:
+          "Apertus 1.5 est en ligne chez Infomaniak, et Helvetra l'utilise désormais. Ce qui s'améliore pour vos traductions, ce que nous laissons désactivé, et un premier aperçu honnête du suisse allemand : une sortie en dialecte qui fonctionne, une détection automatique qui ne fonctionne pas encore.",
+        date: '2026-08-04',
+      },
+      {
         slug: 'why-helvetra-runs-on-infomaniak',
         title: 'Infomaniak devient une fondation: ce que cela signifie pour Helvetra',
         summary:
@@ -154,6 +175,13 @@ const content = {
     subtitle:
       'Note da eventi svizzeri di IA, release di Apertus e tutto ciò che modella il modello dietro ogni traduzione di Helvetra.',
     items: [
+      {
+        slug: 'apertus-1-5-what-it-means-for-helvetra',
+        title: 'Helvetra passa ad Apertus 1.5: cosa cambia e cosa stiamo osservando',
+        summary:
+          "Apertus 1.5 è online su Infomaniak, e Helvetra ora lo usa. Cosa migliora per le tue traduzioni, cosa lasciamo disattivato, e uno sguardo onesto al tedesco svizzero: output in dialetto che funziona, rilevamento automatico che ancora no.",
+        date: '2026-08-04',
+      },
       {
         slug: 'why-helvetra-runs-on-infomaniak',
         title: 'Infomaniak diventa una fondazione: cosa significa per Helvetra',
