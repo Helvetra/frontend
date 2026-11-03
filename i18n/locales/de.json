@@ -485,8 +485,15 @@
       "TEXT_TOO_LONG": "Text überschreitet das Zeichenlimit pro Anfrage (10'000 Zeichen).",
       "INVALID_API_KEY": "X-API-Key-Header fehlt oder wurde widerrufen.",
       "SUSPICIOUS_OUTPUT": "Modell lieferte eine Ausgabe, die nicht wie eine Übersetzung aussah. Erneut versuchen oder Eingabe vereinfachen.",
+      "NAME_SUBSTITUTION": "Das Modell hat den Namen in der Anrede geändert. Bereits einmal wiederholt; erneut versuchen oder die Anrede umformulieren.",
+      "PLACEHOLDER_LEAK": "Das Modell hat einen Platzhalter wie [Ihr Name] eingefügt. Bereits einmal wiederholt; Anfrage erneut senden.",
+      "UNPARSEABLE_OUTPUT": "Bei automatischer Spracherkennung war die Antwort des Modells nicht lesbar. Bereits einmal wiederholt; erneut versuchen oder source_lang angeben.",
+      "TRANSLATION_INCOMPLETE": "Die Übersetzung wurde vor dem Ende abgebrochen. Teilen Sie den Text in kürzere Teile.",
       "USAGE_LIMIT_EXCEEDED": "Monatliches Inklusivkontingent erschöpft.",
-      "INTERNAL_ERROR": "Unerwarteter Serverfehler. Mit Backoff erneut versuchen; bei Anhalten Support kontaktieren."
+      "INTERNAL_ERROR": "Unerwarteter Serverfehler. Mit Backoff erneut versuchen; bei Anhalten Support kontaktieren.",
+      "UPSTREAM_UNAVAILABLE": "Das Übersetzungsmodell ist vorübergehend nicht erreichbar. Mit Backoff erneut versuchen.",
+      "UPSTREAM_BUSY": "Das Übersetzungsmodell ist ausgelastet. Warten Sie die Sekunden aus dem Retry-After-Header ab und versuchen Sie es erneut.",
+      "TRANSLATION_TIMEOUT": "Die Übersetzung dauerte länger als 90 Sekunden. Erneut versuchen oder einen kürzeren Text senden."
     },
     "usage": {
       "title": "Nutzung abfragen",

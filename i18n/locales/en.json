@@ -485,8 +485,15 @@
       "TEXT_TOO_LONG": "Text exceeds the per-request character limit (10,000 characters).",
       "INVALID_API_KEY": "Missing or revoked X-API-Key header.",
       "SUSPICIOUS_OUTPUT": "Model produced output that did not look like a translation. Retry, or simplify the input.",
+      "NAME_SUBSTITUTION": "The model changed the name in the greeting. Already retried once; retry, or rephrase the opening.",
+      "PLACEHOLDER_LEAK": "The model added a template placeholder such as [Your name]. Already retried once; retry the request.",
+      "UNPARSEABLE_OUTPUT": "With automatic source detection, the model's answer could not be read. Already retried once; retry, or set source_lang.",
+      "TRANSLATION_INCOMPLETE": "The translation was cut off before the end. Split the text into shorter parts.",
       "USAGE_LIMIT_EXCEEDED": "Monthly included quota exhausted.",
-      "INTERNAL_ERROR": "Unexpected server error. Retry with backoff; contact support if it persists."
+      "INTERNAL_ERROR": "Unexpected server error. Retry with backoff; contact support if it persists.",
+      "UPSTREAM_UNAVAILABLE": "The translation model is temporarily unavailable. Retry with backoff.",
+      "UPSTREAM_BUSY": "The translation model is busy. Wait for the Retry-After header (seconds), then retry.",
+      "TRANSLATION_TIMEOUT": "The translation took longer than 90 seconds. Retry, or send a shorter text."
     },
     "usage": {
       "title": "Check your usage",

@@ -485,8 +485,15 @@
       "TEXT_TOO_LONG": "Il testo supera il limite di caratteri per richiesta (10.000 caratteri).",
       "INVALID_API_KEY": "Header X-API-Key mancante o revocato.",
       "SUSPICIOUS_OUTPUT": "Il modello ha prodotto un output non simile a una traduzione. Ritentate o semplificate l'input.",
+      "NAME_SUBSTITUTION": "Il modello ha cambiato il nome nel saluto. Già ripetuto una volta; riprova o riformula l'apertura.",
+      "PLACEHOLDER_LEAK": "Il modello ha aggiunto un segnaposto come [Il tuo nome]. Già ripetuto una volta; invia di nuovo la richiesta.",
+      "UNPARSEABLE_OUTPUT": "Con il rilevamento automatico della lingua, la risposta del modello non era leggibile. Già ripetuto una volta; riprova o indica source_lang.",
+      "TRANSLATION_INCOMPLETE": "La traduzione è stata interrotta prima della fine. Dividi il testo in parti più brevi.",
       "USAGE_LIMIT_EXCEEDED": "Quota mensile inclusa esaurita.",
-      "INTERNAL_ERROR": "Errore server imprevisto. Riprovate con backoff; contattate il supporto se persiste."
+      "INTERNAL_ERROR": "Errore server imprevisto. Riprovate con backoff; contattate il supporto se persiste.",
+      "UPSTREAM_UNAVAILABLE": "Il modello di traduzione non è temporaneamente disponibile. Riprova con backoff.",
+      "UPSTREAM_BUSY": "Il modello di traduzione è sovraccarico. Attendi i secondi indicati nell'header Retry-After, poi riprova.",
+      "TRANSLATION_TIMEOUT": "La traduzione ha richiesto più di 90 secondi. Riprova o invia un testo più breve."
     },
     "usage": {
       "title": "Verifica del consumo",

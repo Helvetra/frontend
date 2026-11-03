@@ -485,8 +485,15 @@
       "TEXT_TOO_LONG": "Le texte dépasse la limite de caractères par requête (10 000 caractères).",
       "INVALID_API_KEY": "En-tête X-API-Key manquant ou révoqué.",
       "SUSPICIOUS_OUTPUT": "Le modèle a produit une sortie qui ne ressemble pas à une traduction. Réessayez ou simplifiez l'entrée.",
+      "NAME_SUBSTITUTION": "Le modèle a changé le nom dans la formule d'appel. Déjà relancé une fois ; réessayez ou reformulez l'ouverture.",
+      "PLACEHOLDER_LEAK": "Le modèle a ajouté un espace réservé comme [Votre nom]. Déjà relancé une fois ; renvoyez la requête.",
+      "UNPARSEABLE_OUTPUT": "Avec la détection automatique de la langue, la réponse du modèle était illisible. Déjà relancé une fois ; réessayez ou indiquez source_lang.",
+      "TRANSLATION_INCOMPLETE": "La traduction a été coupée avant la fin. Divisez le texte en parties plus courtes.",
       "USAGE_LIMIT_EXCEEDED": "Quota mensuel inclus épuisé.",
-      "INTERNAL_ERROR": "Erreur serveur inattendue. Réessayez avec backoff ; contactez le support si elle persiste."
+      "INTERNAL_ERROR": "Erreur serveur inattendue. Réessayez avec backoff ; contactez le support si elle persiste.",
+      "UPSTREAM_UNAVAILABLE": "Le modèle de traduction est temporairement indisponible. Réessayez avec un délai croissant.",
+      "UPSTREAM_BUSY": "Le modèle de traduction est saturé. Attendez la durée de l'en-tête Retry-After (secondes), puis réessayez.",
+      "TRANSLATION_TIMEOUT": "La traduction a pris plus de 90 secondes. Réessayez ou envoyez un texte plus court."
     },
     "usage": {
       "title": "Vérifier votre consommation",
