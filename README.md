@@ -62,7 +62,7 @@ npm install
 
 # Configure
 cp .env.example .env
-# Set NUXT_PUBLIC_API_BASE to your backend URL.
+# NUXT_PUBLIC_API_BASE points at a local backend (http://localhost:8000/api).
 # Optional: NUXT_PUBLIC_MATOMO_URL + NUXT_PUBLIC_MATOMO_SITE_ID to enable
 # tracking (left blank = no tracking).
 
@@ -76,6 +76,14 @@ npm run build
 # Lint
 npm run lint
 ```
+
+### Run with the backend
+
+The web app needs the Helvetra API to translate. To run both locally:
+
+1. Clone and start the backend, following its README: [github.com/Helvetra/backend](https://github.com/Helvetra/backend). It listens on `http://localhost:8000` and serves the API under `/api`. You need your own Infomaniak AI API key for Apertus.
+2. Keep `NUXT_PUBLIC_API_BASE=http://localhost:8000/api` from `.env.example`. The `/api` part is required: the app calls `${NUXT_PUBLIC_API_BASE}/v1/translate`.
+3. Start this app with `npm run dev` on port 3000. The backend's default `CORS_ORIGINS` already allows `http://localhost:3000`.
 
 ## Project Structure
 
