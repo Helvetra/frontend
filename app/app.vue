@@ -17,7 +17,7 @@ useJsonLd([
 ])
 
 // Inject hreflang alternate language links for SEO
-const i18nHead = useLocaleHead({ addSeoAttributes: true })
+const i18nHead = useLocaleHead({ seo: true })
 useHead({
   htmlAttrs: { lang: i18nHead.value.htmlAttrs?.lang },
   link: [...(i18nHead.value.link || [])],

@@ -326,7 +326,8 @@ export function useAuth() {
         ...(opts.headers as Record<string, string> | undefined),
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
       }
-      return $fetch<T>(url, { ...opts, headers, ...fetchOpts })
+      // The URL is a plain string, so Nuxt cannot infer the response type.
+      return $fetch(url, { ...opts, headers, ...fetchOpts }) as Promise<T>
     }
 
     try {
