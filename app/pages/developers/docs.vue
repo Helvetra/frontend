@@ -275,8 +275,15 @@ const errorCodes = [
   { code: 'TEXT_TOO_LONG', status: '400' },
   { code: 'INVALID_API_KEY', status: '401' },
   { code: 'SUSPICIOUS_OUTPUT', status: '422' },
+  { code: 'NAME_SUBSTITUTION', status: '422' },
+  { code: 'PLACEHOLDER_LEAK', status: '422' },
+  { code: 'UNPARSEABLE_OUTPUT', status: '422' },
+  { code: 'TRANSLATION_INCOMPLETE', status: '422' },
   { code: 'USAGE_LIMIT_EXCEEDED', status: '429' },
   { code: 'INTERNAL_ERROR', status: '500' },
+  { code: 'UPSTREAM_UNAVAILABLE', status: '503' },
+  { code: 'UPSTREAM_BUSY', status: '503' },
+  { code: 'TRANSLATION_TIMEOUT', status: '504' },
 ]
 
 useJsonLd(getBreadcrumbSchema([
