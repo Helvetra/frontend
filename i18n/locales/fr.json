@@ -563,6 +563,7 @@
     "VALIDATION_ERROR": "Requête invalide. Veuillez réessayer.",
     "RATE_LIMITED": "Vous traduisez vite ! Cette première version a des limites d'utilisation. Accès illimité souhaité ? Écrivez-nous à gruezi{'@'}helvetra.ch",
     "CONNECTION_ERROR": "Erreur de connexion. Veuillez réessayer.",
+    "SERVICE_BUSY": "Helvetra est très sollicité en ce moment. Nouvel essai dans quelques secondes.",
     "TRANSLATION_REJECTED": "Nous n'avons pas pu produire une traduction propre. Veuillez reformuler ou réessayer."
   },
   "footer": {
