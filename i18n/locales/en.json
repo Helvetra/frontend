@@ -60,7 +60,7 @@
         },
         "free": {
           "q": "Is Helvetra free?",
-          "a": "Yes! Create a free account and get 20,000 characters per month. Need more? Helvetra+ offers 500,000 characters per month starting at CHF 4.99."
+          "a": "Yes! You can try Helvetra without an account for 4 weeks. Create a free account to get 5,000 characters per month. Need more? Helvetra+ offers 500,000 characters per month starting at CHF 4.99."
         },
         "different": {
           "q": "What makes Helvetra different from Google Translate or DeepL?",
@@ -84,7 +84,7 @@
         },
         "api": {
           "q": "Is there an API for businesses?",
-          "a": "Yes. The Helvetra Public API is live at <a href=\"/developers\" class=\"text-swiss-red hover:underline\">/developers</a>. Self-serve from CHF 29/month on Starter (14-day free trial) or CHF 99/month on Business, with per-character overage."
+          "a": "Yes. The Helvetra Public API is live at <a href=\"/developers\" class=\"text-swiss-red hover:underline\">/developers</a>. Self-serve at CHF 39/month with a 14-day free trial, with per-character overage."
         },
         "contribute": {
           "q": "Can I contribute?",
@@ -116,7 +116,7 @@
         },
         "apiPricing": {
           "q": "How is the API priced?",
-          "a": "Two self-serve tiers: <strong>Starter</strong> at CHF 29/month with 500,000 characters included (then CHF 10 per million), and <strong>Business</strong> at CHF 99/month with 2,000,000 characters included (then CHF 4 per million). Larger volumes are negotiated as Enterprise. See <a href=\"/developers\" class=\"text-swiss-red hover:underline\">/developers</a>."
+          "a": "One self-serve plan: <strong>Business</strong> at CHF 39/month with 2,000,000 characters included (then CHF 4 per million) and up to 10,000 characters per request. Larger volumes are negotiated as Enterprise. See <a href=\"/developers\" class=\"text-swiss-red hover:underline\">/developers</a>."
         },
         "apiDataResidency": {
           "q": "Where is API data processed?",
@@ -124,7 +124,7 @@
         },
         "apiSla": {
           "q": "Is there an SLA?",
-          "a": "Not on the Starter or Business self-serve tiers at launch. SLAs are available for Enterprise contracts, negotiated per customer. <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Contact us</a> if you need one."
+          "a": "Not on the self-serve Business plan at launch. SLAs are available for Enterprise contracts, negotiated per customer. <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Contact us</a> if you need one."
         },
         "apiInvoicing": {
           "q": "Can I get a CHF invoice with Swiss VAT?",
@@ -294,7 +294,8 @@
     "upgradeCta": "Upgrade to Helvetra+",
     "weeklyLimitReached": "You've reached the weekly limit for anonymous users.",
     "usageLimitReached": "You've reached your usage limit for this period.",
-    "paidPlanLimitNote": "Your limit resets at the start of your next billing period."
+    "paidPlanLimitNote": "Your limit resets at the start of your next billing period.",
+    "trialEnded": "Translating without an account is limited to 4 weeks. Create a free account to keep translating."
   },
   "pricing": {
     "title": "Pricing",
@@ -314,8 +315,8 @@
       "name": "Basic",
       "description": "For occasional translations",
       "price": "Free",
-      "featureLimit": "20,000 characters per month",
-      "feature1": "Up to 1,000 characters per translation",
+      "featureLimit": "5,000 characters per month",
+      "feature1": "Up to 500 characters per translation",
       "feature2": "All Swiss languages supported",
       "featureFormality": "Formal/informal tone toggle",
       "feature3": "No cookies, full privacy",
@@ -354,7 +355,7 @@
   },
   "api": {
     "title": "Translation API for Swiss businesses",
-    "subtitle": "A REST API that brings Swiss data residency, Swiss German and Romansh to your product. Self-serve from CHF 29 a month.",
+    "subtitle": "A REST API that brings Swiss data residency, Swiss German and Romansh to your product. Self-serve for CHF 39 a month.",
     "perMonth": "/month",
     "questions": "Questions or volume needs? Write to",
     "values": {
@@ -377,32 +378,20 @@
     },
     "pricing": {
       "title": "Pricing",
-      "note": "Per-character usage tracked monthly. 14-day free trial on Starter."
+      "note": "Per-character usage tracked monthly. 14-day free trial."
     },
     "tiers": {
-      "starter": {
-        "name": "Starter",
-        "audience": "Small dev teams testing the API",
-        "trial": "Then CHF 10 per million chars of overage.",
-        "feature1": "500,000 characters per month included",
-        "feature2": "Up to 10,000 characters per request",
-        "feature3": "1 API key",
-        "feature4": "All languages and Swiss German dialects",
-        "feature5": "Email support",
-        "cta": "Start free trial"
-      },
       "business": {
         "name": "Business",
-        "audience": "Production SMEs",
-        "tagline": "Then CHF 4 per million chars of overage.",
-        "badge": "Most popular",
+        "audience": "Teams and SMEs",
+        "tagline": "14-day free trial. Then CHF 4 per million chars of overage.",
         "feature1": "2,000,000 characters per month included",
-        "feature2": "Up to 50,000 characters per request (full documents)",
+        "feature2": "Up to 10,000 characters per request",
         "feature3": "10 API keys (per environment, per team)",
         "feature4": "Priority email support",
         "feature5": "Usage-alert webhooks",
         "feature6": "All languages and Swiss German dialects",
-        "cta": "Subscribe"
+        "cta": "Start free trial"
       },
       "enterprise": {
         "name": "Enterprise",
@@ -441,10 +430,10 @@
     },
     "docsCta": "Read the quickstart",
     "referenceCta": "Open API reference",
-    "factSummary": "Helvetra is a Swiss translation API run by a Swiss company on Swiss servers under Swiss law. It supports German, French, Italian, English, Swiss German (with regional dialects), and Romansh. Pricing is CHF 29/month (Starter, 14-day free trial, 500,000 characters included) or CHF 99/month (Business, 2,000,000 characters included), with per-character overage. Customer text is never used to train models. Contact: gruezi{'@'}helvetra.ch.",
+    "factSummary": "Helvetra is a Swiss translation API run by a Swiss company on Swiss servers under Swiss law. It supports German, French, Italian, English, Swiss German (with regional dialects), and Romansh. Pricing is CHF 39/month (14-day free trial, 2,000,000 characters included, up to 10,000 per request), with per-character overage. Customer text is never used to train models. Contact: gruezi{'@'}helvetra.ch.",
     "seo": {
       "title": "Swiss Translation API — Helvetra Developers",
-      "description": "Translation API with Swiss data residency, native Swiss German and Romansh support, CHF invoicing. Self-serve from CHF 29/month with 14-day free trial.",
+      "description": "Translation API with Swiss data residency, native Swiss German and Romansh support, CHF invoicing. Self-serve for CHF 39/month with 14-day free trial.",
       "keywords": "Swiss translation API, translation API Switzerland, Swiss German API, Romansh API, DeepL alternative, GDPR translation API, FADP, Schweizer Übersetzungs-API"
     }
   },
@@ -461,10 +450,10 @@
     "steps": {
       "subscribe": {
         "title": "1. Subscribe and create an API key",
-        "body": "Translation calls are billed per character against an active B2B subscription. Start a free 14-day trial on Starter, then generate keys from your account page.",
+        "body": "Translation calls are billed per character against an active B2B subscription. Start a free 14-day trial, then generate keys from your account page.",
         "bullet1": "Subscribe on the pricing page (card required, no charge during trial).",
         "bullet2": "Open your account page and generate an API key. The full key is shown once — store it like a password.",
-        "bullet3": "Starter allows 1 active key, Business allows 10. Revoke and rotate at any time."
+        "bullet3": "Up to 10 active keys. Revoke and rotate at any time."
       },
       "auth": {
         "title": "2. Authenticate every request",
@@ -493,10 +482,10 @@
     "errors": {
       "UNSUPPORTED_LANGUAGE": "Source or target language code is not supported.",
       "UNSUPPORTED_DIALECT": "Dialect not recognised. See the list of valid dialect codes above.",
-      "TEXT_TOO_LONG": "Text exceeds the per-request character limit for your tier (10k on Starter, 50k on Business).",
+      "TEXT_TOO_LONG": "Text exceeds the per-request character limit (10,000 characters).",
       "INVALID_API_KEY": "Missing or revoked X-API-Key header.",
       "SUSPICIOUS_OUTPUT": "Model produced output that did not look like a translation. Retry, or simplify the input.",
-      "USAGE_LIMIT_EXCEEDED": "Monthly included quota exhausted. Subscription continues — overage applies on Business; Starter blocks until the next period.",
+      "USAGE_LIMIT_EXCEEDED": "Monthly included quota exhausted.",
       "INTERNAL_ERROR": "Unexpected server error. Retry with backoff; contact support if it persists."
     },
     "usage": {
@@ -516,7 +505,7 @@
     "manageBilling": "Manage billing",
     "usageLabel": "Characters this period",
     "usageRemaining": "{count} included characters remaining.",
-    "usageOver": "Over the included quota. Overage applies on Business; Starter blocks until the next period.",
+    "usageOver": "Over the included quota. Overage is billed per character.",
     "noSubscription": "You do not have an active B2B subscription. Pick a plan to get started.",
     "viewPlans": "See plans",
     "keys": {
@@ -559,7 +548,7 @@
     }
   },
   "errors": {
-    "TEXT_TOO_LONG": "Text too long. This first version supports up to 1'000 characters. Need more? Let us know at gruezi{'@'}helvetra.ch",
+    "TEXT_TOO_LONG": "Text too long for your current plan.",
     "VALIDATION_ERROR": "Invalid request. Please try again.",
     "RATE_LIMITED": "You're translating fast! This first version has usage limits. Want unlimited access? Let us know at gruezi{'@'}helvetra.ch",
     "CONNECTION_ERROR": "Connection error. Please try again.",
@@ -604,7 +593,7 @@
     },
     "forDevelopers": {
       "title": "For developers",
-      "body": "Helvetra also offers a self-serve translation API with the same Swiss data residency, Swiss German, and Romansh support. Pricing from CHF 29 per month with a 14-day free trial.",
+      "body": "Helvetra also offers a self-serve translation API with the same Swiss data residency, Swiss German, and Romansh support. CHF 39 per month with a 14-day free trial.",
       "cta": "Explore the developer API"
     },
     "metaDescription": "Helvetra is a private, Swiss-built translation app for Swiss German, German, French, Italian, Romansh and English. Learn about our mission, the open Swiss AI behind it, and our privacy-first approach."
@@ -659,11 +648,11 @@
       "intro": "Helvetra offers the following service tiers:",
       "anonymous": {
         "name": "Anonymous (Web)",
-        "desc": "Up to 400 characters per translation, maximum 2,000 characters per week. No registration required. iOS app users automatically receive Basic tier limits."
+        "desc": "Up to 400 characters per translation, maximum 1,000 characters per week, for up to 4 weeks. After that, a free account is required. iOS app users automatically receive Basic tier limits."
       },
       "free": {
         "name": "Basic (Free)",
-        "desc": "Up to 1,000 characters per translation, maximum 20,000 characters per month. Registration required on web, automatic on iOS."
+        "desc": "Up to 500 characters per translation, maximum 5,000 characters per month. Registration required on web, automatic on iOS."
       },
       "plus": {
         "name": "Helvetra+",
@@ -779,7 +768,7 @@
         },
         "account": {
           "q": "Do I need an account to use Helvetra?",
-          "a": "No. You can use Helvetra without an account and get 5,000 characters per week. Create a free account to get 20,000 characters per month, or upgrade to Helvetra+ for 500,000 characters per month."
+          "a": "Not at first. You can use Helvetra without an account for 4 weeks, with 1,000 characters per week. After that, create a free account to get 5,000 characters per month, or upgrade to Helvetra+ for 500,000 characters per month."
         },
         "restore": {
           "q": "How do I restore my subscription on a new device?",
@@ -1041,7 +1030,7 @@
         },
         "helvetraPricing": {
           "title": "Helvetra Pricing",
-          "point1": "Free: 20,000 characters/month",
+          "point1": "Free: 5,000 characters/month",
           "point2": "Helvetra+: CHF 4.99/mo (500K chars)",
           "point3": "No complex tiers or feature gating"
         },
@@ -1175,7 +1164,7 @@
         },
         "helvetraPricing": {
           "title": "Helvetra Pricing",
-          "point1": "Free: 20,000 characters/month",
+          "point1": "Free: 5,000 characters/month",
           "point2": "Helvetra+: CHF 4.99/mo (500K characters)",
           "point3": "No file limits, just character counts"
         },

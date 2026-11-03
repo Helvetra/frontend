@@ -259,7 +259,7 @@ useJsonLd(getProductSchema([
     name: 'Helvetra Basic',
     price: 0,
     priceCurrency: 'CHF',
-    description: 'Free tier with 20,000 characters per month',
+    description: 'Free tier with 5,000 characters per month',
   },
   {
     name: 'Helvetra+',

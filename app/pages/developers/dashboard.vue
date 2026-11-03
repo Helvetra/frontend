@@ -301,8 +301,8 @@ const usagePercent = computed(() => {
 
 const tierLabel = computed(() => {
   const tier = subscription.value?.tier
-  if (tier === 'starter') return t('api.tiers.starter.name')
-  if (tier === 'business') return t('api.tiers.business.name')
+  // Starter is no longer sold; a leftover Starter plan has the Business limits.
+  if (tier === 'starter' || tier === 'business') return t('api.tiers.business.name')
   return ''
 })
 
