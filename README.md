@@ -1,6 +1,6 @@
 # Helvetra Frontend
 
-Web app and marketing site for [Helvetra](https://helvetra.ch), a privacy-first Swiss translation app.
+Web app and marketing site for [Helvetra](https://helvetra.ch), a privacy-first Swiss translation app. Translations run on [Apertus](https://www.apertus-ai.org/), the open Swiss language model, through the Helvetra API: [github.com/Helvetra/backend](https://github.com/Helvetra/backend) (its README explains how the model is prompted and checked).
 
 The same Nuxt app serves both the translation tool and the marketing/SEO pages (landing, pricing, FAQ, about, comparison articles, the `/developers` B2B surface, etc.).
 
@@ -8,6 +8,7 @@ The same Nuxt app serves both the translation tool and the marketing/SEO pages (
 
 ### Translation UI
 - Real-time auto-translate with debouncing
+- Incremental translation: when one sentence changes, only that sentence is retranslated, with the rest of the text as context; unchanged sentences are reused
 - Auto-detect source language, with abstain logic when target language is a close runner-up to avoid wrong-language flips on short text
 - Swiss German dialect selector (Zurich, Bern, Basel, Luzern, St. Gallen, Wallis)
 - Formality toggle (du/Sie, tu/vous, tu/Lei)
@@ -16,7 +17,7 @@ The same Nuxt app serves both the translation tool and the marketing/SEO pages (
 ### Accounts
 - Email + password registration
 - Sign in with Apple
-- HttpOnly+Secure+SameSite=Strict refresh-token cookies — never stored in `localStorage`
+- HttpOnly+Secure+SameSite=Strict refresh-token cookies, never stored in `localStorage`
 - Silent session restore on page reload via `/refresh`
 - CSRF protection via `csrf_token` cookie + `X-CSRF-Token` header on cookie-authenticated requests
 
@@ -27,6 +28,7 @@ The same Nuxt app serves both the translation tool and the marketing/SEO pages (
 
 ### Marketing & SEO
 - Comparison articles: vs DeepL, vs Google Translate, vs Supertext, best translation apps in Switzerland, Swiss German tools
+- News section (`/news`) with articles in all four languages
 - About, FAQ, Pricing, Privacy, Terms, Support, Impressum
 - Schema.org JSON-LD (Organization, WebSite, Service, BreadcrumbList)
 - Full hreflang setup (de-CH, fr-CH, it-CH, en-GB, x-default) via `@nuxtjs/i18n`
@@ -43,7 +45,7 @@ The same Nuxt app serves both the translation tool and the marketing/SEO pages (
 
 ## Tech Stack
 
-- **Framework:** Nuxt 3 / Vue 3
+- **Framework:** Nuxt 4 / Vue 3
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **i18n:** @nuxtjs/i18n
@@ -77,6 +79,13 @@ npm run build
 npm run lint
 ```
 
+### Running tests
+
+```bash
+npm test        # unit tests (Vitest)
+npm run lint
+```
+
 ### Run with the backend
 
 The web app needs the Helvetra API to translate. To run both locally:
@@ -107,7 +116,11 @@ i18n/
 
 ## Deployment
 
-The app runs as a non-root container in production behind nginx. The same image serves both the translation tool and the marketing pages — they share the Nuxt build. See the parent project's infra repo for the Docker Compose stack.
+The app runs as a non-root Node container (`Dockerfile`) behind nginx, next to the backend, on a server in Switzerland. The same image serves both the translation tool and the marketing pages, since they share the Nuxt build. The production Docker Compose and nginx setup is kept in a private repository.
+
+## About
+
+Built by Alex Margot with [Claude Code](https://claude.com/claude-code), reviewed and tested by hand. Issues and questions: gruezi@helvetra.ch.
 
 ## License
 
