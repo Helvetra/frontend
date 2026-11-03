@@ -563,6 +563,7 @@
     "VALIDATION_ERROR": "Invalid request. Please try again.",
     "RATE_LIMITED": "You're translating fast! This first version has usage limits. Want unlimited access? Let us know at gruezi{'@'}helvetra.ch",
     "CONNECTION_ERROR": "Connection error. Please try again.",
+    "SERVICE_BUSY": "Helvetra is very busy right now. Trying again in a few seconds.",
     "TRANSLATION_REJECTED": "We couldn't produce a clean translation. Please rephrase or try again."
   },
   "footer": {

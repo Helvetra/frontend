@@ -281,15 +281,15 @@
           </template>
         </div>
 
-        <!-- Subtle connection-error indicator (does not replace translation) -->
+        <!-- Subtle connection-error or busy indicator (does not replace translation) -->
         <div
-          v-if="error === 'CONNECTION_ERROR' && !isLoading"
+          v-if="(error === 'CONNECTION_ERROR' || error === 'SERVICE_BUSY') && !isLoading"
           class="absolute bottom-2 left-3 flex items-center gap-1.5 text-xs text-neutral-500"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414" />
           </svg>
-          <span>{{ $t('errors.CONNECTION_ERROR') }}</span>
+          <span>{{ $t(`errors.${error}`) }}</span>
         </div>
 
         <!-- Backend rejected the translation (post-translation validator).
@@ -394,7 +394,7 @@ const props = withDefaults(defineProps<{
   initialFormality: undefined,
 })
 
-const { translate, translateIncremental, isLoading, error } = useTranslation()
+const { translate, translateIncremental, backoffRemainingMs, isLoading, error } = useTranslation()
 const { submitFeedback, hasStoredConsent } = useFeedback()
 const { isAuthenticated, user } = useAuth()
 
@@ -651,7 +651,22 @@ async function performTranslation() {
     }
 
     scrollOutputToBottom()
+  } else if (error.value === 'SERVICE_BUSY') {
+    scheduleBusyRetry()
   }
+}
+
+// The translation service is shared by everyone, so when it is busy, retry
+// once its back-off has passed, spread over a few seconds so clients that
+// were refused together don't all come back at the same moment. Typing
+// cancels this and takes over. See helvetra/infra#21.
+function scheduleBusyRetry() {
+  if (apiCallTimer) {
+    clearTimeout(apiCallTimer)
+  }
+  apiCallTimer = setTimeout(() => {
+    performTranslation()
+  }, backoffRemainingMs() + Math.random() * 5000)
 }
 
 function debouncedTranslate() {

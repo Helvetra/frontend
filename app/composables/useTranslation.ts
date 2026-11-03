@@ -39,6 +39,7 @@ const ERROR_CODE_MAP: Record<string, string> = {
   TEXT_TOO_LONG: 'TEXT_TOO_LONG',
   WEEKLY_LIMIT_EXCEEDED: 'WEEKLY_LIMIT_EXCEEDED',
   USAGE_LIMIT_EXCEEDED: 'USAGE_LIMIT_EXCEEDED',
+  UPSTREAM_BUSY: 'SERVICE_BUSY',
   RATE_LIMIT_EXCEEDED: 'RATE_LIMITED',
   PLACEHOLDER_LEAK: 'TRANSLATION_REJECTED',
   NAME_SUBSTITUTION: 'TRANSLATION_REJECTED',
@@ -57,8 +58,10 @@ export function useTranslation() {
   let abortController: AbortController | null = null
   let requestSeq = 0
 
-  // Honor Retry-After from 429 responses: no new requests until this time.
+  // Honor Retry-After from 429 responses and from a busy translation service:
+  // no new requests until this time, and the same error stays visible.
   let rateLimitedUntil = 0
+  let backoffError = 'RATE_LIMITED'
 
   // Per-text sentence-translation memory for the incremental path. Keyed by
   // the translation config; any change to it invalidates the whole cache.
@@ -108,11 +111,12 @@ export function useTranslation() {
     const code = fetchError.data?.error?.code
     error.value = (code && ERROR_CODE_MAP[code]) || 'CONNECTION_ERROR'
 
-    // 4xx are never retried; on a rate limit, block new attempts until the
-    // server's Retry-After has passed.
-    if (fetchError.statusCode === 429) {
+    // 4xx are never retried; on a rate limit or a busy service, block new
+    // attempts until the server's Retry-After has passed.
+    if (fetchError.statusCode === 429 || error.value === 'SERVICE_BUSY') {
       const retryAfterSeconds = fetchError.data?.error?.retry_after ?? 30
       rateLimitedUntil = Date.now() + retryAfterSeconds * 1000
+      backoffError = error.value
     }
 
     if (error.value === 'TRANSLATION_REJECTED') {
@@ -168,7 +172,7 @@ export function useTranslation() {
       return null
     }
     if (Date.now() < rateLimitedUntil) {
-      error.value = 'RATE_LIMITED'
+      error.value = backoffError
       return null
     }
 
@@ -273,7 +277,7 @@ export function useTranslation() {
       return null
     }
     if (Date.now() < rateLimitedUntil) {
-      error.value = 'RATE_LIMITED'
+      error.value = backoffError
       return null
     }
 
@@ -342,9 +346,15 @@ export function useTranslation() {
     }
   }
 
+  // Milliseconds until new requests are allowed again (0 when not blocked).
+  function backoffRemainingMs(): number {
+    return Math.max(0, rateLimitedUntil - Date.now())
+  }
+
   return {
     translate,
     translateIncremental,
+    backoffRemainingMs,
     isLoading,
     error,
   }
