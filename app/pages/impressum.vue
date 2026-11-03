@@ -51,6 +51,6 @@ const { t } = useI18n()
 
 useHead({
   title: () => `${t('impressum.title')} - Helvetra`,
-  robots: 'noindex, nofollow',
+  meta: [{ name: 'robots', content: 'noindex, nofollow' }],
 })
 </script>

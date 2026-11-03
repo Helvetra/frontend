@@ -1,5 +1,7 @@
 # Helvetra Frontend
 
+[![CI](https://github.com/Helvetra/frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/Helvetra/frontend/actions/workflows/ci.yml)
+
 Web app and marketing site for [Helvetra](https://helvetra.ch), a privacy-first Swiss translation app. Translations run on [Apertus](https://www.apertus-ai.org/), the open Swiss language model, through the Helvetra API: [github.com/Helvetra/backend](https://github.com/Helvetra/backend) (its README explains how the model is prompted and checked).
 
 The same Nuxt app serves both the translation tool and the marketing/SEO pages (landing, pricing, FAQ, about, comparison articles, the `/developers` B2B surface, etc.).
@@ -82,9 +84,12 @@ npm run lint
 ### Running tests
 
 ```bash
-npm test        # unit tests (Vitest)
+npm test            # unit tests (Vitest)
 npm run lint
+npm run typecheck
 ```
+
+CI runs the same three checks on every push ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)).
 
 ### Run with the backend
 
