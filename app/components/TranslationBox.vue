@@ -218,7 +218,7 @@
                upgrade CTA; Helvetra+ and B2B users get an honest explanation
                (no "Upgrade to Helvetra+" — they're already on a paid plan). -->
           <div
-            v-else-if="(error === 'WEEKLY_LIMIT_EXCEEDED' || error === 'RATE_LIMITED') && isAuthenticated && !isLoading"
+            v-else-if="(error === 'WEEKLY_LIMIT_EXCEEDED' || error === 'USAGE_LIMIT_EXCEEDED' || error === 'RATE_LIMITED') && isAuthenticated && !isLoading"
             class="h-full flex items-center justify-center"
           >
             <div class="text-center px-4">
@@ -419,7 +419,7 @@ const localePath = useLocalePath()
 
 // Errors that take over the output panel with a friendly card. Other errors
 // keep the previous translation visible and only show a subtle indicator.
-const ERRORS_REPLACING_OUTPUT = ['TEXT_TOO_LONG', 'WEEKLY_LIMIT_EXCEEDED', 'RATE_LIMITED'] as const
+const ERRORS_REPLACING_OUTPUT = ['TEXT_TOO_LONG', 'WEEKLY_LIMIT_EXCEEDED', 'USAGE_LIMIT_EXCEEDED', 'RATE_LIMITED'] as const
 const errorReplacesOutput = computed(
   () => !!error.value && (ERRORS_REPLACING_OUTPUT as readonly string[]).includes(error.value)
 )
@@ -682,7 +682,11 @@ function debouncedTranslate() {
   // After a quota refusal the server will keep saying no. Stop hammering
   // /translate on every keystroke; the limit card stays visible until the
   // user clears the box or signs in. See helvetra/frontend#104.
-  if (error.value === 'WEEKLY_LIMIT_EXCEEDED' || error.value === 'RATE_LIMITED') {
+  if (
+    error.value === 'WEEKLY_LIMIT_EXCEEDED'
+    || error.value === 'USAGE_LIMIT_EXCEEDED'
+    || error.value === 'RATE_LIMITED'
+  ) {
     return
   }
 
