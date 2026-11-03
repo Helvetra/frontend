@@ -56,59 +56,16 @@
         {{ $t('api.pricing.note') }}
       </p>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- Starter -->
-        <div class="bg-white border border-neutral-200 rounded-xl p-6 flex flex-col">
-          <div class="mb-4">
-            <h3 class="text-xl font-semibold text-neutral-900">{{ $t('api.tiers.starter.name') }}</h3>
-            <p class="text-neutral-500 text-sm mt-1">{{ $t('api.tiers.starter.audience') }}</p>
-          </div>
-
-          <div class="mb-1">
-            <span class="text-3xl font-bold text-neutral-900">CHF 29</span>
-            <span class="text-neutral-500">{{ $t('api.perMonth') }}</span>
-          </div>
-          <p class="text-xs text-neutral-500 mb-6">{{ $t('api.tiers.starter.trial') }}</p>
-
-          <ul class="space-y-3 mb-6 flex-1">
-            <li
-              v-for="(_, idx) in 5"
-              :key="idx"
-              class="flex items-start gap-2 text-sm text-neutral-700"
-            >
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              {{ $t(`api.tiers.starter.feature${idx + 1}`) }}
-            </li>
-          </ul>
-
-          <button
-            type="button"
-            :disabled="isCreatingGateway === 'starter'"
-            class="block w-full py-2.5 px-4 bg-swiss-red text-white font-medium rounded-lg hover:bg-red-700 transition-colors text-center cursor-pointer disabled:opacity-50 disabled:cursor-wait"
-            @click="handleSubscribe('starter')"
-          >
-            <span v-if="isCreatingGateway === 'starter'">{{ $t('auth.loading') }}</span>
-            <span v-else>{{ $t('api.tiers.starter.cta') }}</span>
-          </button>
-        </div>
-
-        <!-- Business (featured) -->
-        <div class="bg-white border-2 border-swiss-red rounded-xl p-6 flex flex-col relative">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-            <span class="bg-swiss-red text-white text-xs font-medium px-3 py-1 rounded-full">
-              {{ $t('api.tiers.business.badge') }}
-            </span>
-          </div>
-
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <!-- Business: the self-serve plan (featured) -->
+        <div class="bg-white border-2 border-swiss-red rounded-xl p-6 flex flex-col">
           <div class="mb-4">
             <h3 class="text-xl font-semibold text-neutral-900">{{ $t('api.tiers.business.name') }}</h3>
             <p class="text-neutral-500 text-sm mt-1">{{ $t('api.tiers.business.audience') }}</p>
           </div>
 
           <div class="mb-1">
-            <span class="text-3xl font-bold text-neutral-900">CHF 99</span>
+            <span class="text-3xl font-bold text-neutral-900">CHF 39</span>
             <span class="text-neutral-500">{{ $t('api.perMonth') }}</span>
           </div>
           <p class="text-xs text-neutral-500 mb-6">{{ $t('api.tiers.business.tagline') }}</p>
@@ -276,7 +233,7 @@ async function handleSubscribe(tier: Tier): Promise<void> {
   }
 }
 
-// Structured data: Service + Offer for the two paid tiers (machine-
+// Structured data: Service + Offer for the self-serve plan (machine-
 // readable pricing for search engines and price comparison tools) and
 // a BreadcrumbList rooted at the home page.
 useJsonLd([
@@ -285,14 +242,8 @@ useJsonLd([
     t('api.subtitle'),
     [
       {
-        name: t('api.tiers.starter.name'),
-        price: 29,
-        description: t('api.tiers.starter.feature1'),
-        url: 'https://helvetra.ch/developers#pricing',
-      },
-      {
         name: t('api.tiers.business.name'),
-        price: 99,
+        price: 39,
         description: t('api.tiers.business.feature1'),
         url: 'https://helvetra.ch/developers#pricing',
       },

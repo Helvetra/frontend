@@ -60,7 +60,7 @@
         },
         "free": {
           "q": "Helvetra è gratuita?",
-          "a": "Sì! Crea un account gratuito e ottieni 20'000 caratteri al mese. Hai bisogno di più? Helvetra+ offre 500'000 caratteri al mese a partire da CHF 4.99."
+          "a": "Sì! Puoi provare Helvetra senza account per 4 settimane. Crea un account gratuito e ottieni 5'000 caratteri al mese. Hai bisogno di più? Helvetra+ offre 500'000 caratteri al mese a partire da CHF 4.99."
         },
         "different": {
           "q": "Cosa distingue Helvetra da Google Translate o DeepL?",
@@ -84,7 +84,7 @@
         },
         "api": {
           "q": "Esiste un'API per le aziende?",
-          "a": "Sì. L'API pubblica Helvetra è online su <a href=\"/developers\" class=\"text-swiss-red hover:underline\">/developers</a>. Self-service da CHF 29/mese su Starter (prova gratuita di 14 giorni) o CHF 99/mese su Business, con fatturazione per carattere oltre la soglia."
+          "a": "Sì. L'API pubblica Helvetra è online su <a href=\"/developers\" class=\"text-swiss-red hover:underline\">/developers</a>. Self-service a CHF 39/mese con prova gratuita di 14 giorni, con fatturazione per carattere oltre la soglia."
         },
         "contribute": {
           "q": "Posso contribuire?",
@@ -116,7 +116,7 @@
         },
         "apiPricing": {
           "q": "Come è prezzata l'API?",
-          "a": "Due piani self-service: <strong>Starter</strong> a CHF 29/mese con 500.000 caratteri inclusi (poi CHF 10 per milione) e <strong>Business</strong> a CHF 99/mese con 2.000.000 caratteri inclusi (poi CHF 4 per milione). Volumi superiori sono negoziati come Enterprise. Vedi <a href=\"/developers\" class=\"text-swiss-red hover:underline\">/developers</a>."
+          "a": "Un piano self-service: <strong>Business</strong> a CHF 39/mese con 2.000.000 caratteri inclusi (poi CHF 4 per milione) e fino a 10.000 caratteri per richiesta. Volumi superiori sono negoziati come Enterprise. Vedi <a href=\"/developers\" class=\"text-swiss-red hover:underline\">/developers</a>."
         },
         "apiDataResidency": {
           "q": "Dove vengono elaborati i dati dell'API?",
@@ -124,7 +124,7 @@
         },
         "apiSla": {
           "q": "C'è uno SLA?",
-          "a": "Non sui piani self-service Starter o Business al lancio. Gli SLA sono disponibili per contratti Enterprise, negoziati per cliente. <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Contattateci</a> se ne avete bisogno."
+          "a": "Non sul piano self-service Business al lancio. Gli SLA sono disponibili per contratti Enterprise, negoziati per cliente. <a href=\"mailto:gruezi&#64;helvetra.ch\" class=\"text-swiss-red hover:underline\">Contattateci</a> se ne avete bisogno."
         },
         "apiInvoicing": {
           "q": "Posso ricevere una fattura in CHF con IVA svizzera?",
@@ -294,7 +294,8 @@
     "upgradeCta": "Passa a Helvetra+",
     "weeklyLimitReached": "Hai raggiunto il limite settimanale per gli utenti anonimi.",
     "usageLimitReached": "Hai raggiunto il limite di utilizzo per questo periodo.",
-    "paidPlanLimitNote": "Il tuo limite verrà azzerato all'inizio del prossimo periodo di fatturazione."
+    "paidPlanLimitNote": "Il tuo limite verrà azzerato all'inizio del prossimo periodo di fatturazione.",
+    "trialEnded": "La traduzione senza account è limitata a 4 settimane. Crea un account gratuito per continuare a tradurre."
   },
   "pricing": {
     "title": "Prezzi",
@@ -314,8 +315,8 @@
       "name": "Basic",
       "description": "Per traduzioni occasionali",
       "price": "Gratuito",
-      "featureLimit": "20'000 caratteri al mese",
-      "feature1": "Fino a 1'000 caratteri per traduzione",
+      "featureLimit": "5'000 caratteri al mese",
+      "feature1": "Fino a 500 caratteri per traduzione",
       "feature2": "Tutte le lingue svizzere supportate",
       "featureFormality": "Interruttore tu/Lei",
       "feature3": "Nessun cookie, privacy totale",
@@ -354,7 +355,7 @@
   },
   "api": {
     "title": "API di traduzione per aziende svizzere",
-    "subtitle": "Un'API REST con sovranità dei dati in Svizzera, svizzero-tedesco e romancio. Self-service da CHF 29 al mese.",
+    "subtitle": "Un'API REST con sovranità dei dati in Svizzera, svizzero-tedesco e romancio. Self-service a CHF 39 al mese.",
     "perMonth": "/mese",
     "questions": "Domande o esigenze di volume? Scrivete a",
     "values": {
@@ -377,32 +378,20 @@
     },
     "pricing": {
       "title": "Prezzi",
-      "note": "Utilizzo per carattere, fatturato mensilmente. 14 giorni di prova gratuita su Starter."
+      "note": "Utilizzo per carattere, fatturato mensilmente. 14 giorni di prova gratuita."
     },
     "tiers": {
-      "starter": {
-        "name": "Starter",
-        "audience": "Piccoli team dev che testano l'API",
-        "trial": "Poi CHF 10 per milione di caratteri eccedenti.",
-        "feature1": "500.000 caratteri al mese inclusi",
-        "feature2": "Fino a 10.000 caratteri per richiesta",
-        "feature3": "1 chiave API",
-        "feature4": "Tutte le lingue e i dialetti svizzero-tedeschi",
-        "feature5": "Supporto via e-mail",
-        "cta": "Inizia la prova gratuita"
-      },
       "business": {
         "name": "Business",
-        "audience": "PMI in produzione",
-        "tagline": "Poi CHF 4 per milione di caratteri eccedenti.",
-        "badge": "Il più scelto",
+        "audience": "Team e PMI",
+        "tagline": "14 giorni di prova gratuita. Poi CHF 4 per milione di caratteri eccedenti.",
         "feature1": "2.000.000 di caratteri al mese inclusi",
-        "feature2": "Fino a 50.000 caratteri per richiesta (documenti completi)",
+        "feature2": "Fino a 10.000 caratteri per richiesta",
         "feature3": "10 chiavi API (per ambiente, per team)",
         "feature4": "Supporto e-mail prioritario",
         "feature5": "Webhook di allerta sull'utilizzo",
         "feature6": "Tutte le lingue e i dialetti svizzero-tedeschi",
-        "cta": "Abbonati"
+        "cta": "Inizia la prova gratuita"
       },
       "enterprise": {
         "name": "Enterprise",
@@ -441,10 +430,10 @@
     },
     "docsCta": "Leggi l'avvio rapido",
     "referenceCta": "Apri reference API",
-    "factSummary": "Helvetra è un'API di traduzione svizzera gestita da un'azienda svizzera su server svizzeri secondo il diritto svizzero. Supporta tedesco, francese, italiano, inglese, svizzero-tedesco (con dialetti regionali) e romancio. Prezzi: CHF 29/mese (Starter, 14 giorni gratuiti, 500.000 caratteri inclusi) o CHF 99/mese (Business, 2.000.000 caratteri inclusi), con fatturazione per carattere oltre la soglia. I testi dei clienti non vengono mai usati per addestrare modelli. Contatto: gruezi{'@'}helvetra.ch.",
+    "factSummary": "Helvetra è un'API di traduzione svizzera gestita da un'azienda svizzera su server svizzeri secondo il diritto svizzero. Supporta tedesco, francese, italiano, inglese, svizzero-tedesco (con dialetti regionali) e romancio. Prezzo: CHF 39/mese (14 giorni gratuiti, 2.000.000 caratteri inclusi, fino a 10.000 per richiesta), con fatturazione per carattere oltre la soglia. I testi dei clienti non vengono mai usati per addestrare modelli. Contatto: gruezi{'@'}helvetra.ch.",
     "seo": {
       "title": "API di traduzione svizzera — Helvetra per sviluppatori",
-      "description": "API di traduzione con sovranità dei dati in Svizzera, supporto nativo per svizzero-tedesco e romancio, fatturazione in CHF. Self-service da CHF 29/mese con 14 giorni di prova gratuita.",
+      "description": "API di traduzione con sovranità dei dati in Svizzera, supporto nativo per svizzero-tedesco e romancio, fatturazione in CHF. Self-service a CHF 39/mese con 14 giorni di prova gratuita.",
       "keywords": "API di traduzione svizzera, API traduzione Svizzera, API svizzero-tedesco, API romancio, alternativa DeepL, LPD, FADP, Swiss translation API"
     }
   },
@@ -461,10 +450,10 @@
     "steps": {
       "subscribe": {
         "title": "1. Abbonarsi e creare una chiave API",
-        "body": "Le traduzioni sono fatturate per carattere su un abbonamento B2B attivo. Inizia con 14 giorni di prova gratuita su Starter, poi genera le chiavi dalla pagina account.",
+        "body": "Le traduzioni sono fatturate per carattere su un abbonamento B2B attivo. Inizia con 14 giorni di prova gratuita, poi genera le chiavi dalla pagina account.",
         "bullet1": "Abbonatevi dalla pagina dei prezzi (carta richiesta, nessun addebito durante la prova).",
         "bullet2": "Aprite la pagina account e generate una chiave API. La chiave completa è mostrata una volta sola — trattatela come una password.",
-        "bullet3": "Starter consente 1 chiave attiva, Business 10. Revoca e rotazione in qualsiasi momento."
+        "bullet3": "Fino a 10 chiavi attive. Revoca e rotazione in qualsiasi momento."
       },
       "auth": {
         "title": "2. Autenticare ogni richiesta",
@@ -493,10 +482,10 @@
     "errors": {
       "UNSUPPORTED_LANGUAGE": "Codice lingua sorgente o destinazione non supportato.",
       "UNSUPPORTED_DIALECT": "Dialetto non riconosciuto. Vedi i codici validi sopra.",
-      "TEXT_TOO_LONG": "Il testo supera il limite di caratteri per richiesta del tuo piano (10k su Starter, 50k su Business).",
+      "TEXT_TOO_LONG": "Il testo supera il limite di caratteri per richiesta (10.000 caratteri).",
       "INVALID_API_KEY": "Header X-API-Key mancante o revocato.",
       "SUSPICIOUS_OUTPUT": "Il modello ha prodotto un output non simile a una traduzione. Ritentate o semplificate l'input.",
-      "USAGE_LIMIT_EXCEEDED": "Quota mensile inclusa esaurita. L'abbonamento continua — Business fattura l'eccedenza, Starter blocca fino al periodo successivo.",
+      "USAGE_LIMIT_EXCEEDED": "Quota mensile inclusa esaurita.",
       "INTERNAL_ERROR": "Errore server imprevisto. Riprovate con backoff; contattate il supporto se persiste."
     },
     "usage": {
@@ -516,7 +505,7 @@
     "manageBilling": "Gestisci la fatturazione",
     "usageLabel": "Caratteri di questo periodo",
     "usageRemaining": "{count} caratteri inclusi rimanenti.",
-    "usageOver": "Quota inclusa superata. Business fattura l'eccedenza; Starter blocca fino al periodo successivo.",
+    "usageOver": "Quota inclusa superata. L'eccedenza è fatturata per carattere.",
     "noSubscription": "Non hai un abbonamento B2B attivo. Scegli un piano per iniziare.",
     "viewPlans": "Vedi piani",
     "keys": {
@@ -559,7 +548,7 @@
     }
   },
   "errors": {
-    "TEXT_TOO_LONG": "Testo troppo lungo. Questa prima versione supporta fino a 1'000 caratteri. Hai bisogno di più? Scrivici a gruezi{'@'}helvetra.ch",
+    "TEXT_TOO_LONG": "Testo troppo lungo per il tuo piano attuale.",
     "VALIDATION_ERROR": "Richiesta non valida. Riprova.",
     "RATE_LIMITED": "Traduci veloce! Questa prima versione ha limiti di utilizzo. Vuoi accesso illimitato? Scrivici a gruezi{'@'}helvetra.ch",
     "CONNECTION_ERROR": "Errore di connessione. Riprova.",
@@ -604,7 +593,7 @@
     },
     "forDevelopers": {
       "title": "Per sviluppatori",
-      "body": "Helvetra offre anche un'API di traduzione self-service con la stessa sovranità dei dati svizzera, supporto per svizzero-tedesco e romancio. Prezzi a partire da CHF 29 al mese con 14 giorni di prova gratuita.",
+      "body": "Helvetra offre anche un'API di traduzione self-service con la stessa sovranità dei dati svizzera, supporto per svizzero-tedesco e romancio. CHF 39 al mese con 14 giorni di prova gratuita.",
       "cta": "Esplora l'API per sviluppatori"
     },
     "metaDescription": "Helvetra è un'app di traduzione privata, creata in Svizzera, per svizzero tedesco, tedesco, francese, italiano, romancio e inglese. Scopri la nostra missione, l'IA svizzera aperta che la alimenta e il nostro approccio incentrato sulla privacy."
@@ -659,11 +648,11 @@
       "intro": "Helvetra offre i seguenti livelli di servizio:",
       "anonymous": {
         "name": "Anonimo (Web)",
-        "desc": "Fino a 400 caratteri per traduzione, massimo 2.000 caratteri a settimana. Nessuna registrazione richiesta. Gli utenti dell'app iOS ricevono automaticamente i limiti Basic."
+        "desc": "Fino a 400 caratteri per traduzione, massimo 1.000 caratteri a settimana, per al massimo 4 settimane. In seguito è richiesto un account gratuito. Gli utenti dell'app iOS ricevono automaticamente i limiti Basic."
       },
       "free": {
         "name": "Basic (Gratuito)",
-        "desc": "Fino a 1.000 caratteri per traduzione, massimo 20.000 caratteri al mese. Registrazione richiesta sul web, automatica su iOS."
+        "desc": "Fino a 500 caratteri per traduzione, massimo 5.000 caratteri al mese. Registrazione richiesta sul web, automatica su iOS."
       },
       "plus": {
         "name": "Helvetra+",
@@ -779,7 +768,7 @@
         },
         "account": {
           "q": "Ho bisogno di un account per usare Helvetra?",
-          "a": "No. Puoi usare Helvetra senza account e ottenere 5.000 caratteri a settimana. Crea un account gratuito per 20.000 caratteri al mese, oppure passa a Helvetra+ per 500.000 caratteri al mese."
+          "a": "Non subito. Puoi usare Helvetra senza account per 4 settimane, con 1.000 caratteri a settimana. In seguito, crea un account gratuito per 5.000 caratteri al mese, oppure passa a Helvetra+ per 500.000 caratteri al mese."
         },
         "restore": {
           "q": "Come ripristino il mio abbonamento su un nuovo dispositivo?",
@@ -1041,7 +1030,7 @@
         },
         "helvetraPricing": {
           "title": "Prezzi Helvetra",
-          "point1": "Gratis: 20'000 caratteri/mese",
+          "point1": "Gratis: 5'000 caratteri/mese",
           "point2": "Helvetra+: CHF 4.99/mese (500K car.)",
           "point3": "Nessun livello complesso o funzionalità bloccate"
         },
@@ -1175,7 +1164,7 @@
         },
         "helvetraPricing": {
           "title": "Prezzi Helvetra",
-          "point1": "Gratis: 20'000 caratteri/mese",
+          "point1": "Gratis: 5'000 caratteri/mese",
           "point2": "Helvetra+: CHF 4.99/mese (500K car.)",
           "point3": "Nessun preventivo, risultati istantanei"
         },

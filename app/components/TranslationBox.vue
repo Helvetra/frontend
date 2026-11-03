@@ -191,13 +191,16 @@
             </div>
           </div>
 
-          <!-- Registration invite for weekly limit (anonymous users) -->
+          <!-- Registration invite when anonymous use hits the weekly limit
+               or its 4-week period is over (anonymous users) -->
           <div
-            v-else-if="error === 'WEEKLY_LIMIT_EXCEEDED' && !isAuthenticated && !isLoading"
+            v-else-if="(error === 'WEEKLY_LIMIT_EXCEEDED' || error === 'SIGNUP_REQUIRED') && !isAuthenticated && !isLoading"
             class="h-full flex items-center justify-center"
           >
             <div class="text-center px-4">
-              <p class="text-sm text-neutral-700 mb-3">{{ $t('limits.weeklyLimitReached') }}</p>
+              <p class="text-sm text-neutral-700 mb-3">
+                {{ error === 'SIGNUP_REQUIRED' ? $t('limits.trialEnded') : $t('limits.weeklyLimitReached') }}
+              </p>
               <NuxtLink
                 :to="localePath('/register')"
                 class="inline-flex items-center gap-2 px-4 py-2 bg-swiss-red text-white text-sm font-medium rounded-lg hover:bg-red-700 transition-colors"
@@ -419,7 +422,7 @@ const localePath = useLocalePath()
 
 // Errors that take over the output panel with a friendly card. Other errors
 // keep the previous translation visible and only show a subtle indicator.
-const ERRORS_REPLACING_OUTPUT = ['TEXT_TOO_LONG', 'WEEKLY_LIMIT_EXCEEDED', 'USAGE_LIMIT_EXCEEDED', 'RATE_LIMITED'] as const
+const ERRORS_REPLACING_OUTPUT = ['TEXT_TOO_LONG', 'WEEKLY_LIMIT_EXCEEDED', 'SIGNUP_REQUIRED', 'USAGE_LIMIT_EXCEEDED', 'RATE_LIMITED'] as const
 const errorReplacesOutput = computed(
   () => !!error.value && (ERRORS_REPLACING_OUTPUT as readonly string[]).includes(error.value)
 )
@@ -699,6 +702,7 @@ function debouncedTranslate() {
   // user clears the box or signs in. See helvetra/frontend#104.
   if (
     error.value === 'WEEKLY_LIMIT_EXCEEDED'
+    || error.value === 'SIGNUP_REQUIRED'
     || error.value === 'USAGE_LIMIT_EXCEEDED'
     || error.value === 'RATE_LIMITED'
   ) {
