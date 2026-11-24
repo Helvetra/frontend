@@ -176,7 +176,7 @@ useJsonLd([
     headline: 'Top 5 Swiss German Translation Tools Compared',
     description: 'Compare the best translation tools for Swiss German, from DeepL to specialized Swiss services.',
     datePublished: '2024-12-22',
-    dateModified: '2026-06-26',
+    dateModified: '2026-11-24',
   }),
   getItemListSchema(
     'Top 5 Swiss German Translation Tools',
@@ -185,7 +185,7 @@ useJsonLd([
       { name: 'DeepL', description: 'Industry-leading AI translation with excellent quality for standard German.' },
       { name: 'Google Translate', description: 'Free and ubiquitous translation supporting 130+ languages.' },
       { name: 'Helvetra', description: 'Swiss-hosted translation with native Swiss German support and privacy focus.' },
-      { name: 'Supertext', description: 'Swiss professional translation service with human translators.' },
+      { name: 'Supertext', description: 'Swiss translation service with an AI translator covering Swiss German (Bernese and Zurich) and optional human verification.' },
       { name: 'iTranslate', description: 'Mobile app with regional dialect recognition including Swiss German.' },
     ]
   ),

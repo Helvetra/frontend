@@ -113,7 +113,7 @@ export function useSchemaOrg() {
       'name': 'Helvetra',
       'applicationCategory': 'UtilitiesApplication',
       'operatingSystem': 'Web',
-      'description': 'Swiss translation app for German, Swiss German, French, Italian, Romansh, and English',
+      'description': 'Swiss translation app for German, Swiss German, French, Italian, Romansh, English, Albanian, Portuguese, Spanish, Croatian and Serbian',
       'offers': offers.map(offer => ({
         '@type': 'Offer',
         'name': offer.name,

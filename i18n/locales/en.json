@@ -52,7 +52,7 @@
       "items": {
         "languages": {
           "q": "What languages does Helvetra support?",
-          "a": "German, Swiss German (with regional dialects), French, Italian, Romansh, and English to start. More languages coming soon."
+          "a": "German, Swiss German (with regional dialects), French, Italian, Romansh and English, plus Albanian, Portuguese, Spanish, Croatian and Serbian, the most spoken other languages in Switzerland."
         },
         "dataStorage": {
           "q": "Where is my data stored?",
@@ -96,11 +96,11 @@
         },
         "dialects": {
           "q": "Can Helvetra translate between Swiss German dialects?",
-          "a": "Yes. You can translate from Zürich German to Bern German, or any combination of supported dialects including Basel, Aargau, and more. This is unique to Helvetra."
+          "a": "Not directly. You can translate from any supported language into one of six Swiss German dialects (Bern, Zurich, Basel, St. Gallen, Valais and Lucerne), and translate Swiss German text in any dialect into the other languages."
         },
         "vsGoogle": {
           "q": "Is Helvetra better than Google Translate for Swiss German?",
-          "a": "For Swiss German, yes. Google Translate doesn't support Swiss German at all. Helvetra is currently the only translation tool that handles Swiss German dialects."
+          "a": "For Swiss German, yes. Google Translate doesn't support Swiss German at all. Helvetra is one of the few translation tools that handle Swiss German dialects, with six regional dialects to choose from."
         },
         "formality": {
           "q": "Can I translate formal or informal Swiss German?",
@@ -112,7 +112,7 @@
         },
         "apiLanguages": {
           "q": "What languages does the API support?",
-          "a": "German, French, Italian, English, Swiss German with regional dialects, and Romansh. Any combination of source and target language works, including auto-detection of the source."
+          "a": "German, French, Italian, English, Swiss German with regional dialects, Romansh, Albanian, Portuguese (European), Spanish, Croatian and Serbian (Latin script). Any combination of source and target language works, including auto-detection of the source."
         },
         "apiPricing": {
           "q": "How is the API priced?",
@@ -283,7 +283,12 @@
     "gsw": "Swiss German",
     "fr": "French",
     "it": "Italian",
-    "rm": "Romansh"
+    "rm": "Romansh",
+    "sq": "Albanian",
+    "pt": "Portuguese",
+    "es": "Spanish",
+    "hr": "Croatian",
+    "sr": "Serbian"
   },
   "limits": {
     "wantMore": "Want to translate longer texts?",
@@ -430,7 +435,7 @@
     },
     "docsCta": "Read the quickstart",
     "referenceCta": "Open API reference",
-    "factSummary": "Helvetra is a Swiss translation API run by a Swiss company on Swiss servers under Swiss law. It supports German, French, Italian, English, Swiss German (with regional dialects), and Romansh. Pricing is CHF 39/month (14-day free trial, 2,000,000 characters included, up to 10,000 per request), with per-character overage. Customer text is never used to train models. Contact: gruezi{'@'}helvetra.ch.",
+    "factSummary": "Helvetra is a Swiss translation API run by a Swiss company on Swiss servers under Swiss law. It supports German, French, Italian, English, Swiss German (with regional dialects), Romansh, Albanian, Portuguese, Spanish, Croatian and Serbian. Pricing is CHF 39/month (14-day free trial, 2,000,000 characters included, up to 10,000 per request), with per-character overage. Customer text is never used to train models. Contact: gruezi{'@'}helvetra.ch.",
     "seo": {
       "title": "Swiss Translation API — Helvetra Developers",
       "description": "Translation API with Swiss data residency, native Swiss German and Romansh support, CHF invoicing. Self-serve for CHF 39/month with 14-day free trial.",
@@ -468,7 +473,7 @@
       "title": "Languages and options",
       "body": "Any source/target combination among the supported languages is valid, including Swiss German and Romansh. Set source_lang to auto to let the engine detect the source.",
       "formalityTitle": "Formality",
-      "formalityBody": "Pass formality=informal or formality=formal when translating to German, French or Italian to control the address form (du/Sie, tu/vous, tu/Lei). Defaults to auto.",
+      "formalityBody": "Pass formality=informal or formality=formal when translating to any supported language except English to control the address form (for example du/Sie, tu/vous, tu/Lei, tú/usted, ti/Vi). Defaults to auto.",
       "dialectTitle": "Swiss German dialects",
       "dialectBody": "When target_lang is gsw, pick a dialect for the regional flavour. Defaults to a neutral Bernese German if omitted."
     },
@@ -603,7 +608,7 @@
       "body": "Helvetra also offers a self-serve translation API with the same Swiss data residency, Swiss German, and Romansh support. CHF 39 per month with a 14-day free trial.",
       "cta": "Explore the developer API"
     },
-    "metaDescription": "Helvetra is a private, Swiss-built translation app for Swiss German, German, French, Italian, Romansh and English. Learn about our mission, the open Swiss AI behind it, and our privacy-first approach."
+    "metaDescription": "Helvetra is a private, Swiss-built translation app for Swiss German, German, French, Italian, Romansh, English and the most spoken other languages in Switzerland. Learn about our mission, the open Swiss AI behind it, and our privacy-first approach."
   },
   "faqPage": {
     "title": "Frequently Asked Questions",
@@ -648,7 +653,7 @@
     },
     "service": {
       "title": "Service Description",
-      "text": "Helvetra provides AI-powered translation services between German, Swiss German, French, Italian, Romansh, and English. Translations are generated by Apertus, a Swiss AI model, and are provided as-is without guarantee of accuracy."
+      "text": "Helvetra provides AI-powered translation services between German, Swiss German, French, Italian, Romansh, English, Albanian, Portuguese, Spanish, Croatian and Serbian. Translations are generated by Apertus, a Swiss AI model, and are provided as-is without guarantee of accuracy."
     },
     "tiers": {
       "title": "Service Tiers",
@@ -803,11 +808,11 @@
       },
       "deepl": {
         "title": "vs DeepL",
-        "description": "Known for quality European translations. Premium pricing, no Swiss German support."
+        "description": "Known for quality European translations. Premium pricing, Swiss Standard German but no dialects."
       },
       "supertext": {
         "title": "vs Supertext",
-        "description": "Swiss company with human translators. Ironically, no Swiss German support from Zurich."
+        "description": "Swiss company with an AI translator and optional human review. Covers Bernese and Zurich German."
       },
       "tags": {
         "privacy": "Privacy",
@@ -855,8 +860,8 @@
         "title": "Where Google Translate Wins",
         "coverage": {
           "title": "Unmatched Language Coverage",
-          "p1": "Google Translate supports 133 languages, from Afrikaans to Zulu, including many regional and endangered languages. If you need to translate Thai, Swahili, or Welsh, Google is essentially your only free option. Helvetra supports six languages (German, French, Italian, English, Swiss German, and Romansh), which covers Switzerland well but won't help you on a trip to Tokyo.",
-          "p2": "This isn't a weakness we're trying to fix. Helvetra is intentionally focused on Swiss languages because that's where we can add real value. If you regularly work with languages outside this scope, Google Translate is the practical choice."
+          "p1": "Google Translate supports 133 languages, from Afrikaans to Zulu, including many regional and endangered languages. If you need to translate Thai, Swahili, or Welsh, Google is essentially your only free option. Helvetra supports eleven languages: German, French, Italian, Romansh, Swiss German, English, and the most spoken other languages in Switzerland (Albanian, Portuguese, Spanish, Croatian and Serbian). That covers daily life in Switzerland well but won't help you on a trip to Tokyo.",
+          "p2": "This isn't a weakness we're trying to fix. Helvetra is intentionally focused on the languages spoken in Switzerland because that's where we can add real value. If you regularly work with languages outside this scope, Google Translate is the practical choice."
         },
         "free": {
           "title": "Truly Unlimited and Free",
@@ -881,8 +886,8 @@
           "p2": "When you use Helvetra, you're supporting the Swiss technology ecosystem instead of feeding more data to Big Tech. Your translations help fund Swiss research and infrastructure, not advertising algorithms in California."
         },
         "swissGerman": {
-          "title": "The Only Swiss German Translator",
-          "p1": "Google Translate doesn't support Swiss German. Neither does DeepL, Microsoft Translator, or any other major translation service. Helvetra is currently the only tool that can translate to and from Swiss German, with support for regional dialects like Zürich, Bern, Basel, and more. The quality is still improving, Swiss German is genuinely hard, but we're the only ones working on it."
+          "title": "Swiss German Dialects",
+          "p1": "Google Translate doesn't support Swiss German. DeepL writes Swiss Standard German (High German with Swiss spelling) but not dialect. Helvetra translates to and from Swiss German, with six regional dialects: Bern, Zurich, Basel, St. Gallen, Valais and Lucerne. The quality is still improving, Swiss German is genuinely hard, but it's what we focus on."
         },
         "simplicity": {
           "title": "Simplicity by Design",
@@ -919,7 +924,7 @@
           "title": "Choose Helvetra if:",
           "point1": "You work primarily with Swiss languages and want optimized quality",
           "point2": "Privacy matters, for business, legal, or personal reasons",
-          "point3": "You need Swiss German translation (we're the only option)",
+          "point3": "You need Swiss German translation (Google doesn't offer it)",
           "point4": "You prefer a simple, focused tool over a feature-packed platform",
           "point5": "You want to support Swiss technology instead of Big Tech"
         }
@@ -981,7 +986,7 @@
         },
         "languages": {
           "title": "Broader Language Coverage",
-          "p1": "DeepL supports 31+ languages compared to Helvetra's 6. Need Japanese, Portuguese, or Polish? DeepL has you covered. Helvetra focuses exclusively on Swiss languages: German, French, Italian, English, Swiss German, and Romansh. This is intentional, we'd rather do six languages excellently than thirty adequately."
+          "p1": "DeepL supports 31+ languages compared to Helvetra's 11. Need Japanese, Korean, or Polish? DeepL has you covered. Helvetra focuses on the languages spoken in Switzerland: German, French, Italian, Romansh, Swiss German and English, plus Albanian, Portuguese, Spanish, Croatian and Serbian. This is intentional, we'd rather cover the languages of Switzerland well than thirty adequately."
         },
         "verdict": "Bottom line: DeepL is a premium translation tool that deserves its reputation. For European language quality, document translation, and API access, it's an excellent choice."
       },
@@ -989,8 +994,8 @@
         "title": "Where Helvetra Wins",
         "swissGerman": {
           "title": "Swiss German Translation",
-          "p1": "DeepL doesn't support Swiss German. Neither does Google Translate, Microsoft Translator, or any other major translation service. Helvetra is the only tool that can translate to and from Swiss German, with support for regional dialects including Zürich, Bern, Basel, Aargau, and more.",
-          "p2": "If you need to translate a Mundart message from a colleague, communicate with Swiss German-speaking family members, or localize content for Swiss audiences, we're your only option. Swiss German is genuinely challenging, it varies significantly by region and has no standardized written form, but we're actively improving our dialect support."
+          "p1": "In 2026 DeepL added Swiss Standard German: written High German with Swiss spelling (ss instead of ß) and Swiss words like Velo. It deliberately leaves out the dialects people actually speak. Helvetra translates Swiss German dialect, with six regions to choose from: Bern, Zurich, Basel, St. Gallen, Valais and Lucerne.",
+          "p2": "If you need to translate a Mundart message from a colleague or write to Swiss German-speaking family members in their dialect, DeepL can't do it and Helvetra can. Swiss German is genuinely challenging, it varies significantly by region and has no standardized written form, but we're actively improving our dialect support."
         },
         "privacy": {
           "title": "Swiss Data Sovereignty",
@@ -1023,7 +1028,7 @@
           "point2": "Optimized for Swiss context and terminology",
           "point3": "Improving rapidly with user feedback"
         },
-        "honestTruth": "The honest truth: for a German-French business email, both tools produce good results. DeepL might edge ahead on literary prose. But for anything involving Swiss German or Swiss-specific context, Helvetra is your only real option, and we're working hard to close any quality gap in other areas."
+        "honestTruth": "The honest truth: for a German-French business email, both tools produce good results. DeepL might edge ahead on literary prose. But for anything involving Swiss German dialect, Helvetra is the better fit, and we're working hard to close any quality gap in other areas."
       },
       "pricingSection": {
         "title": "Pricing Breakdown",
@@ -1054,7 +1059,7 @@
         },
         "chooseHelvetra": {
           "title": "Choose Helvetra if:",
-          "point1": "You need Swiss German translation (we're the only option)",
+          "point1": "You need Swiss German dialect translation (DeepL only offers Swiss Standard German)",
           "point2": "Data sovereignty matters, Swiss servers, Swiss law",
           "point3": "You want affordable pricing for high-volume translation",
           "point4": "You prefer simplicity over features you won't use",
@@ -1073,27 +1078,30 @@
     "supertext": {
       "meta": {
         "title": "Helvetra vs Supertext: Two Swiss Translation Services Compared",
-        "description": "Comparing two Swiss translation services: Helvetra and Supertext. We analyze pricing, features, and the surprising Swiss German gap to help you choose."
+        "description": "Comparing two Swiss translation services: Helvetra and Supertext. We analyze pricing, features, and Swiss German dialect coverage to help you choose."
       },
       "title": "Helvetra vs Supertext",
-      "subtitle": "Two Swiss companies, two different approaches to translation. One focuses on enterprise clients with human review. The other focuses on everyday users with AI speed. Here's how they compare.",
+      "subtitle": "Two Swiss companies, two different approaches to translation. Supertext pairs its AI translator with business features and optional human review. Helvetra focuses on fast, private translation for everyday use. Here's how they compare.",
       "table": {
         "type": "Service Type",
         "helvetraType": "AI instant translation",
-        "supertextType": "AI + human review",
+        "supertextType": "AI, optional human review",
         "price": "Starting Price",
         "helvetraPrice": "Free / CHF 4.99/mo",
-        "supertextPrice": "CHF 9.90/mo",
+        "supertextPrice": "Free / CHF 9.90/mo",
         "languages": "Languages",
-        "helvetraLangs": "6 (Swiss focus)",
-        "supertextLangs": "28",
+        "helvetraLangs": "11 (Swiss focus)",
+        "supertextLangs": "28 (AI), 100+ (human)",
         "swissGerman": "Swiss German",
         "yes": "Yes",
         "no": "No",
         "humanReview": "Human Review",
         "bestFor": "Best For",
         "helvetraBestFor": "Quick, private translation",
-        "supertextBestFor": "Professional documents"
+        "supertextBestFor": "Professional documents",
+        "helvetraSwissGerman": "6 dialects",
+        "supertextSwissGerman": "2 variants (BE, ZH)",
+        "supertextHumanReview": "Paid per order"
       },
       "intro": {
         "p1": "Supertext is a well-established Swiss translation company based in Zurich. They offer a combination of AI-powered translation and human proofreading, targeting businesses and professionals who need polished, publication-ready content. Their client list includes major Swiss brands.",
@@ -1103,71 +1111,71 @@
         "title": "Where Supertext Wins",
         "human": {
           "title": "Human Proofreading Option",
-          "p1": "Supertext's key differentiator is their network of professional translators and editors. After AI generates an initial translation, human experts can review and polish the text. For marketing copy, legal documents, or anything that will be published, this human touch catches nuances that AI might miss.",
+          "p1": "Supertext's key differentiator is their network of professional translators and editors. After the AI translates, a human expert can verify and polish the text, billed per order. For marketing copy, legal documents, or anything that will be published, this human touch catches nuances that AI might miss. Verification currently covers texts up to 3,000 characters between English, French, German and Italian.",
           "p2": "If you need guaranteed accuracy for high-stakes content, having a human expert review your translation provides peace of mind that pure AI cannot match."
         },
         "enterprise": {
           "title": "Enterprise Features",
-          "p1": "Supertext offers team accounts, translation memory, glossaries, and project management tools. Large organizations with ongoing translation needs benefit from these workflow features. They also provide dedicated account managers for enterprise clients."
+          "p1": "From the Advanced plan, Supertext offers glossaries, Microsoft Office add-ins and single sign-on for teams. Enterprise customers get style guides, customised AI models, private hosting options and a personal account manager. Organizations with ongoing translation needs benefit from these workflow features."
         },
         "languages": {
           "title": "Broader Language Coverage",
-          "p1": "Supertext supports 28 languages compared to Helvetra's 6. If you regularly need translations involving Portuguese, Japanese, Arabic, or other languages outside the Swiss national languages, Supertext has broader coverage."
+          "p1": "Supertext's AI translator supports 28 languages compared to Helvetra's 11, and its professional translators cover more than 100. If you regularly need Japanese, Korean, or other languages beyond the ones most spoken in Switzerland, Supertext has broader coverage."
         },
         "formats": {
           "title": "Document Format Support",
-          "p1": "Supertext handles various file formats including Word documents, PowerPoints, and PDFs with layout preservation. Their subscription plans are based on file counts rather than character limits, which suits document-heavy workflows."
+          "p1": "Supertext translates Word, PowerPoint, Excel, PDF and subtitle files. Plans differ mainly in how many file translations you get per month: 5 on Free, 20 on Essential and 60 on Advanced. That suits document-heavy workflows."
         },
         "verdict": "Bottom line: Supertext excels at professional, high-stakes translation where human review and enterprise features justify the premium pricing."
       },
       "helvetraWins": {
         "title": "Where Helvetra Wins",
         "swissGerman": {
-          "title": "Swiss German Support",
-          "p1": "Here's the irony: Supertext is a Swiss company, headquartered in Zurich, yet they don't support Swiss German. Their 28 languages include standard German but not the dialect spoken by millions of Swiss people every day.",
-          "p2": "Helvetra is currently the only translation service that supports Swiss German, with dialect options for Zurich, Bern, Basel, and other regions. If you need to translate Mundart messages or communicate in Swiss German, we're your only option."
+          "title": "More Swiss German Dialects",
+          "p1": "Supertext translates Swiss German too, in two variants: Bernese and Zurich German. Helvetra offers six dialects: Bern, Zurich, Basel, St. Gallen, Valais and Lucerne.",
+          "p2": "If you write to someone from Basel, Valais, St. Gallen or Central Switzerland, Helvetra can match their dialect. For Bernese or Zurich German, both services are an option."
         },
         "pricing": {
-          "title": "Dramatically Lower Pricing",
-          "p1": "Supertext's cheapest plan starts at CHF 9.90/month for 20 files. Their Advanced plan is CHF 24.90/month, and Pro is CHF 49.90/month. These prices make sense for businesses with regular professional translation needs.",
-          "p2": "Helvetra+ costs CHF 4.99/month and gives you 500,000 characters of instant translation. For casual users, students, or anyone who doesn't need human proofreading, this represents significant savings."
+          "title": "Lower Price for Everyday Use",
+          "p1": "Supertext's paid plans start at CHF 9.90/month (Essential), with Advanced at CHF 24.90/month and Enterprise on request. Essential includes unlimited text translation under a fair use policy, plus 20 file translations a month.",
+          "p2": "Helvetra+ costs CHF 4.99/month for 500,000 characters, about half the price of Supertext Essential. If you translate more than that each month or need file translation, Supertext's unlimited text plan may be the better deal."
         },
         "instant": {
-          "title": "Instant Results",
-          "p1": "Helvetra provides translation in seconds. Type or paste your text, get your translation immediately. No waiting for human reviewers, no project queues, no turnaround times. For quick communication needs, instant beats polished."
+          "title": "Nothing Stored, on Any Plan",
+          "p1": "On Supertext's free plan, the texts you enter may be used to improve their language models. Their paid plans delete texts right after translation. Helvetra doesn't store your text on any plan, free or paid."
         },
         "simplicity": {
           "title": "No-Frills Simplicity",
-          "p1": "Supertext's platform is built for professional workflows with features most casual users will never touch. Helvetra is intentionally simple: paste text, get translation, done. No account required for basic use, no learning curve, no complexity."
+          "p1": "Supertext's platform is built for professional workflows with features most casual users will never touch. Helvetra is intentionally simple: paste text, get translation, done. No learning curve, no complexity."
         },
-        "verdict": "Bottom line: Helvetra wins on Swiss German support, pricing, speed, and simplicity. If you don't need human proofreading, you get more for less."
+        "verdict": "Bottom line: Helvetra wins on Swiss German dialect coverage, price for everyday volumes, privacy on the free plan, and simplicity."
       },
       "swissGermanIrony": {
-        "title": "The Swiss German Question",
-        "intro": "Let's address the elephant in the room. Supertext is a proudly Swiss company, founded in Zurich, serving Swiss clients. Yet they don't support Swiss German. Why? Because Swiss German is genuinely difficult for translation services.",
+        "title": "Swiss German: How They Compare",
+        "intro": "Both services translate Swiss German, which is still rare: Google Translate doesn't offer it, and DeepL only writes Swiss Standard German, not dialect. The difference is in the details.",
         "supertext": {
-          "title": "Why Supertext skips Swiss German",
-          "point1": "No standardized written form makes training AI models challenging",
-          "point2": "Regional variations (Zurich vs Bern vs Basel) multiply complexity",
-          "point3": "Their human translators work with standard written languages"
+          "title": "Supertext",
+          "point1": "Two variants: Bernese and Zurich German",
+          "point2": "Included in every plan, including Free",
+          "point3": "Romansh is supported as well"
         },
         "helvetra": {
-          "title": "Why Helvetra tackles it anyway",
-          "point1": "Swiss German is core to Swiss identity, someone needs to solve it",
+          "title": "Helvetra",
+          "point1": "Six dialects: Bern, Zurich, Basel, St. Gallen, Valais and Lucerne",
           "point2": "Apertus (Swiss AI) was trained with Swiss German data",
-          "point3": "We offer dialect selection to handle regional variations"
+          "point3": "Romansh is supported as well, with formal and informal address"
         },
-        "conclusion": "We won't claim our Swiss German translation is perfect. It's a hard problem. But we're the only ones working on it, and we're improving with every user feedback submission."
+        "conclusion": "Neither tool's Swiss German is perfect. Without a standard spelling, it's a hard problem. If you need a dialect other than Bernese or Zurich German, Helvetra covers more regions."
       },
       "pricingSection": {
         "title": "Pricing Comparison",
-        "intro": "The pricing models are fundamentally different. Supertext charges by files, targeting document workflows. Helvetra charges by characters, targeting text translation.",
+        "intro": "The pricing models are different. Supertext's plans differ mainly in file translations and team features, with unlimited text translation from Essential. Helvetra charges by characters, for text translation.",
         "supertextPricing": {
           "title": "Supertext Pricing",
-          "point1": "Free: 3,000 characters trial",
-          "point2": "Essential: CHF 9.90/mo (20 files)",
-          "point3": "Advanced: CHF 24.90/mo (60 files)",
-          "point4": "Pro: CHF 49.90/mo (120 files)"
+          "point1": "Free: up to 3,000 characters per text, 5 file translations/month",
+          "point2": "Essential: CHF 9.90/mo (unlimited text, 20 files)",
+          "point3": "Advanced: CHF 24.90/mo (60 files, glossaries)",
+          "point4": "Enterprise: on request"
         },
         "helvetraPricing": {
           "title": "Helvetra Pricing",
@@ -1175,30 +1183,30 @@
           "point2": "Helvetra+: CHF 4.99/mo (500K characters)",
           "point3": "No file limits, just character counts"
         },
-        "conclusion": "For document-heavy professional use, Supertext's file-based pricing might make sense. For everyday text translation, Helvetra's character-based model is more economical and predictable."
+        "conclusion": "For document-heavy professional use or very high text volumes, Supertext's plans can make sense. For everyday text translation, Helvetra is cheaper and simpler."
       },
       "useCases": {
         "title": "Which Should You Choose?",
         "chooseSupertext": {
           "title": "Choose Supertext if:",
           "point1": "You need human proofreading for publication-ready content",
-          "point2": "You're a business with ongoing professional translation needs",
-          "point3": "You need languages beyond German, French, Italian, and English",
-          "point4": "You want enterprise features like glossaries and team accounts"
+          "point2": "You translate many documents (Word, PowerPoint, Excel, PDF)",
+          "point3": "You need languages Helvetra doesn't offer, such as Japanese or Korean",
+          "point4": "You want team features like glossaries and single sign-on"
         },
         "chooseHelvetra": {
           "title": "Choose Helvetra if:",
-          "point1": "You need Swiss German translation (only option available)",
-          "point2": "You want instant results without waiting for human review",
+          "point1": "You need a Swiss German dialect beyond Bernese or Zurich German",
+          "point2": "You want your text never stored, even on the free plan",
           "point3": "You prefer simple, affordable pricing",
           "point4": "You translate casually and don't need professional polish",
-          "point5": "Privacy matters and you want Swiss AI processing"
+          "point5": "You want a translator built on Apertus, the open Swiss AI model"
         }
       },
       "conclusion": {
         "title": "The Bottom Line",
         "p1": "Supertext and Helvetra serve different markets. Supertext is a professional translation service for businesses who need human-reviewed, publication-quality content. Their pricing and features reflect this enterprise focus.",
-        "p2": "Helvetra is for everyone else: people who need quick, private translation for everyday communication. We're faster, cheaper, simpler, and we're the only ones supporting Swiss German. If you don't need human proofreaders, you don't need to pay for them.",
+        "p2": "Helvetra is for everyone else: people who need quick, private translation for everyday communication. We cost less for everyday volumes, store nothing on any plan, and cover more Swiss German dialects. If you don't need human proofreaders or file translation, you don't need to pay for them.",
         "p3": "Both are Swiss companies committed to quality. The right choice depends on whether you need professional polish or everyday convenience.",
         "cta": "Ready for instant Swiss translation without the enterprise price tag?",
         "tryHelvetra": "Try Helvetra Free"
@@ -1222,10 +1230,10 @@
       "tools": {
         "deepl": {
           "name": "DeepL",
-          "description": "The industry leader in AI translation. DeepL consistently produces the most natural-sounding translations for European languages. However, it only supports standard German, not Swiss German dialects.",
+          "description": "The industry leader in AI translation. DeepL consistently produces the most natural-sounding translations for European languages. For Swiss German, it only offers Swiss Standard German (written High German with Swiss spelling), not dialects.",
           "pro1": "Excellent quality",
           "pro2": "Natural phrasing",
-          "con1": "No Swiss German"
+          "con1": "No Swiss German dialects"
         },
         "google": {
           "name": "Google Translate",
@@ -1236,7 +1244,7 @@
         },
         "helvetra": {
           "name": "Helvetra",
-          "description": "The only translation tool with native Swiss German support. Built in Switzerland with Swiss AI, your data never leaves Swiss servers. Translates between Swiss German, German, French, Italian, Romansh, and English.",
+          "description": "Translates Swiss German in six regional dialects. Built in Switzerland with Swiss AI, your data never leaves Swiss servers. Translates between Swiss German, German, French, Italian, Romansh, English, Albanian, Portuguese, Spanish, Croatian and Serbian.",
           "badge": "Swiss German",
           "pro1": "Swiss German support",
           "pro2": "Swiss privacy",
@@ -1245,7 +1253,7 @@
         },
         "supertext": {
           "name": "Supertext",
-          "description": "A Swiss professional translation service combining AI with human translators. Excellent for business documents needing publication quality, but more expensive and slower than instant AI tools.",
+          "description": "A Swiss translation service with its own AI translator, which covers Swiss German (Bernese and Zurich variants) and Romansh. Optional human verification, billed per order, suits business documents that need publication quality.",
           "pro1": "Human review",
           "pro2": "Swiss company",
           "con1": "Higher cost"
@@ -1260,11 +1268,11 @@
       },
       "conclusion": {
         "title": "Which Should You Choose?",
-        "p1": "For standard German translation, DeepL remains the quality leader. For Swiss German specifically, Helvetra is currently the only dedicated option with native support and Swiss data privacy.",
+        "p1": "For standard German translation, DeepL remains the quality leader. For Swiss German dialect, Helvetra and Supertext are the options: Helvetra covers six regional dialects, Supertext covers Bernese and Zurich German.",
         "p2": "If you need professional polish for business documents, Supertext offers human review. For casual use and travel, Google Translate and iTranslate work fine for standard German."
       },
       "cta": {
-        "text": "Need to translate Swiss German? Try the only tool built specifically for it.",
+        "text": "Need to translate Swiss German? Try the tool built specifically for it.",
         "button": "Try Helvetra Free"
       }
     },
@@ -1284,7 +1292,7 @@
       "apps": {
         "helvetra": {
           "name": "Helvetra",
-          "description": "The only translation app built specifically for Switzerland. Supports all Swiss national languages including Swiss German and Romansh. Data stays on Swiss servers, protected by Swiss privacy law.",
+          "description": "A translation app built specifically for Switzerland. Supports all Swiss national languages including Swiss German dialects and Romansh, plus the most spoken other languages in Switzerland. Data stays on Swiss servers, protected by Swiss privacy law.",
           "badge": "Made in Switzerland",
           "pro1": "Swiss German support",
           "pro2": "Swiss data privacy",
@@ -1293,10 +1301,10 @@
         },
         "deepl": {
           "name": "DeepL",
-          "description": "Known for producing the most natural-sounding translations, especially for European languages. The quality is excellent for German, French, and Italian, though it lacks Swiss German support.",
+          "description": "Known for producing the most natural-sounding translations, especially for European languages. The quality is excellent for German, French, and Italian. For Swiss German it only offers Swiss Standard German, not dialect.",
           "pro1": "Best quality",
           "pro2": "Natural phrasing",
-          "con1": "No Swiss German"
+          "con1": "No Swiss German dialects"
         },
         "google": {
           "name": "Google Translate",
@@ -1322,7 +1330,7 @@
       },
       "conclusion": {
         "title": "Our Recommendation",
-        "p1": "For Swiss users, the best choice depends on your needs. If you need Swiss German or care about data staying in Switzerland, Helvetra is the only option. For pure translation quality in standard languages, DeepL leads.",
+        "p1": "For Swiss users, the best choice depends on your needs. If you need Swiss German dialects or care about data staying in Switzerland, Helvetra is a strong choice. For pure translation quality in standard languages, DeepL leads.",
         "p2": "For casual use on iPhone, Apple Translate works well offline. Google Translate remains the most versatile for less common languages. Microsoft Translator fits best in enterprise Office environments."
       },
       "cta": {

@@ -75,9 +75,9 @@
         </ContentFeatureItem>
       </ContentFeatureSection>
 
-      <!-- The Swiss German Irony -->
-      <section aria-labelledby="swiss-german-irony">
-        <h2 id="swiss-german-irony" class="text-2xl font-bold text-neutral-900 mb-6">
+      <!-- Swiss German comparison -->
+      <section aria-labelledby="swiss-german-comparison">
+        <h2 id="swiss-german-comparison" class="text-2xl font-bold text-neutral-900 mb-6">
           {{ $t('compare.supertext.swissGermanIrony.title') }}
         </h2>
 
@@ -157,7 +157,7 @@ useJsonLd(getArticleSchema({
   headline: 'Helvetra vs Supertext: Swiss Translation Comparison',
   description: 'Compare Helvetra and Supertext. Consumer-focused AI translation vs enterprise human translation services.',
   datePublished: '2024-12-18',
-  dateModified: '2024-12-19',
+  dateModified: '2026-11-24',
 }))
 
 // Comparison table rows
@@ -179,15 +179,15 @@ const comparisonRows = computed(() => [
   },
   {
     label: t('compare.supertext.table.swissGerman'),
-    primaryValue: t('compare.supertext.table.yes'),
-    secondaryValue: t('compare.supertext.table.no'),
+    primaryValue: t('compare.supertext.table.helvetraSwissGerman'),
+    secondaryValue: t('compare.supertext.table.supertextSwissGerman'),
     primaryCheck: true,
-    secondaryCheck: false,
+    secondaryCheck: true,
   },
   {
     label: t('compare.supertext.table.humanReview'),
     primaryValue: t('compare.supertext.table.no'),
-    secondaryValue: t('compare.supertext.table.yes'),
+    secondaryValue: t('compare.supertext.table.supertextHumanReview'),
     primaryCheck: false,
     secondaryCheck: true,
   },
@@ -198,7 +198,7 @@ const comparisonRows = computed(() => [
   },
 ])
 
-// Swiss German irony cards
+// Swiss German comparison cards
 const ironyCards = computed(() => [
   {
     title: t('compare.supertext.swissGermanIrony.supertext.title'),

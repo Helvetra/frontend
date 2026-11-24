@@ -173,7 +173,7 @@ useJsonLd([
     headline: `Best Translation Apps for Switzerland in ${year}`,
     description: 'Compare the top translation apps for Swiss users. Privacy, Swiss German support, and multilingual needs covered.',
     datePublished: '2024-12-22',
-    dateModified: '2026-06-26',
+    dateModified: '2026-11-24',
   }),
   getItemListSchema(
     'Best Translation Apps for Switzerland',
