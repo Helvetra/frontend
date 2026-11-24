@@ -141,7 +141,7 @@ useJsonLd(getArticleSchema({
   headline: 'Helvetra vs Google Translate: Swiss Privacy Comparison',
   description: 'Compare Helvetra and Google Translate. Privacy-focused Swiss alternative vs global reach.',
   datePublished: '2024-12-18',
-  dateModified: '2024-12-19',
+  dateModified: '2026-11-24',
 }))
 
 // Comparison table rows

@@ -6,7 +6,8 @@
 import { francAll } from 'franc'
 
 // Map ISO 639-3 codes (franc) to our language codes
-// Note: Romansh (roh) is not supported by franc, so LLM detection handles it
+// Note: Romansh (roh) is not supported by franc, so LLM detection handles it.
+// Bosnian is listed before Croatian so the reverse map keeps hr -> hrv.
 const ISO_TO_LANG: Record<string, string> = {
   eng: 'en',
   deu: 'de',
@@ -14,13 +15,19 @@ const ISO_TO_LANG: Record<string, string> = {
   fra: 'fr',
   ita: 'it',
   roh: 'rm',
+  als: 'sq',
+  por: 'pt',
+  spa: 'es',
+  bos: 'hr',
+  hrv: 'hr',
+  srp: 'sr',
 }
 
 const LANG_TO_ISO: Record<string, string> = Object.fromEntries(
   Object.entries(ISO_TO_LANG).map(([iso, lang]) => [lang, iso]),
 )
 
-const SUPPORTED_ISO_CODES = ['eng', 'deu', 'gsw', 'fra', 'ita']
+const SUPPORTED_ISO_CODES = ['eng', 'deu', 'gsw', 'fra', 'ita', 'als', 'por', 'spa', 'bos', 'hrv', 'srp']
 
 // When franc's top result differs from the target language but the target
 // also scores within this margin, treat as ambiguous and abstain. Short

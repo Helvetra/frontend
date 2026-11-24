@@ -433,7 +433,10 @@ const STORAGE_KEY_FORMALITY = 'helvetra_formality'
 const STORAGE_KEY_DIALECT = 'helvetra_dialect'
 
 // Languages with T-V distinction (informal/formal address)
-const FORMALITY_LANGUAGES = ['de', 'gsw', 'fr', 'it']
+// Client detections the model double-checks (close language pairs)
+const LLM_VERIFIED_DETECTIONS = ['de', 'it', 'fr', 'hr', 'sr']
+
+const FORMALITY_LANGUAGES = ['de', 'gsw', 'fr', 'it', 'rm', 'sq', 'pt', 'es', 'hr', 'sr']
 
 // Swiss German dialects
 const SWISS_DIALECTS = [
@@ -576,6 +579,11 @@ const availableLanguages = [
   { code: 'fr' },
   { code: 'it' },
   { code: 'rm' },
+  { code: 'sq' },
+  { code: 'pt' },
+  { code: 'es' },
+  { code: 'hr' },
+  { code: 'sr' },
 ]
 
 const { t } = useI18n()
@@ -753,10 +761,11 @@ function tryDetectLanguage() {
       targetLanguage.value = detected === 'en' ? 'de' : 'en'
     }
 
-    // When franc detects German, Italian, or French, trigger LLM verification for disambiguation
-    // German could be Swiss German, Italian/French could be Romansh
+    // Trigger LLM verification where the client detector confuses close languages:
+    // German could be Swiss German, Italian/French could be Romansh, and
+    // Croatian and Serbian are often indistinguishable in Latin script.
     // Only if we haven't exceeded the session quota
-    if ((detected === 'de' || detected === 'it' || detected === 'fr') && llmDetectionCount.value < MAX_LLM_DETECTIONS_PER_SESSION) {
+    if (LLM_VERIFIED_DETECTIONS.includes(detected) && llmDetectionCount.value < MAX_LLM_DETECTIONS_PER_SESSION) {
       pendingLlmDetection.value = true
     }
   }

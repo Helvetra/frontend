@@ -52,7 +52,7 @@
       "items": {
         "languages": {
           "q": "Welche Sprachen unterstützt Helvetra?",
-          "a": "Deutsch, Schweizerdeutsch (mit regionalen Dialekten), Französisch, Italienisch, Rätoromanisch und Englisch zum Start. Weitere Sprachen folgen."
+          "a": "Deutsch, Schweizerdeutsch (mit regionalen Dialekten), Französisch, Italienisch, Rätoromanisch und Englisch, dazu Albanisch, Portugiesisch, Spanisch, Kroatisch und Serbisch, die meistgesprochenen weiteren Sprachen der Schweiz."
         },
         "dataStorage": {
           "q": "Wo werden meine Daten gespeichert?",
@@ -96,11 +96,11 @@
         },
         "dialects": {
           "q": "Kann Helvetra zwischen Schweizerdeutschen Dialekten übersetzen?",
-          "a": "Ja. Sie können von Zürichdeutsch nach Berndeutsch übersetzen oder jede andere Kombination unterstützter Dialekte wie Basel, Aargau und mehr. Das ist einzigartig bei Helvetra."
+          "a": "Nicht direkt. Sie können aus jeder unterstützten Sprache in einen von sechs Schweizerdeutsch-Dialekten übersetzen (Bern, Zürich, Basel, St. Gallen, Wallis und Luzern) und Schweizerdeutsch in jedem Dialekt in die anderen Sprachen übersetzen."
         },
         "vsGoogle": {
           "q": "Ist Helvetra besser als Google Translate für Schweizerdeutsch?",
-          "a": "Für Schweizerdeutsch, ja. Google Translate unterstützt Schweizerdeutsch überhaupt nicht. Helvetra ist derzeit das einzige Übersetzungstool, das Schweizerdeutsche Dialekte beherrscht."
+          "a": "Für Schweizerdeutsch ja. Google Translate unterstützt Schweizerdeutsch überhaupt nicht. Helvetra ist eines der wenigen Übersetzungstools, die Schweizerdeutsch-Dialekte beherrschen, mit sechs regionalen Dialekten zur Auswahl."
         },
         "formality": {
           "q": "Kann ich formell oder informell auf Schweizerdeutsch übersetzen?",
@@ -112,7 +112,7 @@
         },
         "apiLanguages": {
           "q": "Welche Sprachen unterstützt die API?",
-          "a": "Deutsch, Französisch, Italienisch, Englisch, Schweizerdeutsch mit regionalen Dialekten und Rumantsch. Jede Kombination aus Quell- und Zielsprache ist möglich, inklusive automatischer Quellsprach-Erkennung."
+          "a": "Deutsch, Französisch, Italienisch, Englisch, Schweizerdeutsch mit regionalen Dialekten, Rumantsch, Albanisch, Portugiesisch (europäisch), Spanisch, Kroatisch und Serbisch (lateinische Schrift). Jede Kombination aus Quell- und Zielsprache ist möglich, inklusive automatischer Quellsprach-Erkennung."
         },
         "apiPricing": {
           "q": "Wie wird die API verrechnet?",
@@ -283,7 +283,12 @@
     "gsw": "Schweizerdeutsch",
     "fr": "Französisch",
     "it": "Italienisch",
-    "rm": "Rätoromanisch"
+    "rm": "Rätoromanisch",
+    "sq": "Albanisch",
+    "pt": "Portugiesisch",
+    "es": "Spanisch",
+    "hr": "Kroatisch",
+    "sr": "Serbisch"
   },
   "limits": {
     "wantMore": "Möchten Sie längere Texte übersetzen?",
@@ -430,7 +435,7 @@
     },
     "docsCta": "Zum Schnellstart",
     "referenceCta": "API-Referenz öffnen",
-    "factSummary": "Helvetra ist eine Schweizer Übersetzungs-API eines Schweizer Unternehmens auf Schweizer Servern nach Schweizer Recht. Sie unterstützt Deutsch, Französisch, Italienisch, Englisch, Schweizerdeutsch (mit regionalen Dialekten) und Rumantsch. Preis: CHF 39/Monat (14 Tage gratis, 2'000'000 Zeichen inklusive, bis zu 10'000 pro Anfrage), mit Verbrauchsabrechnung pro Zeichen. Kundentexte werden nie zum Modelltraining verwendet. Kontakt: gruezi{'@'}helvetra.ch.",
+    "factSummary": "Helvetra ist eine Schweizer Übersetzungs-API eines Schweizer Unternehmens auf Schweizer Servern nach Schweizer Recht. Sie unterstützt Deutsch, Französisch, Italienisch, Englisch, Schweizerdeutsch (mit regionalen Dialekten), Rumantsch, Albanisch, Portugiesisch, Spanisch, Kroatisch und Serbisch. Preis: CHF 39/Monat (14 Tage gratis, 2'000'000 Zeichen inklusive, bis zu 10'000 pro Anfrage), mit Verbrauchsabrechnung pro Zeichen. Kundentexte werden nie zum Modelltraining verwendet. Kontakt: gruezi{'@'}helvetra.ch.",
     "seo": {
       "title": "Schweizer Übersetzungs-API — Helvetra für Entwickler",
       "description": "Übersetzungs-API mit Schweizer Datenhaltung, nativem Schweizerdeutsch und Rumantsch, CHF-Fakturierung. Self-Service für CHF 39/Monat mit 14 Tagen Gratis-Test.",
@@ -468,7 +473,7 @@
       "title": "Sprachen und Optionen",
       "body": "Jede Kombination unter den unterstützten Sprachen ist gültig, einschliesslich Schweizerdeutsch und Rumantsch. Setzen Sie source_lang auf auto, damit die Engine die Quelle erkennt.",
       "formalityTitle": "Anrede",
-      "formalityBody": "Geben Sie formality=informal oder formality=formal an, wenn Sie ins Deutsche, Französische oder Italienische übersetzen, um Du/Sie, tu/vous, tu/Lei zu steuern. Standard ist auto.",
+      "formalityBody": "Geben Sie formality=informal oder formality=formal an, wenn Sie in eine unterstützte Sprache ausser Englisch übersetzen, um die Anrede zu steuern (zum Beispiel Du/Sie, tu/vous, tu/Lei, tú/usted, ti/Vi). Standard ist auto.",
       "dialectTitle": "Schweizerdeutsch-Dialekte",
       "dialectBody": "Wenn target_lang gsw ist, wählen Sie einen Dialekt für die regionale Färbung. Ohne Angabe wird ein neutrales Bärndütsch verwendet."
     },
@@ -603,7 +608,7 @@
       "body": "Helvetra bietet auch eine Self-Service-Übersetzungs-API mit derselben Schweizer Datenhaltung, Schweizerdeutsch- und Rumantsch-Unterstützung. CHF 39 pro Monat mit 14 Tagen Gratis-Test.",
       "cta": "Entwickler-API entdecken"
     },
-    "metaDescription": "Helvetra ist eine private, in der Schweiz gebaute Übersetzungs-App für Schweizerdeutsch, Deutsch, Französisch, Italienisch, Rätoromanisch und Englisch. Erfahre mehr über unsere Mission, die offene Schweizer KI dahinter und unseren Ansatz mit Datenschutz an erster Stelle."
+    "metaDescription": "Helvetra ist eine private, in der Schweiz gebaute Übersetzungs-App für Schweizerdeutsch, Deutsch, Französisch, Italienisch, Rätoromanisch, Englisch und die meistgesprochenen weiteren Sprachen der Schweiz. Erfahre mehr über unsere Mission, die offene Schweizer KI dahinter und unseren Ansatz mit Datenschutz an erster Stelle."
   },
   "faqPage": {
     "title": "Häufig gestellte Fragen",
@@ -648,7 +653,7 @@
     },
     "service": {
       "title": "Leistungsbeschreibung",
-      "text": "Helvetra bietet KI-gestützte Übersetzungsdienste zwischen Deutsch, Schweizerdeutsch, Französisch, Italienisch, Rätoromanisch und Englisch. Übersetzungen werden von Apertus, einem Schweizer KI-Modell, generiert und ohne Garantie auf Richtigkeit bereitgestellt."
+      "text": "Helvetra bietet KI-gestützte Übersetzungsdienste zwischen Deutsch, Schweizerdeutsch, Französisch, Italienisch, Rätoromanisch, Englisch, Albanisch, Portugiesisch, Spanisch, Kroatisch und Serbisch. Übersetzungen werden von Apertus, einem Schweizer KI-Modell, generiert und ohne Garantie auf Richtigkeit bereitgestellt."
     },
     "tiers": {
       "title": "Servicekategorien",
@@ -803,11 +808,11 @@
       },
       "deepl": {
         "title": "vs DeepL",
-        "description": "Bekannt für hochwertige europäische Übersetzungen. Premium-Preise, kein Schweizerdeutsch."
+        "description": "Bekannt für hochwertige europäische Übersetzungen. Premium-Preise, Schweizer Hochdeutsch, aber keine Dialekte."
       },
       "supertext": {
         "title": "vs Supertext",
-        "description": "Schweizer Unternehmen mit menschlichen Übersetzern. Ironischerweise kein Schweizerdeutsch aus Zürich."
+        "description": "Schweizer Unternehmen mit KI-Übersetzer und optionalem Lektorat. Deckt Berndeutsch und Zürichdeutsch ab."
       },
       "tags": {
         "privacy": "Datenschutz",
@@ -855,8 +860,8 @@
         "title": "Wo Google Translate gewinnt",
         "coverage": {
           "title": "Unerreichte Sprachabdeckung",
-          "p1": "Google Translate unterstützt 133 Sprachen, von Afrikaans bis Zulu, einschliesslich vieler regionaler und bedrohter Sprachen. Wenn Sie Thai, Swahili oder Walisisch übersetzen müssen, ist Google im Grunde Ihre einzige kostenlose Option. Helvetra unterstützt sechs Sprachen (Deutsch, Französisch, Italienisch, Englisch, Schweizerdeutsch und Rätoromanisch), was die Schweiz gut abdeckt, Ihnen aber auf einer Reise nach Tokio nicht hilft.",
-          "p2": "Das ist keine Schwäche, die wir beheben wollen. Helvetra konzentriert sich bewusst auf Schweizer Sprachen, weil wir dort echten Mehrwert bieten können. Wenn Sie regelmässig mit Sprachen ausserhalb dieses Bereichs arbeiten, ist Google Translate die praktische Wahl."
+          "p1": "Google Translate unterstützt 133 Sprachen, von Afrikaans bis Zulu, einschliesslich vieler regionaler und bedrohter Sprachen. Wenn Sie Thai, Swahili oder Walisisch übersetzen müssen, ist Google im Grunde Ihre einzige kostenlose Option. Helvetra unterstützt elf Sprachen: Deutsch, Französisch, Italienisch, Rätoromanisch, Schweizerdeutsch, Englisch und die meistgesprochenen weiteren Sprachen der Schweiz (Albanisch, Portugiesisch, Spanisch, Kroatisch und Serbisch). Das deckt den Alltag in der Schweiz gut ab, hilft Ihnen aber auf einer Reise nach Tokio nicht.",
+          "p2": "Das ist keine Schwäche, die wir beheben wollen. Helvetra konzentriert sich bewusst auf die Sprachen, die in der Schweiz gesprochen werden, weil wir dort echten Mehrwert bieten können. Wenn Sie regelmässig mit Sprachen ausserhalb dieses Bereichs arbeiten, ist Google Translate die praktische Wahl."
         },
         "free": {
           "title": "Wirklich unbegrenzt und kostenlos",
@@ -881,8 +886,8 @@
           "p2": "Wenn Sie Helvetra nutzen, unterstützen Sie das Schweizer Technologie-Ökosystem, anstatt mehr Daten an Big Tech zu liefern. Ihre Übersetzungen finanzieren Schweizer Forschung und Infrastruktur, nicht Werbealgorithmen in Kalifornien."
         },
         "swissGerman": {
-          "title": "Der einzige Schweizerdeutsch-Übersetzer",
-          "p1": "Google Translate unterstützt kein Schweizerdeutsch. DeepL, Microsoft Translator und kein anderer grosser Übersetzungsdienst auch nicht. Helvetra ist derzeit das einzige Tool, das von und nach Schweizerdeutsch übersetzen kann, mit Unterstützung für regionale Dialekte wie Zürich, Bern, Basel und mehr. Die Qualität verbessert sich noch, Schweizerdeutsch ist wirklich schwer, aber wir sind die Einzigen, die daran arbeiten."
+          "title": "Schweizerdeutsche Dialekte",
+          "p1": "Google Translate unterstützt kein Schweizerdeutsch. DeepL schreibt Schweizer Hochdeutsch (Hochdeutsch mit Schweizer Rechtschreibung), aber keinen Dialekt. Helvetra übersetzt aus und in Schweizerdeutsch, mit sechs regionalen Dialekten: Bern, Zürich, Basel, St. Gallen, Wallis und Luzern. Die Qualität wird laufend besser, Schweizerdeutsch ist wirklich schwierig, aber genau darauf konzentrieren wir uns."
         },
         "simplicity": {
           "title": "Einfachheit als Design-Prinzip",
@@ -919,7 +924,7 @@
           "title": "Wählen Sie Helvetra, wenn:",
           "point1": "Sie hauptsächlich mit Schweizer Sprachen arbeiten und optimierte Qualität wollen",
           "point2": "Datenschutz wichtig ist, aus geschäftlichen, rechtlichen oder persönlichen Gründen",
-          "point3": "Sie Schweizerdeutsch-Übersetzung brauchen (wir sind die einzige Option)",
+          "point3": "Sie Schweizerdeutsch übersetzen müssen (Google bietet es nicht an)",
           "point4": "Sie ein einfaches, fokussiertes Tool einer funktionsreichen Plattform vorziehen",
           "point5": "Sie Schweizer Technologie statt Big Tech unterstützen wollen"
         }
@@ -981,7 +986,7 @@
         },
         "languages": {
           "title": "Breitere Sprachabdeckung",
-          "p1": "DeepL unterstützt 31+ Sprachen im Vergleich zu Helvetras 6. Brauchen Sie Japanisch, Portugiesisch oder Polnisch? DeepL hat Sie abgedeckt. Helvetra konzentriert sich ausschliesslich auf Schweizer Sprachen: Deutsch, Französisch, Italienisch, Englisch, Schweizerdeutsch und Rätoromanisch. Das ist beabsichtigt, wir machen lieber sechs Sprachen ausgezeichnet als dreissig mittelmässig."
+          "p1": "DeepL unterstützt 31+ Sprachen im Vergleich zu Helvetras 11. Brauchen Sie Japanisch, Koreanisch oder Polnisch? DeepL hat Sie abgedeckt. Helvetra konzentriert sich auf die Sprachen, die in der Schweiz gesprochen werden: Deutsch, Französisch, Italienisch, Rätoromanisch, Schweizerdeutsch und Englisch, dazu Albanisch, Portugiesisch, Spanisch, Kroatisch und Serbisch. Das ist beabsichtigt, wir decken lieber die Sprachen der Schweiz gut ab als dreissig mittelmässig."
         },
         "verdict": "Fazit: DeepL ist ein Premium-Übersetzungstool, das seinen Ruf verdient. Für europäische Sprachqualität, Dokumentenübersetzung und API-Zugang ist es eine ausgezeichnete Wahl."
       },
@@ -989,8 +994,8 @@
         "title": "Wo Helvetra gewinnt",
         "swissGerman": {
           "title": "Schweizerdeutsch-Übersetzung",
-          "p1": "DeepL unterstützt kein Schweizerdeutsch. Google Translate, Microsoft Translator und andere grosse Übersetzungsdienste auch nicht. Helvetra ist das einzige Tool, das von und nach Schweizerdeutsch übersetzen kann, mit Unterstützung für regionale Dialekte wie Zürich, Bern, Basel, Aargau und mehr.",
-          "p2": "Wenn Sie eine Mundart-Nachricht von einem Kollegen übersetzen, mit schweizerdeutsch-sprechenden Familienmitgliedern kommunizieren oder Inhalte für Schweizer Zielgruppen lokalisieren müssen, sind wir Ihre einzige Option. Schweizerdeutsch ist wirklich herausfordernd, es variiert erheblich nach Region und hat keine standardisierte Schriftform, aber wir verbessern aktiv unsere Dialektunterstützung."
+          "p1": "2026 hat DeepL Schweizer Hochdeutsch eingeführt: geschriebenes Hochdeutsch mit Schweizer Rechtschreibung (ss statt ß) und Schweizer Wörtern wie Velo. Die Dialekte, die im Alltag gesprochen werden, lässt DeepL bewusst weg. Helvetra übersetzt Schweizerdeutsch im Dialekt, mit sechs Regionen zur Auswahl: Bern, Zürich, Basel, St. Gallen, Wallis und Luzern.",
+          "p2": "Wenn Sie eine Mundart-Nachricht von einer Kollegin übersetzen oder Ihrer schweizerdeutschsprachigen Familie im Dialekt schreiben möchten, kann DeepL das nicht, Helvetra schon. Schweizerdeutsch ist wirklich anspruchsvoll, es unterscheidet sich stark nach Region und hat keine einheitliche Schriftform, aber wir verbessern unsere Dialektunterstützung laufend."
         },
         "privacy": {
           "title": "Schweizer Datensouveränität",
@@ -1023,7 +1028,7 @@
           "point2": "Optimiert für Schweizer Kontext und Terminologie",
           "point3": "Verbessert sich schnell mit Nutzer-Feedback"
         },
-        "honestTruth": "Die ehrliche Wahrheit: Für eine Deutsch-Französische Geschäfts-E-Mail produzieren beide Tools gute Ergebnisse. DeepL könnte bei literarischer Prosa vorne liegen. Aber für alles, was Schweizerdeutsch oder Schweiz-spezifischen Kontext beinhaltet, ist Helvetra Ihre einzige echte Option, und wir arbeiten hart daran, jede Qualitätslücke in anderen Bereichen zu schliessen."
+        "honestTruth": "Die ehrliche Wahrheit: Für eine deutsch-französische Geschäfts-E-Mail liefern beide Tools gute Ergebnisse. Bei literarischen Texten hat DeepL vielleicht die Nase vorn. Aber für alles, was Schweizerdeutsch im Dialekt betrifft, passt Helvetra besser, und wir arbeiten hart daran, Qualitätslücken in anderen Bereichen zu schliessen."
       },
       "pricingSection": {
         "title": "Preisaufschlüsselung",
@@ -1054,7 +1059,7 @@
         },
         "chooseHelvetra": {
           "title": "Wählen Sie Helvetra, wenn:",
-          "point1": "Sie Schweizerdeutsch-Übersetzung brauchen (wir sind die einzige Option)",
+          "point1": "Sie Schweizerdeutsch im Dialekt brauchen (DeepL bietet nur Schweizer Hochdeutsch)",
           "point2": "Datensouveränität wichtig ist, Schweizer Server, Schweizer Recht",
           "point3": "Sie günstige Preise für Vielnutzung wollen",
           "point4": "Sie Einfachheit gegenüber Funktionen bevorzugen, die Sie nicht nutzen werden",
@@ -1073,27 +1078,30 @@
     "supertext": {
       "meta": {
         "title": "Helvetra vs Supertext: Zwei Schweizer Übersetzungsdienste im Vergleich",
-        "description": "Vergleich zweier Schweizer Übersetzungsdienste: Helvetra und Supertext. Wir analysieren Preise, Funktionen und die überraschende Schweizerdeutsch-Lücke."
+        "description": "Zwei Schweizer Übersetzungsdienste im Vergleich: Helvetra und Supertext. Wir vergleichen Preise, Funktionen und die Abdeckung schweizerdeutscher Dialekte, damit Sie wählen können."
       },
       "title": "Helvetra vs Supertext",
-      "subtitle": "Zwei Schweizer Unternehmen, zwei verschiedene Übersetzungsansätze. Eines fokussiert auf Geschäftskunden mit menschlicher Korrektur. Das andere auf Alltagsnutzer mit KI-Geschwindigkeit. So vergleichen sie sich.",
+      "subtitle": "Zwei Schweizer Unternehmen, zwei Ansätze für Übersetzung. Supertext verbindet seinen KI-Übersetzer mit Businessfunktionen und optionalem menschlichem Lektorat. Helvetra konzentriert sich auf schnelle, private Übersetzung für den Alltag. So schneiden sie im Vergleich ab.",
       "table": {
         "type": "Diensttyp",
         "helvetraType": "KI-Sofortübersetzung",
-        "supertextType": "KI + menschliche Korrektur",
+        "supertextType": "KI, optionales Lektorat",
         "price": "Startpreis",
         "helvetraPrice": "Gratis / CHF 4.99/Mt.",
-        "supertextPrice": "CHF 9.90/Mt.",
+        "supertextPrice": "Gratis / CHF 9.90/Mt.",
         "languages": "Sprachen",
-        "helvetraLangs": "6 (Schweiz-Fokus)",
-        "supertextLangs": "28",
+        "helvetraLangs": "11 (Schweiz-Fokus)",
+        "supertextLangs": "28 (KI), 100+ (menschlich)",
         "swissGerman": "Schweizerdeutsch",
         "yes": "Ja",
         "no": "Nein",
         "humanReview": "Menschliche Korrektur",
         "bestFor": "Ideal für",
         "helvetraBestFor": "Schnelle, private Übersetzung",
-        "supertextBestFor": "Professionelle Dokumente"
+        "supertextBestFor": "Professionelle Dokumente",
+        "helvetraSwissGerman": "6 Dialekte",
+        "supertextSwissGerman": "2 Varianten (BE, ZH)",
+        "supertextHumanReview": "Kostenpflichtig pro Auftrag"
       },
       "intro": {
         "p1": "Supertext ist ein etabliertes Schweizer Übersetzungsunternehmen mit Sitz in Zürich. Sie bieten eine Kombination aus KI-gestützter Übersetzung und menschlichem Lektorat, ausgerichtet auf Unternehmen und Fachleute, die ausgefeilte, publikationsreife Inhalte brauchen. Ihre Kundenliste umfasst grosse Schweizer Marken.",
@@ -1103,71 +1111,71 @@
         "title": "Wo Supertext gewinnt",
         "human": {
           "title": "Option für menschliches Lektorat",
-          "p1": "Supertexts Hauptunterscheidungsmerkmal ist ihr Netzwerk professioneller Übersetzer und Lektoren. Nachdem KI eine erste Übersetzung erstellt hat, können menschliche Experten den Text überprüfen und verfeinern. Für Marketingtexte, juristische Dokumente oder alles, was veröffentlicht wird, fängt dieser menschliche Touch Nuancen auf, die KI möglicherweise verpasst.",
-          "p2": "Wenn Sie garantierte Genauigkeit für wichtige Inhalte brauchen, bietet eine menschliche Expertenkontrolle Ihrer Übersetzung Sicherheit, die reine KI nicht bieten kann."
+          "p1": "Das wichtigste Unterscheidungsmerkmal von Supertext ist das Netzwerk aus professionellen Übersetzerinnen und Lektoren. Nach der KI-Übersetzung kann eine Fachperson den Text prüfen und verfeinern, abgerechnet pro Auftrag. Bei Marketingtexten, Rechtsdokumenten oder allem, was veröffentlicht wird, erkennt dieser menschliche Blick Nuancen, die KI übersehen kann. Die Prüfung gilt derzeit für Texte bis 3'000 Zeichen zwischen Englisch, Französisch, Deutsch und Italienisch.",
+          "p2": "Wenn Sie bei heiklen Inhalten auf Genauigkeit angewiesen sind, gibt die Prüfung durch eine Fachperson eine Sicherheit, die reine KI nicht bieten kann."
         },
         "enterprise": {
           "title": "Unternehmensfunktionen",
-          "p1": "Supertext bietet Team-Konten, Übersetzungsspeicher, Glossare und Projektmanagement-Tools. Grosse Organisationen mit laufendem Übersetzungsbedarf profitieren von diesen Workflow-Funktionen. Sie bieten auch dedizierte Account-Manager für Unternehmenskunden."
+          "p1": "Ab dem Advanced-Abo bietet Supertext Glossare, Add-ins für Microsoft Office und Single Sign-on für Teams. Enterprise-Kunden erhalten Styleguides, angepasste KI-Modelle, private Hosting-Optionen und eine persönliche Ansprechperson. Organisationen mit laufendem Übersetzungsbedarf profitieren von diesen Workflow-Funktionen."
         },
         "languages": {
           "title": "Breitere Sprachabdeckung",
-          "p1": "Supertext unterstützt 28 Sprachen im Vergleich zu Helvetras 6. Wenn Sie regelmässig Übersetzungen mit Portugiesisch, Japanisch, Arabisch oder anderen Sprachen ausserhalb der Schweizer Landessprachen brauchen, hat Supertext eine breitere Abdeckung."
+          "p1": "Der KI-Übersetzer von Supertext unterstützt 28 Sprachen gegenüber 11 bei Helvetra, die professionellen Übersetzerinnen und Übersetzer decken über 100 ab. Wenn Sie regelmässig Japanisch, Koreanisch oder andere Sprachen brauchen, die in der Schweiz weniger verbreitet sind, hat Supertext die breitere Abdeckung."
         },
         "formats": {
           "title": "Dokumentformat-Unterstützung",
-          "p1": "Supertext verarbeitet verschiedene Dateiformate einschliesslich Word-Dokumenten, PowerPoints und PDFs mit Layout-Erhaltung. Ihre Abonnementpläne basieren auf Dateizahlen statt Zeichenlimits, was dokumentenlastigen Workflows entgegenkommt."
+          "p1": "Supertext übersetzt Word-, PowerPoint-, Excel-, PDF- und Untertiteldateien. Die Abos unterscheiden sich vor allem in der Anzahl Dateiübersetzungen pro Monat: 5 bei Free, 20 bei Essential und 60 bei Advanced. Das passt zu dokumentlastigen Abläufen."
         },
         "verdict": "Fazit: Supertext glänzt bei professioneller, wichtiger Übersetzung, wo menschliche Korrektur und Unternehmensfunktionen den Premium-Preis rechtfertigen."
       },
       "helvetraWins": {
         "title": "Wo Helvetra gewinnt",
         "swissGerman": {
-          "title": "Schweizerdeutsch-Unterstützung",
-          "p1": "Hier ist die Ironie: Supertext ist ein Schweizer Unternehmen mit Hauptsitz in Zürich, unterstützt aber kein Schweizerdeutsch. Ihre 28 Sprachen umfassen Hochdeutsch, aber nicht den Dialekt, den Millionen von Schweizern jeden Tag sprechen.",
-          "p2": "Helvetra ist derzeit der einzige Übersetzungsdienst, der Schweizerdeutsch unterstützt, mit Dialektoptionen für Zürich, Bern, Basel und andere Regionen. Wenn Sie Mundart-Nachrichten übersetzen oder auf Schweizerdeutsch kommunizieren müssen, sind wir Ihre einzige Option."
+          "title": "Mehr schweizerdeutsche Dialekte",
+          "p1": "Auch Supertext übersetzt Schweizerdeutsch, in zwei Varianten: Berndeutsch und Zürichdeutsch. Helvetra bietet sechs Dialekte: Bern, Zürich, Basel, St. Gallen, Wallis und Luzern.",
+          "p2": "Wenn Sie jemandem aus Basel, dem Wallis, St. Gallen oder der Zentralschweiz schreiben, trifft Helvetra den passenden Dialekt. Für Berndeutsch oder Zürichdeutsch kommen beide Dienste in Frage."
         },
         "pricing": {
-          "title": "Deutlich günstigere Preise",
-          "p1": "Supertexts günstigster Plan beginnt bei CHF 9.90/Monat für 20 Dateien. Ihr Advanced-Plan kostet CHF 24.90/Monat, und Pro ist CHF 49.90/Monat. Diese Preise machen Sinn für Unternehmen mit regelmässigem professionellem Übersetzungsbedarf.",
-          "p2": "Helvetra+ kostet CHF 4.99/Monat und gibt Ihnen 500'000 Zeichen Sofortübersetzung. Für Gelegenheitsnutzer, Studenten oder alle, die kein menschliches Lektorat brauchen, bedeutet das erhebliche Einsparungen."
+          "title": "Günstiger für den Alltag",
+          "p1": "Die bezahlten Abos von Supertext beginnen bei CHF 9.90/Monat (Essential), Advanced kostet CHF 24.90/Monat, Enterprise auf Anfrage. Essential umfasst unbegrenzte Textübersetzung im Rahmen einer Fair-Use-Regel sowie 20 Dateiübersetzungen pro Monat.",
+          "p2": "Helvetra+ kostet CHF 4.99/Monat für 500'000 Zeichen, etwa die Hälfte von Supertext Essential. Wenn Sie monatlich mehr übersetzen oder Dateien übersetzen müssen, kann das unbegrenzte Textangebot von Supertext günstiger sein."
         },
         "instant": {
-          "title": "Sofortige Ergebnisse",
-          "p1": "Helvetra liefert Übersetzungen in Sekunden. Tippen oder fügen Sie Ihren Text ein, erhalten Sie Ihre Übersetzung sofort. Kein Warten auf menschliche Prüfer, keine Projektwarteschlangen, keine Bearbeitungszeiten. Für schnelle Kommunikationsbedürfnisse schlägt sofort poliert."
+          "title": "Nichts gespeichert, in jedem Abo",
+          "p1": "Im Gratis-Abo von Supertext können eingegebene Texte zur Verbesserung der Sprachmodelle verwendet werden. In den bezahlten Abos werden Texte direkt nach der Übersetzung gelöscht. Helvetra speichert Ihre Texte in keinem Abo, weder gratis noch bezahlt."
         },
         "simplicity": {
           "title": "Schnörkellose Einfachheit",
-          "p1": "Supertexts Plattform ist für professionelle Workflows gebaut mit Funktionen, die die meisten Gelegenheitsnutzer nie anfassen werden. Helvetra ist bewusst einfach: Text einfügen, Übersetzung erhalten, fertig. Kein Konto für die Grundnutzung erforderlich, keine Lernkurve, keine Komplexität."
+          "p1": "Die Plattform von Supertext ist für professionelle Abläufe gebaut, mit Funktionen, die die meisten Gelegenheitsnutzer nie brauchen. Helvetra ist bewusst einfach: Text einfügen, Übersetzung erhalten, fertig. Keine Einarbeitung, keine Komplexität."
         },
-        "verdict": "Fazit: Helvetra gewinnt bei Schweizerdeutsch-Unterstützung, Preisen, Geschwindigkeit und Einfachheit. Wenn Sie kein menschliches Lektorat brauchen, bekommen Sie mehr für weniger."
+        "verdict": "Fazit: Helvetra punktet bei der Abdeckung schweizerdeutscher Dialekte, beim Preis für alltägliche Mengen, beim Datenschutz im Gratis-Abo und bei der Einfachheit."
       },
       "swissGermanIrony": {
-        "title": "Die Schweizerdeutsch-Frage",
-        "intro": "Sprechen wir das Offensichtliche an. Supertext ist ein stolz schweizerisches Unternehmen, gegründet in Zürich, für Schweizer Kunden. Dennoch unterstützen sie kein Schweizerdeutsch. Warum? Weil Schweizerdeutsch für Übersetzungsdienste wirklich schwierig ist.",
+        "title": "Schweizerdeutsch im Vergleich",
+        "intro": "Beide Dienste übersetzen Schweizerdeutsch, was noch selten ist: Google Translate bietet es nicht an, und DeepL schreibt nur Schweizer Hochdeutsch, keinen Dialekt. Der Unterschied liegt im Detail.",
         "supertext": {
-          "title": "Warum Supertext Schweizerdeutsch auslässt",
-          "point1": "Keine standardisierte Schriftform erschwert das Training von KI-Modellen",
-          "point2": "Regionale Variationen (Zürich vs Bern vs Basel) vervielfachen die Komplexität",
-          "point3": "Ihre menschlichen Übersetzer arbeiten mit standardisierten Schriftsprachen"
+          "title": "Supertext",
+          "point1": "Zwei Varianten: Berndeutsch und Zürichdeutsch",
+          "point2": "In jedem Abo enthalten, auch im Gratis-Abo",
+          "point3": "Rätoromanisch wird ebenfalls unterstützt"
         },
         "helvetra": {
-          "title": "Warum Helvetra es trotzdem angeht",
-          "point1": "Schweizerdeutsch ist zentral für die Schweizer Identität, jemand muss es lösen",
-          "point2": "Apertus (Schweizer KI) wurde mit Schweizerdeutsch-Daten trainiert",
-          "point3": "Wir bieten Dialektauswahl für regionale Variationen"
+          "title": "Helvetra",
+          "point1": "Sechs Dialekte: Bern, Zürich, Basel, St. Gallen, Wallis und Luzern",
+          "point2": "Apertus (Schweizer KI) wurde mit schweizerdeutschen Daten trainiert",
+          "point3": "Rätoromanisch wird ebenfalls unterstützt, mit formeller und informeller Anrede"
         },
-        "conclusion": "Wir behaupten nicht, dass unsere Schweizerdeutsch-Übersetzung perfekt ist. Es ist ein schwieriges Problem. Aber wir sind die einzigen, die daran arbeiten, und wir verbessern uns mit jedem Nutzer-Feedback."
+        "conclusion": "Bei keinem der beiden Tools ist das Schweizerdeutsch perfekt. Ohne einheitliche Rechtschreibung ist es ein schwieriges Problem. Wenn Sie einen anderen Dialekt als Berndeutsch oder Zürichdeutsch brauchen, deckt Helvetra mehr Regionen ab."
       },
       "pricingSection": {
         "title": "Preisvergleich",
-        "intro": "Die Preismodelle sind grundlegend verschieden. Supertext berechnet nach Dateien, ausgerichtet auf Dokumenten-Workflows. Helvetra berechnet nach Zeichen, ausgerichtet auf Textübersetzung.",
+        "intro": "Die Preismodelle sind unterschiedlich. Die Abos von Supertext unterscheiden sich vor allem bei Dateiübersetzungen und Teamfunktionen, ab Essential ist Textübersetzung unbegrenzt. Helvetra rechnet nach Zeichen ab, für Textübersetzung.",
         "supertextPricing": {
           "title": "Supertext-Preise",
-          "point1": "Gratis: 3'000 Zeichen Testversion",
-          "point2": "Essential: CHF 9.90/Mt. (20 Dateien)",
-          "point3": "Advanced: CHF 24.90/Mt. (60 Dateien)",
-          "point4": "Pro: CHF 49.90/Mt. (120 Dateien)"
+          "point1": "Free: bis 3'000 Zeichen pro Text, 5 Dateiübersetzungen/Monat",
+          "point2": "Essential: CHF 9.90/Mt. (Text unbegrenzt, 20 Dateien)",
+          "point3": "Advanced: CHF 24.90/Mt. (60 Dateien, Glossare)",
+          "point4": "Enterprise: auf Anfrage"
         },
         "helvetraPricing": {
           "title": "Helvetra-Preise",
@@ -1175,30 +1183,30 @@
           "point2": "Helvetra+: CHF 4.99/Mt. (500K Zeichen)",
           "point3": "Keine Dateilimits, nur Zeichenzählung"
         },
-        "conclusion": "Für dokumentenlastige professionelle Nutzung könnte Supertexts dateibasierte Preisgestaltung Sinn machen. Für alltägliche Textübersetzung ist Helvetras zeichenbasiertes Modell wirtschaftlicher und berechenbarer."
+        "conclusion": "Für dokumentlastige professionelle Nutzung oder sehr grosse Textmengen können die Abos von Supertext sinnvoll sein. Für alltägliche Textübersetzung ist Helvetra günstiger und einfacher."
       },
       "useCases": {
         "title": "Was sollten Sie wählen?",
         "chooseSupertext": {
           "title": "Wählen Sie Supertext, wenn:",
           "point1": "Sie menschliches Lektorat für publikationsreife Inhalte brauchen",
-          "point2": "Sie ein Unternehmen mit laufendem professionellem Übersetzungsbedarf sind",
-          "point3": "Sie Sprachen ausserhalb von Deutsch, Französisch, Italienisch und Englisch brauchen",
-          "point4": "Sie Unternehmensfunktionen wie Glossare und Team-Konten wollen"
+          "point2": "Sie viele Dokumente übersetzen (Word, PowerPoint, Excel, PDF)",
+          "point3": "Sie Sprachen brauchen, die Helvetra nicht anbietet, etwa Japanisch oder Koreanisch",
+          "point4": "Sie Teamfunktionen wie Glossare und Single Sign-on wollen"
         },
         "chooseHelvetra": {
           "title": "Wählen Sie Helvetra, wenn:",
-          "point1": "Sie Schweizerdeutsch-Übersetzung brauchen (einzige verfügbare Option)",
-          "point2": "Sie sofortige Ergebnisse ohne Warten auf menschliche Korrektur wollen",
+          "point1": "Sie einen anderen Schweizer Dialekt als Berndeutsch oder Zürichdeutsch brauchen",
+          "point2": "Ihre Texte nie gespeichert werden sollen, auch nicht im Gratis-Abo",
           "point3": "Sie einfache, günstige Preise bevorzugen",
           "point4": "Sie gelegentlich übersetzen und keinen professionellen Schliff brauchen",
-          "point5": "Datenschutz wichtig ist und Sie Schweizer KI-Verarbeitung wollen"
+          "point5": "Sie einen Übersetzer auf Basis von Apertus wollen, dem offenen Schweizer KI-Modell"
         }
       },
       "conclusion": {
         "title": "Das Fazit",
         "p1": "Supertext und Helvetra bedienen verschiedene Märkte. Supertext ist ein professioneller Übersetzungsdienst für Unternehmen, die menschlich geprüfte, publikationsfertige Inhalte brauchen. Ihre Preise und Funktionen spiegeln diesen Unternehmensfokus wider.",
-        "p2": "Helvetra ist für alle anderen: Menschen, die schnelle, private Übersetzung für alltägliche Kommunikation brauchen. Wir sind schneller, günstiger, einfacher, und wir sind die einzigen, die Schweizerdeutsch unterstützen. Wenn Sie keine menschlichen Lektoren brauchen, müssen Sie nicht dafür bezahlen.",
+        "p2": "Helvetra ist für alle anderen: Menschen, die schnelle, private Übersetzung für die alltägliche Kommunikation brauchen. Wir sind für alltägliche Mengen günstiger, speichern in keinem Abo etwas und decken mehr schweizerdeutsche Dialekte ab. Wenn Sie kein menschliches Lektorat und keine Dateiübersetzung brauchen, müssen Sie auch nicht dafür bezahlen.",
         "p3": "Beide sind Schweizer Unternehmen, die sich der Qualität verpflichtet fühlen. Die richtige Wahl hängt davon ab, ob Sie professionellen Schliff oder alltägliche Bequemlichkeit brauchen.",
         "cta": "Bereit für sofortige Schweizer Übersetzung ohne Enterprise-Preisschild?",
         "tryHelvetra": "Helvetra kostenlos testen"
@@ -1222,10 +1230,10 @@
       "tools": {
         "deepl": {
           "name": "DeepL",
-          "description": "Der Branchenführer bei KI-Übersetzungen. DeepL liefert durchweg die natürlichsten Übersetzungen für europäische Sprachen. Allerdings unterstützt es nur Hochdeutsch, keine Schweizer Dialekte.",
+          "description": "Der Branchenführer bei KI-Übersetzung. DeepL liefert durchgehend die natürlichsten Übersetzungen für europäische Sprachen. Für Schweizerdeutsch bietet DeepL nur Schweizer Hochdeutsch (geschriebenes Hochdeutsch mit Schweizer Rechtschreibung), keine Dialekte.",
           "pro1": "Exzellente Qualität",
           "pro2": "Natürliche Formulierung",
-          "con1": "Kein Schweizerdeutsch"
+          "con1": "Keine schweizerdeutschen Dialekte"
         },
         "google": {
           "name": "Google Translate",
@@ -1236,7 +1244,7 @@
         },
         "helvetra": {
           "name": "Helvetra",
-          "description": "Das einzige Übersetzungstool mit nativer Schweizerdeutsch-Unterstützung. In der Schweiz entwickelt mit Schweizer KI, Ihre Daten verlassen nie Schweizer Server. Übersetzt zwischen Schweizerdeutsch, Deutsch, Französisch, Italienisch, Rätoromanisch und Englisch.",
+          "description": "Übersetzt Schweizerdeutsch in sechs regionalen Dialekten. In der Schweiz entwickelt mit Schweizer KI, Ihre Daten verlassen nie Schweizer Server. Übersetzt zwischen Schweizerdeutsch, Deutsch, Französisch, Italienisch, Rätoromanisch, Englisch, Albanisch, Portugiesisch, Spanisch, Kroatisch und Serbisch.",
           "badge": "Schweizerdeutsch",
           "pro1": "Schweizerdeutsch",
           "pro2": "Schweizer Datenschutz",
@@ -1245,7 +1253,7 @@
         },
         "supertext": {
           "name": "Supertext",
-          "description": "Ein Schweizer professioneller Übersetzungsdienst, der KI mit menschlichen Übersetzern kombiniert. Ausgezeichnet für Geschäftsdokumente, die Publikationsqualität benötigen, aber teurer und langsamer als Instant-KI-Tools.",
+          "description": "Ein Schweizer Übersetzungsdienst mit eigenem KI-Übersetzer, der Schweizerdeutsch (Berner und Zürcher Variante) und Rätoromanisch abdeckt. Die optionale Prüfung durch Fachpersonen, abgerechnet pro Auftrag, eignet sich für Geschäftsdokumente in Publikationsqualität.",
           "pro1": "Menschliche Prüfung",
           "pro2": "Schweizer Firma",
           "con1": "Höhere Kosten"
@@ -1260,11 +1268,11 @@
       },
       "conclusion": {
         "title": "Welches sollten Sie wählen?",
-        "p1": "Für Standard-Deutsch-Übersetzungen bleibt DeepL der Qualitätsführer. Für Schweizerdeutsch speziell ist Helvetra derzeit die einzige dedizierte Option mit nativer Unterstützung und Schweizer Datenschutz.",
+        "p1": "Für Hochdeutsch bleibt DeepL der Qualitätsführer. Für Schweizerdeutsch im Dialekt kommen Helvetra und Supertext in Frage: Helvetra deckt sechs regionale Dialekte ab, Supertext Berndeutsch und Zürichdeutsch.",
         "p2": "Wenn Sie professionellen Schliff für Geschäftsdokumente brauchen, bietet Supertext menschliche Prüfung. Für gelegentliche Nutzung und Reisen funktionieren Google Translate und iTranslate gut für Hochdeutsch."
       },
       "cta": {
-        "text": "Müssen Sie Schweizerdeutsch übersetzen? Probieren Sie das einzige Tool, das speziell dafür entwickelt wurde.",
+        "text": "Schweizerdeutsch übersetzen? Probieren Sie das Tool, das genau dafür gebaut ist.",
         "button": "Helvetra kostenlos testen"
       }
     },
@@ -1284,7 +1292,7 @@
       "apps": {
         "helvetra": {
           "name": "Helvetra",
-          "description": "Die einzige Übersetzungs-App, die speziell für die Schweiz entwickelt wurde. Unterstützt alle Schweizer Landessprachen inklusive Schweizerdeutsch und Rätoromanisch. Daten bleiben auf Schweizer Servern, geschützt durch Schweizer Datenschutzrecht.",
+          "description": "Eine Übersetzungs-App, die speziell für die Schweiz gebaut ist. Unterstützt alle Landessprachen inklusive schweizerdeutscher Dialekte und Rätoromanisch, dazu die meistgesprochenen weiteren Sprachen der Schweiz. Daten bleiben auf Schweizer Servern, geschützt durch Schweizer Datenschutzrecht.",
           "badge": "Made in Switzerland",
           "pro1": "Schweizerdeutsch",
           "pro2": "Schweizer Datenschutz",
@@ -1293,10 +1301,10 @@
         },
         "deepl": {
           "name": "DeepL",
-          "description": "Bekannt für die natürlichsten Übersetzungen, besonders für europäische Sprachen. Die Qualität ist exzellent für Deutsch, Französisch und Italienisch, obwohl Schweizerdeutsch fehlt.",
+          "description": "Bekannt für die natürlichsten Übersetzungen, besonders bei europäischen Sprachen. Die Qualität ist ausgezeichnet für Deutsch, Französisch und Italienisch. Für Schweizerdeutsch bietet DeepL nur Schweizer Hochdeutsch, keinen Dialekt.",
           "pro1": "Beste Qualität",
           "pro2": "Natürliche Formulierung",
-          "con1": "Kein Schweizerdeutsch"
+          "con1": "Keine schweizerdeutschen Dialekte"
         },
         "google": {
           "name": "Google Translate",
@@ -1322,7 +1330,7 @@
       },
       "conclusion": {
         "title": "Unsere Empfehlung",
-        "p1": "Für Schweizer Nutzer hängt die beste Wahl von Ihren Bedürfnissen ab. Wenn Sie Schweizerdeutsch brauchen oder Wert darauf legen, dass Daten in der Schweiz bleiben, ist Helvetra die einzige Option. Für reine Übersetzungsqualität in Standardsprachen führt DeepL.",
+        "p1": "Für Schweizer Nutzerinnen und Nutzer hängt die beste Wahl von den Bedürfnissen ab. Wenn Sie schweizerdeutsche Dialekte brauchen oder Ihre Daten in der Schweiz bleiben sollen, ist Helvetra eine gute Wahl. Bei reiner Übersetzungsqualität in Standardsprachen führt DeepL.",
         "p2": "Für gelegentliche Nutzung auf dem iPhone funktioniert Apple Translate gut offline. Google Translate bleibt am vielseitigsten für weniger verbreitete Sprachen. Microsoft Translator passt am besten in Enterprise-Office-Umgebungen."
       },
       "cta": {

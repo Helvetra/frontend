@@ -8,13 +8,18 @@
         {{ $t('marketing.languages.title') }}
       </h2>
       <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-lg">
-        <span class="text-neutral-600">German</span>
-        <span class="text-swiss-red font-medium">Swiss German</span>
-        <span class="text-neutral-600">French</span>
-        <span class="text-neutral-600">Italian</span>
-        <span class="text-neutral-600">Romansh</span>
-        <span class="text-neutral-600">English</span>
+        <span
+          v-for="code in languageCodes"
+          :key="code"
+          :class="code === 'gsw' ? 'text-swiss-red font-medium' : 'text-neutral-600'"
+        >
+          {{ $t(`languages.${code}`) }}
+        </span>
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const languageCodes = ['de', 'gsw', 'fr', 'it', 'rm', 'en', 'sq', 'pt', 'es', 'hr', 'sr']
+</script>

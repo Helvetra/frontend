@@ -265,6 +265,11 @@ const supportedLanguages = [
   { code: 'it', name: 'Italian' },
   { code: 'en', name: 'English' },
   { code: 'rm', name: 'Romansh' },
+  { code: 'sq', name: 'Albanian' },
+  { code: 'pt', name: 'Portuguese (European)' },
+  { code: 'es', name: 'Spanish' },
+  { code: 'hr', name: 'Croatian' },
+  { code: 'sr', name: 'Serbian (Latin script)' },
 ]
 
 const dialects = ['bern', 'zurich', 'basel', 'stgallen', 'wallis', 'luzern']

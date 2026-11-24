@@ -158,7 +158,7 @@ useJsonLd(getArticleSchema({
   headline: 'Helvetra vs DeepL: Swiss Translation Comparison',
   description: 'Compare Helvetra and DeepL translation tools. Honest analysis of quality, pricing, privacy, and Swiss German support.',
   datePublished: '2024-12-18',
-  dateModified: '2024-12-19',
+  dateModified: '2026-11-24',
 }))
 
 // Comparison table rows
