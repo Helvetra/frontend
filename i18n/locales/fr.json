@@ -136,11 +136,6 @@
         }
       }
     },
-    "appBanner": {
-      "text": "Helvetra est disponible sur iOS !",
-      "cta": "Télécharger pour iOS",
-      "close": "Fermer"
-    },
     "app": {
       "title": "Helvetra pour iOS",
       "text": "Emportez Helvetra partout. La même traduction suisse, privée et précise, maintenant en app iOS native. Aucun compte nécessaire pour commencer.",

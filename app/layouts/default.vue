@@ -4,7 +4,6 @@
 -->
 <template>
   <div class="min-h-screen flex flex-col bg-neutral-50">
-    <AppStoreBanner />
     <AppHeader />
     <EmailVerificationBanner />
     <main class="flex-1">
